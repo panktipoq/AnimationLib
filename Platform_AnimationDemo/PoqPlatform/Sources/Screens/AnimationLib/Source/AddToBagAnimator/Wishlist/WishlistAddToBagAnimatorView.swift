@@ -46,7 +46,7 @@ class WishlistAddToBagAnimatorView: UIView {
             
             let imageLayerFrame = animSettings?.wishlistCellFrame ?? CGRect.zero
             self.backgroundView.frame = imageLayerFrame
-            self.productImage.frame = CGRect(x: 0, y: 0, width: imageLayerFrame.size.width, height: imageLayerFrame.size.height + 5)
+            self.productImage.frame = CGRect(x: 0, y: 0, width: imageLayerFrame.size.width, height: imageLayerFrame.size.height)
             self.productImage.image = animSettings?.wishlistCellImage
         }
     }
@@ -58,7 +58,8 @@ class WishlistAddToBagAnimatorView: UIView {
      */
     lazy var backgroundView: UIView = {
         let bgView = UIView()
-        bgView.backgroundColor = .clear
+        bgView.backgroundColor = .white
+        bgView.clipsToBounds = true
         return bgView
         
     }()
@@ -168,7 +169,7 @@ extension WishlistAddToBagAnimatorView {
                                duration: 0.3)
             .addBasicAnimation(keyPath: .scale,
                                from: 1,
-                               to: 1.1,
+                               to: 1.2,
                                duration: 0.3)
             .addBasicAnimation(keyPath: .boundsSizeWidth,
                                from: animSettings?.wishlistCellFrame.size.width ?? 0,
@@ -176,7 +177,7 @@ extension WishlistAddToBagAnimatorView {
                                duration: 0.3)
             .addBasicAnimation(keyPath: .boundsSizeHeight,
                                from: animSettings?.wishlistCellFrame.size.height ?? 0,
-                               to: 159,
+                               to: animSettings?.wishlistCellFrame.size.height ?? 0 - 30,
                                duration: 0.3)
             .addBasicAnimation(keyPath: .radius,
                                from:1,
@@ -193,9 +194,14 @@ extension WishlistAddToBagAnimatorView {
     
     func imageScaleAnimation() -> Self {
         PoqAnimator()
+            .addBasicAnimation(keyPath: .scale,
+                               from: 1,
+                               to: 1.1,
+                               duration: 0.1)
             .addBasicAnimation(keyPath: .position,
-                               from: self.productImage.frame.origin,
-                               to: CGPoint(x: self.productImage.frame.origin.x-15, y: self.productImage.frame.origin.y-15),
+                               from: self.productImage.center,
+                               to: CGPoint(x: self.productImage.center.x - 10,
+                                           y: self.productImage.center.y - 5 ),
                                duration: 0.3)
             .startAnimation(for: self.productImage.layer,
                             type: .parallel,
@@ -208,8 +214,8 @@ extension WishlistAddToBagAnimatorView {
         PoqAnimator()
             .addBasicAnimation(keyPath: .opacity,
                                from:0,
-                               to: 0.24,
-                               duration: 0.35)
+                               to: 0.3,
+                               duration: 0.4)
             .startAnimation(for: self.overlayLayer,
                             type: .parallel,
                             isRemovedOnCompletion: false,
@@ -232,8 +238,9 @@ extension WishlistAddToBagAnimatorView {
         
         PoqAnimator()
             .addBasicAnimation(keyPath: .position,
-                               from:productImage.center,
-                               to: CGPoint(x: animSettings?.endOrigin.x ?? 0, y: animSettings?.endOrigin.y ?? 0 ) ,
+                               from:backgroundView.center,
+                               to: CGPoint(x: animSettings?.endOrigin.x ?? 0,
+                                           y: animSettings?.endOrigin.y ?? 0 ),
                                duration: 0.35,
                                delay: 0,
                                timingFunction: .easeInfast)
