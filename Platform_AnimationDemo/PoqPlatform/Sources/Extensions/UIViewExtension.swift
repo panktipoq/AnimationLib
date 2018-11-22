@@ -98,4 +98,17 @@ extension UIView {
         NSLayoutConstraint.activate(res)
         return res
     }
+    
+    /// Take Screenshot of the view
+    func takeScreenshot() -> UIImage {
+        
+        // Begin context
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        // Draw view in that context
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        // Get Image
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? UIImage()
+    }
 }

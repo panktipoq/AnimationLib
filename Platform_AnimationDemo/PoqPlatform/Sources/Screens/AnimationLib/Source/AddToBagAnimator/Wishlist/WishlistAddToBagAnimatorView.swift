@@ -1,8 +1,8 @@
 //
-//  WishlistAddToBagAnimatorView.swift
+//  PDPAddToBagAnimatorView.swift
 //  PoqAnimationLib
 //
-//  Created by Pankti Patel on 21/11/2018.
+//  Created by Pankti Patel on 16/11/2018.
 //  Copyright © 2018 Pankti Patel. All rights reserved.
 //
 
@@ -10,41 +10,52 @@ import Foundation
 import UIKit
 
 
+/*
+ 
+ Wishlist Add to bag animation settings
+ Parameters:
+ 
+ wishlistCellImage : Screenshot of the wishlist cell
+ wishlistCellFrame : Frame of the wishlist cell
+ endFrame          : Frame of the tabbar
+ 
+ */
 
 public struct WishlistAddToBagAnimatorViewSettings {
     
-    public var productImageFrame: CGRect
-    public var productImage: UIImage
-    public var bagTabbarItemView: UIView
-    public var allowUserInteraction: Bool
     
-    init(productImageFrame: CGRect,
-         productImage: UIImage,
-         bagTabbarItemView: UIView,
-         allowUserInteraction: Bool = false) {
-        self.productImageFrame = productImageFrame
-        self.productImage = productImage
-        self.bagTabbarItemView = bagTabbarItemView
-        self.allowUserInteraction = allowUserInteraction
+    public var wishlistCellImage: UIImage
+    public var wishlistCellFrame: CGRect
+    public var endOrigin: CGPoint
+    
+    init(wishlistCellImage: UIImage,
+         wishlistCellFrame: CGRect,
+         endOrigin: CGPoint) {
+        self.wishlistCellFrame = wishlistCellFrame
+        self.wishlistCellImage = wishlistCellImage
+        self.endOrigin = endOrigin
     }
 }
 
 class WishlistAddToBagAnimatorView: UIView {
     
-    var completion: AnimClosure?
-    
+    // MARK: - Initialisation
+    var completion: AnimClosure? //Completion of the animation
     var animSettings: WishlistAddToBagAnimatorViewSettings? {
         didSet {
             
-            self.backgroundView.frame = CGRect(x: 0, y: animSettings?.productImageFrame.origin.y ?? 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            self.productImage.frame = CGRect(x: animSettings?.productImageFrame.origin.x ?? 0, y: 20, width: animSettings?.productImageFrame.size.width ?? 0, height: animSettings?.productImageFrame.size.height ?? 0)
-            self.productImage.image = animSettings?.productImage
-            if animSettings?.allowUserInteraction == false {
-                UIApplication.shared.beginIgnoringInteractionEvents()
-            }
+            let imageLayerFrame = animSettings?.wishlistCellFrame ?? CGRect.zero
+            self.backgroundView.frame = imageLayerFrame
+            self.productImage.frame = CGRect(x: 0, y: 0, width: imageLayerFrame.size.width, height: imageLayerFrame.size.height + 5)
+            self.productImage.image = animSettings?.wishlistCellImage
         }
     }
     
+    /*
+     Background view of the size view
+     it will contain imageview
+     This view is created to provide seperate animation to imageBG and overlay view
+     */
     lazy var backgroundView: UIView = {
         let bgView = UIView()
         bgView.backgroundColor = .clear
@@ -52,6 +63,9 @@ class WishlistAddToBagAnimatorView: UIView {
         
     }()
     
+    /*
+     ImageView with the image provided in settings
+     */
     lazy var productImage: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode =  .scaleAspectFill
@@ -60,6 +74,9 @@ class WishlistAddToBagAnimatorView: UIView {
         return imageView
     }()
     
+    /*
+     Overlay view with black background
+     */
     lazy var overlayLayer: CAShapeLayer = {
         let overlay = CAShapeLayer()
         let path = UIBezierPath(rect: self.bounds)
@@ -70,6 +87,7 @@ class WishlistAddToBagAnimatorView: UIView {
         
     }()
     
+    //MARK: - View Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -78,54 +96,56 @@ class WishlistAddToBagAnimatorView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    deinit {
+        UIApplication.shared.endIgnoringInteractionEvents()
+        PoqAnimator().stopAnimation()
+    }
     
+    
+    //MARK: UI Setup
     func setup() {
         self.backgroundColor = .clear
         self.layer.addSublayer(overlayLayer)
         self.addSubview(backgroundView)
         backgroundView.addSubview(productImage)
     }
+    
+    //MARK: - Animation Actions
     func startAnimation(with settings: WishlistAddToBagAnimatorViewSettings,
                         completion:@escaping AnimClosure) {
         
+        UIApplication.shared.beginIgnoringInteractionEvents()
         self.animSettings = settings
         self.completion = completion
         
         weak var weakself = self
         
         //View, image Tranform and scale animations
-        weakself?.viewScaleAnimation()
-            .overlayScaleAnimation()
-            .imageScaleAnimation {
-                
-                //View, image fall and scale animations
-                weakself?.viewTransformAnimation()
-                    .overlayTransformAnimation(completion: {
-                        
-                        //badge view, tabbar view scale animations
-                        weakself?.tabViewAnimation(completion: {
-                            weakself?.perform(#selector(weakself?.dismissView), with: nil, afterDelay: 0.1)
-                        })
-                    })
+        weakself?.scaleAnimation {
+            //View, image fall and scale animations
+            weakself?.transformAnimation(completion: {
+                //badge view, tabbar view scale animations
+                weakself?.tabViewAnimation(completion: {
+                    weakself?.perform(#selector(weakself?.dismissView), with: nil, afterDelay: 0.1)
+                })
+            })
         }
     }
     
     @objc func dismissView() {
-        if UIApplication.shared.isIgnoringInteractionEvents {
-            UIApplication.shared.endIgnoringInteractionEvents()
-        }
+        
+        PDPAddToBagAnimatorView.stopAnimation()
         if let completion = self.completion {
             completion()
         }
         self.removeFromSuperview()
+        
     }
     
     static func stopAnimation() {
-        UIApplication.shared.endIgnoringInteractionEvents()
-        PoqAnimator().stopAnimation()
-    }
-    deinit {
-        UIApplication.shared.endIgnoringInteractionEvents()
+        if UIApplication.shared.isIgnoringInteractionEvents {
+            UIApplication.shared.endIgnoringInteractionEvents()
+        }
         PoqAnimator().stopAnimation()
     }
 }
@@ -134,22 +154,57 @@ extension WishlistAddToBagAnimatorView {
     
     // MARK: - Start Scale Animations
     
+    func scaleAnimation(completion: AnimClosure?){
+        self.viewScaleAnimation()
+        .imageScaleAnimation()
+        .overlayScaleAnimation(completion: completion)
+    }
+    
     func viewScaleAnimation() -> Self {
         PoqAnimator()
-            .addBasicAnimation(keyPath: .positionY,
-                               from:backgroundView.center.y,
-                               to: self.center.y-52,
-                               duration: 0.35)
+            .addBasicAnimation(keyPath: .position,
+                               from: self.backgroundView.center,
+                               to: CGPoint(x: self.center.x, y: self.backgroundView.center.y),
+                               duration: 0.3)
             .addBasicAnimation(keyPath: .scale,
+                               from: 1,
+                               to: 1.1,
+                               duration: 0.3)
+            .addBasicAnimation(keyPath: .boundsSizeWidth,
+                               from: animSettings?.wishlistCellFrame.size.width ?? 0,
+                               to: 120,
+                               duration: 0.3)
+            .addBasicAnimation(keyPath: .boundsSizeHeight,
+                               from: animSettings?.wishlistCellFrame.size.height ?? 0,
+                               to: 159,
+                               duration: 0.3)
+            .addBasicAnimation(keyPath: .radius,
                                from:1,
-                               to: 0.5 ,
-                               duration: 0.35)
-            .startAnimation(for: backgroundView.layer,
+                               to: 8 ,
+                               duration: 0.3,
+                               delay: 0,
+                               timingFunction: .easeInfast)
+            .startAnimation(for: self.backgroundView.layer,
                             type: .parallel,
                             isRemovedOnCompletion: false)
         return self
+        
     }
-    func overlayScaleAnimation() -> Self {
+    
+    func imageScaleAnimation() -> Self {
+        PoqAnimator()
+            .addBasicAnimation(keyPath: .position,
+                               from: self.productImage.frame.origin,
+                               to: CGPoint(x: self.productImage.frame.origin.x-15, y: self.productImage.frame.origin.y-15),
+                               duration: 0.3)
+            .startAnimation(for: self.productImage.layer,
+                            type: .parallel,
+                            isRemovedOnCompletion: false)
+        return self
+        
+    }
+    
+    func overlayScaleAnimation(completion: AnimClosure?){
         PoqAnimator()
             .addBasicAnimation(keyPath: .opacity,
                                from:0,
@@ -157,37 +212,28 @@ extension WishlistAddToBagAnimatorView {
                                duration: 0.35)
             .startAnimation(for: self.overlayLayer,
                             type: .parallel,
-                            isRemovedOnCompletion: false)
-        return self
-        
-    }
-    func imageScaleAnimation(completion: AnimClosure?) {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .radius,
-                               from:1,
-                               to: 15 ,
-                               duration: 0.35,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .startAnimation(for: self.productImage.layer,
-                            type: .parallel,
                             isRemovedOnCompletion: false,
                             completion: completion)
-        
     }
-    
+   
 }
 
 extension WishlistAddToBagAnimatorView {
     
     // MARK: - Start transform Animations
     
+    func transformAnimation(completion: AnimClosure?){
+        self.viewTransformAnimation()
+        .overlayTransformAnimation(completion: completion)
+    }
+    
+    
     func viewTransformAnimation() -> Self {
         
         PoqAnimator()
             .addBasicAnimation(keyPath: .position,
-                               from:CGPoint(x: self.center.x, y: self.center.y-52),
-                               to: CGPoint(x: animSettings?.bagTabbarItemView.center.x ?? 0, y: animSettings?.bagTabbarItemView.superview?.center.y ?? 0 ) ,
+                               from:productImage.center,
+                               to: CGPoint(x: animSettings?.endOrigin.x ?? 0, y: animSettings?.endOrigin.y ?? 0 ) ,
                                duration: 0.35,
                                delay: 0,
                                timingFunction: .easeInfast)

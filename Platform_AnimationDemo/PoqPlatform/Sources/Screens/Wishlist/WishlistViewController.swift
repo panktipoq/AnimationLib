@@ -24,7 +24,7 @@ import UIKit
  */
 
 open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, PoqProductSizeSelectionPresenter, SizeSelectionDelegate, UITableViewDataSource, UITableViewDelegate {
-
+    
     /// The name of the screen that will be tracked in analytics.
     override open var screenName: String {
         return "WishList Screen"
@@ -55,7 +55,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     @IBOutlet open weak var itemsSummaryHeight: NSLayoutConstraint? {
         didSet {
             // Hide it first, then slide up after bag items > 0
-
+            
             itemsSummaryHeight?.constant = 0
         }
     }
@@ -65,7 +65,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     
     /// The height of the product cell.
     open var productCellHeight: CGFloat = 180.0
-
+    
     /// Flag for showing size selection box when product is added to bag.
     var shouldShowSizesSection = true
     
@@ -84,8 +84,8 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     open lazy var viewModel: WishlistViewModel? = {
         [unowned self] in
         return WishlistViewModel(viewControllerDelegate: self)
-    }()
-
+        }()
+    
     /// The identifier for the product sizes in the product size selection box.
     var productSizesViewCellIdentifier = ProductSizesViewCell.poqReuseIdentifier
     
@@ -98,6 +98,9 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     /// Flag that separates screen that appears from tab as opposed to one that comes as traditional navigation.
     open var isFromTab = true
     
+    // SelectedProduct index when press addToBag
+    var selectedProductIndex: Int = 0
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -105,7 +108,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     /// Triggered when the view has loaded. Sets up the navigation bar item, the pull to refresh item.
     override open func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         setUpView()
         
         setUpLeftNavigationBarItem()
@@ -117,7 +120,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         refreshControl.addTarget(self, action: #selector(WishlistViewController.startRefresh(_:)), for: UIControlEvents.valueChanged)
         
         wishlistTable?.addSubview(refreshControl)
-
+        
         updateClearAllVisibilityStatus()
         
         // Log wishlist screen
@@ -126,13 +129,13 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         if AppSettings.sharedInstance.hideRightNavigationMenuOnWish {
             navigationItem.rightBarButtonItem = nil
         }
-    
+        
         wishlistTable?.isEditing = false
         
         self.hideTableView(animated: false)
         
         updateTotals()
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(WishlistViewController.updateTotals), name: NSNotification.Name(rawValue: wishlistChangeNotification), object: nil)
         
         PoqUserNotificationCenter.shared.setupRemoteNotifications()
@@ -191,7 +194,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         self.viewModel?.getWishList(true)
         refreshControl.endRefreshing()
     }
-
+    
     /// Update the totals.
     @objc open func updateTotals() {
         
@@ -245,7 +248,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
             
             cell.selectionStyle = .none
             cell.accessibilityIdentifier = AccessibilityLabels.wishItems
-
+            
             return cell
         }
         
@@ -395,7 +398,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
-
+    
     /// Returns the footer view of the tableView.
     ///
     /// - Parameters:
@@ -403,7 +406,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     ///   - section: The section that will receive the footer view.
     /// - Returns: The view that will be used as a footer for the wishlist screen.
     open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-
+        
         if let viewModel = viewModel, viewModel.shouldLoadMoreProducts() {
             
             var footer: UITableViewHeaderFooterView? = wishlistTable?.dequeueReusableHeaderFooterView(withIdentifier: WishlistTableViewFooter.WishlistFooterReuseIdentifier)
@@ -411,13 +414,13 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
             if footer == nil {
                 footer = WishlistTableViewFooter(reuseIdentifier: WishlistTableViewFooter.WishlistFooterReuseIdentifier)
             }
-
+            
             return footer
         }
         
         return nil
     }
-
+    
     /// Returns the height of a given footer section.
     ///
     /// - Parameters:
@@ -440,10 +443,10 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     ///   - view: Reffrence to the footer view that will be rendered.
     ///   - section: The section that will receive the footer.
     open func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-
+        
         viewModel?.loadNextPage()
     }
-
+    
     // MARK: - IBActions
     
     /// Triggers the clear all dialog for the wishlist screen.
@@ -494,11 +497,13 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         showTableView()
         
         switch networkTaskType {
-        
-        case PoqNetworkTaskType.postBag, PoqNetworkTaskType.postCartItems :
             
+        case PoqNetworkTaskType.postBag:
+            self.perform(#selector(startAddToBagAnimation), with: nil, afterDelay: 0.1)
+             
+        case PoqNetworkTaskType.postCartItems :
             syncBagCheck()
-
+            
         case PoqNetworkTaskType.productDetails :
             
             if let selectedProduct = viewModel?.selectedProduct {
@@ -521,7 +526,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
     ///   - networkTaskType: The network task type that failed.
     ///   - error: The associated error with the failure.
     override open func networkTaskDidFail(_ networkTaskType: PoqNetworkTaskTypeProvider, error: NSError?) {
-      
+        
         showTableView()
         
         switch networkTaskType {
@@ -529,7 +534,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         case PoqNetworkTaskType.postCartItems, PoqNetworkTaskType.postBag:
             
             let errorTitle = "ADD_TO_BAG_ERROR_TITLE".localizedPoqString
-
+            
             let alertController = UIAlertController(title: errorTitle, message: error?.localizedDescription ?? "SOMETHING_WENT_WRONG".localizedPoqString, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alertController, animated: true)
@@ -538,7 +543,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
             
             break
         }
-
+        
     }
     
     /// Used to update the table view in which the wishlist is rendered.
@@ -603,6 +608,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
             Log.warning("Error: selected element is not a product")
             return
         }
+        selectedProductIndex = index
         viewModel?.updateSelectedProduct(selectedProduct)
     }
     
@@ -647,7 +653,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
                 product.selectedSizeID = self.viewModel?.selectedProduct?.selectedSizeID
                 
                 self.viewModel?.addToBag( product)
-
+                
                 if let productUnwrapped = viewModel?.selectedProduct, let productSizeUnwrapped = viewModel?.selectedProduct?.productSizes?[0] {
                     PoqTracker.sharedInstance.trackAddToBag(for: productUnwrapped, productSize: productSizeUnwrapped)
                     BagHelper.logAddToBag(productUnwrapped.title, productSize: productSizeUnwrapped)
@@ -655,7 +661,7 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
                 
             } else if presentedViewController == nil {
                 if AppSettings.sharedInstance.shouldCheckForOutOfStockeProducts, viewModel?.selectedProduct?.isOutOfStock() == true {
-                        BagHelper.showPopupMessage(AppLocalization.sharedInstance.bagOutOfStockMessage, isSuccess: false)
+                    BagHelper.showPopupMessage(AppLocalization.sharedInstance.bagOutOfStockMessage, isSuccess: false)
                 } else {
                     showSizeSelector(using: product)
                 }
@@ -668,14 +674,14 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         
         // Handle the legacy PoqMessage http error code case
         if let messageObject = viewModel?.message, let message = messageObject.message, let statusCode = messageObject.statusCode, statusCode != 200 {
-       
+            
             BagHelper.showPopupMessage(message, isSuccess: false)
             
             return
         }
         
         updateRightButton(animated: true)
-
+        
         BagHelper.completedAddToBag()
     }
     
@@ -695,9 +701,40 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         
         // Log add to bag action
         BagHelper.logAddToBag(selectedProduct.title, productSize: size)
-
+        
         PoqTracker.sharedInstance.trackAddToBag(for: selectedProduct, productSize: size)
     }
+}
+
+extension WishlistViewController {
+    
+    // Add to bag Animation
+    @objc func startAddToBagAnimation() {
+        
+        guard let cell = wishlistTable.cellForRow(at: IndexPath(row: selectedProductIndex, section: 0)) as? WishListTableViewCell else {
+            return
+        }
+        
+        if let tabController = self.tabBarController as? TabBarViewController,
+            let tabbarItem = tabController.viewForTabBarItemAtIndex(2) {
+        
+            let image = cell.takeScreenshot()
+            let endFrame = CGPoint(x: tabbarItem.center.x,
+                                   y: tabController.tabBar.center.y)
+            
+            let rectOfCell = wishlistTable.rectForRow(at: IndexPath(row: selectedProductIndex, section: 0))
+            let rectOfCellInSuperview = wishlistTable.convert(rectOfCell, to: wishlistTable.superview)
+            let settings = WishlistAddToBagAnimatorViewSettings(wishlistCellImage: image,
+                                                                wishlistCellFrame: rectOfCellInSuperview,
+                                                                endOrigin:endFrame)
+            weak var weakself = self
+            WishlistAnimator.startAddToBagAnimation(with: settings) {
+                weakself?.syncBagCheck()
+            }
+        }
+        
+    }
+    
 }
 
 // MARK: - BUTTON ACTION
@@ -721,3 +758,4 @@ extension WishlistViewController: NoItemsCellDelegate {
         NavigationHelper.sharedInstance.continueShopping()
     }
 }
+

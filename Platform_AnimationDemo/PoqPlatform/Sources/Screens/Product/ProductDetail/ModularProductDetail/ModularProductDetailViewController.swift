@@ -182,8 +182,13 @@ open class ModularProductDetailViewController: PoqBaseViewController, PoqProduct
         // Test Code
         if let tabController = self.tabBarController as? TabBarViewController,
             let tabbarItem = tabController.viewForTabBarItemAtIndex(2) {
-            let startFrame = CGRect(x: param.productImageFrame.origin.x, y: param.productImageFrame.origin.y - (self.collectionView?.contentOffset.y ?? 0), width: param.productImageFrame.size.width, height: param.productImageFrame.size.height)
-            let endFrame = CGPoint(x: tabbarItem.center.x, y: tabController.tabBar.center.y)
+            let startFrame = CGRect(x: param.productImageFrame.origin.x,
+                                    y: param.productImageFrame.origin.y - (self.collectionView?.contentOffset.y ?? 0),
+                                    width: param.productImageFrame.size.width,
+                                    height: param.productImageFrame.size.height)
+            
+            let endFrame = CGPoint(x: tabbarItem.center.x,
+                                   y: tabController.tabBar.center.y)
             let settings = PDPAddToBagAnimatorViewSettings(productImage: param.productImage,
                                                            startFrame: startFrame,
                                                            endOrigin: endFrame)
