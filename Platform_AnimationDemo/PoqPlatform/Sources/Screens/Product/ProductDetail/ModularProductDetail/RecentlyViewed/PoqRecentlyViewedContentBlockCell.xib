@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3s8-AR-bbv" customClass="PoqRecentlyViewedContentBlockCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-eN-gLL" userLabel="Separator" customClass="SolidLine" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="145" width="419" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" placeholder="YES" id="BhU-k8-WR3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NZw-eN-gLL" firstAttribute="leading" secondItem="3s8-AR-bbv" secondAttribute="leading" id="XmK-sE-4YF"/>
+                <constraint firstAttribute="bottom" secondItem="NZw-eN-gLL" secondAttribute="bottom" id="bfU-jZ-zCI"/>
+                <constraint firstAttribute="trailing" secondItem="NZw-eN-gLL" secondAttribute="trailing" id="w68-Se-d39"/>
+            </constraints>
+            <size key="customSize" width="419" height="129"/>
+            <connections>
+                <outlet property="separator" destination="NZw-eN-gLL" id="5jP-vE-pxX"/>
+            </connections>
+            <point key="canvasLocation" x="-193.5" y="-188"/>
+        </collectionViewCell>
+    </objects>
+</document>

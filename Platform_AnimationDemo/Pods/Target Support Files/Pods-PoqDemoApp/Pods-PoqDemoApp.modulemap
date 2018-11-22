@@ -1,0 +1,6 @@
+framework module Pods_PoqDemoApp {
+  umbrella header "Pods-PoqDemoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

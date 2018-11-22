@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VersionInfoTableViewCell" id="i5f-qA-QNx" customClass="VersionInfoTableViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="550" height="30"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i5f-qA-QNx" id="iCD-AL-5qI">
+                <rect key="frame" x="0.0" y="0.0" width="550" height="29.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dld-ar-WG1">
+                        <rect key="frame" x="21" y="6.5" width="508" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dld-ar-WG1" secondAttribute="trailing" constant="21" id="XvZ-EB-oSY"/>
+                    <constraint firstItem="dld-ar-WG1" firstAttribute="centerY" secondItem="iCD-AL-5qI" secondAttribute="centerY" id="i1x-EF-IOx"/>
+                    <constraint firstItem="dld-ar-WG1" firstAttribute="leading" secondItem="iCD-AL-5qI" secondAttribute="leading" constant="21" id="oOE-82-eF7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buildNumberLabel" destination="dld-ar-WG1" id="YcQ-Wg-zYf"/>
+            </connections>
+            <point key="canvasLocation" x="-56" y="81"/>
+        </tableViewCell>
+    </objects>
+</document>

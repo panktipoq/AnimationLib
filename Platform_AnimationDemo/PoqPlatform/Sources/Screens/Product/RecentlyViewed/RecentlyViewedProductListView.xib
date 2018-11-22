@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentlyViewedProductListViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="rMI-UF-cMf" id="iOT-cp-fo8"/>
+                <outlet property="noProductsLabel" destination="VEF-Fu-bKr" id="k1C-3i-fhz"/>
+                <outlet property="noProductsView" destination="yeU-qG-Qq6" id="nqP-Nc-Xiy"/>
+                <outlet property="view" destination="iN0-l3-epB" id="RpN-n6-fQW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rMI-UF-cMf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HXb-Ww-SqP">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PLH-ci-YIb"/>
+                        <outlet property="delegate" destination="-1" id="SvT-h9-9UX"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeU-qG-Qq6" userLabel="EmptyResultsView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEF-Fu-bKr" userLabel="NoItemsLabel">
+                            <rect key="frame" x="120" y="323" width="135" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="VEF-Fu-bKr" firstAttribute="centerX" secondItem="yeU-qG-Qq6" secondAttribute="centerX" id="ANF-ah-92M"/>
+                        <constraint firstItem="VEF-Fu-bKr" firstAttribute="centerY" secondItem="yeU-qG-Qq6" secondAttribute="centerY" id="fdx-4t-yqV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yeU-qG-Qq6" secondAttribute="trailing" id="Cx4-ab-2SV"/>
+                <constraint firstItem="rMI-UF-cMf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R3Z-Ul-ZEo"/>
+                <constraint firstItem="yeU-qG-Qq6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZX2-fi-Rjp"/>
+                <constraint firstAttribute="bottom" secondItem="rMI-UF-cMf" secondAttribute="bottom" id="eEt-QK-YpT"/>
+                <constraint firstItem="yeU-qG-Qq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gQ8-Id-cqm"/>
+                <constraint firstAttribute="trailing" secondItem="rMI-UF-cMf" secondAttribute="trailing" id="omC-aF-fmd"/>
+                <constraint firstAttribute="bottom" secondItem="yeU-qG-Qq6" secondAttribute="bottom" id="qav-uV-FmL"/>
+                <constraint firstItem="rMI-UF-cMf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xE4-8e-fD3"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

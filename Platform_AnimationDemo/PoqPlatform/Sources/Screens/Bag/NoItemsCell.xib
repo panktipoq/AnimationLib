@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NoItemsCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="499.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPe-x7-z8e">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="499"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bag empty label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZTu-1e-MUq">
+                                <rect key="frame" x="139" y="153" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TPJ-MJ-IlD">
+                                <rect key="frame" x="109" y="152" width="22" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="7js-Xv-yvk"/>
+                                    <constraint firstAttribute="height" constant="23" id="AFg-yw-cZq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOd-fK-cAh" userLabel="Go Shopping Button" customClass="SignButton" customModule="PoqPlatform" customModuleProvider="target">
+                                <rect key="frame" x="15" y="411" width="370" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mJX-lc-rK8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="signButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1X5-an-svj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bag empty instructions" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJz-Hu-4zB">
+                                <rect key="frame" x="16" y="190" width="368" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dOd-fK-cAh" firstAttribute="top" secondItem="zJz-Hu-4zB" secondAttribute="bottom" constant="200" id="0sW-y2-mph"/>
+                            <constraint firstItem="ZTu-1e-MUq" firstAttribute="leading" secondItem="TPJ-MJ-IlD" secondAttribute="trailing" constant="8" id="49k-G0-3UN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZTu-1e-MUq" secondAttribute="trailing" constant="5" id="4Fj-pH-WC2"/>
+                            <constraint firstItem="TPJ-MJ-IlD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bPe-x7-z8e" secondAttribute="leading" constant="5" id="4bB-rx-JjL"/>
+                            <constraint firstAttribute="centerY" secondItem="zJz-Hu-4zB" secondAttribute="centerY" constant="49.5" id="60Z-UB-Bjy"/>
+                            <constraint firstAttribute="trailing" secondItem="zJz-Hu-4zB" secondAttribute="trailing" constant="50" id="6zN-oD-HUI">
+                                <variation key="widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="zJz-Hu-4zB" firstAttribute="leading" secondItem="bPe-x7-z8e" secondAttribute="leading" constant="50" id="GO0-Am-vJM">
+                                <variation key="widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="zJz-Hu-4zB" firstAttribute="top" secondItem="ZTu-1e-MUq" secondAttribute="bottom" constant="16" id="QCr-JY-EUu"/>
+                            <constraint firstAttribute="trailing" secondItem="dOd-fK-cAh" secondAttribute="trailing" constant="15" id="Qn4-eZ-Smb"/>
+                            <constraint firstAttribute="centerX" secondItem="ZTu-1e-MUq" secondAttribute="centerX" constant="-0.5" id="Vj7-dw-mtS"/>
+                            <constraint firstItem="dOd-fK-cAh" firstAttribute="leading" secondItem="bPe-x7-z8e" secondAttribute="leading" constant="15" id="aCe-PM-NL3"/>
+                            <constraint firstItem="TPJ-MJ-IlD" firstAttribute="centerY" secondItem="ZTu-1e-MUq" secondAttribute="centerY" id="pv5-k5-pN2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="bPe-x7-z8e" secondAttribute="trailing" id="2ac-aR-bAC"/>
+                    <constraint firstItem="bPe-x7-z8e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Ep-0I-aIh"/>
+                    <constraint firstItem="bPe-x7-z8e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jKz-wZ-aqn"/>
+                    <constraint firstAttribute="bottom" secondItem="bPe-x7-z8e" secondAttribute="bottom" id="kTJ-dy-u00"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bagHeart" destination="TPJ-MJ-IlD" id="by0-6U-HzI"/>
+                <outlet property="goShoppingButton" destination="dOd-fK-cAh" id="Hb0-yT-9Vn"/>
+                <outlet property="goShoppingButtonLeadingSpace" destination="aCe-PM-NL3" id="r7o-1c-hsk"/>
+                <outlet property="goShoppingButtonTrailingSpace" destination="Qn4-eZ-Smb" id="PdG-on-jSi"/>
+                <outlet property="noItemsInstructionsLabel" destination="zJz-Hu-4zB" id="1WT-i6-MNf"/>
+                <outlet property="noItemsLabel" destination="ZTu-1e-MUq" id="Rp9-9F-k42"/>
+                <outlet property="textToGotShoppingButtonDistance" destination="0sW-y2-mph" id="KdC-0I-6kW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

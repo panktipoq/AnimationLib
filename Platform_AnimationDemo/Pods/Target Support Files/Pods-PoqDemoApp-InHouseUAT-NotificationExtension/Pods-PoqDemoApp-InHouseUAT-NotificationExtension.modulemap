@@ -1,0 +1,6 @@
+framework module Pods_PoqDemoApp_InHouseUAT_NotificationExtension {
+  umbrella header "Pods-PoqDemoApp-InHouseUAT-NotificationExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

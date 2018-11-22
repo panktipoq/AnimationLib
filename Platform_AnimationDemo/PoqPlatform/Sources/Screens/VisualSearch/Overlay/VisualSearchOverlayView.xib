@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VisualSearchOverlayView" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visual_search_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-ww-HqX">
+                    <rect key="frame" x="0.0" y="64" width="1024" height="1366"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visual Search is here!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5z-iG-Dy5">
+                    <rect key="frame" x="511.5" y="104" width="448.5" height="52.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="44"/>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bu-g2-yuA">
+                    <rect key="frame" x="511.5" y="164.5" width="447" height="105"/>
+                    <string key="text">Snap or upload a picture of 
+your favourite outfit to find our
+similar items</string>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2Bu-g2-yuA" firstAttribute="centerX" secondItem="n5z-iG-Dy5" secondAttribute="centerX" id="7NK-K8-eFA"/>
+                <constraint firstItem="Yjg-ww-HqX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="E7v-QO-kda"/>
+                <constraint firstItem="2Bu-g2-yuA" firstAttribute="top" secondItem="n5z-iG-Dy5" secondAttribute="bottom" constant="8" id="RQO-KM-gux"/>
+                <constraint firstItem="n5z-iG-Dy5" firstAttribute="top" secondItem="Yjg-ww-HqX" secondAttribute="top" constant="40" id="UdC-tU-25K"/>
+                <constraint firstItem="2Bu-g2-yuA" firstAttribute="leading" secondItem="n5z-iG-Dy5" secondAttribute="leading" id="ZJA-pW-R97"/>
+                <constraint firstItem="Yjg-ww-HqX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fNL-k4-meY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n5z-iG-Dy5" secondAttribute="trailing" constant="64" id="nIz-iC-xxi"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="Yjg-ww-HqX" id="BUq-1v-uyX"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="visual_search_onboarding" width="1024" height="1366"/>
+    </resources>
+</document>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseSameAddressTableViewCell" customModule="BlueInc" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SRt-cn-Wt5" customClass="CheckoutSameAddressTableViewCell" customModule="BlueInc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRt-cn-Wt5" id="KKQ-Bd-8JQ">
+                <frame key="frameInset" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Use same as billing address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="0En-6a-CPB">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5oR-s1-FeG">
+                        <connections>
+                            <action selector="switchValueChange:" destination="SRt-cn-Wt5" eventType="valueChanged" id="mU0-xb-F5R"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5oR-s1-FeG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0En-6a-CPB" secondAttribute="trailing" constant="8" id="EtL-bO-acz"/>
+                    <constraint firstItem="0En-6a-CPB" firstAttribute="leading" secondItem="KKQ-Bd-8JQ" secondAttribute="leading" constant="15" id="JhP-LQ-A5c"/>
+                    <constraint firstAttribute="centerY" secondItem="5oR-s1-FeG" secondAttribute="centerY" id="cad-m1-asM"/>
+                    <constraint firstAttribute="centerY" secondItem="0En-6a-CPB" secondAttribute="centerY" id="cza-PN-jWu"/>
+                    <constraint firstAttribute="trailing" secondItem="5oR-s1-FeG" secondAttribute="trailing" constant="8" id="xSY-5d-JlN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="title" destination="0En-6a-CPB" id="e7V-bD-Va8"/>
+                <outlet property="useSameAddressSwitch" destination="5oR-s1-FeG" id="4Rh-ww-Pyv"/>
+            </connections>
+            <point key="canvasLocation" x="334" y="30"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckoutBagViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="applePayButtonContainer" destination="VYI-As-J1o" id="JXI-YP-0rB"/>
+                <outlet property="applePayButtonWidthAvailableConstraint" destination="7I7-Vz-6Cv" id="KEl-e0-S6b"/>
+                <outlet property="applePayButtonWidthUnavailableConstraint" destination="JCC-we-7pu" id="8rS-i5-WDU"/>
+                <outlet property="applyVoucherHeight" destination="RJy-wU-sKz" id="fZR-jS-xDx"/>
+                <outlet property="checkoutButton" destination="Jbw-xe-rJi" id="Pm6-Jh-6Ho"/>
+                <outlet property="itemsLabel" destination="z8q-L5-Rpb" id="2hu-Ke-Adt"/>
+                <outlet property="payButtonsContainerView" destination="Mlv-H6-4ci" id="JIz-iG-yja"/>
+                <outlet property="payWithCard" destination="jiu-yA-4Lf" id="8jt-y8-Fr9"/>
+                <outlet property="tableView" destination="eKd-gc-niV" id="OXU-CU-azd"/>
+                <outlet property="totalInfoPanelHeight" destination="lsT-zY-0z3" id="qVs-yp-Yk5"/>
+                <outlet property="totalLabel" destination="Mgp-oT-LMu" id="CDk-4D-Z5A"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gWS-bT-wcT"/>
+                <outlet property="voucherAmountLabel" destination="vA8-MR-Wfz" id="cgV-Ml-xB0"/>
+                <outlet property="voucherCodeLabel" destination="Mtg-zI-yp1" id="lFU-cG-5WZ"/>
+                <outlet property="voucherPanel" destination="afU-Yp-0S4" id="jnK-mU-qDV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eKd-gc-niV">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="446"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MaP-9h-TTM"/>
+                        <outlet property="delegate" destination="-1" id="gzJ-b2-6an"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmt-5N-q9W">
+                    <rect key="frame" x="0.0" y="446" width="600" height="154"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afU-Yp-0S4" userLabel="Apply Voucher" customClass="AddVoucherView" customModule="PoqPlatform" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-9q-R2k" userLabel="Top Ruler">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="S4L-fA-zPN"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA8-MR-Wfz" userLabel="Voucher amount label">
+                                    <rect key="frame" x="551" y="0.0" width="0.0" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHH-mM-SF9" customClass="DisclosureIndicator" customModule="PoqPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="573" y="13" width="10" height="18"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="6EJ-gX-j65"/>
+                                        <constraint firstAttribute="height" constant="18" id="Itj-KP-Jdy"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-ky-Kyk" userLabel="Close Button" customClass="CloseButton" customModule="PoqPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="556" y="0.0" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="BJ6-Ji-dWy"/>
+                                    </constraints>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voucher Code and Student Discount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-zI-yp1" userLabel="Voucher Code Label">
+                                    <rect key="frame" x="10" y="0.0" width="546" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="rm9-ky-Kyk" secondAttribute="bottom" id="3eT-Wr-Hup"/>
+                                <constraint firstItem="Mtg-zI-yp1" firstAttribute="centerY" secondItem="afU-Yp-0S4" secondAttribute="centerY" id="6gM-1w-j9e"/>
+                                <constraint firstItem="rm9-ky-Kyk" firstAttribute="leading" secondItem="Mtg-zI-yp1" secondAttribute="trailing" id="AU7-Iq-qaT"/>
+                                <constraint firstItem="rHH-mM-SF9" firstAttribute="centerY" secondItem="afU-Yp-0S4" secondAttribute="centerY" id="CHr-WA-BUq"/>
+                                <constraint firstItem="rm9-ky-Kyk" firstAttribute="leading" secondItem="vA8-MR-Wfz" secondAttribute="trailing" constant="5" id="Pdg-Nf-GzD"/>
+                                <constraint firstAttribute="height" constant="44" id="RJy-wU-sKz"/>
+                                <constraint firstAttribute="trailing" secondItem="rm9-ky-Kyk" secondAttribute="trailing" id="SAn-Pl-123"/>
+                                <constraint firstItem="vA8-MR-Wfz" firstAttribute="height" secondItem="afU-Yp-0S4" secondAttribute="height" id="aOS-wi-4pr"/>
+                                <constraint firstItem="Mtg-zI-yp1" firstAttribute="leading" secondItem="afU-Yp-0S4" secondAttribute="leading" constant="10" id="aOa-fQ-WPk"/>
+                                <constraint firstItem="rm9-ky-Kyk" firstAttribute="top" secondItem="afU-Yp-0S4" secondAttribute="top" id="pMH-i5-IPy"/>
+                                <constraint firstAttribute="trailing" secondItem="rHH-mM-SF9" secondAttribute="trailing" constant="17" id="qcC-mS-pzD"/>
+                                <constraint firstItem="vA8-MR-Wfz" firstAttribute="centerY" secondItem="afU-Yp-0S4" secondAttribute="centerY" id="qzL-sD-Ddh"/>
+                                <constraint firstItem="Mtg-zI-yp1" firstAttribute="height" secondItem="afU-Yp-0S4" secondAttribute="height" id="v8v-Tl-ttJ"/>
+                                <constraint firstItem="XPG-9q-R2k" firstAttribute="top" secondItem="afU-Yp-0S4" secondAttribute="top" id="vom-jp-2eJ"/>
+                                <constraint firstAttribute="trailing" secondItem="XPG-9q-R2k" secondAttribute="trailing" id="xN7-hD-eaY"/>
+                                <constraint firstItem="XPG-9q-R2k" firstAttribute="leading" secondItem="afU-Yp-0S4" secondAttribute="leading" id="y9t-Xg-GjA"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="addVoucherButton" destination="rHH-mM-SF9" id="HTP-P8-MNu"/>
+                                <outlet property="closeButton" destination="rm9-ky-Kyk" id="3Qh-ET-zuo"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sS-tB-cfW" userLabel="Total and Checkout Buttons View">
+                            <rect key="frame" x="0.0" y="44" width="600" height="110"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivl-Yy-xQv" userLabel="Top Line">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="QMU-Dh-HWA"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: £ 0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgp-oT-LMu" userLabel="Total Label">
+                                    <rect key="frame" x="464" y="13" width="126" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="a3I-GT-wgY"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="a3I-GT-wgY"/>
+                                        </mask>
+                                    </variation>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbw-xe-rJi" userLabel="Secure Checkout" customClass="CheckoutButton" customModule="PoqPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="51" width="584" height="44"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="X1Z-Ea-83F"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="checkoutButtonClicked:" destination="-1" eventType="touchUpInside" id="F4X-gs-Ub2"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlv-H6-4ci" userLabel="Buttons container">
+                                    <rect key="frame" x="8" y="51" width="584" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiu-yA-4Lf" userLabel="Pay With Card Button" customClass="BlackButton" customModule="PoqPlatform" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="284" height="44"/>
+                                            <connections>
+                                                <action selector="blackButtonClicked:" destination="-1" eventType="touchUpInside" id="BOR-ji-APF"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYI-As-J1o" userLabel="Apple Pay Button Container">
+                                            <rect key="frame" x="284" y="0.0" width="300" height="44"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" id="JCC-we-7pu"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="JCC-we-7pu"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="VYI-As-J1o" secondAttribute="bottom" id="5wU-MM-nZ5"/>
+                                        <constraint firstItem="VYI-As-J1o" firstAttribute="width" secondItem="Mlv-H6-4ci" secondAttribute="width" multiplier="0.5" constant="8" id="7I7-Vz-6Cv"/>
+                                        <constraint firstItem="jiu-yA-4Lf" firstAttribute="leading" secondItem="Mlv-H6-4ci" secondAttribute="leading" id="PGF-gx-Ukn"/>
+                                        <constraint firstItem="jiu-yA-4Lf" firstAttribute="trailing" secondItem="VYI-As-J1o" secondAttribute="leading" id="aAL-Xl-zDB"/>
+                                        <constraint firstItem="jiu-yA-4Lf" firstAttribute="top" secondItem="Mlv-H6-4ci" secondAttribute="top" id="iDJ-d8-9Mb"/>
+                                        <constraint firstAttribute="height" constant="44" id="mId-l2-hEe"/>
+                                        <constraint firstItem="VYI-As-J1o" firstAttribute="top" secondItem="Mlv-H6-4ci" secondAttribute="top" id="nCr-Z5-S6L"/>
+                                        <constraint firstAttribute="trailing" secondItem="VYI-As-J1o" secondAttribute="trailing" id="qBK-7u-JMb"/>
+                                        <constraint firstAttribute="bottom" secondItem="jiu-yA-4Lf" secondAttribute="bottom" id="syy-Fh-Exe"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 items" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-L5-Rpb" userLabel="Items Label">
+                                    <rect key="frame" x="10" y="20" width="56.5" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="288" id="0AU-9o-Gpo"/>
+                                        <constraint firstAttribute="height" constant="21" id="1Ze-Wz-i5G"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="0AU-9o-Gpo"/>
+                                            <exclude reference="1Ze-Wz-i5G"/>
+                                        </mask>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Ivl-Yy-xQv" firstAttribute="leading" secondItem="1sS-tB-cfW" secondAttribute="leading" id="2D6-cU-loK"/>
+                                <constraint firstItem="Mlv-H6-4ci" firstAttribute="top" secondItem="1sS-tB-cfW" secondAttribute="top" constant="51" id="5T5-Qe-Lln"/>
+                                <constraint firstItem="z8q-L5-Rpb" firstAttribute="top" secondItem="Ivl-Yy-xQv" secondAttribute="bottom" constant="19" id="AdO-fp-yyg"/>
+                                <constraint firstItem="Mgp-oT-LMu" firstAttribute="top" secondItem="1sS-tB-cfW" secondAttribute="top" constant="13" id="Cq5-UX-mtw"/>
+                                <constraint firstItem="z8q-L5-Rpb" firstAttribute="leading" secondItem="1sS-tB-cfW" secondAttribute="leading" constant="10" id="G0d-ZK-jr5"/>
+                                <constraint firstItem="Ivl-Yy-xQv" firstAttribute="top" secondItem="1sS-tB-cfW" secondAttribute="top" id="QEW-vr-4A1"/>
+                                <constraint firstItem="Mlv-H6-4ci" firstAttribute="leading" secondItem="1sS-tB-cfW" secondAttribute="leading" constant="8" id="SYv-Pa-Qjj"/>
+                                <constraint firstItem="Jbw-xe-rJi" firstAttribute="leading" secondItem="1sS-tB-cfW" secondAttribute="leading" constant="8" id="YBR-60-Vc4"/>
+                                <constraint firstItem="Jbw-xe-rJi" firstAttribute="top" secondItem="Mgp-oT-LMu" secondAttribute="bottom" constant="15" id="ccU-3t-7SJ"/>
+                                <constraint firstItem="z8q-L5-Rpb" firstAttribute="bottom" secondItem="Mgp-oT-LMu" secondAttribute="bottom" id="gPW-Dz-bdr"/>
+                                <constraint firstItem="Jbw-xe-rJi" firstAttribute="top" secondItem="1sS-tB-cfW" secondAttribute="top" constant="51" id="ixR-n7-b9c"/>
+                                <constraint firstAttribute="trailing" secondItem="Jbw-xe-rJi" secondAttribute="trailing" constant="8" id="mr6-RJ-s4l"/>
+                                <constraint firstAttribute="trailing" secondItem="Ivl-Yy-xQv" secondAttribute="trailing" id="pRT-U8-rx2"/>
+                                <constraint firstAttribute="trailing" secondItem="Mlv-H6-4ci" secondAttribute="trailing" constant="8" id="tD0-8k-sFt"/>
+                                <constraint firstAttribute="trailing" secondItem="Mgp-oT-LMu" secondAttribute="trailing" constant="10" id="voU-64-X2f"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="1sS-tB-cfW" firstAttribute="leading" secondItem="Xmt-5N-q9W" secondAttribute="leading" id="7th-Kz-r6W"/>
+                        <constraint firstItem="afU-Yp-0S4" firstAttribute="leading" secondItem="Xmt-5N-q9W" secondAttribute="leading" id="DPU-jU-k4V"/>
+                        <constraint firstAttribute="bottom" secondItem="1sS-tB-cfW" secondAttribute="bottom" id="GsC-xM-tVh"/>
+                        <constraint firstItem="afU-Yp-0S4" firstAttribute="top" secondItem="Xmt-5N-q9W" secondAttribute="top" id="IoL-gO-ckt"/>
+                        <constraint firstAttribute="trailing" secondItem="1sS-tB-cfW" secondAttribute="trailing" id="Mlz-cS-skk"/>
+                        <constraint firstAttribute="trailing" secondItem="afU-Yp-0S4" secondAttribute="trailing" id="Swf-d6-5sI"/>
+                        <constraint firstItem="1sS-tB-cfW" firstAttribute="top" secondItem="afU-Yp-0S4" secondAttribute="bottom" id="dYk-T2-kxg"/>
+                        <constraint firstAttribute="height" constant="154" id="lsT-zY-0z3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eKd-gc-niV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="30S-NN-9e5"/>
+                <constraint firstItem="Xmt-5N-q9W" firstAttribute="top" secondItem="eKd-gc-niV" secondAttribute="bottom" id="8Ui-qq-kiq"/>
+                <constraint firstAttribute="trailing" secondItem="eKd-gc-niV" secondAttribute="trailing" id="G8c-bq-COx"/>
+                <constraint firstAttribute="bottom" secondItem="Xmt-5N-q9W" secondAttribute="bottom" id="N5e-C1-0JW"/>
+                <constraint firstAttribute="trailing" secondItem="Xmt-5N-q9W" secondAttribute="trailing" id="Qfi-Ba-Fai"/>
+                <constraint firstItem="eKd-gc-niV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Z3n-sl-Bo2"/>
+                <constraint firstItem="Xmt-5N-q9W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sT6-Vo-8lY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

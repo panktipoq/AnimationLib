@@ -1,0 +1,6 @@
+{
+  "message": "No products founds.\nPlease try again with a different image.",
+  "errorMessage": null,
+  "statusCode": 400,
+  "success": false
+} 

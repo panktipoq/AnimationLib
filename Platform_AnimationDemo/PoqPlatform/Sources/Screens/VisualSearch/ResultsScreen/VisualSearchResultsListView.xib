@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VisualSearchResultsListViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="l2t-mX-8EP" id="vie-1O-zBw"/>
+                <outlet property="noSearchResultsView" destination="Q33-A6-Lh8" id="Two-y1-3Fn"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Tan-h2-m6e"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="l2t-mX-8EP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="wVv-oZ-qOJ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="x5C-HV-IUb"/>
+                        <outlet property="delegate" destination="-1" id="RGC-5U-PO3"/>
+                    </connections>
+                </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q33-A6-Lh8" userLabel="No Search Results">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <viewLayoutGuide key="safeArea" id="fuz-ZZ-9X6"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="l2t-mX-8EP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1fb-20-GYN"/>
+                <constraint firstItem="Q33-A6-Lh8" firstAttribute="top" secondItem="l2t-mX-8EP" secondAttribute="top" id="AdV-sQ-7Yq"/>
+                <constraint firstItem="l2t-mX-8EP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Hc2-3A-7SI"/>
+                <constraint firstItem="l2t-mX-8EP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ZE1-DL-2Ec"/>
+                <constraint firstItem="Q33-A6-Lh8" firstAttribute="leading" secondItem="l2t-mX-8EP" secondAttribute="leading" id="d4X-zu-ogu"/>
+                <constraint firstItem="l2t-mX-8EP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kZg-pj-hFg"/>
+                <constraint firstItem="Q33-A6-Lh8" firstAttribute="trailing" secondItem="l2t-mX-8EP" secondAttribute="trailing" id="phK-7h-b2q"/>
+                <constraint firstItem="Q33-A6-Lh8" firstAttribute="bottom" secondItem="l2t-mX-8EP" secondAttribute="bottom" id="whX-MT-Ag2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

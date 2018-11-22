@@ -1,0 +1,651 @@
+#!/usr/bin/env ruby
+
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/docs
+# All available actions: https://github.com/fastlane/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# By default, fastlane will send which actions are used
+# No personal data is shared, more information on https://github.com/fastlane/enhancer
+# Uncomment the following line to opt out
+# opt_out_usage
+
+# If you want to automatically update fastlane if a new version is available:
+# Issue with doing this is the Permissions ERROR so fastlane should be updated manually on Jenkins slaves.
+# - Have also tried with rvm and rbenv which works fine on the slave but will require a work around for Jenkins as it doesnt use the .bash_profile...
+# update_fastlane
+
+ENV["FASTLANE_HIDE_CHANGELOG"] = "1"
+ENV["FASTLANE_SKIP_UPDATE_CHECK"] = "1"
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.46.0"
+default_platform :ios
+skip_docs
+
+before_all do
+    ENV["FASTLANE_XCODE_LIST_TIMEOUT"] = "30"
+
+    configure_environment
+end
+
+desc "The most important function to override and set defaults for 'POQ_{VAR}' environment variables."
+lane :configure_environment do
+    ENV["POQ_WORKSPACE"] = "Poq.iOS.Platform.xcworkspace"
+    ENV["POQ_PROJECT"] = "Poq.iOS.Platform.xcodeproj"
+    ENV["POQ_SCHEME"] = "PoqDemoApp"
+end
+
+desc "Handles general options by turning them into environment variables."
+lane :parse_options do |options|
+    scheme = ENV["POQ_SCHEME"]
+    puts "Found scheme named: #{scheme}"
+    target = options[:target]
+    puts "Found target named: #{target}"
+    scheme = target if target
+
+    # There should always be a scheme otherwise whats the point?
+    if scheme.to_s.empty?
+        raise "No target specified please call this lane using 'fastlane {lane} target:{target}'."
+    end
+
+    puts "Using scheme named: #{scheme}"
+    ENV["POQ_SCHEME"] = scheme
+end
+
+desc "Generates and builds this repo's app."
+lane :build_app do |options|
+    parse_options(options)
+    generate
+    build
+end
+
+desc "Generate's builds and runs all tests on this repo's app."
+lane :test_app do |options|
+    parse_options(options)
+    generate
+    build_for_testing
+    test
+end
+
+desc "Generates, signs, archives and deploys the app to fabric."
+lane :fabric_app do |options|
+    parse_options(options)
+    generate
+    archive
+    upload_fabric
+end
+
+desc "Generates the project files, runs cocoapods, and generates the user scheme."
+lane :generate do
+    project = ENV["POQ_PROJECT"]
+
+    # Move up out of the fastlane directory.
+    Dir.chdir("..") do
+        # Remove all existing workspaces and projects.
+        FileUtils.rm_rf(Dir.glob(["./*.xcodeproj", "./*.xcworkspace"]))
+
+        # Generate the project using gyp.
+        if project == "Poq.iOS.Platform.xcodeproj"
+            # If the project is the platform then we will generate here.
+            sh "./Generation/Scripts/GenerateProject.command"
+        else
+            # If the project is not the platform then we assume that platform is in its normal location.
+            Dir.chdir("Poq.iOS.Platform") do
+                # Remove any existing workspaces, projects and wrongly placed pods.
+                FileUtils.rm_rf(Dir.glob(["./*.xcodeproj", "./*.xcworkspace", "./Pods/"]))
+
+                # Generate the platform project first.
+                sh "./Generation/Scripts/GenerateProject.command --gyp_folder ../gyp"
+                
+                # Correct schemes inside platform project file.
+                schemes(project: "Poq.iOS.Platform.xcodeproj", order: 0)
+                update_build_number(project: "Poq.iOS.Platform.xcodeproj")
+            end
+
+            # Generate the client project next.
+            sh "./Poq.iOS.Platform/Generation/Scripts/GenerateProject.command"
+        end
+
+        # Correct schemes inside current project file. I use 100 as the start for clients because we will never have 100 platform targets.
+        schemes(project: ENV["POQ_PROJECT"], order: 100)
+        update_build_number(project: ENV["POQ_PROJECT"])
+
+        # Finally install or update the pods.
+        begin
+            unless Dir.exists?("./Pods")
+                puts "Updating cocoapods specs..."
+                sh "pod repo update"
+            end
+
+            puts "Installing pods..."
+            sh "pod install"
+        rescue
+            begin
+                puts "Pod install failed, falling back to pod repo update and install..."
+                sh "pod repo update"
+
+                puts "Installing pods..."
+                sh "pod install"
+            rescue
+                puts "Pod repo update and install failed, falling back to pod update..."
+                sh "pod update"
+            end
+        end
+
+        # FIXME: The line below should be remove as soon as we remove REALM cocoapod from our project. The problem is defined here https://github.com/realm/realm-cocoa/issues/5840
+        sh "chmod 666 Pods/Realm/include/RLMPlatform.h"
+    end
+
+    # Sign the project unless we skip signing.
+    if ENV["POQ_SKIP_SIGNING"] != 'true'
+        begin
+            sign
+        rescue
+            sign(readonly: 'false') if prompt(text: "Would you like to try updating the certificates with an admin account through the apple developer portal?", boolean: true)
+        end
+    end
+end
+
+desc "Shares and corrects schemes for Jenkins and the everyone else. Call with option 'project:{project_path}'.'"
+lane :schemes do |options|
+    project_path = options[:project]
+    order_hint = options[:order]
+
+    fastlane_require 'xcodeproj'
+
+    # Next we will start using ruby with xcodeproj to fix the scan scheme.
+    project = Xcodeproj::Project.open(project_path)
+
+    # Running recreate_user_schemes doesnt work with aggregate targets, so we remove them.
+    puts "Removing aggregate targets"
+    project.targets.each do |target|
+        if target.is_a?(Xcodeproj::Project::Object::PBXAggregateTarget)
+            target.remove_from_project
+        end
+    end
+    project.save
+
+    puts "Removing existing user schemes" # Remove all previous user schemes (we will handle the regeneration ourselves).
+    user_schemes_dir = Xcodeproj::XCScheme.user_data_dir(project_path)
+    FileUtils.rm_rf(user_schemes_dir)
+    FileUtils.mkdir_p(user_schemes_dir)
+
+    # Create the xcschememanagement plist hash to suppress xcode auto scheme creation. 
+    scheme_list = Hash.new
+    scheme_list["SchemeUserState"] = Hash.new
+    scheme_list["SuppressBuildableAutocreation"] = Hash.new
+
+    puts "Generating shared schemes"
+    project.native_targets.each do |target|
+        if target.test_target_type?
+            next
+        end
+
+        # Move the user scheme to the xcshareddata folder - making it shared.
+        scheme_name = target.name
+
+        # Open the scheme to begin linking the test targets.
+        scheme_path = Xcodeproj::XCScheme.shared_data_dir(project_path) + "#{scheme_name}.xcscheme"
+        scheme = Xcodeproj::XCScheme.new
+        scheme.configure_with_targets(target, nil)
+        scheme.test_action.code_coverage_enabled = true
+
+        # Suppress generation of this target scheme.
+        scheme_list["SuppressBuildableAutocreation"][target.uuid] = Hash.new
+        scheme_list["SuppressBuildableAutocreation"][target.uuid]["primary"] = true
+
+        # Set ordering of target in list (useful for keeping platform at one end).
+        if !order_hint.nil?
+            scheme_list["SchemeUserState"]["#{scheme_name}.xcscheme_^#shared#^_"] = Hash.new
+            scheme_list["SchemeUserState"]["#{scheme_name}.xcscheme_^#shared#^_"]["orderHint"] = order_hint
+            order_hint += 1
+        end
+
+        # Now try to fix the target scheme by checking its dependant targets for tests and linking them.
+        dependants = project.host_targets_for_embedded_target(target)
+        if dependants.any?
+            puts "Linking test target schemes to '#{scheme_name}'"
+
+            # Fix the scheme by adding its test targets to it.
+            dependants.each do |dependant|
+                if dependant.test_target_type?
+                    scheme.configure_with_targets(nil, dependant)
+                end
+            end
+
+            # Make sure the scheme's test action is not using launch args.
+            scheme.test_action.should_use_launch_scheme_args_env = false
+
+            # Create the standard test action environment variables.
+            variables = scheme.test_action.environment_variables
+            variables.assign_variable({ key: "IS_TESTING", value: "YES" })
+            variables.assign_variable({ key: "BASE_URL", value: "http://localhost:50100" })
+
+            # Add the test action environment variables to the test action.
+            scheme.test_action.environment_variables = variables
+        end
+
+        # Save the fixed scheme ready for building and testing.
+        scheme.save_as(project_path, scheme_name)
+    end
+
+    # Save the xcschememanagement plist to stop xcode from recreating the user schemes.
+    scheme_list_path = user_schemes_dir + "xcschememanagement.plist"
+    Xcodeproj::Plist.write_to_path(scheme_list, scheme_list_path)
+end
+
+desc "Code signs the scheme with the correct certificate and provisioning profile. You should send appstore:true for an appstore build."
+lane :sign do |options|
+    project_path = "../" + ENV["POQ_PROJECT"]
+    readonly = options[:readonly] == 'false' ? false : true
+
+    # Defined block for reuse later which loops over only relevant targets and returns info.
+    # Reasoning: This whole function is split into two loops through because we can call match the least this way...
+    # Instead of for each profile in a single loop (which is a pain when asking non-readonly apple id input).
+    def for_each_target(project)
+        project.native_targets.each do |target|
+            next if target.test_target_type?
+    
+            # Get the build config and skip those that do not need signing.
+            build_configuration = target.build_configurations.first
+            next if build_configuration.build_settings['CODE_SIGN_IDENTITY'] == ''
+
+            # Get the team_id and skip those without one.
+            team_id = build_configuration.build_settings['DEVELOPMENT_TEAM']
+            next if team_id.nil? || team_id.empty?
+
+            # By default we use enterprise certificates unless the title has AppStore or Adhoc in it.
+            type = target.name.match(/.*AppStore.*/) ? 'appstore' : 'enterprise'
+            type = 'adhoc' if target.name.match(/.*AdHoc.*/)
+
+            bundle_id = build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
+
+            yield(target, team_id, type, bundle_id)
+        end
+    end
+
+    project = Xcodeproj::Project.open(project_path)
+
+    # Build the list of identifiers by type and team_id.
+    identifiers = Hash.new
+    for_each_target(project) do |target, team_id, type, bundle_id|
+        identifiers[team_id] = Hash.new if identifiers[team_id].nil?
+        identifiers[team_id][type] = Array.new if identifiers[team_id][type].nil?
+        identifiers[team_id][type] << bundle_id
+    end
+
+    # Fills the match git url if its not already been filled.
+    # Maybe this customization is a bit over the top but developers are all different, and clients are all different.
+    if ENV["MATCH_GIT_URL"].nil?
+        # Set the most correct github connection to the repo...
+        use_ssh = !sh("git remote -v").include?("https://")
+        use_ssh = true unless ENV["POQ_USE_SSH"].nil?
+
+        # Allow a way to customise the match repo location for github repos...
+        github_location = ENV["MATCH_GITHUB_LOCATION"]
+        github_location = 'poqcommerce/Poq.iOS.Certificates.git' if github_location.nil?
+        ENV["MATCH_GIT_URL"] = "https://github.com/#{github_location}"
+        ENV["MATCH_GIT_URL"] = "git@github.com:#{github_location}" if use_ssh
+    end
+
+    # Fix the certificates an provisioning profiles locally (or if not readonly everywhere).
+    identifiers.each do |team_id, types|
+        types.each do |type, app_ids|
+            match(
+                git_branch: team_id,
+                type: type,
+                app_identifier: app_ids,
+                team_id: team_id,
+                readonly: readonly
+            )
+        end
+    end
+
+    # Sets the provisioning profile into all build configurations.
+    for_each_target(project) do |target, team_id, type, bundle_id|
+        profile_name = ENV["sigh_#{bundle_id}_#{type}_profile-name"]
+        target.build_configuration_list.set_setting('PROVISIONING_PROFILE_SPECIFIER', profile_name)
+    end
+
+    puts "Installing provisioning profiles..."
+    project.save
+end
+
+desc "Updates the build number of the project file. In a client the build number is '{platform_version}.{commit_count}' otherwise '{commit_count}.'"
+lane :update_build_number do |options|
+    build_number = sh("git rev-list HEAD --count")
+    build_number = "0" if build_number.nil?
+    build_number = build_number.strip
+
+    project_path = options[:project] || ENV["POQ_PROJECT"]
+    project = Xcodeproj::Project.open(project_path)
+
+    if project_path != "Poq.iOS.Platform.xcodeproj"
+        File.open('Poq.iOS.Platform/Poq.iOS.Platform.gyp') do |file|
+            file.each_line do |line|
+                line_matches = line.match(/'(.*)'.*'(.*)'/)
+                next if line_matches.nil?
+
+                key, value = line_matches.captures
+                next if key != "version"
+                break if value.nil?
+
+                build_number = "#{value}.#{build_number}"
+                break
+            end
+        end
+    end
+    
+    puts "POQ_BUILD_NUMBER set to #{build_number}"
+    project.build_configuration_list.set_setting('POQ_BUILD_NUMBER', build_number)
+    project.save
+end
+
+desc "Updates the version number and/or build number to the numbers sent through with `version_number:` or `build_number:`."
+lane :update_version do |options|
+    parse_options(options)
+
+    build_number = options[:build_number]
+    version_number = options[:version_number]
+
+    if build_number.to_s.empty? && version_number.to_s.empty?
+        puts "No build_number or version_number passed as options. Please specify either. Skipping!"
+        next
+    end
+
+    update_info_plist(
+        xcodeproj: ENV["POQ_PROJECT"],
+        scheme: ENV["POQ_SCHEME"],
+        block: lambda { |plist|
+            plist["CFBundleVersion"] = build_number if build_number
+            plist["CFBundleShortVersionString"] = version_number if version_number
+        }
+    )
+end
+
+desc "Creates a changelog.txt file in the fastlane folder. You should pass start_commit:{sha}. You can pass max_chars:{int>3} to this to limit the change log."
+lane :changelog do |options|
+    start_commit = options[:start_commit]
+    between = start_commit ? [start_commit, 'HEAD'] : nil
+
+    # Here we use fastlane's changelog_from.. to grab the first line of commits between two SHAs.
+    # Use https://git-scm.com/docs/pretty-formats as a reference.
+    changes = changelog_from_git_commits(
+        between: between,
+        pretty: 'format:| [%cd] | %h | %b | %cn |',
+        date_format: 'short',
+        merge_commit_filtering: 'only_include_merges'
+    )
+    changes = "" if changes.nil?
+
+    # If this is not the platform then we also want to get the platform's changes...
+    project = ENV["POQ_PROJECT"]
+    if project != "Poq.iOS.Platform.xcodeproj"
+        # So we use the client's start commit's platform as the platform's start commit.
+        last_platform_commit = Actions.sh("git rev-parse #{start_commit}:Poq.iOS.Platform", log: false)
+
+        puts "Running same command to generate platform changelog..."
+        Dir.chdir("../Poq.iOS.Platform") do
+            # Then we just run the same lane but in the platform's repo to create it's changelog file.
+            sh "fastlane changelog start_commit:#{last_platform_commit}"
+
+            puts "Merging platform changelog into clients changelog..."
+            platform_changes = File.read("Fastlane/changelog.txt")
+            unless platform_changes.to_s.strip.empty?
+                changes << "\n\n----- Poq.iOS.Platform -----\n\n"
+                changes << platform_changes
+            end
+        end
+    end
+
+    # Limit the changelog to the max_chars if there is one and its greater than 3 (to append ...).
+    character_limit = options[:max_chars].to_i
+    if character_limit > 3 && changes.length > character_limit
+        puts "Changelog will be sliced to character limit of #{character_limit}."
+
+        changes = changes.slice(0, character_limit - 3)
+        changes << "..."
+    end
+
+    # Finally we are done so save the full changelog to a file.
+    puts "Writing changelog to Fastlane/changelog.txt."
+    File.write("changelog.txt", changes)
+end
+
+desc "Builds a specified scheme within a specified workspace."
+lane :build do |options|
+    parse_options(options)
+    xcodebuild(
+        workspace: ENV["POQ_WORKSPACE"],
+        scheme: ENV["POQ_SCHEME"],
+        destination: "generic/platform=iOS",
+        clean: true,
+        build: true,
+        parallelize_targets: true,
+        build_settings: {
+            "CODE_SIGNING_REQUIRED" => "NO",
+            "CODE_SIGN_IDENTITY" => ""
+        }
+    )
+end
+
+desc "Builds a specified scheme within a specified workspace for testing without actually testing it."
+lane :build_for_testing do |options|
+    parse_options(options)
+    scan(
+        workspace: ENV["POQ_WORKSPACE"], 
+        scheme: ENV["POQ_SCHEME"], 
+        clean: true, 
+        skip_build: true, 
+        build_for_testing: true,
+        skip_slack: true
+    )
+end
+
+desc "Tests a specified scheme within a specified workspace without building it first. It should already be built."
+lane :test do |options|
+    parse_options(options)
+    scan(
+        workspace: ENV["POQ_WORKSPACE"], 
+        scheme: ENV["POQ_SCHEME"], 
+        skip_build: true, 
+        test_without_building: true,
+        skip_slack: true
+    )
+end
+
+desc "Builds a specified scheme within a specified workspace for calabash."
+lane :build_calabash_simulator do |options|
+    parse_options(options)
+    xcodebuild(
+        workspace: ENV["POQ_WORKSPACE"],
+        scheme: ENV["POQ_SCHEME"],
+        configuration: "Calabash",
+        destination: "generic/platform=iOS",
+        clean: true,
+        build: true,
+        parallelize_targets: true,
+        build_settings: {
+            "CODE_SIGNING_REQUIRED" => "NO",
+            "CODE_SIGN_IDENTITY" => "",
+            "CONFIGURATION_BUILD_DIR" => "#{Dir.pwd}/build/calabash"
+        }
+    )
+end
+
+desc "Tests the existing calabash app, found in the 'Fastlane/build/calabash' directory, which should have been created previously using 'build_calabash_simulator'."
+lane :test_calabash_simulator do |options|
+    features = options[:features].split(',').map do |feature|
+        "features/#{feature}/"
+    end
+
+    tags = options[:tags].split(',').map do |tag|
+        "@#{tag}"
+    end
+    
+    calabash_command = "cucumber -p ios"
+    calabash_command << " #{features.join(" ")}" if features.any?
+    calabash_command << " #{tags.join(" ")}" if tags.any?
+
+    Dir.chdir("build/calabash") do
+        sh calabash_command
+    end
+end
+
+desc "Archives the target scheme (app) ready for calabash testing on a device - the target MUST be an enterprise (InHouse) target."
+lane :build_calabash_device do |options|
+    parse_options(options)
+
+    team_id = development_team
+    if team_id != "DK34MVSU63"
+        raise "The target's team id is not the enterprise team - you cannot use a non-enterprise target for calabash."
+    end
+
+    gym(
+        workspace: ENV["POQ_WORKSPACE"],
+        scheme: ENV["POQ_SCHEME"],
+        configuration: "Calabash",
+        output_directory: "#{Dir.pwd}/build/calabash",
+        output_name: "Calabash",
+        export_method: 'enterprise',
+        include_symbols: true,
+        clean: true
+    )
+end
+
+# desc "Tests the calabash archive on a physical device and with the feature set or tags sent with 'features:f1,f2... tags:tag1,tag2'."
+desc "Currently this only install's the calabash ipa file to the device using cfgutil."
+lane :test_calabash_device do |options|
+    sh "cfgutil install-app #{Dir.pwd}/build/calabash/Calabash.ipa"
+
+    # TODO: Figure out how to automatically retreive the device uuid and device ip address.
+    # ----- Important! Below implementation will work but is missing some last steps.
+
+    # bundle_id = bundle_identifier
+    
+    # Turn feature comma separated string into array of features relative testable features.
+    # features = options[:features].split(',').map do |feature|
+    #     "features/#{feature}/"
+    # end
+
+    # Turn tag comma separated string into array of tags with @ prefix.
+    # tags = options[:tags].split(',').map do |tag|
+    #     "@#{tag}"
+    # end
+
+    # BUNDLE_ID={bundle_id} DEVICE_TARGET={device_uuid} DEVICE_ENDPOINT=http://{device_ip_address}:37265 cucumber -p ios
+    # calabash_command = "BUNDLE_ID=#{bundle_id} cucumber -p ios"
+    # calabash_command << " #{features.join(" ")}" if features.any?
+    # calabash_command << " #{tags.join(" ")}" if tags.any?
+    # sh calabash_command
+end
+
+desc "Does a static analysis of the project. Configured by the options in .swiftlint.yml"
+lane :lint do
+	swiftlint(
+		mode: :lint,
+		output_file: 'Fastlane/report_swiftlint.txt',
+ 		config_file: 'Fastlane/.swiftlint.yml',
+        executable: 'Pods/SwiftLint/swiftlint'
+	)
+end
+
+# Returns the value for the desired build setting from the current scheme.
+def value_for_build_setting(key)
+    project_path = "../" + ENV["POQ_PROJECT"]
+    scheme_name = ENV["POQ_SCHEME"]
+
+    project = Xcodeproj::Project.open(project_path)
+    target = project.native_targets.find { |target| target.name == scheme_name }
+
+    build_configuration = target.build_configurations.first
+    build_configuration.build_settings[key]
+end
+
+# Returns the bundle identifier for the current scheme.
+def bundle_identifier
+    value_for_build_setting('PRODUCT_BUNDLE_IDENTIFIER')
+end
+
+# Returns the development team for the current scheme.
+def development_team
+    value_for_build_setting('DEVELOPMENT_TEAM')
+end
+
+desc "Archives the target scheme (app) ready for deployment. You should send appstore:true for an appstore build."
+lane :archive do |options|
+    parse_options(options)
+
+    method = 'enterprise'
+
+    if options[:appstore]
+        method = 'app-store'
+        team_id = development_team
+
+        if team_id == "DK34MVSU63"
+            raise "The target's team id is within the enterprise team - you cannot deploy this to testflight."
+        end
+    end
+
+    gym(
+        workspace: ENV["POQ_WORKSPACE"],
+        scheme: ENV["POQ_SCHEME"],
+        output_directory: "./Fastlane/build",
+        export_method: method,
+        include_symbols: true,
+        clean: true
+    )
+end
+
+desc "Uploads the ipa file generated with fastlane to fabric (should be in Fastlane/build). For the changelog you should pass start_commit:{sha}"
+lane :upload_fabric do |options|
+    parse_options(options)
+
+    notes_path = options[:notes_path]
+    skip_changelog = options[:skip_changelog]
+    if notes_path.nil? && (skip_changelog.nil? || skip_changelog == 'false')
+        # Forward options including max chars t ocreate changelog.
+        options[:max_chars] = 10000
+        changelog(options)
+
+        # Set notes path to the correct value if there is one.
+        notes_path = './Fastlane/changelog.txt' if File.file?('./Fastlane/changelog.txt')
+    end
+
+    scheme_name = ENV["POQ_SCHEME"]
+    puts "Attempting to upload #{scheme_name} to Fabric..."
+
+    ipa_path = options[:ipa_path]
+    ipa_path = "./Fastlane/build/#{scheme_name}.ipa" unless ipa_path
+
+    crashlytics(
+        ipa_path: ipa_path,
+        api_token: value_for_build_setting('FABRIC_API_KEY'),
+        build_secret: value_for_build_setting('FABRIC_API_SECRET'),
+        notes_path: notes_path
+    )
+end
+
+desc "Uploads the ipa file generated with fastlane to testflight (should be in Fastlane/build)."
+lane :upload_appstore do |options|
+    parse_options(options)
+
+    scheme_name = ENV["POQ_SCHEME"]
+    bundle_id = bundle_identifier
+    team_id = development_team
+
+    pilot(
+        app_identifier: bundle_id,
+        team_id: team_id,
+        ipa: "./Fastlane/build/#{scheme_name}.ipa",
+        skip_waiting_for_build_processing: true
+    )
+end
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/docs/Platforms.md
+# All available actions: https://github.com/fastlane/fastlane/blob/master/docs/Actions.md

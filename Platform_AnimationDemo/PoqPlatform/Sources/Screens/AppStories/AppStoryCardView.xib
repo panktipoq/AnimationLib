@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppStoryCardViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="gifView" destination="qxq-12-zEW" id="7XS-Nj-Yvh"/>
+                <outlet property="imageView" destination="pEl-lJ-uTg" id="P1V-RS-Xka"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qxq-12-zEW" userLabel="Gif View" customClass="PoqGifImageView" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-lJ-uTg" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pEl-lJ-uTg" secondAttribute="bottom" id="2FH-Li-H5W"/>
+                <constraint firstAttribute="bottom" secondItem="qxq-12-zEW" secondAttribute="bottom" id="KZI-mu-1dQ"/>
+                <constraint firstAttribute="trailing" secondItem="qxq-12-zEW" secondAttribute="trailing" id="YL8-q2-xz7"/>
+                <constraint firstAttribute="trailing" secondItem="pEl-lJ-uTg" secondAttribute="trailing" id="iV5-Qm-TlR"/>
+                <constraint firstItem="pEl-lJ-uTg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nEz-vr-BJY"/>
+                <constraint firstItem="pEl-lJ-uTg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sqb-Zd-36I"/>
+                <constraint firstItem="qxq-12-zEW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t3l-ft-9fU"/>
+                <constraint firstItem="qxq-12-zEW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yYW-5I-hOO"/>
+            </constraints>
+            <point key="canvasLocation" x="56" y="89"/>
+        </view>
+    </objects>
+</document>

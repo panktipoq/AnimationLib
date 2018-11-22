@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="94Z-sL-1rx" customClass="PoqProductLinkContentBlockView" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMj-zh-5SQ" customClass="DisclosureIndicator" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="344" y="15.5" width="11" height="19"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="11" id="GIn-Z6-aEX"/>
+                            <constraint firstAttribute="height" constant="19" id="QUA-sB-7ib"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="50" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vO0-xU-Jbz">
+                        <rect key="frame" x="16" y="0.0" width="42" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="50" id="o7N-gL-ajU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZF-EV-uao">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <connections>
+                            <action selector="linkTapped:" destination="94Z-sL-1rx" eventType="touchUpInside" id="kb2-0K-jLz"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88h-le-UGl" userLabel="Separator" customClass="SolidLine" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="49" width="375" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" placeholder="YES" id="MYq-vu-DyM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dZF-EV-uao" firstAttribute="top" secondItem="94Z-sL-1rx" secondAttribute="top" id="267-Wo-edE"/>
+                <constraint firstItem="88h-le-UGl" firstAttribute="leading" secondItem="94Z-sL-1rx" secondAttribute="leading" id="3yf-Nv-igS"/>
+                <constraint firstAttribute="trailing" secondItem="88h-le-UGl" secondAttribute="trailing" id="475-xU-QRb"/>
+                <constraint firstItem="sMj-zh-5SQ" firstAttribute="centerY" secondItem="vO0-xU-Jbz" secondAttribute="centerY" id="7iX-9Y-prI"/>
+                <constraint firstAttribute="bottom" secondItem="88h-le-UGl" secondAttribute="bottom" id="CJT-IQ-fSA"/>
+                <constraint firstAttribute="trailing" secondItem="sMj-zh-5SQ" secondAttribute="trailing" constant="20" id="Msi-KC-qMe"/>
+                <constraint firstItem="dZF-EV-uao" firstAttribute="leading" secondItem="94Z-sL-1rx" secondAttribute="leading" id="N72-8J-cxY"/>
+                <constraint firstAttribute="bottom" secondItem="vO0-xU-Jbz" secondAttribute="bottom" id="QHk-QT-zFy"/>
+                <constraint firstItem="vO0-xU-Jbz" firstAttribute="top" secondItem="94Z-sL-1rx" secondAttribute="top" id="XOb-7n-tKr"/>
+                <constraint firstAttribute="trailing" secondItem="dZF-EV-uao" secondAttribute="trailing" id="ZJr-HS-ENe"/>
+                <constraint firstItem="vO0-xU-Jbz" firstAttribute="leading" secondItem="94Z-sL-1rx" secondAttribute="leading" constant="16" id="gDm-Hw-gCX"/>
+                <constraint firstAttribute="bottom" secondItem="dZF-EV-uao" secondAttribute="bottom" id="tQU-tu-XUL"/>
+            </constraints>
+            <connections>
+                <outlet property="linkButton" destination="dZF-EV-uao" id="mU9-OX-hK2"/>
+                <outlet property="linkLabel" destination="vO0-xU-Jbz" id="Ix0-Q4-dtj"/>
+                <outlet property="separator" destination="88h-le-UGl" id="Tak-Iv-omI"/>
+            </connections>
+            <point key="canvasLocation" x="-2.5" y="-7"/>
+        </collectionViewCell>
+    </objects>
+</document>

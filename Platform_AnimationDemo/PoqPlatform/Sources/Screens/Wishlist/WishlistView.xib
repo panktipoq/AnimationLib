@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WishlistViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="clearAllButton" destination="bVf-mh-qZ0" id="lbv-38-z0A"/>
+                <outlet property="countLabel" destination="357-7d-4B4" id="KP0-EZ-xaz"/>
+                <outlet property="itemsSummaryHeight" destination="VB8-lc-1l5" id="pFB-hh-SLJ"/>
+                <outlet property="separationLine" destination="BeT-8I-AHR" id="1bS-Yp-AiE"/>
+                <outlet property="toolbarView" destination="qo5-Q1-ogc" id="nhf-n2-xDL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ryI-Nn-zNl"/>
+                <outlet property="wishlistTable" destination="P9H-UK-vqi" id="Aeq-ec-VYp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-Q1-ogc">
+                    <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-8I-AHR">
+                            <rect key="frame" x="0.0" y="28.5" width="375" height="0.5"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="8ST-H3-Ker"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="357-7d-4B4">
+                            <rect key="frame" x="8" y="4" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="DbX-Ba-aHE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVf-mh-qZ0">
+                            <rect key="frame" x="310" y="0.0" width="57" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="bON-0T-lCf"/>
+                                <constraint firstAttribute="width" constant="73" id="hqa-eJ-QlK"/>
+                            </constraints>
+                            <state key="normal" title="Clear All">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="hqa-eJ-QlK"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="clearAllItems:" destination="-1" eventType="touchUpInside" id="cZB-vF-5xf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="357-7d-4B4" firstAttribute="leading" secondItem="qo5-Q1-ogc" secondAttribute="leading" constant="8" id="1Fu-N2-8RY"/>
+                        <constraint firstItem="357-7d-4B4" firstAttribute="top" secondItem="qo5-Q1-ogc" secondAttribute="top" constant="4" id="Cyw-U1-jpi"/>
+                        <constraint firstAttribute="trailing" secondItem="bVf-mh-qZ0" secondAttribute="trailing" constant="8" id="G6C-3v-R2s"/>
+                        <constraint firstAttribute="bottom" secondItem="BeT-8I-AHR" secondAttribute="bottom" id="OuQ-8L-QUK"/>
+                        <constraint firstItem="bVf-mh-qZ0" firstAttribute="top" secondItem="qo5-Q1-ogc" secondAttribute="top" id="RvH-vI-B8Q"/>
+                        <constraint firstAttribute="height" constant="29" id="VB8-lc-1l5"/>
+                        <constraint firstItem="BeT-8I-AHR" firstAttribute="leading" secondItem="qo5-Q1-ogc" secondAttribute="leading" id="i1F-qI-rcn"/>
+                        <constraint firstAttribute="width" constant="600" id="nTD-Lt-ElH"/>
+                        <constraint firstAttribute="trailing" secondItem="BeT-8I-AHR" secondAttribute="trailing" id="sgV-Wa-EvJ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="nTD-Lt-ElH"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="P9H-UK-vqi">
+                    <rect key="frame" x="0.0" y="93" width="375" height="574"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LWs-uV-mIr"/>
+                        <outlet property="delegate" destination="-1" id="74j-Ge-mCN"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qo5-Q1-ogc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4kO-xw-9Eo"/>
+                <constraint firstAttribute="trailing" secondItem="qo5-Q1-ogc" secondAttribute="trailing" id="EtC-1B-sk6"/>
+                <constraint firstItem="qo5-Q1-ogc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" priority="800" id="Vpk-Rz-dAh"/>
+                <constraint firstItem="P9H-UK-vqi" firstAttribute="top" secondItem="qo5-Q1-ogc" secondAttribute="bottom" id="dee-nd-s7g"/>
+                <constraint firstAttribute="trailing" secondItem="P9H-UK-vqi" secondAttribute="trailing" id="jsf-Sk-xin"/>
+                <constraint firstItem="P9H-UK-vqi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nIw-x7-ZsD"/>
+                <constraint firstAttribute="bottom" secondItem="P9H-UK-vqi" secondAttribute="bottom" id="yNz-W2-CuC"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="-144" y="-109"/>
+        </view>
+    </objects>
+</document>

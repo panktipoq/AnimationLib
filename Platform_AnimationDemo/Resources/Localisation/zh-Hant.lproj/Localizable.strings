@@ -1,0 +1,460 @@
+/*
+   Localizable.strings
+   Poq_App_Base
+ 
+   Created by Jun Seki on 13/07/2014.
+   Copyright (c) 2014 Poq. All rights reserved.
+ */
+
+
+//"KEY" = "CONTENT";
+//tabs
+"HOME"="主頁";
+"SHOP"="購物";
+"LIKES"="喜歡";
+"WISHLIST"="收藏";
+"STORES"="商店";
+"SCAN"="掃描";
+"BAG"="購物車";
+"MORE"="更多";
+"YOU"="我的";
+
+"DELIVERY_TYPE" = "delivery";
+"CLICK_AND_COLLECT" = "click & collect";
+"CLICK_AND_COLLECT_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_SELECT" = "Select";
+
+//basics:
+"OK"="確認";
+"CANCEL"="取消";
+"ERROR"="錯誤";
+"SUCCESSFUL"="成功!";
+"NEXT"="下一個";
+"DONE"="完成";
+"LOADING"="加載中...";
+"WISH"="喜歡";
+"LOVES"="喜歡";
+"SUBMIT"="提交";
+"LOGOUT"="登出";
+"COLOUR"="Colour";
+
+///bag
+"GO_TO_BAG"="去購物車";
+"EDIT"="編輯";
+"Edit"="編輯";
+"DONE"="完成";
+"NUMBER_ITEMS"="共 %d 件";
+
+//STORE
+"STORE FINDER"="附近的商店";
+"CALL"="電話詢問";
+"DIRECTIONS"="顯示方向";
+"Directions"="顯示方向";
+"OPENING_HOURS"="營業時間：";
+
+"MONDAY"="星期一";
+"TUESDAY"="星期二";
+"WEDNESDAY"="星期三";
+"THURSDAY"="星期四";
+"FRIDAY"="星期五";
+"SATURDAY"="星期六";
+"SUNDAY"="星期日";
+
+"Monday"="星期一";
+"Tuesday"="星期二";
+"Wednesday"="星期三";
+"Thursday"="星期四";
+"Friday"="星期五";
+"Saturday"="星期六";
+"Sunday"="星期日";
+
+"AVAILABLE_IN_STORE"="店內有售";
+"NOT_AVAILABLE_IN_STORE"="店內無貨";
+"IN_STORE_AVAILABILITY"="查詢店內";
+"IN_STORE_AVAILABILITY_OFF"="無法獲得店內信息";
+"CHECK_IN_STORE_AVAILABILITY_OFF"="查詢店內庫存";
+"DESCRIPTION"="商品詳情";
+"Description"="商品詳情";
+"DELIVERY"="郵寄";
+"RETURNS"="退還";
+"SIZE_GUIDE"="尺碼";
+"LEAVING_THE_APP"="離開應用";
+"LEAVING_THE_APP_GETTING_DIRECTIONS"="您確定要打開導航，離開應用嗎？";
+"GET_DIRECTIONS"="導航";
+"NEARBY"="附近";
+"MAP"="地圖";
+"NEAR_ME"="我的附近";
+"BY_NAME"="店名";
+"MAPS"="地圖";
+"MILES"="Miles";
+"FAVO​​URITE_STORE"="喜愛的商店";
+"CALL_THIS_STORE"="致電詢問 ";
+"STORE_DIRECTIONS"="商店方向";
+"OPEN_TODAY"="今日營業時間: ";
+"AVAILABLE_AT_OUR_STORE"="在 %@ 商店有售";
+"SIZE_AVAILABLE_AT_STORE"="號碼%@ 在%@ 商店有售";
+"UNAVAILABLE_AT_STORE"=" %@ 商店已售完";
+"SIZE_UNAVAILABLE_STORE_SELECT_STORE"="號碼%@ 在%@ 商店已售完. 請選擇另外一家.";
+"SET_FAVOURITE"="Set favourite";
+
+//refresh
+"PULL_TO_REFRESH" = "下拉可更新...";
+"RELEASE_TO_REFRESH" = "鬆開可更新...";
+
+//MARK: - PLP
+"FEATURED" = "推薦";
+"Featured"="推薦";
+"NEWEST" = "最新";
+"Newest"="最新";
+"RATING" = "好評";
+"Rating"="好評";
+"PRICE_DOWN" = "價格 ↓";
+"PRICE_UP" = "價格 ↑";
+"Price_Down"="價格 ↓";
+"Price_Up"="價格 ↑";
+
+//MARK: - FILTERS
+"REFINE" = "篩選";
+"Refine" = "篩選";
+"FILTERS" = "篩選";
+"COLOUR" = "顏色";
+"SIZE" = "尺寸";
+"BRAND" = "品牌";
+"STYLE" = "樣式";
+"CATEGORY" = "分類";
+"FILTER_RESULTS" = "篩選結果";
+"FILTER_OPTIONS" = "篩選選項";
+
+//User login in/registration:
+"REGISTER"="註冊";
+"SIGN_UP"="註冊";
+"SUBMIT"="提交";
+"SIGN_IN"="登入";
+"SIGN_INTO"="登入 \n";
+"LOGIN"="登錄";
+"LOGOUT"="登出";
+"LOGGED_OUT"="退出";
+"FORGOT_PASSWORD"="忘記密碼";
+"TERMS_CONDITIONS"="服務條款";
+"LOGIN_REGISTER_TO_LIKE"="請先登錄／註冊才能加入收藏。";
+"LOGIN_REGISTER_TO_CONTINUE"="請先登錄／註冊後再繼續。";
+"LOGGED_OUT_TEXT"="已經成功退出您的賬戶。";
+"LOGIN_ERROR"="密碼或用戶名錯誤，請重新再試。";
+"LOGIN_FAILED"="登錄失敗";
+"BAG_MERGED"="我們發現您已有貨物在其他購物車內，我們將合併您的貨物";
+"CUSTOMER_RECOGNITION_NUMBER"="會員卡號";
+
+//SIGN UP
+"YOUR_ACCOUNT"="您的帳戶";
+"FIRSTNAME"="名*";
+"LASTNAME"="姓*";
+"EMAIL"="郵箱地址*";
+"PASSWORD"="密碼*";
+"GENDER"="性別*";
+"FEMALE"="女士";
+"MALE" ="男士";
+"SHOW"="顯示";
+"HIDE"="隱藏";
+"SEND_ME_PROMOTIONS"="同意House of Fraser 發送給我促銷";
+"MASTERCARD_OPTION"="我已經有會員卡";
+"OPT_OUT_OPTION"="You can opt out of having a Recognition Reward Account at any time, just call Customer Services";
+
+//my profile
+"UNLOCK_FEATURES"="開始使用這些功能";
+"GO_SHOPPING_NOW"="開始購物";
+
+// My profile section titles
+"SHOW_AT_THE_TILL_POINTS" = "請出示會員碼來獲得積分";
+"MY_FAVOURITE_STORE" = "我的商店";
+"SAVED_SIZES" = "選擇的尺寸";
+"HISTORY" = "歷史";
+"DISCOVER_MORE_ABOUT_RECOGNITION" = "由此獲得更多會員優惠";
+"IM_NEW" = "我是新人";
+"BACK_TO_TOP" = "回到頂部";
+
+// My profile size links
+"MAN" = "男士";
+"WOMAN" = "女士";
+"KIDS" = "兒童";
+
+// My profile - recently reviewed
+"RECENTLY_VIEWED_ITEMS" = "最近瀏覽記錄";
+"CLEAR_RECENTLY_VIEWED_ITEMS"="清除最近瀏覽記錄";
+"CLEAR_CONFIRMATTION"="您確定要清除瀏覽記錄?";
+"NO_RECENTLY_VIEWED_ITEMS"="沒有最近瀏覽記錄";
+
+//MARK: - order history
+"NUMBER_ORDER"="%d 個訂單";
+"NUMBER_ORDERS"="%d 個訂單";
+"YOUR_ORDER_HISTORY" = "訂單歷史";
+"YOUR_ORDER_SUMMARY"="訂單預覽";
+"ORDER_NUMBER"="訂單號碼:";
+"ORDER_DATE"="訂單日期";
+"ORDER_TOTAL"="訂單總額";
+"DELIVERY_OPTION"="郵寄選項";
+"PAYMENT_METHOD"="付款方式";
+"DELIVERED_TO"="寄送至:";
+"SUB_TOTAL"="小計";
+"POST_PACKAGING"="Post & Packaging";
+"Total"="總計";
+"Total:"="總計:";
+"ORDER_HISTORY_EMPTY"="無​​訂單歷史紀錄";
+
+//MARK: - My profile other text
+"WELCOME"="歡迎";
+"WELCOME_TO_YOUR"="歡迎來到你的";
+"BIRTHDAY_DOUBLE_POINTS"="Birthday Double Points? Add your date of birth";
+"KEEP_SCROLLING_DO​​WN"="Keep scrolling down";
+"SIGN_IN_TO"="Sign in to";
+"COLLECT_POINTS"="Collect Points* and enjoy fuss-free checkout";
+"OTHER_GREAT_FEATURES"="You'll also have access to these other great features";
+"ADD_YOUR_FAVOURITE_STORE"="Add your favourite store";
+"VIEW_STOCK_AVAILABILITY_OPENING_TIMES"="View stock availability and opening times";
+"MAKE_MONEY_WHILE_YOU_SHOP"="MAKE MONEY WHILE YOU SHOP";
+"START_COLLECTING_POINTS"="Start collecting points with a House of Fraser Virtual Recognition Card";
+"COLLECT_RECOGNITION_POINTS"="Collect Recognition Points when you sign in or sign up*";
+"DATA_CORRECT_YESTERDAY"="Data correct as of yesterday";
+"REWARD_DUE_TO_EXPIRE_ON"="%@%@ Reward due to expire on %@.\n All data correct as of yesterday";
+"GOT_REWARD_CARD"="Got a plastic Reward Card?";
+"LINK_PLASTIC_REWARD_CARD"="Link your plastic Reward Card to your Recognition Account";
+"BE_YOU_NO_MATTER"="Be you no matter who with House of Fraser";
+"ACCESS_TO_ALL_FEATURES"="You now have access to all the great features below";
+"YOUR_RECOGNITION_DASHBOARD"="YOUR RECOGNITION REWARD ACCOUNT DASHBOARD";
+"EXCLUDES_RECOGNITION_CARD"="This excludes Recognition MasterCard and Account Card";
+"YOU_HAVE"="YOU HAVE";
+"YOUR_REWARD"="YOUR REWARD";
+"TO_SPEND"="TO SPEND";
+
+//Error message:
+"HOME_CONNECTION_ERROR"="網路不給力.\n請下拉刷新.";
+"TRY_AGAIN"="請稍後再試試.";
+"CONNECTION_ERROR"="網路不給力";
+"UNABLE_TO_CONNECT" = "網絡不給力，無法連接，請稍後再試。";
+"SESSION_ERROR"="發生錯誤";
+"INVALID_SESSION"="請再次登陸";
+"SOMETHING_WENT_WRONG"="出錯啦";
+"FACEBOOK_ERROR"="臉書錯誤";
+"MAIL_SENDING_FAILED"="郵件發送錯誤";
+"NO_ACTIVE_EMAIL"="沒有發現郵箱";
+"UNABLE_TO_SYNC_WISH"="同步收藏錯誤，請再次登入。";
+"UNABLE_TO_SYNC_BAG"="同步購物車錯誤，請再次登入。";
+"UNABLE_TO_ADD_TO_BAG"="加入購物車錯誤，請稍後再試。";
+"NO_NETWORK_CONNECTION"="網絡不給力";
+"NO_NETWORK_CONNECTION_MSG"="無法連接，請稍後再試";
+
+//share options
+"FACEBOOK"="臉書";
+"TWITTER"="推特";
+"PINTEREST"="Pinterest";
+"SAVE_PICTURE"="保存圖片";
+"E-MAIL_FRIEND"="發送給朋友";
+"LOOK_WHAT_I_FOUND_ON %@ app! \n%@ "="分享給你一個我在%@ 發現的寶貝\n%@ ";
+
+//success message
+"TWITTER_CONFIRMATION"="分享成功";
+"IMAGE_SAVED_TITLE"="保存圖片";
+"IMAGE_SAVED_CONFIRMATION"="圖片保存成功";
+"SHARING_CONFIRMATION"="分享成功!";
+"MAIL_SENT_CONFIRMATION"="郵件成功發送";
+
+//barcode scanner
+"LINK_FOUND"="發現物品";
+"OPEN_LINK"="打開連接";
+"CONTINUE"="繼續";
+"SCAN_CODE"="掃一掃";
+"ENTER_CODE"="輸入條形碼";
+"SCAN_TOP_TEXT"="將二維碼／條碼放入框內，即可自動掃描.";
+"SCAN_BOTTOM_TEXT"="點擊屏幕對焦";
+"ENTER_THE_CODE_HERE"="請在此輸入號碼";
+"ENTER_CODE_MANUALLY"="Enter code manually";
+"ALIGN_BARCODE"="Align barcode within the arrows";
+"ENSURE_BARCODE"="Ensure barcode is upright and avoid any shadows or glare";
+
+//Products related
+"SHOP_IT"="相關商品";
+"SHARE"="分享";
+"LIKE"="喜歡";
+"BUY"="立即購買";
+
+"SELECT_SIZE"="請選擇尺碼:";
+"ONE_SIZE"="均碼";
+"OUT_OF_STOCK"="沒貨了";
+"SOLD_OUT"="搶光了";
+"PDP_Sold_Out"="搶光了";
+
+//MARK: Review
+"RATINGS_REVIEWS"="Ratings & Reviews";
+
+//MARK: - search
+"SEARCH_KEYWORD"="搜索品牌或者關鍵詞";
+"SEARCH_ALL_PRODUCTS"="請輸入要搜索的關鍵字";
+"SEARCH_IN"="搜索";
+"CLEAR"="清除";
+"YOUR_SEARCH_HISTORY"="你的搜索記錄";
+"NO_SEARCH_HISTORY"="沒有你的搜索記錄";
+"NO_SEARCH_RESULTS_FOUND"="沒有發現任何結果";
+
+
+"WISH_NO_ITEMS"="還沒有收藏任何物品";
+"WISH_NO_ITEMS_INSTRUCTIONS"="喜歡這個物品? 點擊愛心加入收藏";
+"BAG_REMOVE_ITEMS %@"="您確定要刪除 %@ ?";
+"BAG_NO_ITEMS"="您的購物車裡什麼都沒有";
+"BAG_NO_ITEMS_INSTRUCTIONS"="點​​擊以下開始在House of Fraser 購物";
+"ADD_TO_BAG"="加入購物車";
+"ADDED_TO_BAG"="已加入購物車";
+"BAG_OUT_OF_STOCK"="Product is out of stock";
+"BAG_ITEM_UNAVAILABLE"="Requested amount is not available";
+"BAG_ITEM_INFO_UNAVAILABLE" = "Product Information is not available";
+
+"NO_RESULTS"="暫無內容";
+"NO_RESULTS_FOUND"="沒有搜索結果";
+"NO_RESULTS_FOUND_FOR \n \"%@\"."="沒有發現任何有關\n \"%@\" 的.";
+"NO_RESULTS_FOUND_IN \"%@\"."="在\"%@\" 裡沒有發現相關. \n\n 請按“搜索”繼續.";
+
+
+//checkout
+"PHONE"="電話號碼";
+"ADDRESS"="地址";
+"CITY"="城市";
+"COUNTY"="省市";
+"POST_CODE"="郵編";
+"COUNTRY"="國際";
+
+
+"CONTACT_DETAILS"="聯繫方式";
+"TOTAL"="總計";
+"TOTAL_AMOUNT"="總額:";
+"SECURE_CHECKOUT"="安全付款";
+"Secure_Checkout"="安全付款";
+"NEXT_STEP"="下一步";
+"BILLING_ADDRESS"="付款地址";
+"DELIVERY_ADDRESS"="郵寄地址";
+"OR_STATE_PROVINCE"="或者省市";
+"OR_ZIP_CODE"="或者郵編";
+"SAME_ADDRESS"="發送到同一地點";
+
+"CHECKOUT_SECURELY"="安全付款";
+
+// Availability
+"IN_STORE_AVAILABILITY"="查看店內庫存";
+"IN_STORE_AVAILABILITY_TITLE"="請選擇您的尺寸和商店";
+"IN_STORE_AVAILABILITY_DESCRIPTION"="查詢您的貨物在商店內的庫存";
+"IN_STORE_SIZE"="尺寸";
+"IN_STORE_STORE"="商店";
+"IN_STORE_SELECT_SIZE"="請選擇尺碼";
+"IN_STORE_SELECT_STORE"="請選擇商店";
+
+"BUY_COLLECT"="取貨";
+"HOME_DELIVERY"="英國 & 愛爾蘭 送貨";
+"INTERNATIONAL_DELIVERY"="國際郵寄";
+
+"PLEASE_CORRECT"="請更正:";
+"ENTER_FIRSTNAME"="請更正您的名字.";
+"ENTER_LASTNAME"="請更正您的姓氏.";
+"ENTER_TELEPHONE"="請更正您的手機號碼.";
+"ENTER_VALID_EMAIL"="請輸入有效的郵箱地址.";
+"ENTER_PASSWORD" ="請輸入密碼.";
+"ENTER_VALID_PASSWORD" ="至少8位字母和1位數字";
+
+"ENTER_BILLING_ADDRESS"="請輸入您的付款地址.";
+"ENTER_CITY"="請輸入您的付款城市.";
+"ENTER_COUNTY"="請輸入您的付款省市.";
+"ENTER_POSTCODE"="請輸入您的付款郵編.";
+"ENTER_COUNTRY"="請輸入您的付款國家.";
+
+"ENTER_DELIVERY_FIRSTNAME"="請輸入您的收件人名字.";
+"ENTER_DELIVERY_LASTNAME"="請輸入您的收件人姓氏.";
+"ENTER_DELIVERY_TELEPHONE"="請輸入您的收件人電話號碼";
+"ENTER_DELIVERY_ADDRESS"="請輸入您的收件人地址.";
+"ENTER_DELIVERY_CITY"="請輸入您的收件人城市.";
+"ENTER_DELIVERY_POSTCODE"="請輸入您的收件人郵編.";
+"ENTER_DELIVERY_COUNTRY"="請輸入您的收件人名字國家.";
+
+
+//SCANNER
+"CAMERA"="相機";
+
+
+// NETWORK TASK
+"NO_RESULTS_FOUND_FOR_YOUR_REQUEST"="沒有發現任何結果";
+
+// ALERT
+"CONFIRMATION"="確認";
+"CLEAR_ALL_WISHLIST_ITEMS"="您確定要清除所有的收藏？";
+
+// My Sizes
+"MY_SIZES_MY_MEASUREMENTS"="我的尺寸";
+"MY_SIZES_HIS_MEASUREMENTS"="他的尺寸";
+"MY_SIZES_HER_MEASUREMENTS"="她的尺寸";
+"MY_SIZES_LITTLE_ONE_MEASUREMENTS"="兒童的尺寸";
+"MY_SIZES_MANS_MEASUREMENTS"="男士的尺寸";
+"MY_SIZES_WOMAN_MEASUREMENTS"="女士的尺寸";
+"MY_SIZES_KIDS_MEASUREMENTS"="兒童的尺寸";
+"MY_SIZES_ENTER_IN_YOUR_MEASUREMENTS"="請輸入您的尺寸號碼";
+"MY_SIZES_TOPS"="上衣";
+"MY_SIZES_BOTTOMS"="下衣";
+"MY_SIZES_SHOES"="鞋";
+"MY_SIZES_BRA"="文胸";
+"MY_SIZES_BRA_BACK"="胸圍";
+"MY_SIZES_BRA_CUP"="罩杯";
+"MY_SIZES_NO_SIZE_SELECTED"="沒有任何選擇";
+"SIZES" = "号码";
+
+// Edit Profile
+"UPDATE_YOUR_DETAILS"="更新您的資料";
+"DOB"="出生日期";
+"MANAGE_MY_ADDRESS"="管理地址簿";
+"REGISTER_REPLACEMENT_REWARD_CARD"="註冊／更換會員卡";
+"PLEASE_SELECT_ONE"="請選擇";
+"SUCCESSFULLY_UPDATED"="更新成功.";
+"VIEW_MY_PROFILE"="查看我的資料";
+"DO_YOU_WANT_TO_LOG_OUT"="您確定要登出?";
+"ARE_YOU_SURE"="您確定";
+"MANAGE_YOUR_DETAILS"="Manage your details here - Date of Birth can only be updated once";
+
+// PRODUCT LIST FILTERS
+"CLEAR_SELECTED_FILTERS"="清除已選";
+"CLEAR_CURRENT_VIEW"="清除當頁";
+"CLEAR_ALL"="清除所有選項";
+"EMAIL_IN_USE"="郵箱已經被使用";
+"PLEASE_SIGN_IN_TO_YOUR_ACCOUNT"="請登入您的賬戶";
+"CLEAR_ALL_FILTERS" = "清除所有選項";
+"MOST_RECENT" = "最新上架";
+
+//Order list
+"CLICK_BELOW"="點擊以下開始在House of Fraser 購物";
+// LOOKBOOK
+"LOOKBOOK_SHOP_BUTTON" = "購買樣式";
+"LOOKBOOK_HIDE_BUTTON" = "隱藏";
+
+
+// Sign up
+"GENDER_REQUIRED" = "請輸入性別";
+"USERNAME_ALREADY_USE"="Username is already in use";
+
+// WEBVIEW
+"PLEASE_WAIT" = "我們正在處理您的信息，請稍後";
+"WEBVIEW_LOADING" = "加載中...";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT" = "您確定要離開付款?";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_YES" = "確認";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_NO" = "取消";
+
+"FAILED_TO_LOGIN" = "登入失敗";
+"UNAUTORIZED_ACCESS" = "訪問錯誤";
+"WRONG_USERNAME_OR_PASSWORD" = "用戶名／密碼​​錯誤";
+"DISMISS" = "跳過";
+"FAILED_TO_SIGN_UP" = "註冊失敗";
+
+"iRateMessageTitle" = "為“%@”評分";
+"iRateAppMessage" = "如果您覺得“%@”很好用，可否為其評一個分數？評分過程只需花費很少的時間。感謝您的支持！";
+"iRateCancelButton" = "不了，謝謝";
+"iRateRateButton" = "現在去評分";
+"iRateRemindButton" = "稍後再說";
+
+// MARK: Native Checkout
+"CHECKOUT_PAYMENT_STEP_FIRST_LINE" = "Payment & Billing";
+"CHECKOUT_DELIVERY_STEP_FIRST_LINE" = "Delivery";
+"CHECKOUT_BILLING_STEP_FIRST_LINE" = "Billing address";
+"CHECKOUT_DELIVERY_OPTIONS_STEP_FIRST_LINE" = "Delivery service";
+

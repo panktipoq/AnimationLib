@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AppStoryCarouselCardCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="525" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="525" height="188"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="948-M0-S7b" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="8" width="525" height="172"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-Sv-945" userLabel="Unviewed Label Container">
+                        <rect key="frame" x="3" y="11" width="52" height="25"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV9-DP-nbS" userLabel="Unviewed Label Container">
+                                <rect key="frame" x="5" y="2" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sV9-DP-nbS" secondAttribute="bottom" constant="2" id="7yk-x2-EYL"/>
+                            <constraint firstItem="sV9-DP-nbS" firstAttribute="leading" secondItem="HRV-Sv-945" secondAttribute="leading" constant="5" id="Ccf-vT-qJn"/>
+                            <constraint firstItem="sV9-DP-nbS" firstAttribute="top" secondItem="HRV-Sv-945" secondAttribute="top" constant="2" id="JHC-d0-aQv"/>
+                            <constraint firstAttribute="trailing" secondItem="sV9-DP-nbS" secondAttribute="trailing" constant="5" id="zkH-1l-PAa"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="HRV-Sv-945" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="1UY-fD-0Hc"/>
+                <constraint firstItem="HRV-Sv-945" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="11" id="KHI-jQ-2dg"/>
+                <constraint firstItem="948-M0-S7b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Uvu-dn-SUi"/>
+                <constraint firstItem="948-M0-S7b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="YCf-H0-qQ9"/>
+                <constraint firstAttribute="trailing" secondItem="948-M0-S7b" secondAttribute="trailing" id="dbl-BK-chO"/>
+                <constraint firstAttribute="bottom" secondItem="948-M0-S7b" secondAttribute="bottom" constant="8" id="za2-Oy-C88"/>
+            </constraints>
+            <size key="customSize" width="525" height="188"/>
+            <connections>
+                <outlet property="imageView" destination="948-M0-S7b" id="llG-gJ-lk0"/>
+                <outlet property="unviewedStoryLabel" destination="sV9-DP-nbS" id="B9P-6W-Cdl"/>
+                <outlet property="unviewedStoryLabelContainer" destination="HRV-Sv-945" id="YnM-Pu-2of"/>
+            </connections>
+            <point key="canvasLocation" x="71.5" y="16"/>
+        </collectionViewCell>
+    </objects>
+</document>

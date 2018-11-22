@@ -1,0 +1,14 @@
+{
+"cartId": "testCart",
+"cartItems": [
+],
+"total": {
+    "now": 0.00,
+    "nowFormatted": "$0.00",
+    "was": null,
+    "wasFormatted": null,
+    "currencySymbol": "$",
+    "currencyCode": "USD"
+}
+}
+

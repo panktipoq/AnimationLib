@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductSizeSelectionViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="sizeSelectorBottomConstraint" destination="3Fr-l7-RyH" id="ZWO-24-09h"/>
+                <outlet property="sizeSelectorContainer" destination="1MH-IB-ltp" id="t9I-xg-CxI"/>
+                <outlet property="sizeSelectorHiddenConstraint" destination="WAc-HA-va5" id="d76-Kg-jNh"/>
+                <outlet property="sizeSelectorTable" destination="h5g-Br-bsq" id="Mt8-AK-Uxb"/>
+                <outlet property="tableHeightConstraint" destination="cOz-y1-fYR" id="s3H-wD-hbg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1MH-IB-ltp">
+                    <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h5g-Br-bsq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="cOz-y1-fYR"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="tY2-XO-T9R"/>
+                                <outlet property="delegate" destination="-1" id="COV-A2-Qx6"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="h5g-Br-bsq" secondAttribute="trailing" id="G8K-lY-ICz"/>
+                        <constraint firstItem="h5g-Br-bsq" firstAttribute="leading" secondItem="1MH-IB-ltp" secondAttribute="leading" id="J2x-i8-RKn"/>
+                        <constraint firstAttribute="height" id="WAc-HA-va5"/>
+                        <constraint firstItem="h5g-Br-bsq" firstAttribute="top" secondItem="1MH-IB-ltp" secondAttribute="top" id="aZh-CM-tEC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottomMargin" secondItem="h5g-Br-bsq" secondAttribute="bottom" priority="800" id="3Fr-l7-RyH"/>
+                <constraint firstAttribute="trailing" secondItem="1MH-IB-ltp" secondAttribute="trailing" id="f3s-IO-5V0"/>
+                <constraint firstAttribute="bottom" secondItem="1MH-IB-ltp" secondAttribute="bottom" id="fL9-R3-d0a"/>
+                <constraint firstItem="1MH-IB-ltp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yOm-yT-4NK"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

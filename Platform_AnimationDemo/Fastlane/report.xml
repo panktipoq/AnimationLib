@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: Verifying fastlane version" time="0.008562">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.000722">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: Switch to configure_environment lane" time="0.000709">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: ./Generation/Scripts/GenerateProject.command" time="1.396995">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: Switch to schemes lane" time="0.000885">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: Switch to update_build_number lane" time="0.000847">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: git rev-list HEAD --count" time="0.093299">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: pod install" time="11.413915">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: chmod 666 Pods/Realm/include/RLMPlatform.h" time="0.005921">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: Switch to sign lane" time="0.001026">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: git remote -v" time="0.010042">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: match" time="7.301157">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

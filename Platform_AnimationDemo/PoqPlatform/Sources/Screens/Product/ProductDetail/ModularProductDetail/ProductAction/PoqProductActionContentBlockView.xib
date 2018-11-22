@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ahj-Qf-Uja" customClass="PoqProductActionContentBlockView" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="473" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XY3-R8-dOL">
+                        <rect key="frame" x="15" y="12" width="443" height="72"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-bR-Rhn" userLabel="Title Label">
+                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aQA-KU-ht9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-sD-94R">
+                                <rect key="frame" x="0.0" y="36" width="118" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Lrg-3U-geu"/>
+                                    <constraint firstAttribute="width" constant="118" id="lbB-Vx-fdS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openDeeplink:" destination="Ahj-Qf-Uja" eventType="touchUpInside" id="ROb-Z3-pYk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezX-0Y-6pn">
+                        <rect key="frame" x="0.0" y="100" width="473" height="10"/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="o2M-3u-2TX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XY3-R8-dOL" secondAttribute="trailing" constant="15" id="0gD-fH-mvt"/>
+                <constraint firstItem="ezX-0Y-6pn" firstAttribute="top" secondItem="XY3-R8-dOL" secondAttribute="bottom" constant="16" id="6iE-ti-KYk"/>
+                <constraint firstItem="XY3-R8-dOL" firstAttribute="top" secondItem="Ahj-Qf-Uja" secondAttribute="top" constant="12" id="GIG-ET-XKB"/>
+                <constraint firstAttribute="bottom" secondItem="ezX-0Y-6pn" secondAttribute="bottom" id="I1T-Kt-OJ5"/>
+                <constraint firstItem="XY3-R8-dOL" firstAttribute="leading" secondItem="Ahj-Qf-Uja" secondAttribute="leading" constant="15" id="otH-0g-MXo"/>
+                <constraint firstItem="ezX-0Y-6pn" firstAttribute="leading" secondItem="Ahj-Qf-Uja" secondAttribute="leading" id="sbW-V5-zZV"/>
+                <constraint firstAttribute="trailing" secondItem="ezX-0Y-6pn" secondAttribute="trailing" id="ubo-06-dg3"/>
+            </constraints>
+            <size key="customSize" width="473" height="182"/>
+            <connections>
+                <outlet property="actionButton" destination="Iip-sD-94R" id="rps-o4-Pd5"/>
+                <outlet property="spaceView" destination="ezX-0Y-6pn" id="ngU-sU-5zt"/>
+                <outlet property="titleLabel" destination="vGL-bR-Rhn" id="Xtm-8d-CO2"/>
+            </connections>
+            <point key="canvasLocation" x="94.5" y="-29"/>
+        </collectionViewCell>
+    </objects>
+</document>

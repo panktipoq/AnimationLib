@@ -1,0 +1,15 @@
+[
+    {
+        "id": 0,
+        "appID": 0,
+        "message": null,
+        "statusCode": 200,
+        "code": "checkmo",
+        "title": "Native App Payment",
+        "postName": "payment[method]",
+        "poqUserId": "1A8FB0DA-8F48-462B-900C-2F931A3AFF13",
+        "stripeCustomerId": null,
+        "paymentMethodToken": null,
+        "paymentType": null
+    }
+]

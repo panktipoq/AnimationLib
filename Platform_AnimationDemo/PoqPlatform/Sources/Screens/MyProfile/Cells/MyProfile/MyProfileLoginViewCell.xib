@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-ExtraLight.ttf">
+            <string>SourceSansPro-ExtraLight</string>
+        </array>
+        <array key="SourceSansPro-Light.ttf">
+            <string>SourceSansPro-Light</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Vs4-T3-VkL" customClass="MyProfileLoginViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KSb-Ej-uu4" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="530"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-fp-3fx">
+                        <rect key="frame" x="15" y="18" width="64" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ugf-Cl-KWb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="I0t-IH-cUy">
+                        <rect key="frame" x="15" y="33" width="290" height="51"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="51" id="Bdi-eX-qM1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-ExtraLight" family="Source Sans Pro" pointSize="35"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-he-gVd">
+                        <rect key="frame" x="15" y="126" width="175" height="95"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="175" id="Gkk-Hl-fzt"/>
+                            <constraint firstAttribute="height" constant="95" id="jaI-m1-ik3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-ExtraLight" family="Source Sans Pro" pointSize="23"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDw-Be-pN2" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="195" y="90" width="100" height="137"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tb-ZG-Pyi" userLabel="Signup Button" customClass="BlackButton" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="15" y="288" width="290" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="tTK-IN-m7V"/>
+                        </constraints>
+                        <connections>
+                            <action selector="blackButtonClicked:" destination="Vs4-T3-VkL" eventType="touchUpInside" id="1lt-a2-bh4"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3u-v0-aI8" userLabel="Signin Button" customClass="BlackButton" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="15" y="347" width="290" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="zRW-pU-Pzi"/>
+                        </constraints>
+                        <connections>
+                            <action selector="blackButtonClicked:" destination="Vs4-T3-VkL" eventType="touchUpInside" id="ylZ-2o-lDh"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* You can opt out any reward scheme at any time, just call Customer Services" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="6II-cG-mRI">
+                        <rect key="frame" x="15" y="397" width="290" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3Bk-dR-2vA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Light" family="Source Sans Pro" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll also have access to these other great features:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOU-RN-l1H">
+                        <rect key="frame" x="10" y="430" width="300" height="61"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="61" id="NeN-Sr-jrS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-ExtraLight" family="Source Sans Pro" pointSize="23"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-vs-UDw">
+                        <rect key="frame" x="20" y="434" width="280" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="7TX-on-tit"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
+                        <state key="normal" title="Dismiss">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="dismiss" destination="Vs4-T3-VkL" eventType="touchUpInside" id="Upu-CC-IPH"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Zq2-Pc-51I">
+                        <rect key="frame" x="154" y="491" width="13" height="7"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="inB-zo-euJ"/>
+                            <constraint firstAttribute="height" constant="7" id="nGR-5a-Nzv"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Zq2-Pc-51I" secondAttribute="centerX" constant="-0.5" id="0As-C2-8iF"/>
+                <constraint firstItem="I0t-IH-cUy" firstAttribute="top" secondItem="ahe-fp-3fx" secondAttribute="bottom" constant="-5" id="3pO-g0-0q4"/>
+                <constraint firstItem="7tb-ZG-Pyi" firstAttribute="trailing" secondItem="R3u-v0-aI8" secondAttribute="trailing" id="416-dN-uO2"/>
+                <constraint firstAttribute="centerY" secondItem="WEo-he-gVd" secondAttribute="centerY" constant="86.5" id="6yo-0t-S84"/>
+                <constraint firstAttribute="trailing" secondItem="yOU-RN-l1H" secondAttribute="trailing" constant="10" id="Af8-Gf-tav"/>
+                <constraint firstItem="KSb-Ej-uu4" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" id="Bpg-lL-XyL"/>
+                <constraint firstItem="I0t-IH-cUy" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="15" id="Dni-vA-DWv"/>
+                <constraint firstItem="WEo-he-gVd" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="15" id="Eqg-Pa-VBP"/>
+                <constraint firstItem="6II-cG-mRI" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="15" id="Esz-4m-un2"/>
+                <constraint firstItem="Zq2-Pc-51I" firstAttribute="top" secondItem="1yg-vs-UDw" secondAttribute="bottom" constant="27" id="FSy-47-hYU"/>
+                <constraint firstAttribute="trailing" secondItem="KSb-Ej-uu4" secondAttribute="trailing" id="G5l-XD-XN9"/>
+                <constraint firstItem="WEo-he-gVd" firstAttribute="top" secondItem="I0t-IH-cUy" secondAttribute="bottom" constant="32" id="InI-Wp-0Gh"/>
+                <constraint firstItem="R3u-v0-aI8" firstAttribute="top" secondItem="7tb-ZG-Pyi" secondAttribute="bottom" constant="14" id="Meb-b4-dZS"/>
+                <constraint firstItem="yOU-RN-l1H" firstAttribute="top" secondItem="6II-cG-mRI" secondAttribute="bottom" priority="750" constant="12" id="Mmg-QN-b3K"/>
+                <constraint firstItem="WDw-Be-pN2" firstAttribute="top" secondItem="I0t-IH-cUy" secondAttribute="bottom" constant="6" id="PJR-Yy-7Wf"/>
+                <constraint firstAttribute="trailing" secondItem="7tb-ZG-Pyi" secondAttribute="trailing" constant="15" id="Q1Q-CX-tUp"/>
+                <constraint firstAttribute="bottom" secondItem="yOU-RN-l1H" secondAttribute="bottom" constant="29" id="QsS-Pi-hFI"/>
+                <constraint firstItem="yOU-RN-l1H" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="10" id="S5m-b0-AwU"/>
+                <constraint firstItem="WDw-Be-pN2" firstAttribute="top" secondItem="I0t-IH-cUy" secondAttribute="bottom" constant="-4" id="SpN-n2-ucS"/>
+                <constraint firstAttribute="centerY" secondItem="WDw-Be-pN2" secondAttribute="centerY" constant="101.5" id="Sw4-SN-no5"/>
+                <constraint firstItem="1yg-vs-UDw" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="20" id="TpQ-Qp-770"/>
+                <constraint firstAttribute="centerX" secondItem="7tb-ZG-Pyi" secondAttribute="centerX" id="Tsp-zO-uif"/>
+                <constraint firstAttribute="centerX" secondItem="KSb-Ej-uu4" secondAttribute="centerX" id="VAF-c0-eMW"/>
+                <constraint firstAttribute="trailing" secondItem="KSb-Ej-uu4" secondAttribute="trailing" id="YQV-IC-gwo"/>
+                <constraint firstItem="Zq2-Pc-51I" firstAttribute="top" secondItem="yOU-RN-l1H" secondAttribute="bottom" id="Z4q-Nh-gnK"/>
+                <constraint firstItem="6II-cG-mRI" firstAttribute="top" secondItem="R3u-v0-aI8" secondAttribute="bottom" constant="5" id="Zcl-by-DmQ"/>
+                <constraint firstItem="yOU-RN-l1H" firstAttribute="top" secondItem="6II-cG-mRI" secondAttribute="bottom" constant="12" id="a4c-Kd-e3g"/>
+                <constraint firstItem="1yg-vs-UDw" firstAttribute="top" secondItem="6II-cG-mRI" secondAttribute="bottom" constant="16" id="cIU-hH-odb"/>
+                <constraint firstAttribute="centerX" secondItem="yOU-RN-l1H" secondAttribute="centerX" id="dDU-Re-y7J"/>
+                <constraint firstAttribute="bottom" secondItem="Zq2-Pc-51I" secondAttribute="bottom" constant="22" id="eeY-NW-JfK"/>
+                <constraint firstAttribute="trailing" secondItem="WDw-Be-pN2" secondAttribute="trailing" constant="25" id="gDM-O6-dTl"/>
+                <constraint firstItem="7tb-ZG-Pyi" firstAttribute="width" secondItem="R3u-v0-aI8" secondAttribute="width" priority="750" id="gsx-D8-iS0"/>
+                <constraint firstItem="WEo-he-gVd" firstAttribute="centerY" secondItem="WDw-Be-pN2" secondAttribute="centerY" constant="15" id="iF2-QW-xDw"/>
+                <constraint firstItem="ahe-fp-3fx" firstAttribute="top" secondItem="Vs4-T3-VkL" secondAttribute="top" constant="18" id="isY-s0-qRo"/>
+                <constraint firstItem="7tb-ZG-Pyi" firstAttribute="leading" secondItem="R3u-v0-aI8" secondAttribute="leading" id="m6P-9c-bo9"/>
+                <constraint firstItem="WDw-Be-pN2" firstAttribute="leading" secondItem="WEo-he-gVd" secondAttribute="trailing" constant="5" id="o13-Ru-OTr"/>
+                <constraint firstAttribute="centerX" secondItem="6II-cG-mRI" secondAttribute="centerX" id="oA2-a1-ibn"/>
+                <constraint firstItem="KSb-Ej-uu4" firstAttribute="top" secondItem="Vs4-T3-VkL" secondAttribute="top" id="p8C-f8-Z9O"/>
+                <constraint firstAttribute="trailing" secondItem="I0t-IH-cUy" secondAttribute="trailing" constant="15" id="rSG-nb-UHH"/>
+                <constraint firstItem="7tb-ZG-Pyi" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="15" id="rca-At-XI8"/>
+                <constraint firstAttribute="trailing" secondItem="6II-cG-mRI" secondAttribute="trailing" constant="15" id="sC7-kd-fhe"/>
+                <constraint firstAttribute="trailing" secondItem="1yg-vs-UDw" secondAttribute="trailing" constant="20" id="uQ9-rK-sdx"/>
+                <constraint firstItem="ahe-fp-3fx" firstAttribute="leading" secondItem="Vs4-T3-VkL" secondAttribute="leading" constant="15" id="urq-4l-vGF"/>
+                <constraint firstAttribute="centerY" secondItem="KSb-Ej-uu4" secondAttribute="centerY" id="vF1-cy-Is0"/>
+                <constraint firstItem="1yg-vs-UDw" firstAttribute="top" secondItem="6II-cG-mRI" secondAttribute="bottom" constant="2" id="wKd-gS-QpS"/>
+                <constraint firstAttribute="bottom" secondItem="KSb-Ej-uu4" secondAttribute="bottom" constant="-10" id="xZV-aS-erF"/>
+                <constraint firstAttribute="centerX" secondItem="R3u-v0-aI8" secondAttribute="centerX" id="zMj-wJ-0he"/>
+            </constraints>
+            <size key="customSize" width="1133" height="94"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="vF1-cy-Is0"/>
+                    <exclude reference="InI-Wp-0Gh"/>
+                    <exclude reference="SpN-n2-ucS"/>
+                    <exclude reference="Mmg-QN-b3K"/>
+                    <exclude reference="QsS-Pi-hFI"/>
+                    <exclude reference="wKd-gS-QpS"/>
+                    <exclude reference="FSy-47-hYU"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="bannerImage" destination="KSb-Ej-uu4" id="0zS-tY-Q1U"/>
+                <outlet property="companyLabel" destination="I0t-IH-cUy" id="5ic-Rn-zck"/>
+                <outlet property="dismissButton" destination="1yg-vs-UDw" id="TnQ-ae-Zu7"/>
+                <outlet property="downArrow" destination="Zq2-Pc-51I" id="Su7-Do-NDA"/>
+                <outlet property="loyaltyCardBannerImage" destination="WDw-Be-pN2" id="8ZT-Lj-vSE"/>
+                <outlet property="loyaltyPointsLabel" destination="WEo-he-gVd" id="rCK-mC-NqF"/>
+                <outlet property="optOutLabel" destination="6II-cG-mRI" id="fwC-ga-Vii"/>
+                <outlet property="otherFeaturesLabel" destination="yOU-RN-l1H" id="nTq-LN-cSt"/>
+                <outlet property="signinButton" destination="R3u-v0-aI8" id="9Wb-UV-gTH"/>
+                <outlet property="signupButton" destination="7tb-ZG-Pyi" id="3tj-PX-Oxj"/>
+                <outlet property="signupButtonLeadingSpace" destination="rca-At-XI8" id="TVO-Ru-XOM"/>
+                <outlet property="signupButtonTrailingSpace" destination="Q1Q-CX-tUp" id="6ba-9P-v1o"/>
+                <outlet property="welcomeLabel" destination="ahe-fp-3fx" id="Fgd-CA-fQG"/>
+            </connections>
+            <point key="canvasLocation" x="99" y="13"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="DownArrow" width="54" height="30"/>
+    </resources>
+</document>

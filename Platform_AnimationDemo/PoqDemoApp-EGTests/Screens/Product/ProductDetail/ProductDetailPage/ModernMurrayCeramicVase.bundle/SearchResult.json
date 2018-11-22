@@ -1,0 +1,173 @@
+{
+	"paging": {
+		"totalPages": 1.0,
+		"currentPage": 1,
+		"pageSize": 12,
+		"totalResults": 1.0,
+		"filteredResults": 1,
+		"currentPageResults": 1
+	},
+	"filters": {
+		"isFromDB": false,
+		"cacheIdentifier": "Products-by-Keyword - 173-https://poq-api-uat.azurewebsites.net/api/Products/Filter/173?keyword=Modern%20Murray&order=date&page=1",
+		"integrationUrl": null,
+		"keyword": "Modern Murray Ceramic Vase",
+		"externalId": null,
+		"ids": [
+
+		],
+		"categoryId": null,
+		"sizes": [
+			"One Size"
+		],
+		"sizeValues": [
+
+		],
+		"prices": [
+			59.95,
+			59.95
+		],
+		"categories": [
+			{
+				"id": "228692",
+				"title": "Decorative Accents"
+			},
+			{
+				"id": "274457",
+				"title": "View All"
+			},
+			{
+				"id": "228701",
+				"title": "VIP"
+			}
+		],
+		"colours": [
+			"Black"
+		],
+		"colourValues": [
+
+		],
+		"brands": [
+
+		],
+		"styles": [
+
+		],
+		"ratings": [
+
+		],
+		"selectedCategories": [
+
+		],
+		"selectedSizes": [
+
+		],
+		"selectedSizeValues": [
+
+		],
+		"selectedBrands": [
+
+		],
+		"selectedStyles": [
+
+		],
+		"selectedRatings": [
+
+		],
+		"selectedColors": [
+
+		],
+		"selectedColorValues": [
+
+		],
+		"selectedMinPrice": null,
+		"selectedMaxPrice": null,
+		"selectedSortField": 3,
+		"selectedSortDirection": 0,
+		"refinements": [
+
+		],
+		"selectedRefinements": [
+
+		]
+	},
+	"products": [
+		{
+			"id": 13566408,
+			"title": "Modern Murray Ceramic Vase",
+			"body": "<p>Ceramic. 5.5\" diameter, 12\" high.</p>",
+			"description": "Ceramic. 5.5\" diameter, 12\" high.",
+			"price": 147.15,
+			"specialPrice": 59.95,
+			"sortIndex": 56,
+			"url": "https://poqmbuat.blob.core.windows.net/app173/9749345-800.jpg?v=131406319900530000",
+			"width": 1435,
+			"height": 2048,
+			"thumbnailUrl": "https://poqmbuat.blob.core.windows.net/app173/9749345-540.jpg?v=131406319900530000",
+			"thumbnailWidth": 149,
+			"thumbnailHeight": 213,
+			"isFavorite": null,
+			"numberofLikes": 0,
+			"numberOfReviews": 0,
+			"relatedProductIDs": null,
+			"productColors": null,
+			"productSizes": [
+				{
+					"id": 0,
+					"size": "One Size",
+					"sku": null,
+					"quantity": 0,
+					"sortIndex": 0,
+					"ean": null,
+					"price": 0.0,
+					"specialPrice": 0.0,
+					"sizeAttributes": null,
+					"productID": 0
+				}
+			],
+			"productPictures": [
+				{
+					"id": 0,
+					"pictureID": 0,
+					"sortIndex": 0,
+					"url": "https://poqmbuat.blob.core.windows.net/app173/9749345-800.jpg?v=131406319900530000",
+					"width": 1435,
+					"height": 2048,
+					"thumbnailUrl": "https://poqmbuat.blob.core.windows.net/app173/9749345-540.jpg?v=131406319900530000",
+					"thumbnailWidth": 149,
+					"thumbnailHeight": 213
+				}
+			],
+			"externalID": "437",
+			"productURL": "http://poqmagento.azurewebsites.net/index.php/modern-murray-ceramic-vase-480.html",
+			"hasMoreColors": false,
+			"color": "Black",
+			"colorGroupID": "437-Black",
+			"colorSwatchUrl": null,
+			"brand": null,
+			"promotion": null,
+			"sizeGuide": null,
+			"returns": null,
+			"delivery": null,
+			"style": null,
+			"rating": 0.0,
+			"internationalDelivery": null,
+			"homeDelivery": null,
+			"buyAndCollect": null,
+			"isAvailableInStore": null,
+			"selectedSizeID": null,
+			"selectedSizeName": null,
+			"isInStock": false,
+			"headerImage": null,
+			"videoUrl": null
+		}
+	],
+	"contentBlocks": [
+
+	],
+	"message": "No category/keyword set",
+	"appId": 173,
+	"averageRating": 0.0,
+	"numberOfReviews": 0,
+	"redirectUrl": null
+}

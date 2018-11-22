@@ -1,0 +1,619 @@
+/*
+ Localizable.strings
+ Poq_App_Base
+ 
+ Created by Jun Seki on 13/07/2014.
+ Copyright (c) 2014 Poq. All rights reserved.
+ */
+
+
+//"KEY" = "CONTENT";
+//tabs
+"HOME"="HOME";
+"SHOP"="SHOP";
+"LIKES"="LIKES";
+"WISHLIST"="WUNSCHLISTE";
+"STORES"="STORES";
+"SCAN"="SCANNEN";
+"BAG"="WARENKORB";
+"MORE"="MEHR";
+"YOU"="SIE";
+
+"DELIVERY_TYPE" = "delivery";
+"CLICK_AND_COLLECT" = "click & collect";
+"CLICK_AND_COLLECT_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_SELECT" = "Select";
+
+"Home"="Home";
+"Shop"="Shop";
+"Likes"="Likes";
+"Wishlist"="Wunschliste";
+"Stores"="Stores";
+"Scan"="Scannen";
+"Bag"="Warenkorb";
+"More"="Mehr";
+"You"="Sie";
+
+
+//basics:
+"OK"="OK";
+"CANCEL"="Abbrechen";
+"ERROR"="FEHLER";
+"SUCCESSFUL"="Erfolgreich";
+"NEXT"="Weiter";
+"DONE"="Fertig";
+"LOADING"="Laden";
+"Loading..."="Laden...";
+"WISH"="WISH";
+"LOVES"="LOVES";
+"SUBMIT"="Übermitteln";
+"LOGOUT"="Logout";
+"REMOVE"="Entfernen";
+"COLOUR"="Colour";
+
+///MARK: - bag
+"GO_TO_BAG"="Gehe zu Warenkorb";
+"EDIT"="BEARBEITEN";
+"Edit"="Bearbeiten";
+"REFINE"="VERFEINERN";
+"Refine"="Verfeinern";
+"DONE"="Fertig";
+"NUMBER_ITEMS"="%d Artikel";
+"NUMBER_ITEM"="%d Artikel";
+"BAG_REMOVE_ITEMS %@"="Sind Sie sicher, dass Sie %@ aus Ihrem Warenkorb entfernen möchten?";
+"BAG_NO_ITEMS"="Ihr Warenkorb ist leer";
+"BAG_NO_ITEMS_INSTRUCTIONS"="Klicken Sie unten um mit dem Einkauf bei %@ zu beginnen";
+"ADD_TO_BAG"="IN DEN WARENKORB";
+"Add_to_Bag"="In den Warenkorb";
+"ADDED_TO_BAG"="ZU WARENKORB HINZUGEFÜGT";
+"Added_to_Bag"="Zu Warenkorb hinzugefügt";
+"ERROR_ADDED_TO_BAG"="Beim Hinzufügen zum Warenkorb ist ein Fehler aufgetreten";
+"BAG_OUT_OF_STOCK"="Zur Zeit nicht auf Lager";
+"BAG_ITEM_UNAVAILABLE"="Gewünschte Menge ist nicht verfügbar";
+"BAG_ITEM_INFO_UNAVAILABLE" = "Produktinformation ist nicht verfügbar";
+
+
+//MARK: wishlist
+"WISH_NO_ITEMS"="Ihre Wunschliste ist leer";
+"WISH_NO_ITEMS_INSTRUCTIONS"="Ihnen gefällt ein Artikel? Tippen Sie auf das Herz, um ihn zu Ihrer Wunschliste hinzuzufügen.";
+
+
+//MARK: - store
+"STORE FINDER"="STORE FINDER";
+"CALL"="Anrufen";
+"GET_NUMBER"="Telefonnummer abrufen ";
+"DIRECTIONS"="WEGBESCHREIBUNG";
+"Directions"="Wegbeschreibung";
+"OPENING_HOURS"="Öffnungszeiten";
+
+"MONDAY"="MONTAG";
+"TUESDAY"="DIENSTAG";
+"WEDNESDAY"="MITTWOCH";
+"THURSDAY"="DONNERSTAG";
+"FRIDAY"="FREITAG";
+"SATURDAY"="SAMSTAG";
+"SUNDAY"="SONNTAG";
+
+"MONDAY"="Montag";
+"TUESDAY"="Dienstag";
+"WEDNESDAY"="Mittwoch";
+"THURSDAY"="Donnerstag";
+"FRIDAY"="Freitag";
+"SATURDAY"="Samstag";
+"SUNDAY"="Sonntag";
+
+"AVAILABLE_IN_STORE"="Verfügbar im Store";
+"NOT_AVAILABLE_IN_STORE"="Nicht verfügbar im Store";
+"IN_STORE_AVAILABILITY"="Im Store";
+"IN_STORE_AVAILABILITY_OFF"="Storeinformationen zur Zeit nicht verfügbar";
+"CHECK_IN_STORE_AVAILABILITY_OFF"="Verfügbarkeit im Store überprüfen";
+"DESCRIPTION"="BESCHREIBUNG";
+"Description"="Beschreibung";
+"DELIVERY"="Lieferung";
+"RETURNS"="Rückgaben";
+"SIZE_GUIDE"="Größentabelle";
+"LEAVING_THE_APP"="App verlassen";
+"LEAVING_THE_APP_GETTING_DIRECTIONS"="Durch Abrufen der Wegbeschreibung verlassen Sie die App. Sind Sie sicher, dass Sie die App verlassen möchten?";
+"GET_DIRECTIONS"="Zur Wegbeschreibung";
+"NEARBY"="In der Nähe";
+"NEAR_ME"="IN MEINER NÄHE";
+"BY_NAME"="NACH NAME";
+"MAPS"="KARTEN";
+"MAP"="Karte";
+"MILES"="Meilen";
+"FAVOURITE_STORE"="Lieblings-Store";
+"CALL_THIS_STORE"="Diesen Store anrufen ";
+"STORE_DIRECTIONS"="Wegbeschreibung zum Store";
+"OPEN_TODAY"="Heute geöffnet: ";
+"AVAILABLE_AT_OUR_STORE"="Verfügbar in unserem %@ Store";
+"SIZE_AVAILABLE_AT_STORE"="Größe %@ ist in unserem %@ Store verfügbar";
+"UNAVAILABLE_AT_STORE"="Nicht verfügbar in unserem %@ Store";
+"SIZE_UNAVAILABLE_STORE_SELECT_STORE"="Größe %@ ist nicht im %@ Store verfügbar. Wählen Sie einen andern Store aus.";
+"SET_FAVOURITE"="Als Favorit auswählen";
+//refresh
+"PULL_TO_REFRESH" = "Zum Aktualisieren herunterziehen...";
+"RELEASE_TO_REFRESH" = "Zum Aktualisieren loslassen...";
+
+//MARK: PRICE
+"Was"=" War %@";
+"Now"="Jetzt %@";
+"From"="Ab %@";
+
+//MARK: - PLP
+"FEATURED"="TOPSELLER";
+"Featured"="Topseller";
+"NEWEST"="NEUHEITEN";
+"Newest"="Neuheiten";
+"RATING"="BEWERTUNG";
+"Rating"="Bewertung";
+"PRICE_DOWN"="PREIS ↓";
+"PRICE_UP"="PREIS ↑";
+"Price_Down"="Preis ↓";
+"Price_Up"="Preis ↑";
+"SORT_BY"="Sortiert nach: %@";
+
+
+//MARK: - User login in/registration:
+"REGISTER"="Neu registrieren";
+"SIGN_UP"="Anmelden";
+"SUBMIT"="Übermitteln";
+"SIGN_IN"="Anmelden";
+"SIGN_INTO"="Anmelden zu \n";
+"SIGN_IN_TO"="Anmelden zu";
+"LOGIN"="Login";
+"LOGGED_OUT"="Abgemeldet";
+"FORGOT_PASSWORD"="Passwort Vergessen";
+"TERMS_CONDITIONS"="AGB’s";
+"LOGIN_REGISTER_TO_LIKE"="Bitte loggen Sie sich ein, oder registrieren Sie sich, um den Artikel zu Ihrer Wunschliste hinzuzufügen.";
+"LOGIN_REGISTER_TO_CONTINUE"="Bitte melden Sie sich an, oder registrieren Sie sich, um fortzufahren.";
+"LOGGED_OUT_TEXT"="Sie sind jetzt abgemeldet.";
+"LOGIN_ERROR"="E-Mail-Adresse oder Passwort sind nicht korrekt. Bitte versuchen Sie es erneut.";
+"LOGIN_FAILED"="LOGIN FEHLGESCHLAGEN";
+"BAG_MERGED"="Wir haben gesehen, dass Sie bereits Artikel in Ihrem Warenkorb hatten. Wir haben diese zu Ihrem derzeitigen Warenkorb hinzugefügt";
+"CUSTOMER_RECOGNITION_NUMBER"="TREUEKONTO NR.";
+"USER_WELCOME_MESSAGE"="Hey ";
+
+
+//MARK: - SIGN UP
+"YOUR_ACCOUNT"="Ihr Konto";
+"FIRSTNAME"="Vorname*";
+"LASTNAME"="Nachname*";
+"EMAIL"="E-Mail-Adresse*";
+"PASSWORD"="Passwort*";
+"GENDER"="Geschlecht*";
+"FEMALE"="Weiblich";
+"MALE" ="Männlich";
+"SHOW"="ZEIGEN";
+"HIDE"="AUSBLENDEN";
+"SEND_ME_PROMOTIONS"="Schicken sie mir House of Fraser Angebote & Aktionen";
+"MASTERCARD_OPTION"="Ich habe bereits eine Treue- MasterCard / Kontokarte";
+"OPT_OUT_OPTION"="Sie können sich jederzeit vom Treuekonto abmelden, rufen Sie einfach den Kundenservice an";
+
+//MARK: - my profile
+"UNLOCK_FEATURES"="Diese Features freischalten";
+"GO_SHOPPING_NOW"="Einkauf beginnen";
+
+// My profile section titles
+"SHOW_AT_THE_TILL_POINTS" = "AN DER KASSE VORZEIGEN, UM TREUEPUNKTE ZU SAMMELN";
+"MY_FAVOURITE_STORE" = "MEIN LIEBLINGS-STORE";
+"SAVED_SIZES" = "GESPREICHERTE GRÖßEN";
+"HISTORY" = "VERLAUF";
+"DISCOVER_MORE_ABOUT_RECOGNITION" = "Mehr über die Treuekarte erfahren";
+"IM_NEW" = "Ich bin neu hier";
+"BACK_TO_TOP" = "Zurück nach oben";
+
+// My profile size links
+"MAN" = "Herren";
+"WOMAN" = "Damen";
+"KIDS" = "Kinder";
+
+// My profile - recently reviewed
+"RECENTLY_VIEWED_ITEMS" = "Zuletzt angesehene Artikel";
+"CLEAR_RECENTLY_VIEWED_ITEMS"="Zuletzt angesehene Artikel löschen";
+"CLEAR_CONFIRMATTION"="Sind Sie sicher, dass sie Ihre zuletzt angesehenen Artikel löschen wollen?";
+"NO_RECENTLY_VIEWED_ITEMS"="Keine zuletzt angesehenen Artikel";
+
+//MARK: - order history
+"NUMBER_ORDER"="%d Bestellung";
+"NUMBER_ORDERS"="%d Bestellungen";
+"YOUR_ORDER_HISTORY" = "Vorherige Bestellungen";
+"YOUR_ORDER_SUMMARY"="Ihre Bestellübersicht";
+"ORDER_NUMBER"="Bestellnummer:";
+"ORDER_DATE"="Bestelldatum";
+"ORDER_TOTAL"="Bestellsumme";
+"PURCHASED"="Bestellt";
+"DELIVERY_OPTION"="Lieferoptionen";
+"PAYMENT_METHOD"="Zahlungsart";
+"DELIVERED_TO"="Geliefert zu:";
+"SUB_TOTAL"="Zwischensumme";
+"POST_PACKAGING"="Versand & Verpackung";
+"Total"="Gesamtsumme";
+"ORDER_HISTORY_EMPTY"="Bestellverlauf leer";
+"PRODUCT_CODE"="Produktcode";
+"GIFT_MESSAGE"="Geschenk-Nachricht:";
+"ORDER_STATUS"="Ihre Bestellung ist %@";
+
+//MARK: - My profile other text
+"WELCOME"="Willkommen";
+"WELCOME_TO_YOUR"="Willkommen";
+"BIRTHDAY_DOUBLE_POINTS"="Doppelte Geburtstagspunkte erhalten? Fügen Sie Ihr Geburtsdatum hinzu";
+"KEEP_SCROLLING_DOWN"="Weiter nach unten scrollen";
+"COLLECT_POINTS"="Punkte sammeln* und ein unkompliziertes Check-out genießen";
+"OTHER_GREAT_FEATURES"="Sie werden ebenfalls Zugang zu diesen anderen, großartigen Features erhalten";
+"ADD_YOUR_FAVOURITE_STORE"="Lieblings-Store hinzufügen";
+"VIEW_STOCK_AVAILABILITY_OPENING_TIMES"="Lagerverfügbarkeit und Öffnungszeiten ansehen";
+"MAKE_MONEY_WHILE_YOU_SHOP"="GELD VERDIENEN WÄHREND DES EINKAUFS";
+"START_COLLECTING_POINTS"="Fangen Sie an Punkte zu sammeln mit der virtuellen House of Fraser Treuekarte";
+"COLLECT_RECOGNITION_POINTS"="Sammeln Sie Treuepunkte beim Anmelden oder Registrieren*";
+"DATA_CORRECT_YESTERDAY"="Daten entsprechen dem Stand von gestern";
+"REWARD_DUE_TO_EXPIRE_ON"="%@%@ Prämie läuft am %@ ab.\n Alle Daten entsprechen dem Stand von gestern";
+"GOT_REWARD_CARD"="Haben Sie eine Treuekarte?";
+"LINK_PLASTIC_REWARD_CARD"="Verbinden Sie Ihre Treuekarte mit Ihrem Treuekonto";
+"BE_YOU_NO_MATTER"="Be you no matter who with House of Fraser";
+"ACCESS_TO_ALL_FEATURES"="Sie haben jetzt Zugang zu all diesen großartigen Features weiter unten";
+"YOUR_RECOGNITION_DASHBOARD"="IHR TREUEKONTO DASHBOARD";
+"EXCLUDES_RECOGNITION_CARD"="Dies schließt Treue-MasterCard und Kontokarte aus";
+"YOU_HAVE"="SIE HABEN";
+"POINTS"="PUNKTE";
+"YOUR_REWARD"="IHRE PRÄMIE";
+"TO_SPEND"="ZUM EINLÖSEN";
+
+
+//MARK: - Error message:
+"HOME_CONNECTION_ERROR"="Verbindungsfehler.\nZum Aktualisieren nach unten ziehen.";
+"TRY_AGAIN"="Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.";
+"CONNECTION_ERROR"="Verbindungsfehler";
+"UNABLE_TO_CONNECT" = "Verbindung mit dem Server fehlgeschlagen. Bitte aktualisieren Sie und versuchen es erneut.";
+"SESSION_ERROR"="Sitzungsfehler";
+"INVALID_SESSION"="Ihre aktuelle Sitzung ist nicht mehr gültig. Bitte melden Sie sich erneut an.";
+"SOMETHING_WENT_WRONG"="Leider ist etwas schiefgegangen.";
+"FACEBOOK_ERROR"="Teilen auf Facebook ist fehlgeschlagen.";
+"MAIL_SENDING_FAILED"="Nachrichtenversendung fehlgeschlagen.";
+"NO_ACTIVE_EMAIL"="Keine gültige E-mail-Adresse für diesen Account.";
+"UNABLE_TO_SYNC_WISH"="Ihre Wunschliste konnte nicht synchronisiert werden. Bitte melden Sie sich erneut an.";
+"UNABLE_TO_SYNC_BAG"=" Ihr Warenkorb konnte nicht synchronisiert werden. Bitte melden Sie sich erneut an.";
+"UNABLE_TO_ADD_TO_BAG"="Ihr Artikel konnte nicht zum Warenkorb hinzugefügt werden. Verbindungsfehler mit dem Server. Bitte versuchen Sie es erneut.";
+"NO_NETWORK_CONNECTION"="Keine Netzwerk-Verbindung.";
+"NO_NETWORK_CONNECTION_MSG"="Ihr Gerät ist nicht mit dem Netzwerk verbunden. Bitte versuchen Sie es erneut, wenn Ihr Gerät mit dem Netzwerk verbunden ist.";
+
+//MARK: - share options
+"FACEBOOK"="Facebook";
+"TWITTER"="Twitter";
+"PINTEREST"="Pinterest";
+"SAVE_PICTURE"="Bild speichern";
+"E-MAIL_FRIEND"="Einem Freund e-mailen";
+"LOOK_WHAT_I_FOUND_ON %@ app! \n%@ "="Schau was ich gerade in der %@ app \n%@  gefunden habe!";
+
+//MARK: - success message
+"TWITTER_CONFIRMATION"="Danke fürs Tweeten.";
+"IMAGE_SAVED_TITLE"="Bild gespeichert.";
+"IMAGE_SAVED_CONFIRMATION"="Das Bild wurde auf Ihrem Gerät gespeichert.";
+"SHARING_CONFIRMATION"="Danke fürs Teilen!";
+"MAIL_SENT_CONFIRMATION"="Ihre Nachricht wurde erfolgreich gesendet.";
+
+//MARK: - barcode scanner
+"LINK_FOUND"="Link gefunden";
+"OPEN_LINK"="Link öffnen";
+"CONTINUE"="FORTFAHREN";
+"Continue"="Fortfahren";
+"SCAN_CODE"="CODE SCANNEN";
+"ENTER_CODE"="CODE EINGEBEN";
+"Enter_code"="Code eingeben";
+"SCAN_TOP_TEXT"="UM DEN CODE ZU SCANNEN, RICHTEN SIE IHN ANHAND DER GERADEN LINIEN AUS.";
+"SCAN_BOTTOM_TEXT"="BERÜHREN SIE DEN BILDSCHIRM UM ZU FOKUSSIEREN.";
+"ENTER_CODE_MANUALLY"="Code manuell eingeben";
+"ENTER_THE_CODE_HERE"="Hier Code eingeben";
+"ALIGN_BARCODE"="Richten Sie den Barcode innerhalb der Pfeile aus.";
+"ENSURE_BARCODE"="Stellen Sie sicher, dass der Barcode aufrecht ist und vermeiden Sie Schatten oder Spiegelungen.";
+"QR_Code_Detected"="QR Code erfasst.";
+
+//Products related
+"SHOP_IT"="Shop It";
+"SHARE"="TEILEN";
+"LIKE"="LIKE";
+"BUY"="KAUFEN";
+
+"SELECT_SIZE"="Größe auswählen:";
+"ONE_SIZE"="Einheitsgröße";
+"OUT_OF_STOCK"="Nicht verfügbar";
+"SOLD_OUT"="Ausverkauft";
+
+//MARK: Review
+"RATINGS_REVIEWS"="Bewertungen & Rezensionen";
+
+//MARK: - search
+"SEARCH_KEYWORD"="Suche nach Marke oder Stichwort";
+"SEARCH_ALL_PRODUCTS"="ALLE PRODUKTE DURCHSUCHEN";
+"SEARCH_IN"="SUCHE IN";
+"CLEAR"="Entfernen";
+"CLEAR_HISTORY"="Verlauf löschen";
+"YOUR_SEARCH_HISTORY"="IHR SUCHVERLAUF";
+"NO_SEARCH_HISTORY"="Sie haben keinen Suchverlauf";
+"NO_SEARCH_RESULTS_FOUND"="Keine Suchergebnisse gefunden";
+
+"NO_RESULTS"="Keine Suchergebnisse";
+"NO_RESULTS_FOUND"="Keine Suchergebnisse";
+"PLEASE_TRY_AGAIN"="Bitte versuchen Sie es erneut";
+"NO_RESULTS_FOUND_FOR \n \"%@\"."="ES KONNTEN KEINE ARTIKEL IN  \n \"%@\" GEFUNDEN WERDEN.";
+"NO_RESULTS_FOUND_IN \"%@\"."="ES KONNTEN LEIDER KEINE ARTIKEL UNTER \"%@\" \n\n GEFUNDEN WERDEN. TIPPEN SIE 'SUCHEN' AN, UM MEHR PRODUKTE ANZUSEHEN.";
+
+//checkout
+
+"FIRSTNAME_ADDRESS"="Vorname";
+"LASTNAME_ADDRESS"="Nachname";
+"EMAIL_ADDRESS"="E-Mail-Adresse";
+"PHONE"="Telefon";
+"ADDRESS"="Adresszeile 1 (Oder Firmenname)";
+"CITY"="Ort / Stadt";
+"TOWN_CITY"="Ort / Stadt";
+"COUNTY"="Verwaltungsbezirk";
+"POST_CODE"="Postleitzahl";
+"COUNTRY"="Land";
+"ADDRESS2"="Adresszeile 2";
+"COMPANY"="Firma";
+
+"Phone*"="Telefon*";
+"Address*"="Adresse*";
+"City*"="Stadt*";
+"County*"="Verwaltungsbezirk*";
+"PostCode*"="Postleitzahl*";
+"Country*"="Land*";
+
+
+"CONTACT_DETAILS"="Kontaktdetails";
+"TOTAL"="Gesamt";
+"TOTAL_AMOUNT"="Gesamtsumme:";
+"SECURE_CHECKOUT"="ZUM SICHEREN CHECK-OUT";
+"Secure_Checkout"="Zum sicheren Check-out";
+"NEXT_STEP"="NÄCHSTER SCHRITT";
+"PRIMARY_BILLING_ADDRESS"="Haupt \nRechnungsadresse";
+"PRIMARY_DELIVERY_ADDRESS"="Haupt \nLieferadresse";
+"BILLING_ADDRESS"="Rechnungsadresse";
+"DELIVERY_ADDRESS"="Lieferadresse";
+"OR_STATE_PROVINCE"="oder Staat/Verwaltungsbezirk";
+"OR_ZIP_CODE"="oder Postleitzahl";
+"SAME_ADDRESS"="Zur gleichen Adresse liefern";
+"CHECKOUT_SECURELY"="Zum sicheren Check-out";
+"SELECT_BILLING_ADDRESS"="Rechnungsadresse auswählen";
+"SELECT_DELIVERY_ADDRESS"="Lieferadresse auswählen";
+"NEW_BILLING_ADDRESS"="neue Rechnungsadresse";
+"NEW_DELIVERY_ADDRESS"="neue Lieferadresse";
+
+// Availability
+"IN_STORE_AVAILABILITY"="Lagerverfügbarkeit prüfen";
+"IN_STORE_AVAILABILITY_TITLE"="BITTE WÅHLEN SIE IHRE GRÖßE UND IHREN LIEBLINGS-STORE AUS";
+"IN_STORE_AVAILABILITY_DESCRIPTION"="Verfügbarkeit dieses Artikels in Ihrer Größe und Ihrem gewünschten Store prüfen";
+"IN_STORE_SIZE"="Größe";
+"IN_STORE_STORE"="Store";
+"IN_STORE_SELECT_SIZE"="Größe auswählen";
+"IN_STORE_SELECT_STORE"="Store auswählen";
+
+"BUY_COLLECT"="In Filiale abholbar";
+"HOME_DELIVERY"="Lieferung Vereinigtes Königreich & Irland";
+"INTERNATIONAL_DELIVERY"="Internationale Lieferung";
+
+"PLEASE_CORRECT"="Bitte korrigieren Sie:";
+"ENTER_FIRSTNAME"="Bitte geben Sie Ihren Vornamen ein.";
+"ENTER_LASTNAME"="Bitte geben Sie Ihren Nachnamen ein.";
+"ENTER_TELEPHONE"="Bitte geben Sie Ihre Telefonnummer ein.";
+"ENTER_VALID_EMAIL"="Bitte geben Sie Ihre E-Mail-Adresse ein.";
+"ENTER_PASSWORD" ="Bitte geben Sie ein Passwort ein.";
+"ENTER_VALID_PASSWORD" ="Min. 8 Zeichen und 1 Nummer";
+
+"ENTER_BILLING_ADDRESS"="Bitte geben Sie Ihre Zahlungsadresse ein.";
+"ENTER_CITY"="Bitte geben Sie eine Stadt für Ihre Zahlungsadresse ein.";
+"ENTER_COUNTY"="Bitte geben Sie einen Verwaltungsbezirk für Ihre Zahlungsadresse ein.";
+"ENTER_POSTCODE"="Bitte geben Sie eine Postleitzahl für Ihre Zahlungsadresse ein.";
+"ENTER_COUNTRY"="Bitte wählen Sie ein Land für Ihre Zahlungsadresse aus.";
+
+"ENTER_DELIVERY_FIRSTNAME"="Bitte geben Sie den Vornamen für Ihre Lieferadresse ein.";
+"ENTER_DELIVERY_LASTNAME"="Bitte geben Sie den Nachnamen für Ihre Lieferadresse ein.";
+"ENTER_DELIVERY_TELEPHONE"="Bitte geben Sie eine Telefonnummer für Ihre Lieferadresse ein.";
+"ENTER_DELIVERY_ADDRESS"="Bitte geben Sie Ihre Lieferadresse ein.";
+"ENTER_DELIVERY_CITY"="Bitte geben Sie die Stadt Ihrer Lieferadresse ein.";
+"ENTER_DELIVERY_POSTCODE"="Bitte geben Sie die Postleitzahl Ihrer Lieferadresse ein.";
+"ENTER_DELIVERY_COUNTRY"="Bitte geben Sie ein Land für Ihre Lieferadresse ein.";
+
+"ENTER_VALID_FIRSTNAME"="Bitte geben Sie Ihren Vornamen für %@ ein.";
+"ENTER_VALID_LASTNAME"="Bitte geben Sie Ihren Nachnamen für %@ ein.";
+"ENTER_VALID_TELEPHONE"="Bitte geben Sie eine gültige Telefonnummer (nur Zahlen) für %@ ein.";
+"ENTER_VALID_ADDRESS"="Bitte geben Sie eine Adresse für %@ ein.";
+"ENTER_VALID_CITY"="Bitte geben Sie eine Stadt für %@ ein.";
+"ENTER_VALID_POSTCODE"="Bitte geben Sie eine gültige Postleitzahl für %@ ein.";
+"ENTER_VALID_COUNTRY"="Bitte geben Sie ein Land für %@ ein.";
+
+// PAYMENT METHOD
+"SELECT_PAYMENT_METHOD" = "Zahlungsmethode auswählen";
+"SELECT_PAYMENT_METHOD_ERROR" = "Zahlungsmethode ist momentan nicht verfügbar. Bitte versuchen Sie es später erneut.";
+
+"ADD_CARD_PAYMENT_METHOD_TITLE" = "Karte hinzufügen";
+"ADD_PAYMENT_METHOD_SAVE" = "Sichern";
+"ADD_PAYMENT_METHOD_SECURITY_HINT" = "Um sicherzustellen, dass alle Informationen abgesichert sind, werden Ihre Kartendaten verschlüsselt, bevor sie an unseren sicheren Zahlungsdienstleister übermittelt werden.";
+
+//SCANNER
+"CAMERA"="Kamera";
+
+
+// NETWORK TASK
+"OOPS"="Upps";
+"NO_RESULT_FOUND_FOR_YOUR_REQUEST"="Keine Ergebnisse für Ihre Anfrage gefunden";
+
+// ALERT
+"CONFIRMATION"="Bestätigung";
+"CLEAR_ALL_WISHLIST_ITEMS"="Sind Sie sicher, dass Sie alle Artikel von Ihrer Wunschliste entfernen möchten?";
+
+// My Sizes
+"MY_SIZES_MY_MEASUREMENTS"="Meine Größen";
+"MY_SIZES_HIS_MEASUREMENTS"="Seine Größen ";
+"MY_SIZES_HER_MEASUREMENTS"="Ihre Größen ";
+"MY_SIZES_LITTLE_ONE_MEASUREMENTS"="Kindergrößen";
+"MY_SIZES_MANS_MEASUREMENTS"="Herrengrößen";
+"MY_SIZES_WOMAN_MEASUREMENTS"="Damengrößen";
+"MY_SIZES_ENTER_IN_YOUR_MEASUREMENTS"="Geben Sie Ihre Maße ein";
+"MY_SIZES_TOPS"="Oberteile";
+"MY_SIZES_BOTTOMS"="Hosen";
+"MY_SIZES_SHOES"="Schuhe";
+"MY_SIZES_BRA"="BH";
+"MY_SIZES_BRA_BACK"="Umfang";
+"MY_SIZES_BRA_CUP"="Körbchengröße";
+"MY_SIZES_NO_SIZE_SELECTED"="Keine Größe ausgewählt";
+
+// Edit Profile
+"UPDATE_YOUR_DETAILS"="Aktualisieren Sie Ihre Angaben";
+"DOB"="Geburtsdatum";
+"MANAGE_MY_ADDRESS"="Meine Adressen verwalten";
+"REGISTER_REPLACEMENT_REWARD_CARD"="Registrieren Sie Ihre Ersatz-Treuekarte";
+"PLEASE_SELECT_ONE"="Bitte wählen Sie eine aus";
+"SUCCESSFULLY_UPDATED"="Erfolgreich aktualisiert.";
+"VIEW_MY_PROFILE"="Mein Profil ansehen";
+"DO_YOU_WANT_TO_LOG_OUT"="Möchten Sie sich aus Ihrem Konto ausloggen?";
+"ARE_YOU_SURE"="Sind Sie sicher?";
+"MANAGE_YOUR_DETAILS_BIRTHDAY"="Verwalten Sie Ihre Angaben hier – Geburtsdatum kann nur einmal aktualisiert werden";
+"MANAGE_YOUR_DETAILS"="Verwalten Sie Ihre Angaben hier";
+"EMAIL_IN_USE"="E-Mail-Adresse bereits vergeben.";
+"PLEASE_SIGN_IN_TO_YOUR_ACCOUNT"="Bitte melden Sie sich mit Ihrem Konto an";
+
+
+// PRODUCT LIST FILTERS
+"CLEAR_SELECTED_FILTERS"="Ausgewählte Filter entfernen";
+"CLEAR_CURRENT_VIEW"="Ansicht löschen";
+"CLEAR_ALL"="Alles löschen";
+//MARK: - FILTERS Options
+"FILTERS" = "FILTER";
+"Filters" = "Filter";
+"FILTER_COLOUR" = "Farbe";
+"FILTER_SIZE" = "Größe";
+"FILTER_BRAND" = "Marke";
+"FILTER_STYLE" = "Stil";
+"FILTER_CATEGORY" = "Kategorie";
+"FILTER_RESULTS" = "Filter";
+"FILTER_OPTIONS" = "Filter";
+
+"CLEAR_ALL_FILTERS" = "ALLE FILTER ENTFERNEN";
+"CLEAR_FILTERS" = "Filter entfernen";
+"CLEAR_CURRENT_MESSAGE" = "Sind Sie sicher, dass Sie Ihre derzeitige Auswahl löschen möchten?";
+"MOST_RECENT" = "NEU EINGETROFFEN";
+
+//Order list
+"CLICK_BELOW"="Klicken Sie unten, um den Einkauf bei %@ zu beginnen";
+// LOOKBOOK
+"LOOKBOOK_SHOP_BUTTON" = "DEN LOOK SHOPPEN";
+"LOOKBOOK_HIDE_BUTTON" = "AUSBLENDEN";
+
+
+// Sign up
+"GENDER_REQUIRED" = "Geschlecht ist erforderlich";
+"USERNAME_ALREADY_USE"="Benutzername ist bereits vergeben";
+
+// WEBVIEW
+"PLEASE_WAIT" = "Bitte warten Sie während wir Ihre Angaben verarbeiten";
+"WEBVIEW_LOADING" = "Laden...";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT" = "Sind Sie sicher, dass Sie das Check-out verlassen wollen?";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_YES" = "Ja";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_NO" = "Nein";
+
+"FAILED_TO_LOGIN" = "Anmeldung fehlgeschlagen";
+"UNAUTORIZED_ACCESS" = "Unauthorisierter Zugriff";
+"WRONG_USERNAME_OR_PASSWORD" = "Falscher Benutzername oder Passwort";
+"DISMISS" = "Verwerfen";
+"FAILED_TO_SIGN_UP" = "Registrierung fehlgeschlagen";
+
+//iRate pop up message
+"iRateMessageTitle" = "%@ bewerten";
+"iRateAppMessage" = "Hat Ihnen %@ gefallen? Bitte nehmen Sie sich einen Moment Zeit für eine Bewertung. Vielen Dank für Ihre Unterstützung!";
+"iRateGameMessage" = "Hat Ihnen %@ gefallen? Bitte nehmen Sie sich einen Moment Zeit für eine Bewertung. Vielen Dank für Ihre Unterstützung!";
+"iRateCancelButton" = "Nein Danke";
+"iRateRateButton" = "Jetzt Bewerten";
+"iRateRemindButton" = "Vielleicht Später";
+
+// Apply Voucher
+"APPLY_VOUCHER_TITLE" = "Gutschein einlösen";
+"APPLY_VOUCHER_TEXTFIELD_PLACEHOLDER" = "Gutscheincode und Studentenrabatt";
+"APPLY_VOUCHER_BUTTON_LABEL" = "Eingeben";
+"REMOVE_VOUCHER_MESSAGE" = "Möchten Sie den Gutschein entfernen?";
+"INVALID_VOUCHER_CODE" = "Ungültiger Code. Bitte versuchen Sie es erneut.";
+"VOUCHER_VIEW_TEXT" = "Gutschein";
+"STUDENT_DISCOUNT_VIEW_TEXT" = "Studentenrabatt";
+"VOUCHER_CODE_DEFAULT_TEXT" = "Gutscheincode";
+"STUDEN_DISCOUNT_DEFAULT_TEXT" = "NUS Studentennummer";
+//Permission
+"FAILED_TO_ACCESS_CONTACT" = "Zugriff auf Kontaktliste fehlgeschlagen";
+// Shopify
+"SHOPIFY_US_ONLY_SHIPPING_ADDRESS_TITLE" = "Nur US-Amerikanische Lieferadressen unterstützt";
+"APPLE_PAY_UNAVAILABLE_ERROR" = "Apple Pay ist derzeit nicht verfügbar. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut";
+"CANNOT_USE_APPLE_WHILE_EDIT" = "Bearbeitung beenden, um Apple Pay zu benutzen";
+"CANNOT_USE_APPLE_UNAVAILABLE_ITEM" = "Bestellung nicht möglich. Warenkorb enthält nicht-verfügbare Artikel";
+"SHOPIFY_US_ONLY_BILLING_ADDRESS_TITLE" = "Nur US-Amerikanische Zahlungsadressen unterstützt";
+
+// MARK: - Checkout Order Summary
+"CHECKOUT_WITH_KLARNA" = "Kasse mit Klarna";
+"DELIVERY_OPTIONS" = "Lieferoptionen";
+"SELECT_DELIVERY_OPTIONS" = "Lieferoptionen auswählen";
+"DISCOUNT"="Rabatt";
+"COMPLETE_ALL_REQURED_FIELDS" = "Füllen Sie alle Felder aus, um die Bestellung aufzugeben";
+"COMPLETE_PAYMENT_METHOD_NOT_AVAILABLE" = "Zahlungsmethode ist nicht verfügbar";
+"CONTINUE_SHOPPING" = "Weitershoppen";
+"SWIPE_TO_HYPE_PLACEHOLDER"="Swipe to Hype Feature in Kürze verfügbar.";
+"SELECT_BILLING_ADDRESS" = "Zahlungsadresse Auswählen";
+"SELECT_DELIVERY_ADDRESS" = "Lieferadresse Auswählen";
+"SELECT_ADDRESS_TYPE" = "Wähle %@";
+"ADDRESS_TYPE" = "%@ Adresse";
+"ADDRESS_BOOK" = "Adressbuch";
+"DELETE_ADDRESS_MESSAGE" = "Sind Sie sicher, dass Sie die Adresse löschen wollen?";
+
+"ADDRESS_TYPE_BILLING" = "Billing";
+"ADDRESS_TYPE_DELIVERY" = "Delivery";
+"ADDRESS_TYPE_ADDRESS_BOOK" = "Address Book";
+"ADDRESS_TYPE_NEW_ADDRESS" = "New Address";
+
+"ADDRESS_BOOK" = "Adressbuch";
+"DELETE" = "Löschen";
+"SAVE" = "Speichern";
+
+"VIEW_AMEND_BUTTON" = "Ansehen / Ändern";
+"SET_PRIMARY_BILLING_ADDRESS" = "Legen Sie eine Haupt-Rechnungsadresse fest";
+"SET_PRIMARY_SHIPPING_ADDRESS" = "Legen Sie eine Haupt-Lieferadresse fest";
+"SAME_AS_BILLING_ADDRESS" = "Gleiche Adresse, wie Zahlungsadresse verwenden";
+"DISCOUNT"="Rabatt";
+"CONTINUE_SHOPPING" = "Weitershoppen";
+"ORDER_NUMBER"="Bestellung #%@";
+"ORDER_ID"="Bestell-ID: ";
+"YAY"="Juhu!";
+"SAME_AS_BILLING_ADDRESS" = "Gleiche Adresse, wie Zahlungsadresse verwenden";
+"NEW_ADDRESS" = "Neue Adresse hinzufügen";
+
+//Order Confirmation
+"CONTINUE_SHOPPING" = "WEITERSHOPPEN";
+"ORDER_HARSH_NUMBER" = "Bestellung #%@";
+"CHECKOUT_MANAGEADDRESS_SELECT_ADDRESS" = "ADRESSE AUSWÄHLEN";
+"EDIT_ADDRESS" = "Adresse bearbeiten";
+"FREE"="KOSTENLOS";
+"Free"="Kostenlos";
+"MY_ACCOUNT"="Mein Konto";
+"DELETE" = "Löschen";
+"SAVE" = "Speichern";
+
+
+"CHECKOUT_ERROR" = "Ein Fehler ist aufgetreten. Bitte überprüfen Sie Ihre Zahlungsinformationen und versuchen Sie es später erneut.";
+"Skip" = "Überspringen";
+
+// MARK: COUNTRY SELECTIONS
+"COUNTRY_SELECTION_TITLE" = "Bevorzugtes Land";
+"COUNTRY_SELECTION_WARNING_TITLE" = "Durch Ändern des Landes könnten die Produktpreise variieren und Ihr Warenkorb wird geleert";
+"COUNTRY_SELECTION_CURRENT_COUNTRY_FORMAT" = "Ihr derzeitiges Land ist %@";
+
+"Size"="Größe";
+"size"="größe";
+"SIZE"="GRÖßE";
+
+"TITLE_SIZE_NUMBER"="%@ - Größe %@";
+"PDP_Sold_Out" = "Ausverkauft";
+
+// MARK: Native Checkout
+"CHECKOUT_PAYMENT_STEP_FIRST_LINE" = "Payment & Billing";
+"CHECKOUT_DELIVERY_STEP_FIRST_LINE" = "Delivery";
+"CHECKOUT_BILLING_STEP_FIRST_LINE" = "Billing address";
+"CHECKOUT_DELIVERY_OPTIONS_STEP_FIRST_LINE" = "Delivery service";
+
+

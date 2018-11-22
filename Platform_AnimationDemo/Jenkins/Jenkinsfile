@@ -1,0 +1,76 @@
+#!/usr/bin/env groovy
+@Library('ios-shared-library') _
+
+String cron = poqPlatformTrigger()
+def actions = poqActions.forPlatform()
+def targets = ['PoqDemoApp', 'PoqDemoApp-InHouseUAT'].join('\n')
+
+pipeline {
+    agent { label 'ios' }
+
+    environment {
+        LANG = 'en_US.UTF-8'
+        LANGUAGE = 'en_US.UTF-8'
+        LC_ALL = 'en_US.UTF-8'
+    }
+
+    parameters {
+        choice(name: 'POQ_ACTION', description: 'Action', choices: actions)
+        choice(name: 'POQ_TARGET', description: 'Target', choices: targets)
+        string(name: 'POQ_BUILD_NUMBER', description: 'Upload Build Number (optional)', defaultValue: '')
+        string(name: 'POQ_OPTIONS', description: 'Additional Options (optional)', defaultValue: '')
+    }
+
+    triggers {
+        parameterizedCron("${cron}")
+    }
+
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+    }
+
+    stages {
+        stage('Generate') {
+            steps { poqStepGenerate() }
+        }
+
+        stage('Build') {
+            when { expression { poqShouldBuild() } }
+            steps { poqStepBuild() }
+        }
+            
+        stage('Test') {
+            when { expression { poqShouldTest() } }
+            steps { poqStepTest() }
+        }
+
+        stage('Check Clients') {
+            when { expression { poqShouldCheckClients() } }
+            steps { poqStepCheckClients() }
+        }
+
+        stage('Archive') {
+            when { expression { poqShouldArchive() } }
+            steps { poqStepArchive() }
+        }
+
+        stage('Upload') {
+            when { expression { poqShouldArchive() } }
+            steps { poqStepUpload() }
+        }
+    }
+
+    post {
+        always {
+            poqStepAlways()
+        }
+
+        success {
+            poqStepSuccess()
+        }
+
+        failure {
+            poqStepFailure()
+        }
+    }
+}

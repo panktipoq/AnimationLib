@@ -1,0 +1,41 @@
+{
+"order": {
+"channel": "iphone",
+"currency": "GBP",
+"externalId": null,
+"items": [{
+"productId": 15302316,
+"productTitle": "Gabby's Green Velvet Sequin Long Sleeve Bodycon Dress",
+"sku": "V59DB740365C17",
+"price": 39.99,
+"specialPrice": 14.99,
+"quantity": 1
+}],
+"orderId": 0,
+"reference": "A6EC1CAC-C0AC-4439-A3DE-D7DF2761540E",
+"staticContent": {
+"cssOverriding": null,
+"jsOverriding": null,
+"orderCostTrackingJs": "getPoqOrder();",
+"orderNumberTrackingJs": "getPoqOrder();"
+},
+"subtotal": 14.99
+},
+"url": "https://poq-web-carttransferdemo-uat.azurewebsites.net/cart/",
+"httpMethod": "POST",
+"body": "reference=A6EC1CAC-C0AC-4439-A3DE-D7DF2761540E&currency=GBP&items%5b0%5d%5bsku%5d=V59DB740365C17&items%5b0%5d%5bquantity%5d=1",
+"cookies": [],
+"cssOverriding": null,
+"jsOverriding": null,
+"headers": [{
+"name": "Content-Type",
+"value": "application/json"
+}],
+"orderNumberTrackingJs": "getPoqOrder();",
+"orderCostTrackingJs": "getPoqOrder();",
+"success": false,
+"errorMessage": null,
+"message": null,
+"responseCode": 0,
+"statusCode": 0
+}

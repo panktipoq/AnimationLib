@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Sn5-wJ-nK5" customClass="ColorSwatchButtonView" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1og-8M-j4p" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="4" y="4" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1" id="CYR-kM-vnh"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Y6q-2e-Njp"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th0-fr-D29">
+                    <rect key="frame" x="1" y="1" width="42" height="42"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Th0-fr-D29" firstAttribute="top" secondItem="Sn5-wJ-nK5" secondAttribute="top" constant="1" id="dBJ-o9-okz"/>
+                <constraint firstAttribute="bottom" secondItem="1og-8M-j4p" secondAttribute="bottom" constant="4" id="dIV-Nu-u3L"/>
+                <constraint firstItem="1og-8M-j4p" firstAttribute="leading" secondItem="Sn5-wJ-nK5" secondAttribute="leading" constant="4" id="mJR-3O-qYc"/>
+                <constraint firstAttribute="trailing" secondItem="1og-8M-j4p" secondAttribute="trailing" constant="4" id="q1M-Ep-phJ"/>
+                <constraint firstItem="Th0-fr-D29" firstAttribute="leading" secondItem="Sn5-wJ-nK5" secondAttribute="leading" constant="1" id="rCB-4y-leY"/>
+                <constraint firstAttribute="bottom" secondItem="Th0-fr-D29" secondAttribute="bottom" constant="1" id="saL-Xw-jOA"/>
+                <constraint firstItem="1og-8M-j4p" firstAttribute="top" secondItem="Sn5-wJ-nK5" secondAttribute="top" constant="4" id="spl-Ty-joy"/>
+                <constraint firstAttribute="trailing" secondItem="Th0-fr-D29" secondAttribute="trailing" constant="1" id="vgW-ct-k7V"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="colorSwatchButton" destination="Th0-fr-D29" id="v9N-Rp-l0f"/>
+                <outlet property="colorSwatchImageView" destination="1og-8M-j4p" id="Xmc-Nc-EjO"/>
+            </connections>
+            <point key="canvasLocation" x="-122" y="-2"/>
+        </view>
+    </objects>
+</document>

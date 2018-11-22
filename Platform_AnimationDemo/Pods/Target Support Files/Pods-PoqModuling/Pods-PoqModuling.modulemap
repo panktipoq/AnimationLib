@@ -1,0 +1,6 @@
+framework module Pods_PoqModuling {
+  umbrella header "Pods-PoqModuling-umbrella.h"
+
+  export *
+  module * { export * }
+}

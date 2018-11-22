@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginOptionsViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="39m-WW-hUI" id="gag-8K-d4S"/>
+                <outlet property="loginOptionsCollectionView" destination="Y9i-4D-QlZ" id="exi-9M-gof"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Htc-jq-IXS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Y9i-4D-QlZ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2bs-Yy-qGz">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dIR-g3-HYL"/>
+                        <outlet property="delegate" destination="-1" id="4rJ-a6-ga1"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39m-WW-hUI" userLabel="Close Button" customClass="CloseButton" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="5" y="15" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Scn-jW-Vab"/>
+                        <constraint firstAttribute="height" constant="44" id="Z53-nb-5XZ"/>
+                    </constraints>
+                    <connections>
+                        <action selector="closeButtonClicked:" destination="-1" eventType="touchUpInside" id="VbX-Rp-X02"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y9i-4D-QlZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2sR-KD-0Za"/>
+                <constraint firstItem="39m-WW-hUI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="4Ow-YI-Jjc"/>
+                <constraint firstAttribute="bottom" secondItem="Y9i-4D-QlZ" secondAttribute="bottom" id="6Jz-vU-ydK"/>
+                <constraint firstItem="Y9i-4D-QlZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aMK-lY-bo7"/>
+                <constraint firstItem="Y9i-4D-QlZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cTh-kf-qhh"/>
+                <constraint firstItem="39m-WW-hUI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="hLt-vd-ONu"/>
+                <constraint firstItem="Y9i-4D-QlZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rkR-CL-yFI"/>
+                <constraint firstAttribute="trailing" secondItem="Y9i-4D-QlZ" secondAttribute="trailing" id="tgA-7R-RDB"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

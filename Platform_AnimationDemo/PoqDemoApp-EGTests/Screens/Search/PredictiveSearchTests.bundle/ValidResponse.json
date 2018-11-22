@@ -1,0 +1,15 @@
+{
+    "@odata.context": "https://poq-platform-search-uat.search.windows.net/indexes('category-index-173')/$metadata#docs(deeplinkUrl,title,numberOfProducts,appId,categoryId,parentCategoryId,parentCategoryTitle)",
+    "value": [
+          {
+          "@search.text": "Shirts",
+          "deeplinkUrl": null,
+          "title": "Shirts",
+          "numberOfProducts": 3,
+          "appId": 173,
+          "categoryId": "240562",
+          "parentCategoryId": 228694,
+          "parentCategoryTitle": "Men"
+          }
+    ]
+}

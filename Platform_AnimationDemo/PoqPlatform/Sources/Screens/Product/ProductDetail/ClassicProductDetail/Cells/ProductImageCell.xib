@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductImageCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="198"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="279" height="198"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qT-xS-1Ty" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="279" height="198"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="3qT-xS-1Ty" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PW1-uD-Nrs"/>
+                <constraint firstAttribute="bottom" secondItem="3qT-xS-1Ty" secondAttribute="bottom" id="USk-tv-Nkf"/>
+                <constraint firstAttribute="trailing" secondItem="3qT-xS-1Ty" secondAttribute="trailing" id="ckG-sz-qAZ"/>
+                <constraint firstItem="3qT-xS-1Ty" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eCG-Yb-KXz"/>
+            </constraints>
+            <size key="customSize" width="279" height="198"/>
+            <connections>
+                <outlet property="imageView" destination="3qT-xS-1Ty" id="aih-zi-IFN"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="15"/>
+        </collectionViewCell>
+    </objects>
+</document>

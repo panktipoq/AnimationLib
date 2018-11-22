@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckoutDeliveryOptionsCell" rowHeight="44" id="MgN-mF-aLo" customClass="CheckoutDeliveryOptionsCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MgN-mF-aLo" id="tIr-QP-9Y2">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4t-CQ-Xq8" userLabel="title">
+                        <rect key="frame" x="15" y="15" width="225" height="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reU-JI-G77" userLabel="price">
+                        <rect key="frame" x="255" y="11" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="CKz-tx-lLb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="s4t-CQ-Xq8" secondAttribute="bottom" constant="15" id="Exj-OI-cSW"/>
+                    <constraint firstAttribute="trailing" secondItem="reU-JI-G77" secondAttribute="trailing" constant="15" id="IZN-Yw-963"/>
+                    <constraint firstItem="s4t-CQ-Xq8" firstAttribute="top" secondItem="tIr-QP-9Y2" secondAttribute="top" constant="15" id="JD4-nA-kKf"/>
+                    <constraint firstItem="reU-JI-G77" firstAttribute="leading" secondItem="s4t-CQ-Xq8" secondAttribute="trailing" constant="15" id="PPn-Hu-Ole"/>
+                    <constraint firstAttribute="bottom" secondItem="reU-JI-G77" secondAttribute="bottom" constant="11" id="XMx-MZ-lkg"/>
+                    <constraint firstItem="s4t-CQ-Xq8" firstAttribute="leading" secondItem="tIr-QP-9Y2" secondAttribute="leading" constant="15" id="YVp-9o-8Za"/>
+                    <constraint firstItem="reU-JI-G77" firstAttribute="top" secondItem="tIr-QP-9Y2" secondAttribute="top" constant="11" id="vd5-xC-Zj7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="priceLabel" destination="reU-JI-G77" id="Syl-EX-z9b"/>
+                <outlet property="titleLabel" destination="s4t-CQ-Xq8" id="jnz-2G-qm4"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="202"/>
+        </tableViewCell>
+    </objects>
+</document>

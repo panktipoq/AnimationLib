@@ -1,0 +1,6 @@
+framework module Pods_PoqNetworking {
+  umbrella header "Pods-PoqNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}

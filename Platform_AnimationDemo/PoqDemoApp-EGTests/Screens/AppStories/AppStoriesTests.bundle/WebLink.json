@@ -1,0 +1,45 @@
+{
+    "stories": [
+                {
+                "identifier": "34230714-8ee6-42e2-8c92-e3d3f18b6899",
+                "title": "Looks4Dayz",
+                "iconUrl": "http://localhost:50100/app173/11158306-thumb.png",
+                "imageUrl": "http://localhost:50100/app173/11176197-1.png?v=131466069540670000",
+                "from": null,
+                "to": null,
+                "autoplay": false,
+                "cards": [
+                          {
+                          "type": "Weblink",
+                          "url": "https://www.apple.com",
+                          "identifier": "540722f6-a6f7-49df-90e6-e0a2f3c96c4b",
+                          "title": "Now that's what I call music",
+                          "imageUrl": "http://localhost:50100/app173/11158308-1.jpg?v=131461356855970000",
+                          "duration": 4,
+                          "actionLabel": "Double Denim"
+                          }
+                          ]
+                },
+                {
+                "identifier": "34230714-8ee6-42e2-8c92-e3d3f18b6899",
+                "title": "Looks4Dayz",
+                "iconUrl": "http://localhost:50100/app173/11158306-thumb.png",
+                "imageUrl": "http://localhost:50100/app173/11176197-1.png?v=131466069540670000",
+                "from": null,
+                "to": null,
+                "autoplay": false,
+                "cards": [
+                          {
+                          "type": "Video",
+                          "videoUrl": "https://www.quizclothing.co.uk/_uploads/products/videos/00100013062.mp4",
+                          "identifier": "85f55e71-e3c7-42a3-8dd9-a21eac918c4b",
+                          "title": "Autumn Looks",
+                          "imageUrl": "https://poquat.blob.core.windows.net/app173/11452839-1.gif?v=131516922598900000",
+                          "duration": 4,
+                          "actionLabel": "Better Conversion?"
+                          }
+                          ]
+                }
+                ]
+}
+

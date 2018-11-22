@@ -1,0 +1,70 @@
+{
+    "cartId": "testCart",
+    "cartItems": [
+                  {
+                  "brand": "Gucci",
+                  "id": "61669731",
+                  "isInStock": true,
+                  "price": {
+                  "now": 60.00,
+                  "nowFormatted": "$60.00",
+                  "was": 120.00,
+                  "wasFormatted": null,
+                  "currencySymbol": "£",
+                  "currencyCode": "GBP"
+                  },
+                  "total": {
+                  "now": 60.00,
+                  "nowFormatted": "$60.00",
+                  "was": null,
+                  "wasFormatted": null,
+                  "currencySymbol": "$",
+                  "currencyCode": "USD"
+                  },
+                  "platformProductId": "3364503",
+                  "clientProductId": "00100013074",
+                  "title": "Tori Tank",
+                  "thumbnailUrl": "https://az412776.vo.msecnd.net/app167/7489507-540.jpg?v=131581702710670000",
+                  "quantity": 1,
+                  "variantId": "10432143",
+                  "variantName": "XL"
+                  },
+                  {
+                  "brand": "Gucci",
+                  "id": "61669741",
+                  "isInStock": false,
+                  "price": {
+                      "now": 210.00,
+                      "nowFormatted": "$210.00",
+                      "was": null,
+                      "wasFormatted": null,
+                      "currencySymbol": "$",
+                      "currencyCode": "USD"
+                  },
+                  "total": {
+                      "now": 210.00,
+                      "nowFormatted": "$210.00",
+                      "was": null,
+                      "wasFormatted": null,
+                      "currencySymbol": "$",
+                      "currencyCode": "USD"
+                  },
+                  "platformProductId": "3364504",
+                  "clientProductId": "00100013075",
+                  "title": "Elizabeth Knit Top",
+                  "thumbnailUrl": "https://az412776.vo.msecnd.net/app167/7489495-540.jpg?v=131581702687070000",
+                  "wasPrice": null,
+                  "quantity": 1,
+                  "variantId": "10432132",
+                  "variantName": "XL"
+                  }
+                  ],
+    "total": {
+        "now": 270.00,
+        "nowFormatted": "$270.00",
+        "was": null,
+        "wasFormatted": null,
+        "currencySymbol": "$",
+        "currencyCode": "USD"
+    }
+}

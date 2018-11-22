@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="KGk-i7-Jjw" customClass="DatePickerTableViewCell" customModule="BlueInc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="321" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OfQ-du-zeX">
+                        <date key="date" timeIntervalSinceReferenceDate="471280369.05071598">
+                            <!--2015-12-08 15:12:49 +0000-->
+                        </date>
+                    </datePicker>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OfQ-du-zeX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CO9-gB-pPM"/>
+                    <constraint firstAttribute="trailing" secondItem="OfQ-du-zeX" secondAttribute="trailing" id="Qzd-Wg-gl2"/>
+                    <constraint firstItem="OfQ-du-zeX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="el7-Sv-FB7"/>
+                    <constraint firstAttribute="bottom" secondItem="OfQ-du-zeX" secondAttribute="bottom" id="fUy-Ay-UL6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="datePicker" destination="OfQ-du-zeX" id="GAW-Cb-2Cl"/>
+            </connections>
+            <point key="canvasLocation" x="380.5" y="334"/>
+        </tableViewCell>
+    </objects>
+</document>

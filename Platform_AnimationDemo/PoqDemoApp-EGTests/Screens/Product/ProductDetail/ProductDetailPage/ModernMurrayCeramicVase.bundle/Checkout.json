@@ -1,0 +1,97 @@
+{
+	"order": {
+		"orderId": 233999,
+		"subtotal": 147.15,
+		"items": [
+			{
+				"productId": 13566408,
+				"productTitle": "Modern Murray Ceramic Vase",
+				"sku": "0480005156238",
+				"price": 147.15,
+				"quantity": 1
+			}
+		]
+	},
+	"url": "https://production-web-belk.demandware.net/on/demandware.store/Sites-Belk-Site/default/COShipping",
+	"httpMethod": "GET",
+	"body": null,
+	"cookies": [
+		{
+			"commentUrl": null,
+			"comment": null,
+			"domain": ".demandware.net",
+			"expireDate": "2018-12-21T16:57:50Z",
+			"isHttpOnly": true,
+			"isSecure": false,
+			"isSessionOnly": false,
+			"name": "__cfduid",
+			"path": "/",
+			"port": null,
+			"rawValue": "__cfduid=dbd5311728ce61f1a0b12cc1f0efcb89d1513875470; expires=Fri, 21-Dec-18 16:57:50 GMT; path=/; domain=.demandware.net; HttpOnly",
+			"value": "dbd5311728ce61f1a0b12cc1f0efcb89d1513875470"
+		},
+		{
+			"commentUrl": null,
+			"comment": "\"Demandware anonymous cookie for site Sites-Belk-Site\"",
+			"domain": null,
+			"expireDate": "2018-06-19T16:57:50Z",
+			"isHttpOnly": false,
+			"isSecure": false,
+			"isSessionOnly": false,
+			"name": "dwanonymous_a58257d7a8c8c52704fa91f850837017",
+			"path": "/",
+			"port": null,
+			"rawValue": "dwanonymous_a58257d7a8c8c52704fa91f850837017=abmLnxWac8xVRXMDC5silR1q0i; Version=1; Comment=\"Demandware anonymous cookie for site Sites-Belk-Site\"; Max-Age=15552000; Expires=Tue, 19-Jun-2018 16:57:50 GMT; Path=/",
+			"value": "abmLnxWac8xVRXMDC5silR1q0i"
+		},
+		{
+			"commentUrl": null,
+			"comment": "\"Demandware Secure Token for site Sites-Belk-Site\"",
+			"domain": null,
+			"expireDate": null,
+			"isHttpOnly": true,
+			"isSecure": true,
+			"isSessionOnly": false,
+			"name": "dwsecuretoken_a58257d7a8c8c52704fa91f850837017",
+			"path": "/",
+			"port": null,
+			"rawValue": "dwsecuretoken_a58257d7a8c8c52704fa91f850837017=0e5JG4sCanhvi-9K64HRUMeKGVjMZ2tujA==; Version=1; Comment=\"Demandware Secure Token for site Sites-Belk-Site\"; Path=/; Secure; HttpOnly",
+			"value": "0e5JG4sCanhvi-9K64HRUMeKGVjMZ2tujA=="
+		},
+		{
+			"commentUrl": null,
+			"comment": null,
+			"domain": null,
+			"expireDate": null,
+			"isHttpOnly": true,
+			"isSecure": false,
+			"isSessionOnly": false,
+			"name": "dwsid",
+			"path": "/",
+			"port": null,
+			"rawValue": "dwsid=Au_cQd5ZucialTYoy_eUuEXH9Jl1-7ng9CJmEa9C1_uuMdpPYSK7CRw206RmVzY7dv8zqx0SmfsHZgH5H_wclw==; Path=/; HttpOnly",
+			"value": "Au_cQd5ZucialTYoy_eUuEXH9Jl1-7ng9CJmEa9C1_uuMdpPYSK7CRw206RmVzY7dv8zqx0SmfsHZgH5H_wclw=="
+		},
+		{
+			"commentUrl": null,
+			"comment": null,
+			"domain": null,
+			"expireDate": null,
+			"isHttpOnly": false,
+			"isSecure": false,
+			"isSessionOnly": false,
+			"name": "SourceClient",
+			"path": null,
+			"port": null,
+			"rawValue": null,
+			"value": "MobileApp"
+		}
+	],
+	"cssOverriding": null,
+	"jsOverriding": null,
+	"orderNumberTrackingJs": "JSON.parse(document.querySelector('meta[name=order-confirmation]').getAttribute('data-order-confirmation'))['orderNo'];",
+	"orderCostTrackingJs": "function getPoqOrder(){ var orderConfirmation = JSON.parse(document.querySelector(\"meta[name='order-confirmation']\").getAttribute('data-order-confirmation')); var poqOrder = \"{\\\"subTotal\\\":\\\"\"+orderConfirmation['AdjMerchandizeTotalGross']+\"\\\", \\\"delivery\\\":\\\"\"+orderConfirmation['AdjShippingGross']+\"\\\", \\\"discount\\\":\\\"0\\\"\"+\", \\\"total\\\":\\\"\"+orderConfirmation['Gross']+\"\\\"}\"; return poqOrder; } getPoqOrder();",
+	"storeName": null,
+	"errorMessage": null,
+	"statusCode": 200
+}

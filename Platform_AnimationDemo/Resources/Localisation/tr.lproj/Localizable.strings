@@ -1,0 +1,323 @@
+/* 
+  Localizable.strings
+  Poq_App_Base
+
+  Created by Jun Seki on 13/07/2014.
+  Copyright (c) 2014 Poq. All rights reserved.
+*/
+
+
+
+//"KEY" = "CONTENT";
+//tabs
+"HOME"="HOME";
+"SHOP"="SHOP";
+"LIKES"="LIKES";
+"WISHLIST"="WISH";
+"STORES"="STORES";
+"SCAN"="SCAN";
+"BAG"="BAG";
+"MORE"="MORE";
+
+"DELIVERY_TYPE" = "delivery";
+"CLICK_AND_COLLECT" = "click & collect";
+"CLICK_AND_COLLECT_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_SELECT" = "Select";
+
+
+//basics:
+"OK"="OK";
+"CANCEL"="Cancel";
+"ERROR"="ERROR";
+"SUCCESSFUL"="Successful!";
+"NEXT"="Next";
+"DONE"="Done";
+"LOADING"="Loading";
+"WISH"="WISH";
+"LOVES"="LOVES";
+"SUBMIT"="Submit";
+"LOGOUT"="Logout";
+"COLOUR"="Colour";
+
+///bag
+"GO_TO_BAG"="Go to your bag";
+"EDIT"="Edit";
+"DONE"="Done";
+
+//store
+"STORE_FINDER"="STORE FINDER";
+"CALL"="Call";
+"DIRECTIONS"="Directions";
+"OPENING_HOURS"="Opening Hours:";
+"MONDAY"="Monday";
+"TUESDAY"="Tuesday";
+"WEDNESDAY"="Wednesday";
+"THURSDAY"="Thursday";
+"FRIDAY"="Friday";
+"SATURDAY"="Saturday";
+"SUNDAY"="Sunday";
+"AVAILABLE_IN_STORE"="Available in store";
+"NOT_AVAILABLE_IN_STORE"="Not Available in store";
+"IN_STORE_AVAILABILITY"="In store";
+"IN_STORE_AVAILABILITY_OFF"="Store information currently unavailable";
+"CHECK_IN_STORE_AVAILABILITY_OFF"="Check store availability";
+"DESCRIPTION"="Description";
+"DELIVERY"="Delivery";
+"RETURNS"="Returns";
+"SIZE_GUIDE"="Size guide";
+"LEAVING_THE_APP"="Leaving the app";
+"LEAVING_THE_APP_GETTING_DIRECTIONS"="Getting directions will take you out of the app. Are you sure you want to go?";
+"GET_DIRECTIONS"="Get Directions";
+"NEARBY"="Nearby";
+"MAP"="Map";
+
+//refresh
+"PULL_TO_REFRESH" = "Pull down to refresh...";
+"RELEASE_TO_REFRESH" = "Release to refresh...";
+
+//User login in/registration:
+"REGISTER"="Register";
+"SIGN_UP"="I'm new";
+"SUBMIT"="Submit";
+"SIGN_IN"="Sign in";
+"SIGN_INTO"="Sign into \n";
+"LOGIN"="Login";
+"LOGOUT"="Logout";
+"LOGGED_OUT"="Logged out";
+"FORGOT_PASSWORD"="Forgot Password";
+"TERMS_CONDITIONS"="Terms & Conditions";
+"LOGIN_REGISTER_TO_LIKE"="Please log in or register to like the product.";
+"LOGIN_REGISTER_TO_CONTINUE"="Please log in or register to continue";
+"LOGGED_OUT_TEXT"="You are now logged out of your account.";
+"LOGIN_ERROR"="The e-mail or password you entered might be incorrect. Please try again ";
+"LOGIN_FAILED"="LOGIN FAILED";
+"BAG_MERGED"="We see you already had items in your basket so we’ve merged these items into your current basket";
+"CUSTOMER_RECOGNITION_NUMBER"="CUSTOMER RECOGNITION ACCOUNT NUMBER";
+
+//SIGN UP
+"YOUR_ACCOUNT"="Your account";
+"FIRSTNAME"="First Name*";
+"LASTNAME"="Last Name*";
+"EMAIL"="Email*";
+"PASSWORD"="Password*";
+"GENDER"="Gender*";
+"FEMALE"="Female";
+"MALE" ="Male";
+"SHOW"="SHOW";
+"HIDE"="HIDE";
+"SEND_ME_PROMOTIONS"="Send me House of Fraser offers & promotions";
+"MASTERCARD_OPTION"="I already have a Recognition MasterCard / Account Card ";
+
+//my profile
+"UNLOCK_FEATURES"="Unlock these features";
+"GO_SHOPPING_NOW"="Start Shopping";
+
+//Error message:
+"HOME_CONNECTION_ERROR"="Connection error.\nPlease pull down to refresh.";
+"TRY_AGAIN"="Please try again later.";
+"CONNECTION_ERROR"="Connection Error";
+"UNABLE_TO_CONNECT" = "Unable to connect to server, please go back and try again.";
+"SESSION_ERROR"="Session Error";
+"INVALID_SESSION"="Your current session is no longer valid. Please log in again.";
+"SOMETHING_WENT_WRONG"="Something went wrong";
+"FACEBOOK_ERROR"="Failed to share on Facebook";
+"MAIL_SENDING_FAILED"="Mail sending failed.";
+"NO_ACTIVE_EMAIL"="No active e-mail account found on this device.";
+"UNABLE_TO_SYNC_WISH"="Unable to sync wish list. Please try logging in again.";
+"UNABLE_TO_SYNC_BAG"="Unable to sync bag contents. Please try logging in again.";
+"UNABLE_TO_ADD_TO_BAG"="Unable to add to bag. Error communicating with server. Please try again.";
+"NO_NETWORK_CONNECTION"="No Network Connection";
+"NO_NETWORK_CONNECTION_MSG"="Your device does not appear to be connected to the network. Please try again when you have network connection";
+
+//share options
+"FACEBOOK"="Facebook";
+"TWITTER"="Twitter";
+"PINTEREST"="Pinterest";
+"SAVE_PICTURE"="Save Picture";
+"E-MAIL_FRIEND"="E-mail to a friend";
+"LOOK_WHAT_I_FOUND_ON %@ app! \n%@ "="Look what I just found on the %@ app! \n%@ ";
+
+//success message
+"TWITTER_CONFIRMATION"="Thanks for tweeting.";
+"IMAGE_SAVED_TITLE"="Image Saved";
+"IMAGE_SAVED_CONFIRMATION"="Image has been saved onto your device.";
+"SHARING_CONFIRMATION"="Thanks for sharing!";
+"MAIL_SENT_CONFIRMATION"="Mail sent successfully.";
+
+//barcode scanner
+"LINK_FOUND"="Link found";
+"OPEN_LINK"="Open the link";
+"CONTINUE"="CONTINUE";
+"SCAN_CODE"="SCAN CODE";
+"ENTER_CODE"="ENTER CODE";
+"SCAN_TOP_TEXT"="TO SCAN A CODE, ALIGN IT BETWEEN THE LINES BELOW.";
+"SCAN_BOTTOM_TEXT"="TAP THE SCREEN TO FOCUS";
+"CODE_TEXTFIELD"="Enter code here";
+
+//Products related
+"SHOP_IT"="Shop It";
+"SHARE"="SHARE";
+"LIKE"="LIKE";
+"BUY"="BUY";
+
+"SELECT_SIZE"="Select size:";
+"ONE_SIZE"="One Size";
+"OUT_OF_STOCK"="Out of stock";
+"SOLD_OUT"="Sold Out";
+"SEARCH_ALL_PRODUCTS"="SEARCH ALL PRODUCTS";
+"SEARCH_IN"="SEARCH IN";
+"WISH_NO_ITEMS"="Your wishlist is empty";
+"WISH_NO_ITEMS_INSTRUCTIONS"="Love a product? Add it to your wishlist by tapping the heart";
+"BAG_REMOVE_ITEMS %@"="Are you sure you want to remove %@ from your bag?";
+"BAG_NO_ITEMS"="Your bag is empty";
+"BAG_NO_ITEMS_INSTRUCTIONS"="Click below to start shopping at House of Fraser";
+"ADD_TO_BAG"="Add to Bag";
+"ADDED_TO_BAG"="Added to Bag";
+"BAG_OUT_OF_STOCK"="Product is out of stock";
+"BAG_ITEM_UNAVAILABLE"="Requested amount is not available";
+
+"NO_RESULTS"="No Results";
+"NO_RESULTS_FOUND"="No results found";
+"PLEASE_TRY_AGAIN"="Please try again";
+"NO_RESULTS_FOUND_FOR \n \"%@\"."="NO RESULTS FOUND FOR \n \"%@\".";
+"NO_RESULTS_FOUND_IN \"%@\"."="NO RESULTS FOUND IN \"%@\". \n\n TAP SEARCH TO VIEW MORE PRODUCTS.";
+
+//checkout
+"FIRST_NAME"="First Name";
+"LAST_NAME"="Last Name";
+"PHONE"="Phone";
+"ADDRESS"="Address";
+"CITY"="City";
+"COUNTY"="County";
+"POST_CODE"="Post Code";
+"COUNTRY"="Country";
+
+
+"CONTACT_DETAILS"="Contact Details";
+"TOTAL"="TOTAL";
+"TOTAL_AMOUNT"="Total amount:";
+"SECURE_CHECKOUT"="Secure Checkout";
+"NEXT_STEP"="Sonraki Adim";
+"BILLING_ADDRESS"="Billing Address";
+"DELIVERY_ADDRESS"="Delivery Address";
+"OR_STATE_PROVINCE"="or state/province";
+"OR_ZIP_CODE"="or ZIP code";
+"SAME_ADDRESS"="Deliver to the same address";
+
+"CHECKOUT_SECURELY"="Secure Checkout";
+
+// Availability
+"IN_STORE_AVAILABILITY"="Check store stock";
+"IN_STORE_AVAILABILITY_TITLE"="PLEASE SELECT YOUR SIZE AND YOUR FAVORITE STORE";
+"IN_STORE_AVAILABILITY_DESCRIPTION"="Check the availability of this product in your size and at your desired store";
+"IN_STORE_SIZE"="Size";
+"IN_STORE_STORE"="Store";
+"IN_STORE_SELECT_SIZE"="Select Size";
+"IN_STORE_SELECT_STORE"="Select Store";
+
+"BUY_COLLECT"="Collection";
+"HOME_DELIVERY"="UK & Ireland Delivery";
+"INTERNATIONAL_DELIVERY"="International Delivery";
+
+"PLEASE_CORRECT"="Please Correct:";
+"ENTER_FIRSTNAME"="Please enter first name.";
+"ENTER_LASTNAME"="Please enter last name.";
+"ENTER_TELEPHONE"="Please enter your telephone or mobile number.";
+"ENTER_VALID_EMAIL"="Please enter a valid e-mail address.";
+"ENTER_PASSWORD" ="Please enter a password.";
+"ENTER_VALID_PASSWORD" ="Min 8 characters and 1 number";
+
+"ENTER_BILLING_ADDRESS"="Please enter your billing address.";
+"ENTER_CITY"="Please enter your city for your billing address.";
+"ENTER_COUNTY"="Please enter your county for your billing address.";
+"ENTER_POSTCODE"="Please enter your postcode for your billing address.";
+"ENTER_COUNTRY"="Please pick your country for your billing address.";
+
+"ENTER_DELIVERY_FIRSTNAME"="Please enter your delivery address First Name.";
+"ENTER_DELIVERY_LASTNAME"="Please enter your delivery address Last Name.";
+"ENTER_DELIVERY_TELEPHONE"="Please enter the telephone number for your delivery address.";
+"ENTER_DELIVERY_ADDRESS"="Please enter your delivery address.";
+"ENTER_DELIVERY_CITY"="Please enter your delivery address City.";
+"ENTER_DELIVERY_POSTCODE"="Please enter your delivery address Post Code.";
+"ENTER_DELIVERY_COUNTRY"="Please enter the Country for your delivery address.";
+
+//SCANNER
+"CAMERA"="Camera";
+
+
+// NETWORK TASK
+"OOPS"="Oops";
+"NO_RESULT_FOUND_FOR_YOUR_REQUEST"="No result found for your request";
+
+// SEARCH
+"CLEAR"="Clear";
+
+// ALERT
+"CONFIRMATION"="Confirmation";
+"CLEAR_ALL_WISHLIST_ITEMS"="Are you sure you want to clear all of the itmes in your Wishlist?";
+
+// My Sizes
+"MY_SIZES_MY_MEASUREMENTS"="My sizes";
+"MY_SIZES_HIS_MEASUREMENTS"="His sizes";
+"MY_SIZES_HER_MEASUREMENTS"="Her sizes";
+"MY_SIZES_LITTLE_ONE_MEASUREMENTS"="Little one's sizes";
+"MY_SIZES_MANS_MEASUREMENTS"="Men's sizes";
+"MY_SIZES_WOMAN_MEASUREMENTS"="Women's sizes";
+"MY_SIZES_ENTER_IN_YOUR_MEASUREMENTS"="Enter your vital stats";
+"MY_SIZES_TOPS"="Tops";
+"MY_SIZES_BOTTOMS"="Bottoms";
+"MY_SIZES_SHOES"="Shoes";
+"MY_SIZES_BRA"="Bra";
+"MY_SIZES_BRA_BACK"="Back size";
+"MY_SIZES_BRA_CUP"="Cup size";
+"MY_SIZES_NO_SIZE_SELECTED"="No size selected";
+
+// Edit Profile
+"UPDATE_YOUR_DETAILS"="Update Your Details";
+"DOB"="Date of birth";
+"MANAGE_MY_ADDRESS"="Manage addresses";
+"REGISTER_REPLACEMENT_REWARD_CARD"="Register Replacement Reward Card";
+"PLEASE_SELECT_ONE"="Please select one";
+"SUCCESSFULLY_UPDATED"="Successfully updated.";
+"VIEW_MY_PROFILE"="View My Profile";
+"DO_YOU_WANT_TO_LOG_OUT"="Do you want to logout from your HoF account?";
+"ARE_YOU_SURE"="Are you sure";
+
+// PRODUCT LIST FILTERS
+"CLEAR_SELECTED_FILTERS"="Clear Selected Filters";
+"CLEAR_CURRENT_VIEW"="Clear Current View";
+"CLEAR_ALL"="Clear All";
+"CLEAR_RECENTLY_VIEWED_ITEMS"="Clear Recently Viewed Items";
+"CLEAR_CONFIRMATTION"="Are you sure to clear recently viewed items";
+"EMAIL_IN_USE"="Email address already in use.";
+"PLEASE_SIGN_IN_TO_YOUR_ACCOUNT"="Please sign in to your account";
+
+//Order list
+"CLICK_BELOW"="Click below to start shopping at House of Fraser";
+// LOOKBOOK
+"LOOKBOOK_SHOP_BUTTON" = "SHOP THE LOOK";
+"LOOKBOOK_HIDE_BUTTON" = "HIDE";
+
+
+// Sign up
+"GENDER_REQUIRED" = "Gender is required";
+
+// WEBVIEW
+"WEBVIEW_LOADING" = "Loading...";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT" = "Are you sure you want to leave the checkout?";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_YES" = "Yes";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_NO" = "No";
+
+"FAILED_TO_LOGIN" = "Failed to login";
+"UNAUTORIZED_ACCESS" = "Unauthorized Access";
+"WRONG_USERNAME_OR_PASSWORD" = "Wrong Username or password";
+"DISMISS" = "Dismiss";
+"FAILED_TO_SIGN_UP" = "Failed to sign up";
+
+// MARK: Native Checkout
+"CHECKOUT_PAYMENT_STEP_FIRST_LINE" = "Payment & Billing";
+"CHECKOUT_DELIVERY_STEP_FIRST_LINE" = "Delivery";
+"CHECKOUT_BILLING_STEP_FIRST_LINE" = "Billing address";
+"CHECKOUT_DELIVERY_OPTIONS_STEP_FIRST_LINE" = "Delivery service";
+

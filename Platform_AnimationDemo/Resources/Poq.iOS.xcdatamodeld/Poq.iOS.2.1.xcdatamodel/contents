@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Xcode 4.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="Poq.iOS.1.0">
+    <entity name="BeaconManagedObject" representedClassName="." syncable="YES">
+        <attribute name="major" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="minor" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="region" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MonitoringBeaconsRegion" inverseName="beacons" inverseEntity="MonitoringBeaconsRegion" syncable="YES"/>
+    </entity>
+    <entity name="MonitoringBeaconsRegion" representedClassName="." syncable="YES">
+        <attribute name="actionLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="beacons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BeaconManagedObject" inverseName="region" inverseEntity="BeaconManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="PoqSettingModel" representedClassName="PoqSettingModel" syncable="YES">
+        <attribute name="appId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="settingTypeId" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BeaconManagedObject" positionX="9" positionY="63" width="128" height="105"/>
+        <element name="MonitoringBeaconsRegion" positionX="-18" positionY="54" width="128" height="135"/>
+        <element name="PoqSettingModel" positionX="-54" positionY="-9" width="128" height="120"/>
+    </elements>
+</model>

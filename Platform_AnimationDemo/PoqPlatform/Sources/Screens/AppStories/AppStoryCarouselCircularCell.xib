@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="D6m-dj-Zbz" customClass="AppStoryCarouselCircularCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="141"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDf-Ll-IWY">
+                        <rect key="frame" x="27" y="5" width="117" height="117"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-2D-q20" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="107" height="107"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xO2-2D-q20" secondAttribute="bottom" constant="5" id="0c7-Zi-lku"/>
+                            <constraint firstItem="xO2-2D-q20" firstAttribute="top" secondItem="xDf-Ll-IWY" secondAttribute="top" constant="5" id="GnV-wR-JYD"/>
+                            <constraint firstAttribute="width" secondItem="xDf-Ll-IWY" secondAttribute="height" id="HAS-cC-QXV"/>
+                            <constraint firstItem="xO2-2D-q20" firstAttribute="leading" secondItem="xDf-Ll-IWY" secondAttribute="leading" constant="5" id="Jg8-GF-1VI"/>
+                            <constraint firstAttribute="trailing" secondItem="xO2-2D-q20" secondAttribute="trailing" constant="5" id="euE-Zq-P8t"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-3S-GUU">
+                        <rect key="frame" x="0.0" y="127" width="171" height="12"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AzD-3S-GUU" secondAttribute="bottom" constant="2" id="5A6-70-vll"/>
+                <constraint firstItem="xDf-Ll-IWY" firstAttribute="centerX" secondItem="D6m-dj-Zbz" secondAttribute="centerX" id="Bk7-gz-8h2"/>
+                <constraint firstItem="AzD-3S-GUU" firstAttribute="leading" secondItem="D6m-dj-Zbz" secondAttribute="leading" id="Ox5-zu-WZo"/>
+                <constraint firstItem="AzD-3S-GUU" firstAttribute="top" secondItem="xDf-Ll-IWY" secondAttribute="bottom" constant="5" id="tGq-pZ-eOS"/>
+                <constraint firstAttribute="trailing" secondItem="AzD-3S-GUU" secondAttribute="trailing" id="vcE-aI-u03"/>
+                <constraint firstItem="xDf-Ll-IWY" firstAttribute="top" secondItem="D6m-dj-Zbz" secondAttribute="top" constant="5" id="yoS-ez-2CC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="HXu-FN-WhZ"/>
+            <size key="customSize" width="171" height="141"/>
+            <connections>
+                <outlet property="imageContainerView" destination="xDf-Ll-IWY" id="RQT-Xs-IJo"/>
+                <outlet property="imageView" destination="xO2-2D-q20" id="nBH-eU-lfq"/>
+                <outlet property="storyTitleLabel" destination="AzD-3S-GUU" id="X0E-Wq-eGw"/>
+            </connections>
+            <point key="canvasLocation" x="415.5" y="466.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

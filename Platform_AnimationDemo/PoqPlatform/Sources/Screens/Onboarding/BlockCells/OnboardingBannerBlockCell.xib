@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Kn-6X-oO0" customClass="OnboardingBannerBlockCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="206"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixC-en-aDk" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="206"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ixC-en-aDk" firstAttribute="top" secondItem="3Kn-6X-oO0" secondAttribute="top" id="bI0-de-6aA"/>
+                <constraint firstAttribute="bottom" secondItem="ixC-en-aDk" secondAttribute="bottom" id="iJa-dN-qeh"/>
+                <constraint firstItem="ixC-en-aDk" firstAttribute="leading" secondItem="3Kn-6X-oO0" secondAttribute="leading" id="pdW-Oe-OoJ"/>
+                <constraint firstAttribute="trailing" secondItem="ixC-en-aDk" secondAttribute="trailing" id="wSS-um-j13"/>
+            </constraints>
+            <size key="customSize" width="352" height="206"/>
+            <connections>
+                <outlet property="bannerImage" destination="ixC-en-aDk" id="jl2-GR-T3q"/>
+            </connections>
+            <point key="canvasLocation" x="-4" y="-185"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_PoqModuling_UnitTests {
+  umbrella header "Pods-PoqModuling-UnitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

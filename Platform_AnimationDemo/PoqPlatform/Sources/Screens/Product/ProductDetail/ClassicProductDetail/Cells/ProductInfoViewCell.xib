@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="ProductInfoViewCell" rowHeight="611" id="AlY-CU-UWO" customClass="ProductInfoViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AlY-CU-UWO" id="Hnq-EZ-gcr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="479.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£000.00 £000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="upA-xC-2kT" userLabel="Price">
+                        <rect key="frame" x="175" y="396" width="130" height="75"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label LabelLabel Label Label Label Label Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBA-qy-HAv" userLabel="Title">
+                        <rect key="frame" x="15" y="379" width="152" height="52"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0f4-nD-VzK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="371"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7y0-Bl-chK">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="AlY-CU-UWO" id="XBC-QV-xrm"/>
+                            <outlet property="delegate" destination="AlY-CU-UWO" id="3kb-qO-LEx"/>
+                        </connections>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MGx-ch-5N9">
+                        <rect key="frame" x="140" y="316" width="39" height="37"/>
+                        <color key="pageIndicatorTintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </pageControl>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-Z7-V3y" userLabel="Like Button">
+                        <rect key="frame" x="13" y="312" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="0Ib-Ib-H2g"/>
+                            <constraint firstAttribute="width" constant="44" id="UUD-ob-gTp"/>
+                        </constraints>
+                        <state key="normal" image="LikeButtonImageDefault"/>
+                        <state key="selected" image="LikeButtonImagePressed"/>
+                        <state key="highlighted" image="LikeButtonImagePressed"/>
+                        <connections>
+                            <action selector="likeButtonClicked:" destination="AlY-CU-UWO" eventType="touchUpInside" id="2Hb-12-OzC"/>
+                        </connections>
+                    </button>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8C7-aA-3vs" userLabel="HorizontalRuler">
+                        <rect key="frame" x="0.0" y="371" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="prA-st-Eht"/>
+                        </constraints>
+                    </view>
+                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6H-5L-7Bz" customClass="AddToBagButton" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="175" y="346" width="130" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Q9t-al-xUu"/>
+                            <constraint firstAttribute="width" constant="130" id="W7b-Rg-Yf1"/>
+                        </constraints>
+                        <state key="normal" title="Add to Bag"/>
+                        <connections>
+                            <action selector="addToBagButtonClicked:" destination="AlY-CU-UWO" eventType="touchUpInside" id="dgz-KS-yx2"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vid-nU-fz9" userLabel="Ratings">
+                        <rect key="frame" x="15" y="431" width="152" height="35"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="H2I-B4-fil"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="MGx-ch-5N9" secondAttribute="centerX" constant="0.5" id="0zq-6F-tDe"/>
+                    <constraint firstItem="8C7-aA-3vs" firstAttribute="leading" secondItem="Hnq-EZ-gcr" secondAttribute="leading" id="1di-RB-X80"/>
+                    <constraint firstItem="bdy-Z7-V3y" firstAttribute="centerY" secondItem="MGx-ch-5N9" secondAttribute="centerY" id="53O-Jw-G3h"/>
+                    <constraint firstItem="s6H-5L-7Bz" firstAttribute="leading" secondItem="BBA-qy-HAv" secondAttribute="trailing" constant="8" id="7Dw-S2-z7B"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0f4-nD-VzK" secondAttribute="bottom" priority="750" constant="100" id="BCF-J4-WZl"/>
+                    <constraint firstItem="Vid-nU-fz9" firstAttribute="width" secondItem="BBA-qy-HAv" secondAttribute="width" id="DYW-bQ-uz0"/>
+                    <constraint firstAttribute="trailing" secondItem="8C7-aA-3vs" secondAttribute="trailing" id="F9v-L6-Cma"/>
+                    <constraint firstItem="bdy-Z7-V3y" firstAttribute="leading" secondItem="Hnq-EZ-gcr" secondAttribute="leadingMargin" constant="5" id="FNX-aW-QWY"/>
+                    <constraint firstItem="BBA-qy-HAv" firstAttribute="top" secondItem="0f4-nD-VzK" secondAttribute="bottom" constant="8" id="GYI-dn-tbo"/>
+                    <constraint firstItem="0f4-nD-VzK" firstAttribute="leading" secondItem="Hnq-EZ-gcr" secondAttribute="leading" id="HGN-ae-rOw"/>
+                    <constraint firstAttribute="trailing" secondItem="s6H-5L-7Bz" secondAttribute="trailing" constant="15" id="JbH-l1-xDl"/>
+                    <constraint firstItem="0f4-nD-VzK" firstAttribute="top" secondItem="Hnq-EZ-gcr" secondAttribute="top" id="LYz-QR-mhU"/>
+                    <constraint firstItem="upA-xC-2kT" firstAttribute="top" secondItem="s6H-5L-7Bz" secondAttribute="bottom" id="RKN-bW-8d1"/>
+                    <constraint firstItem="Vid-nU-fz9" firstAttribute="top" secondItem="0f4-nD-VzK" secondAttribute="bottom" constant="60" id="UO1-16-KiP"/>
+                    <constraint firstItem="BBA-qy-HAv" firstAttribute="leading" secondItem="Hnq-EZ-gcr" secondAttribute="leading" constant="15" id="f3h-fV-DWx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="BBA-qy-HAv" secondAttribute="bottom" priority="750" id="gI1-yE-5fd"/>
+                    <constraint firstAttribute="trailing" secondItem="0f4-nD-VzK" secondAttribute="trailing" id="gSi-QS-0IB"/>
+                    <constraint firstItem="8C7-aA-3vs" firstAttribute="centerY" secondItem="s6H-5L-7Bz" secondAttribute="centerY" id="hDA-KZ-uFD"/>
+                    <constraint firstItem="Vid-nU-fz9" firstAttribute="top" secondItem="BBA-qy-HAv" secondAttribute="bottom" id="jtK-gG-ZsN"/>
+                    <constraint firstItem="8C7-aA-3vs" firstAttribute="top" secondItem="0f4-nD-VzK" secondAttribute="bottom" id="nxx-RP-ads"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="upA-xC-2kT" secondAttribute="bottom" id="ny1-bD-MdQ"/>
+                    <constraint firstItem="upA-xC-2kT" firstAttribute="width" secondItem="s6H-5L-7Bz" secondAttribute="width" id="qi5-cP-zrG"/>
+                    <constraint firstItem="Vid-nU-fz9" firstAttribute="leading" secondItem="Hnq-EZ-gcr" secondAttribute="leading" constant="15" id="rSj-KS-CZp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Vid-nU-fz9" secondAttribute="bottom" constant="5" id="sDC-AP-98h"/>
+                    <constraint firstItem="upA-xC-2kT" firstAttribute="trailing" secondItem="s6H-5L-7Bz" secondAttribute="trailing" id="tAy-wG-I46"/>
+                    <constraint firstItem="8C7-aA-3vs" firstAttribute="top" secondItem="bdy-Z7-V3y" secondAttribute="bottom" constant="15" id="wRx-tI-BsM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addToBagButton" destination="s6H-5L-7Bz" id="gbh-Ye-Yc7"/>
+                <outlet property="likeButton" destination="bdy-Z7-V3y" id="ryh-2x-PuG"/>
+                <outlet property="pageControl" destination="MGx-ch-5N9" id="Xsg-1q-lzI"/>
+                <outlet property="priceLabel" destination="upA-xC-2kT" id="4kG-AQ-YQQ"/>
+                <outlet property="ratingView" destination="Vid-nU-fz9" id="fca-6x-Poh"/>
+                <outlet property="swipeView" destination="0f4-nD-VzK" id="Q3i-4H-3aJ"/>
+                <outlet property="titleLabel" destination="BBA-qy-HAv" id="CXg-Qa-x6Z"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="43"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LikeButtonImageDefault" width="44" height="44"/>
+        <image name="LikeButtonImagePressed" width="44" height="44"/>
+    </resources>
+</document>

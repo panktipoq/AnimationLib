@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="H7r-vV-nss" customClass="CategoryListViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="514" height="113"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H7r-vV-nss" id="rel-qy-cvD">
+                <rect key="frame" x="0.0" y="0.0" width="514" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixB-aZ-t4d">
+                        <rect key="frame" x="12" y="23" width="463" height="66"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-M1-1bE" userLabel="DisclosureIndicator" customClass="DisclosureIndicator" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="483" y="47" width="11" height="19"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="11" id="ewL-D0-udD"/>
+                            <constraint firstAttribute="height" constant="19" id="php-Pd-sm1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="R6W-M1-1bE" firstAttribute="leading" secondItem="ixB-aZ-t4d" secondAttribute="trailing" constant="8" id="2KE-b6-era"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="R6W-M1-1bE" secondAttribute="trailing" constant="12" id="PW5-CH-0z4"/>
+                    <constraint firstItem="ixB-aZ-t4d" firstAttribute="leading" secondItem="rel-qy-cvD" secondAttribute="leading" constant="12" id="QbY-bl-g4C"/>
+                    <constraint firstItem="R6W-M1-1bE" firstAttribute="centerY" secondItem="rel-qy-cvD" secondAttribute="centerY" id="cXU-hH-cxH"/>
+                    <constraint firstItem="ixB-aZ-t4d" firstAttribute="top" secondItem="rel-qy-cvD" secondAttribute="topMargin" constant="15" id="ppv-Fx-uId"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ixB-aZ-t4d" secondAttribute="bottom" constant="15" id="uvU-vj-sIj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLabelConstraint" destination="uvU-vj-sIj" id="627-ng-ipP"/>
+                <outlet property="categoryNameLabel" destination="ixB-aZ-t4d" id="zNm-9X-VON"/>
+                <outlet property="topLabelConstraint" destination="ppv-Fx-uId" id="jbu-3s-2jN"/>
+            </connections>
+            <point key="canvasLocation" x="486" y="337.5"/>
+        </tableViewCell>
+    </objects>
+</document>

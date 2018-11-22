@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VisualSearchCropViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="hsP-01-Yiq" id="rAp-5v-iOw"/>
+                <outlet property="croppingContainerView" destination="1uL-KI-csR" id="0WV-hG-9s9"/>
+                <outlet property="doneButton" destination="CMn-xD-b46" id="tac-WY-fa3"/>
+                <outlet property="submitButtonsEffectView" destination="R1R-cD-Qlk" id="1o9-8s-Rd9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="KFe-hf-0Ab"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1R-cD-Qlk">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gWf-sF-2av">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMn-xD-b46">
+                                <rect key="frame" x="186.5" y="0.0" width="188.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gut-LF-UnT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsP-01-Yiq">
+                                <rect key="frame" x="0.0" y="0.0" width="188.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Cye-RD-3um"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hsP-01-Yiq" firstAttribute="top" secondItem="gWf-sF-2av" secondAttribute="top" id="Bmz-m9-Mdz"/>
+                            <constraint firstItem="CMn-xD-b46" firstAttribute="top" secondItem="gWf-sF-2av" secondAttribute="top" id="MA9-9b-rdG"/>
+                            <constraint firstAttribute="trailing" secondItem="CMn-xD-b46" secondAttribute="trailing" id="Q02-xY-9lB"/>
+                            <constraint firstItem="CMn-xD-b46" firstAttribute="width" secondItem="gWf-sF-2av" secondAttribute="width" multiplier="0.5" constant="1" id="Tt2-yZ-TWL"/>
+                            <constraint firstItem="hsP-01-Yiq" firstAttribute="width" secondItem="gWf-sF-2av" secondAttribute="width" multiplier="0.5" constant="1" id="oyL-LD-aef"/>
+                            <constraint firstItem="hsP-01-Yiq" firstAttribute="leading" secondItem="gWf-sF-2av" secondAttribute="leading" id="y4v-sP-ZgW"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="extraLight"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-KI-csR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="R1R-cD-Qlk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1Ea-NN-nx2"/>
+                <constraint firstItem="1uL-KI-csR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="21Q-x8-Yde"/>
+                <constraint firstItem="1uL-KI-csR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="41U-Fu-TId"/>
+                <constraint firstItem="R1R-cD-Qlk" firstAttribute="top" secondItem="1uL-KI-csR" secondAttribute="bottom" constant="8" id="EOb-jn-g8m"/>
+                <constraint firstItem="R1R-cD-Qlk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FLr-9D-yhV"/>
+                <constraint firstItem="1uL-KI-csR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IYq-Qm-d8X"/>
+                <constraint firstItem="R1R-cD-Qlk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-44" id="jMF-4Y-1lb"/>
+                <constraint firstItem="R1R-cD-Qlk" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="zhM-pn-LnW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

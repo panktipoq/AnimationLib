@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="LoginHeaderTableViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPZ-DL-gGp" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="75.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBe-JJ-O6X">
+                        <rect key="frame" x="15" y="15" width="358" height="30.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content=" ">
+                                <attributes>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oBe-JJ-O6X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="33v-SD-bRg"/>
+                    <constraint firstAttribute="trailing" secondItem="oBe-JJ-O6X" secondAttribute="trailing" constant="15" id="Am0-Tb-xYT"/>
+                    <constraint firstItem="oBe-JJ-O6X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Lc0-lh-AlQ"/>
+                    <constraint firstItem="bPZ-DL-gGp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iAH-lz-8gq"/>
+                    <constraint firstItem="bPZ-DL-gGp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="loE-4l-Ggo"/>
+                    <constraint firstAttribute="trailing" secondItem="bPZ-DL-gGp" secondAttribute="trailing" id="oZ8-mg-dNh"/>
+                    <constraint firstAttribute="bottom" secondItem="bPZ-DL-gGp" secondAttribute="bottom" id="xZX-ty-ix5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerImageView" destination="bPZ-DL-gGp" id="319-SY-9g5"/>
+                <outlet property="titleLabel" destination="oBe-JJ-O6X" id="GoY-Kx-5FX"/>
+            </connections>
+            <point key="canvasLocation" x="528" y="400"/>
+        </tableViewCell>
+    </objects>
+</document>

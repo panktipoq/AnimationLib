@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="adt-lv-D5Q" customClass="CurrencySwitcherHeaderView" customModule="PoqPlatform">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uff-XS-iAA">
+                    <rect key="frame" x="14" y="10" width="343" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="grc-BN-SF5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Uff-XS-iAA" secondAttribute="bottom" constant="9" id="5Q4-FO-rOz"/>
+                <constraint firstAttribute="trailing" secondItem="Uff-XS-iAA" secondAttribute="trailing" constant="18" id="FyY-Qo-KAr"/>
+                <constraint firstItem="Uff-XS-iAA" firstAttribute="top" secondItem="adt-lv-D5Q" secondAttribute="top" constant="10" id="Vje-W4-bZc"/>
+                <constraint firstItem="Uff-XS-iAA" firstAttribute="leading" secondItem="adt-lv-D5Q" secondAttribute="leading" constant="14" id="sYi-5a-2pp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Oa7-4J-s7M"/>
+            <connections>
+                <outlet property="titleLabel" destination="Uff-XS-iAA" id="k5p-9o-BS8"/>
+            </connections>
+            <point key="canvasLocation" x="-377" y="133"/>
+        </view>
+    </objects>
+</document>

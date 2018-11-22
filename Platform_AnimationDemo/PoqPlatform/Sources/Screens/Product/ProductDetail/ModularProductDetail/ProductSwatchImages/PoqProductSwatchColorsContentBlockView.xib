@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SnS-kk-pZq" customClass="PoqProductSwatchColorsContentBlockView" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="478" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi5-re-Igg">
+                        <rect key="frame" x="15" y="69.5" width="30.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JYR-iO-ofe">
+                        <rect key="frame" x="0.0" y="8" width="478" height="44"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="44" id="lsZ-KJ-7hV"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="vYM-Y2-YpC">
+                            <size key="itemSize" width="44" height="44"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="SnS-kk-pZq" id="eIg-rw-UPl"/>
+                            <outlet property="delegate" destination="SnS-kk-pZq" id="xri-ME-Bfh"/>
+                        </connections>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6k-ft-i63" userLabel="Separator" customClass="SolidLine" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="95" width="478" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" placeholder="YES" id="U33-3q-dBu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="n6k-ft-i63" secondAttribute="bottom" id="4MJ-g7-tsg"/>
+                <constraint firstItem="JYR-iO-ofe" firstAttribute="top" secondItem="SnS-kk-pZq" secondAttribute="top" constant="8" id="8qJ-P3-Ljk"/>
+                <constraint firstItem="n6k-ft-i63" firstAttribute="leading" secondItem="SnS-kk-pZq" secondAttribute="leading" id="EcI-hd-pT8"/>
+                <constraint firstAttribute="trailing" secondItem="n6k-ft-i63" secondAttribute="trailing" id="F7Q-7v-SUD"/>
+                <constraint firstAttribute="trailing" secondItem="JYR-iO-ofe" secondAttribute="trailing" id="GDT-e3-cqg"/>
+                <constraint firstAttribute="bottom" secondItem="Mi5-re-Igg" secondAttribute="bottom" priority="900" constant="12" id="ZyA-qr-gSM"/>
+                <constraint firstItem="Mi5-re-Igg" firstAttribute="leading" secondItem="SnS-kk-pZq" secondAttribute="leading" constant="15" id="bLm-uh-Suz"/>
+                <constraint firstItem="JYR-iO-ofe" firstAttribute="leading" secondItem="SnS-kk-pZq" secondAttribute="leading" id="h4T-dd-cIQ"/>
+                <constraint firstItem="Mi5-re-Igg" firstAttribute="top" secondItem="JYR-iO-ofe" secondAttribute="bottom" priority="900" constant="17.5" id="xaf-el-aw8"/>
+            </constraints>
+            <size key="customSize" width="478" height="82"/>
+            <connections>
+                <outlet property="collectionView" destination="JYR-iO-ofe" id="cVH-qV-LZe"/>
+                <outlet property="colorNameLabel" destination="Mi5-re-Igg" id="HAg-yK-dz6"/>
+                <outlet property="separator" destination="n6k-ft-i63" id="mfk-h6-8UE"/>
+            </connections>
+            <point key="canvasLocation" x="-143" y="-75"/>
+        </collectionViewCell>
+    </objects>
+</document>

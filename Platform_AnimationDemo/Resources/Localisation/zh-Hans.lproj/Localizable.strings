@@ -1,0 +1,526 @@
+/*
+ Localizable.strings
+ Poq_App_Base
+ 
+ Created by Jun Seki on 13/07/2014.
+ Copyright (c) 2014 Poq. All rights reserved.
+ */
+
+
+//"KEY" = "CONTENT";
+//tabs
+"HOME"="主页";
+"SHOP"="购物";
+"LIKES"="喜欢";
+"WISHLIST"="收藏";
+"STORES"="商店";
+"SCAN"="扫描";
+"BAG"="购物车";
+"MORE"="更多";
+"YOU"="我的";
+
+"DELIVERY_TYPE" = "delivery";
+"CLICK_AND_COLLECT" = "click & collect";
+"CLICK_AND_COLLECT_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_SELECT" = "Select";
+
+//basics:
+"OK"="确认";
+"CANCEL"="取消";
+"ERROR"="错误";
+"SUCCESSFUL"="成功!";
+"NEXT"="下一个";
+"DONE"="完成";
+"LOADING"="加载中...";
+"WISH"="喜欢";
+"LOVES"="喜欢";
+"SUBMIT"="提交";
+"LOGOUT"="登出";
+"COLOUR"="Colour";
+
+///bag
+"GO_TO_BAG"="去购物车";
+"EDIT"="编辑";
+"Edit"="编辑";
+"DONE"="完成";
+"NUMBER_ITEMS"="共 %d 件";
+
+//STORE
+"STORE FINDER"="附近的商店";
+"CALL"="电话询问";
+"DIRECTIONS"="显示方向";
+"Directions"="显示方向";
+"OPENING_HOURS"="营业时间：";
+
+"MONDAY"="星期一";
+"TUESDAY"="星期二";
+"WEDNESDAY"="星期三";
+"THURSDAY"="星期四";
+"FRIDAY"="星期五";
+"SATURDAY"="星期六";
+"SUNDAY"="星期日";
+
+"Monday"="星期一";
+"Tuesday"="星期二";
+"Wednesday"="星期三";
+"Thursday"="星期四";
+"Friday"="星期五";
+"Saturday"="星期六";
+"Sunday"="星期日";
+
+"AVAILABLE_IN_STORE"="店内有售";
+"NOT_AVAILABLE_IN_STORE"="店内无货";
+"IN_STORE_AVAILABILITY"="查询店内";
+"IN_STORE_AVAILABILITY_OFF"="无法获得店内信息";
+"CHECK_IN_STORE_AVAILABILITY_OFF"="查询店内库存";
+"DESCRIPTION"="商品详情";
+"Description"="商品详情";
+"DELIVERY"="邮寄";
+"RETURNS"="退还";
+"SIZE_GUIDE"="尺码";
+"LEAVING_THE_APP"="离开应用";
+"LEAVING_THE_APP_GETTING_DIRECTIONS"="您确定要打开导航，离开应用吗？";
+"GET_DIRECTIONS"="导航";
+"NEARBY"="附近";
+"MAP"="地图";
+"NEAR_ME"="我的附近";
+"BY_NAME"="店名";
+"MAPS"="地图";
+
+"MILES"="Miles";
+"FAVOURITE_STORE"="喜爱的商店";
+"CALL_THIS_STORE"="致电询问 ";
+"STORE_DIRECTIONS"="商店方向";
+"OPEN_TODAY"="今日营业时间: ";
+"AVAILABLE_AT_OUR_STORE"="在 %@ 商店有售";
+"SIZE_AVAILABLE_AT_STORE"="号码 %@ 在 %@ 商店有售";
+"UNAVAILABLE_AT_STORE"=" %@ 商店已售完";
+"SIZE_UNAVAILABLE_STORE_SELECT_STORE"="号码 %@ 在 %@ 商店已售完. 请选择另外一家.";
+"SET_FAVOURITE"="Set favourite";
+
+//refresh
+"PULL_TO_REFRESH" = "下拉可更新...";
+"RELEASE_TO_REFRESH" = "松开可更新...";
+
+//MARK: - PLP
+"FEATURED" = "推荐";
+"Featured"="推荐";
+"NEWEST" = "最新";
+"Newest"="最新";
+"RATING" = "好评";
+"Rating"="好评";
+"PRICE_DOWN" = "价格 ↓";
+"PRICE_UP" = "价格 ↑";
+"Price_Down"="价格 ↓";
+"Price_Up"="价格 ↑";
+
+//MARK: - FILTERS
+"REFINE" = "筛选";
+"Refine" = "筛选";
+"FILTERS" = "筛选";
+"COLOUR" = "颜色";
+"SIZE" = "尺寸";
+"BRAND" = "品牌";
+"STYLE" = "样式";
+"CATEGORY" = "分类";
+"FILTER_RESULTS" = "筛选结果";
+"FILTER_OPTIONS" = "筛选选项";
+
+
+//User login in/registration:
+"REGISTER"="注册";
+"SIGN_UP"="注册";
+"SUBMIT"="提交";
+"SIGN_IN"="登入";
+"SIGN_INTO"="登入 \n";
+"LOGIN"="登录";
+"LOGOUT"="登出";
+"LOGGED_OUT"="退出";
+"FORGOT_PASSWORD"="忘记密码";
+"TERMS_CONDITIONS"="服务条款";
+"LOGIN_REGISTER_TO_LIKE"="请先登录／注册才能加入收藏。";
+"LOGIN_REGISTER_TO_CONTINUE"="请先登录／注册后再继续。";
+"LOGGED_OUT_TEXT"="已经成功退出您的账户。";
+"LOGIN_ERROR"="密码或用户名错误，请重新再试。";
+"LOGIN_FAILED"="登录失败";
+"BAG_MERGED"="我们发现您已有货物在其他购物车内，我们将合并您的货物";
+"CUSTOMER_RECOGNITION_NUMBER"="会员卡号";
+
+//SIGN UP
+"YOUR_ACCOUNT"="您的帐户";
+"FIRSTNAME"="名*";
+"LASTNAME"="姓*";
+"EMAIL"="邮箱地址*";
+"PASSWORD"="密码*";
+"GENDER"="性别*";
+"FEMALE"="女士";
+"MALE" ="男士";
+"SHOW"="显示";
+"HIDE"="隐藏";
+"SEND_ME_PROMOTIONS"="同意 House of Fraser 发送给我促销";
+"MASTERCARD_OPTION"="我已经有会员卡";
+"OPT_OUT_OPTION"="You can opt out of having a Recognition Reward Account at any time, just call Customer Services";
+
+//my profile
+"UNLOCK_FEATURES"="开始使用这些功能";
+"GO_SHOPPING_NOW"="开始购物";
+
+// My profile section titles
+"SHOW_AT_THE_TILL_POINTS" = "请出示会员码来获得积分";
+"MY_FAVOURITE_STORE" = "我的商店";
+"SAVED_SIZES" = "选择的尺寸";
+"HISTORY" = "历史";
+"DISCOVER_MORE_ABOUT_RECOGNITION" = "由此获得更多会员优惠";
+"IM_NEW" = "我是新人";
+"BACK_TO_TOP" = "回到顶部";
+
+// My profile size links
+"MAN" = "男士";
+"WOMAN" = "女士";
+"KIDS" = "儿童";
+
+// My profile - recently reviewed
+"RECENTLY_VIEWED_ITEMS" = "最近浏览记录";
+"CLEAR_RECENTLY_VIEWED_ITEMS"="清除最近浏览记录";
+"CLEAR_CONFIRMATTION"="您确定要清除浏览记录?";
+"NO_RECENTLY_VIEWED_ITEMS"="没有最近浏览记录";
+
+//MARK: - order history
+"NUMBER_ORDER"="%d 个订单";
+"NUMBER_ORDERS"="%d 个订单";
+"YOUR_ORDER_HISTORY" = "订单历史";
+"YOUR_ORDER_SUMMARY"="订单预览";
+"ORDER_NUMBER"="订单号码:";
+"ORDER_DATE"="订单日期";
+"ORDER_TOTAL"="订单总额";
+"DELIVERY_OPTION"="邮寄选项";
+"PAYMENT_METHOD"="付款方式";
+"DELIVERED_TO"="寄送至:";
+"SUB_TOTAL"="小计";
+"POST_PACKAGING"="Post & Packaging";
+"Total"="总计";
+"Total:"="总计:";
+"ORDER_HISTORY_EMPTY"="无订单历史纪录";
+
+//MARK: - My profile other text
+"WELCOME"="欢迎";
+"WELCOME_TO_YOUR"="欢迎来到你的";
+"BIRTHDAY_DOUBLE_POINTS"="Birthday Double Points? Add your date of birth";
+"KEEP_SCROLLING_DOWN"="Keep scrolling down";
+"SIGN_IN_TO"="Sign in to";
+"COLLECT_POINTS"="Collect Points* and enjoy fuss-free checkout";
+"OTHER_GREAT_FEATURES"="You'll also have access to these other great features";
+"ADD_YOUR_FAVOURITE_STORE"="Add your favourite store";
+"VIEW_STOCK_AVAILABILITY_OPENING_TIMES"="View stock availability and opening times";
+"MAKE_MONEY_WHILE_YOU_SHOP"="MAKE MONEY WHILE YOU SHOP";
+"START_COLLECTING_POINTS"="Start collecting points with a House of Fraser Virtual Recognition Card";
+"COLLECT_RECOGNITION_POINTS"="Collect Recognition Points when you sign in or sign up*";
+"DATA_CORRECT_YESTERDAY"="Data correct as of yesterday";
+"REWARD_DUE_TO_EXPIRE_ON"="%@%@ Reward due to expire on %@.\n All data correct as of yesterday";
+"GOT_REWARD_CARD"="Got a plastic Reward Card?";
+"LINK_PLASTIC_REWARD_CARD"="Link your plastic Reward Card to your Recognition Account";
+"BE_YOU_NO_MATTER"="Be you no matter who with House of Fraser";
+"ACCESS_TO_ALL_FEATURES"="You now have access to all the great features below";
+"YOUR_RECOGNITION_DASHBOARD"="YOUR RECOGNITION REWARD ACCOUNT DASHBOARD";
+"EXCLUDES_RECOGNITION_CARD"="This excludes Recognition MasterCard and Account Card";
+"YOU_HAVE"="YOU HAVE";
+"YOUR_REWARD"="YOUR REWARD";
+"TO_SPEND"="TO SPEND";
+
+//Error message:
+"HOME_CONNECTION_ERROR"="网路不给力.\n请下拉刷新.";
+"TRY_AGAIN"="请稍后再试试.";
+"CONNECTION_ERROR"="网路不给力";
+"UNABLE_TO_CONNECT" = "网络不给力，无法连接，请稍后再试。";
+"SESSION_ERROR"="发生错误";
+"INVALID_SESSION"="请再次登陆";
+"SOMETHING_WENT_WRONG"="出错啦";
+"FACEBOOK_ERROR"="脸书错误";
+"MAIL_SENDING_FAILED"="邮件发送错误";
+"NO_ACTIVE_EMAIL"="没有发现邮箱";
+"UNABLE_TO_SYNC_WISH"="同步收藏错误，请再次登入。";
+"UNABLE_TO_SYNC_BAG"="同步购物车错误，请再次登入。";
+"UNABLE_TO_ADD_TO_BAG"="加入购物车错误，请稍后再试。";
+"NO_NETWORK_CONNECTION"="网络不给力";
+"NO_NETWORK_CONNECTION_MSG"="无法连接，请稍后再试";
+
+//share options
+"FACEBOOK"="脸书";
+"TWITTER"="推特";
+"PINTEREST"="Pinterest";
+"SAVE_PICTURE"="保存图片";
+"E-MAIL_FRIEND"="发送给朋友";
+"LOOK_WHAT_I_FOUND_ON %@ app! \n%@ "="分享给你一个我在 %@ 发现的宝贝 \n%@ ";
+
+//success message
+"TWITTER_CONFIRMATION"="分享成功";
+"IMAGE_SAVED_TITLE"="保存图片";
+"IMAGE_SAVED_CONFIRMATION"="图片保存成功";
+"SHARING_CONFIRMATION"="分享成功!";
+"MAIL_SENT_CONFIRMATION"="邮件成功发送";
+
+//barcode scanner
+"LINK_FOUND"="发现物品";
+"OPEN_LINK"="打开连接";
+"CONTINUE"="继续";
+"SCAN_CODE"="扫一扫";
+"ENTER_CODE"="输入条形码";
+"SCAN_TOP_TEXT"="将二维码／条码放入框内，即可自动扫描.";
+"SCAN_BOTTOM_TEXT"="点击屏幕对焦";
+"ENTER_THE_CODE_HERE"="请在此输入号码";
+"ENTER_CODE_MANUALLY"="Enter code manually";
+"ALIGN_BARCODE"="Align barcode within the arrows";
+"ENSURE_BARCODE"="Ensure barcode is upright and avoid any shadows or glare";
+
+//Products related
+"SHOP_IT"="相关商品";
+"SHARE"="分享";
+"LIKE"="喜欢";
+"BUY"="立即购买";
+
+"SELECT_SIZE"="请选择尺码:";
+"ONE_SIZE"="均码";
+"OUT_OF_STOCK"="没货了";
+"SOLD_OUT"="抢光了";
+"PDP_Sold_Out"="抢光了";
+
+//MARK: Review
+"RATINGS_REVIEWS"="Ratings & Reviews";
+
+//MARK: - search
+"SEARCH_KEYWORD"="搜索品牌或者关键词";
+"SEARCH_ALL_PRODUCTS"="请输入要搜索的关键字";
+"SEARCH_IN"="搜索";
+"CLEAR"="清除";
+"YOUR_SEARCH_HISTORY"="你的搜索记录";
+"NO_SEARCH_HISTORY"="没有你的搜索记录";
+"NO_SEARCH_RESULTS_FOUND"="没有发现任何结果";
+
+
+"WISH_NO_ITEMS"="还没有收藏任何物品";
+"WISH_NO_ITEMS_INSTRUCTIONS"="喜欢这个物品? 点击爱心加入收藏";
+"BAG_REMOVE_ITEMS %@"="您确定要删除 %@ ?";
+"BAG_NO_ITEMS"="您的购物车里什么都没有";
+"BAG_NO_ITEMS_INSTRUCTIONS"="点击以下开始在 House of Fraser 购物";
+"ADD_TO_BAG"="加入购物车";
+"ADDED_TO_BAG"="已加入购物车";
+"BAG_OUT_OF_STOCK"="Product is out of stock";
+"BAG_ITEM_UNAVAILABLE"="Requested amount is not available";
+"BAG_ITEM_INFO_UNAVAILABLE" = "Product Information is not available";
+
+"NO_RESULTS"="暂无内容";
+"NO_RESULTS_FOUND"="没有搜索结果";
+"NO_RESULTS_FOUND_FOR \n \"%@\"."="没有发现任何有关 \n \"%@\" 的.";
+"NO_RESULTS_FOUND_IN \"%@\"."="在 \"%@\" 里没有发现相关. \n\n 请按“搜索”继续.";
+"PLEASE_TRY_AGAIN"="请重试。";
+
+//checkout
+"PHONE"="电话号码";
+"ADDRESS"="地址";
+"CITY"="城市";
+"COUNTY"="省市";
+"POST_CODE"="邮编";
+"COUNTRY"="国际";
+
+
+"CONTACT_DETAILS"="联系方式";
+"TOTAL"="总计";
+"TOTAL_AMOUNT"="总额:";
+"SECURE_CHECKOUT"="安全付款";
+"Secure_Checkout"="安全付款";
+"NEXT_STEP"="下一步";
+"BILLING_ADDRESS"="付款地址";
+"DELIVERY_ADDRESS"="邮寄地址";
+"OR_STATE_PROVINCE"="或者省市";
+"OR_ZIP_CODE"="或者邮编";
+"SAME_ADDRESS"="发送到同一地点";
+
+"CHECKOUT_SECURELY"="安全付款";
+
+// Availability
+"IN_STORE_AVAILABILITY"="查看店内库存";
+"IN_STORE_AVAILABILITY_TITLE"="请选择您的尺寸和商店";
+"IN_STORE_AVAILABILITY_DESCRIPTION"="查询您的货物在商店内的库存";
+"IN_STORE_SIZE"="尺寸";
+"IN_STORE_STORE"="商店";
+"IN_STORE_SELECT_SIZE"="请选择尺码";
+"IN_STORE_SELECT_STORE"="请选择商店";
+
+"BUY_COLLECT"="取货";
+"HOME_DELIVERY"="英国 & 爱尔兰 送货";
+"INTERNATIONAL_DELIVERY"="国际邮寄";
+
+"PLEASE_CORRECT"="请更正:";
+"ENTER_FIRSTNAME"="请更正您的名字.";
+"ENTER_LASTNAME"="请更正您的姓氏.";
+"ENTER_TELEPHONE"="请更正您的手机号码.";
+"ENTER_VALID_EMAIL"="请输入有效的邮箱地址.";
+"ENTER_PASSWORD" ="请输入密码.";
+"ENTER_VALID_PASSWORD" ="至少8位字母和1位数字";
+
+"ENTER_BILLING_ADDRESS"="请输入您的付款地址.";
+"ENTER_CITY"="请输入您的付款城市.";
+"ENTER_COUNTY"="请输入您的付款省市.";
+"ENTER_POSTCODE"="请输入您的付款邮编.";
+"ENTER_COUNTRY"="请输入您的付款国家.";
+
+"ENTER_DELIVERY_FIRSTNAME"="请输入您的收件人名字.";
+"ENTER_DELIVERY_LASTNAME"="请输入您的收件人姓氏.";
+"ENTER_DELIVERY_TELEPHONE"="请输入您的收件人电话号码";
+"ENTER_DELIVERY_ADDRESS"="请输入您的收件人地址.";
+"ENTER_DELIVERY_CITY"="请输入您的收件人城市.";
+"ENTER_DELIVERY_POSTCODE"="请输入您的收件人邮编.";
+"ENTER_DELIVERY_COUNTRY"="请输入您的收件人名字国家.";
+
+
+//SCANNER
+"CAMERA"="相机";
+
+
+// NETWORK TASK
+"NO_RESULTS_FOUND_FOR_YOUR_REQUEST"="没有发现任何结果";
+
+// ALERT
+"CONFIRMATION"="确认";
+"CLEAR_ALL_WISHLIST_ITEMS"="您确定要清除所有的收藏？";
+
+// My Sizes
+"MY_SIZES_MY_MEASUREMENTS"="我的尺寸";
+"MY_SIZES_HIS_MEASUREMENTS"="他的尺寸";
+"MY_SIZES_HER_MEASUREMENTS"="她的尺寸";
+"MY_SIZES_LITTLE_ONE_MEASUREMENTS"="儿童的尺寸";
+"MY_SIZES_MANS_MEASUREMENTS"="男士的尺寸";
+"MY_SIZES_WOMAN_MEASUREMENTS"="女士的尺寸";
+"MY_SIZES_KIDS_MEASUREMENTS"="儿童的尺寸";
+"MY_SIZES_ENTER_IN_YOUR_MEASUREMENTS"="请输入您的尺寸号码";
+"MY_SIZES_TOPS"="上衣";
+"MY_SIZES_BOTTOMS"="下衣";
+"MY_SIZES_SHOES"="鞋";
+"MY_SIZES_BRA"="文胸";
+"MY_SIZES_BRA_BACK"="胸围";
+"MY_SIZES_BRA_CUP"="罩杯";
+"MY_SIZES_NO_SIZE_SELECTED"="没有任何选择";
+"SIZES" = "号码";
+
+// Edit Profile
+"UPDATE_YOUR_DETAILS"="更新您的资料";
+"DOB"="出生日期";
+"MANAGE_MY_ADDRESS"="管理地址簿";
+"REGISTER_REPLACEMENT_REWARD_CARD"="注册／更换会员卡";
+"PLEASE_SELECT_ONE"="请选择";
+"SUCCESSFULLY_UPDATED"="更新成功.";
+"VIEW_MY_PROFILE"="查看我的资料";
+"DO_YOU_WANT_TO_LOG_OUT"="您确定要登出?";
+"ARE_YOU_SURE"="您确定";
+"MANAGE_YOUR_DETAILS"="Manage your details here - Date of Birth can only be updated once";
+
+// PRODUCT LIST FILTERS
+"CLEAR_SELECTED_FILTERS"="清除已选";
+"CLEAR_CURRENT_VIEW"="清除当页选项";
+"CLEAR_ALL"="清除所有选项";
+"EMAIL_IN_USE"="邮箱已经被使用";
+"PLEASE_SIGN_IN_TO_YOUR_ACCOUNT"="请登入您的账户";
+"CLEAR_ALL_FILTERS" = "清除所有选项";
+"MOST_RECENT" = "最新上架";
+
+//Order list
+"CLICK_BELOW"="点击以下开始在 House of Fraser 购物";
+// LOOKBOOK
+"LOOKBOOK_SHOP_BUTTON" = "购买样式";
+"LOOKBOOK_HIDE_BUTTON" = "隐藏";
+
+
+// Sign up
+"GENDER_REQUIRED" = "请输入性别";
+"USERNAME_ALREADY_USE"="Username is already in use";
+
+// WEBVIEW
+"PLEASE_WAIT" = "我们正在处理您的信息，请稍后";
+"WEBVIEW_LOADING" = "加载中...";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT" = "您确定要离开付款?";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_YES" = "确认";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_NO" = "取消";
+
+"FAILED_TO_LOGIN" = "登入失败";
+"UNAUTORIZED_ACCESS" = "访问错误";
+"WRONG_USERNAME_OR_PASSWORD" = "用户名／密码错误";
+"DISMISS" = "跳过";
+"FAILED_TO_SIGN_UP" = "注册失败";
+
+"iRateMessageTitle" = "为“%@”评分";
+"iRateAppMessage" = "如果您觉得“%@”很好用，可否为其评一个分数？评分过程只需花费很少的时间。感谢您的支持！";
+"iRateCancelButton" = "不了，谢谢";
+"iRateRateButton" = "现在去评分";
+"iRateRemindButton" = "稍后再说";
+
+
+// Apply Voucher
+"APPLY_VOUCHER_TITLE" = "使用优惠券";
+"APPLY_VOUCHER_TEXTFIELD_PLACEHOLDER" = "优惠券和学生折扣";
+"APPLY_VOUCHER_BUTTON_LABEL" = "使用";
+"REMOVE_VOUCHER_MESSAGE" = "消除优惠券";
+"INVALID_VOUCHER_CODE" = "优惠券无效. 请重试.";
+"VOUCHER_VIEW_TEXT" = "优惠券";
+"STUDENT_DISCOUNT_VIEW_TEXT" = "学生折扣";
+"VOUCHER_CODE_DEFAULT_TEXT" = "优惠券";
+"STUDEN_DISCOUNT_DEFAULT_TEXT" = "NUS 学生折扣";
+//Permission
+"FAILED_TO_ACCESS_CONTACT" = "无法读取联络方式";
+// Shopify
+"SHOPIFY_US_ONLY_SHIPPING_ADDRESS_TITLE" = "Only US shipping addresses supported";
+"APPLE_PAY_UNAVAILABLE_ERROR" = "Apple Pay 暂时无法访问. 请稍后再试";
+"CANNOT_USE_APPLE_WHILE_EDIT" = "请编辑完再使用 Apple Pay";
+"SHOPIFY_US_ONLY_BILLING_ADDRESS_TITLE" = "Only US billing addresses supported";
+
+// MARK: - Checkout Order Summary
+"DELIVERY_OPTIONS" = "邮寄选项";
+"DISCOUNT"="折扣";
+"COMPLETE_ALL_REQURED_FIELDS" = "请填完所有选项";
+"COMPLETE_PAYMENT_METHOD_NOT_AVAILABLE" = "付款方式不可用";
+"CONTINUE_SHOPPING" = "继续购物";
+"SWIPE_TO_HYPE_PLACEHOLDER"="Swipe to Hype Feature coming soon.";
+"SELECT_BILLING_ADDRESS" = "请选择付款地址";
+"SELECT_DELIVERY_ADDRESS" = "请选择邮寄地址";
+"SELECT_ADDRESS_TYPE" = "Select %@";
+"ADDRESS_BOOK" = "地址簿";
+"DELETE_ADDRESS_MESSAGE" = "你确定你要删除这个地址?";
+
+"DELETE" = "删除";
+"SAVE" = "保存";
+
+"VIEW_AMEND_BUTTON" = "查看 / 更改";
+"SET_PRIMARY_BILLING_ADDRESS" = "设置为主要付款地址";
+"SET_PRIMARY_SHIPPING_ADDRESS" = "设置为主要邮寄地址";
+"SAME_AS_BILLING_ADDRESS" = "使用同样付款地址";
+"ORDER_NUMBER"="订单 #%@";
+"ORDER_ID"="订单号:";
+"YAY"="Yay!";
+"NEW_ADDRESS" = "新的地址";
+
+//Order Confirmation
+"CHECKOUT_WITH_KLARNA" = "与Klarna结帐";
+"ORDER_HARSH_NUMBER" = "Order #%@";
+
+"CHECKOUT_MANAGEADDRESS_SELECT_ADDRESS" = "选择地址";
+"EDIT_ADDRESS" = "编辑地址";
+"FREE"="免费";
+"Free"="免费";
+"MY_ACCOUNT"="我的账户";
+"SAVE" = "保存";
+
+
+"CHECKOUT_ERROR" = "发生错误, 请再次确认您的付款信息，稍后再试.";
+"Skip" = "跳过";
+
+// MARK: COUNTRY SELECTIONS
+"COUNTRY_SELECTION_TITLE" = "国家选项";
+"COUNTRY_SELECTION_WARNING_TITLE" = "请注意：选择国家之后，商品价格会不同，您的购物车会被清空。";
+"COUNTRY_SELECTION_CURRENT_COUNTRY_FORMAT" = "您当前所在地： %@";
+
+// MARK: Native Checkout
+"CHECKOUT_PAYMENT_STEP_FIRST_LINE" = "Payment & Billing";
+"CHECKOUT_DELIVERY_STEP_FIRST_LINE" = "Delivery";
+"CHECKOUT_BILLING_STEP_FIRST_LINE" = "Billing address";
+"CHECKOUT_DELIVERY_OPTIONS_STEP_FIRST_LINE" = "Delivery service";
+

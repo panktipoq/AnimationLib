@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-Semibold.ttf">
+            <string>SourceSansPro-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m7U-4P-DTW" customClass="MyProfileStoreViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="314"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="314"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Store Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xoh-zl-oXw">
+                        <rect key="frame" x="15" y="209" width="96" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="AUN-hF-sgD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Details" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8t-J6-Oiy">
+                        <rect key="frame" x="16" y="234" width="194" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Eyx-p2-rNU"/>
+                            <constraint firstAttribute="width" constant="194" id="OYt-jL-BqW"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="194" id="YJk-qu-xHO"/>
+                            <constraint firstAttribute="height" constant="40" id="dXz-Vp-7Kt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Eyx-p2-rNU"/>
+                                <exclude reference="dXz-Vp-7Kt"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="41A-9M-dBO">
+                        <rect key="frame" x="17" y="285" width="193" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0dl-Lj-aQj"/>
+                            <constraint firstAttribute="height" constant="21" id="HLN-F2-o0w"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="193" id="Msf-aY-9Fr"/>
+                            <constraint firstAttribute="width" constant="193" id="ntp-3A-74B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12M-wE-ZNr">
+                        <rect key="frame" x="210" y="204.5" width="102" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="4ue-35-UcM"/>
+                            <constraint firstAttribute="height" constant="30" id="7uh-Dw-NYu"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="mZ9-Ta-gGg"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="puu-sl-5t8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                        <state key="normal" title="Set favourite">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4ue-35-UcM"/>
+                                <exclude reference="puu-sl-5t8"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="favoriteButtonClick:" destination="m7U-4P-DTW" eventType="touchUpInside" id="7Lk-MM-PcB"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFo-MI-GSR" customClass="PoqSpinner" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="135" y="227" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="oKc-7H-iun"/>
+                            <constraint firstAttribute="width" constant="50" id="zDV-Ii-ZBL"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DF-ct-HUZ">
+                        <rect key="frame" x="10" y="10" width="302" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8m-DO-t6v">
+                        <rect key="frame" x="0.0" y="41" width="320" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="FfM-V6-eo1"/>
+                            <constraint firstAttribute="height" constant="140" id="hQE-Zo-mzB"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="tyq-vG-zdE"/>
+                        </connections>
+                    </mapView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs1-1V-Dhc" userLabel="Call Button" customClass="CallButton" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="268" y="254.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="NId-H8-NH7"/>
+                            <constraint firstAttribute="height" constant="44" id="oWe-fu-HWg"/>
+                        </constraints>
+                        <connections>
+                            <action selector="callButtonClicked:" destination="m7U-4P-DTW" eventType="touchUpInside" id="qGn-xc-FGw"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Xoh-zl-oXw" firstAttribute="leading" secondItem="m7U-4P-DTW" secondAttribute="leading" constant="15" id="0ZT-h3-D2h"/>
+                <constraint firstAttribute="centerX" secondItem="tFo-MI-GSR" secondAttribute="centerX" id="CA8-SL-Cka"/>
+                <constraint firstAttribute="trailing" secondItem="y8m-DO-t6v" secondAttribute="trailing" id="CWO-5W-wHQ"/>
+                <constraint firstItem="bs1-1V-Dhc" firstAttribute="trailing" secondItem="12M-wE-ZNr" secondAttribute="trailing" id="Kke-o0-jsg"/>
+                <constraint firstItem="y8m-DO-t6v" firstAttribute="top" secondItem="3DF-ct-HUZ" secondAttribute="bottom" constant="10" id="RV7-cY-xCW"/>
+                <constraint firstItem="41A-9M-dBO" firstAttribute="top" secondItem="tFo-MI-GSR" secondAttribute="bottom" constant="8" id="RhF-7b-zGd"/>
+                <constraint firstItem="12M-wE-ZNr" firstAttribute="centerY" secondItem="Xoh-zl-oXw" secondAttribute="centerY" id="UcS-ob-oc6"/>
+                <constraint firstItem="12M-wE-ZNr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xoh-zl-oXw" secondAttribute="trailing" priority="750" constant="11" id="ZUN-pd-Cz0"/>
+                <constraint firstAttribute="trailing" secondItem="12M-wE-ZNr" secondAttribute="trailing" constant="8" id="c3W-eQ-whn"/>
+                <constraint firstItem="3DF-ct-HUZ" firstAttribute="top" secondItem="m7U-4P-DTW" secondAttribute="top" constant="10" id="gHT-di-FGe"/>
+                <constraint firstAttribute="trailing" secondItem="3DF-ct-HUZ" secondAttribute="trailing" constant="8" id="gMR-t3-DlJ"/>
+                <constraint firstItem="3DF-ct-HUZ" firstAttribute="leading" secondItem="m7U-4P-DTW" secondAttribute="leading" constant="10" id="nCS-Ea-f3O"/>
+                <constraint firstItem="bs1-1V-Dhc" firstAttribute="top" secondItem="12M-wE-ZNr" secondAttribute="bottom" constant="20" id="nza-mg-0MM"/>
+                <constraint firstItem="Xoh-zl-oXw" firstAttribute="top" secondItem="y8m-DO-t6v" secondAttribute="bottom" constant="28" id="pEn-mw-VQR"/>
+                <constraint firstItem="tFo-MI-GSR" firstAttribute="top" secondItem="y8m-DO-t6v" secondAttribute="bottom" constant="46" id="qNq-AX-63d"/>
+                <constraint firstItem="L8t-J6-Oiy" firstAttribute="leading" secondItem="41A-9M-dBO" secondAttribute="leading" constant="-1" id="vHW-SG-dGb"/>
+                <constraint firstItem="L8t-J6-Oiy" firstAttribute="top" secondItem="Xoh-zl-oXw" secondAttribute="bottom" constant="4" id="wdq-5b-S70"/>
+                <constraint firstItem="y8m-DO-t6v" firstAttribute="leading" secondItem="m7U-4P-DTW" secondAttribute="leading" id="xfI-dc-orp"/>
+                <constraint firstItem="L8t-J6-Oiy" firstAttribute="leading" secondItem="Xoh-zl-oXw" secondAttribute="leading" constant="1" id="zKQ-LW-bB7"/>
+            </constraints>
+            <size key="customSize" width="715" height="278"/>
+            <connections>
+                <outlet property="addressLabel" destination="L8t-J6-Oiy" id="0UG-tF-ANt"/>
+                <outlet property="callButton" destination="bs1-1V-Dhc" id="aVc-Dy-6ev"/>
+                <outlet property="favoriteButton" destination="12M-wE-ZNr" id="v4G-MX-VUu"/>
+                <outlet property="mapView" destination="y8m-DO-t6v" id="fcP-fF-bKy"/>
+                <outlet property="nameLabel" destination="Xoh-zl-oXw" id="9qf-bw-OHT"/>
+                <outlet property="openingHoursLabel" destination="41A-9M-dBO" id="BX9-Bl-98O"/>
+                <outlet property="spinnerView" destination="tFo-MI-GSR" id="Y8q-zS-g8e"/>
+                <outlet property="titleLabel" destination="3DF-ct-HUZ" id="wUu-AB-Jjr"/>
+                <outlet property="titleLabelLeftConstraint" destination="nCS-Ea-f3O" id="m1D-td-NRG"/>
+            </connections>
+            <point key="canvasLocation" x="442" y="209"/>
+        </collectionViewCell>
+    </objects>
+</document>

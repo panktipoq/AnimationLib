@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="OrderDetailGiftViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Gift Message:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grY-gN-K1I">
+                        <rect key="frame" x="15" y="8" width="107" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEw-5j-YvM">
+                        <rect key="frame" x="15" y="34" width="370" height="92"/>
+                        <string key="text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eunt ut labore et doloreunt uteunt ut labore et dolore magna unt ut labore et dolore  labore labore et dolore  labore et dolore magna aliqua. 5thline”</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="rEw-5j-YvM" secondAttribute="trailing" constant="10" id="4Er-kh-rTl"/>
+                    <constraint firstAttribute="centerX" secondItem="rEw-5j-YvM" secondAttribute="centerX" id="77b-JB-r5J"/>
+                    <constraint firstItem="grY-gN-K1I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="Egi-nl-J8h"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rEw-5j-YvM" secondAttribute="trailing" id="G8q-2x-MS3"/>
+                    <constraint firstItem="rEw-5j-YvM" firstAttribute="top" secondItem="grY-gN-K1I" secondAttribute="bottom" constant="5" id="OXb-Ru-7bB"/>
+                    <constraint firstItem="rEw-5j-YvM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Q74-EP-Uej"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rEw-5j-YvM" secondAttribute="bottom" constant="5" id="XUJ-fh-fmh"/>
+                    <constraint firstItem="rEw-5j-YvM" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-7" id="lNc-4S-aKC"/>
+                    <constraint firstItem="rEw-5j-YvM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="lsW-5f-zRN"/>
+                    <constraint firstItem="grY-gN-K1I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="yI7-qr-U6n"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="4Er-kh-rTl"/>
+                        <exclude reference="77b-JB-r5J"/>
+                        <exclude reference="G8q-2x-MS3"/>
+                        <exclude reference="Q74-EP-Uej"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="giftMessageLabel" destination="rEw-5j-YvM" id="A23-Jf-Z2g"/>
+                <outlet property="giftMessageTitleLabel" destination="grY-gN-K1I" id="oFY-M3-FOd"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

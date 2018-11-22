@@ -1,0 +1,151 @@
+###
+# Swiftlint configuration file.
+# Latest version supported: 0.24.0
+# Any newer version hasn't been checked yet and might not follow the style guide.
+#
+###
+
+disabled_rules: # rule identifiers to exclude from running
+  - todo
+  - nesting # func nesting max 1 level
+  - trailing_whitespace
+  - closure_parameter_position
+  - function_body_length
+  - generic_type_name
+  - identifier_name
+  - line_length
+  - private_over_fileprivate
+  - redundant_string_enum_value
+
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Carthage
+  - Pods
+  - External
+  - Submodules
+
+opt_in_rules:
+    - force_unwrapping
+    - conditional_returns_on_newline
+    - closure_spacing
+    - overridden_super_call
+    - switch_case_on_newline
+    - fatal_error_message
+    - file_name
+    - multiline_arguments
+    - redundant_type_annotation
+    - toggle_bool
+
+# rule parameters
+identifier_name:
+ min_length: 2
+ max_length: 30
+
+cyclomatic_complexity:
+  - 20 #warning
+
+file_length:
+  - 1000 #warning
+
+type_body_length:
+ - 200 #warning
+ 
+function_body_length:
+  - 60 #warning
+
+line_length:
+  - 350 #warning
+
+force_unwrapping: 
+  severity: error
+overridden_super_call: 
+  severity: error
+
+custom_rules:
+  unnecessary_datatype:
+    name: "Unnecessary Datatype"
+    regex: '(?m-s)(let|var).*(:\s\[+(\w|:| |\t)+\]+\s*=\s*\[:*\])'
+    message: "Unnecessary datatype. Use '= [DataType]()' instead of ': [DataType] = []'"
+    severity: warning
+  missing_closure_name:
+    name: "Missing closure name"
+    regex: '^\s*\}\) \{.*'
+    message: "Add the missing closure name"
+    severity: warning
+  empty_commented_line:
+    name: "Empty Commented Out Line"
+    regex: '(\t+| +)//\n'
+    message: "Remove useless comment lines or use /* format */"
+    severity: warning
+  comments_space:
+    name: "Space After Comment"
+    regex: '(//\w+|///\w+)'
+    message: "There should be a space between the start of a comment and the first character."
+    severity: warning
+    match_kinds:
+      - comment
+      - doccomment
+      - doccomment.field
+  comments_capitalized_ignore_possible_code:
+    name: "Capitalize First Word In Comment"
+    regex: '(// +(?!swiftlint)[a-z]+)'
+    message: "The first word of a comment should be capitalized"
+    severity: warning
+    match_kinds:
+      - comment
+      - doccomment
+  empty_first_line:
+    name: "Empty First Line"
+    regex: '(extension|class) (?!(?:func))[^\{]*\{[^\n]*\n[\t ]*\w+'
+    message: "There should be an empty line after a class or extension declaration."
+    severity: warning
+    match_kinds:
+      - keyword
+      - typeidentifier
+      - identifier
+      - typeidentifier
+      - argument
+      - string
+      - objectliteral
+      - placeholder
+      - parameter
+      - attribute.builtin
+  unnecessary_leading_void_in:
+    name: "Unnecessary -> Void in at the end of the line"
+    regex: '(-> (Void|\(\)) in$)'
+    message: "Unnecessary '-> Void in' at the end of the line. Use only 'in'"
+    severity: warning
+  unnecessary_type:
+    name: "Unnecessary Type"
+    regex: '(?sm)[ \ta-zA-Z0-9]?(?:let|var){1} [ \ta-zA-Z0-9]+?:[ \t]+?([a-zA-Z0-9]+?)[\t ]+?=[\t ]?\1'
+    message: "Type Definition Not Needed"
+    severity: warning
+  empty_closure_params:
+    name: "Empty closure params"
+    regex: '\{ (\(\) -> Void in)$'
+    message: "`() -> Void in` should be avoided"
+    severity: warning
+  invalid_mark_format:
+    name: "Invalid MARK Format"
+    regex: '(?m-s)(\/\/[\s]*?MARK(?!(\:[\s]{1}\-[\s]{1}){1}))'
+    message: "Use format: MARK: - Your Info"
+    severity: warning
+  unnecessary_space:
+    name: "Unnecessary Space"
+    regex: '(\[[a-zA-Z0-9]+? {1}: {1}[a-zA-Z0-9]+?\])'
+    message: "Unnecessary space. use [DataType: DataType]."
+    severity: warning
+  missing_space:
+    name: "Missing Space"
+    regex: '(\[[a-zA-Z0-9]+?:[a-zA-Z0-9]+?\])'
+    message: "Missing space. use [DataType: DataType]."
+    severity: warning
+  get_prefixed_function:
+    name: "Get prefixed function"
+    regex: '(?-smxi)(func get[A-Z0-9][\w]+?(\())'
+    message: "You should not prefix your functions with the word get."
+    severity: warning
+  empty_lines_before_declaration_end:
+    name: "Empty lines before declaration end"
+    regex: '\n[ \t]*\n[ \t]*\}([ \t]*\n|\n)'
+    message: "Empty lines before a declaration aren't improving the readability."
+    severity: warning

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApplyVoucherViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="applyButton" destination="YFX-QU-L6j" id="MZR-VS-2WG"/>
+                <outlet property="closeButton" destination="spY-zl-uy8" id="C4e-CH-VGl"/>
+                <outlet property="titleLabel" destination="Waj-zp-VZ1" id="lW6-0e-16g"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9I4-XG-8W4"/>
+                <outlet property="voucherCodeTextField" destination="yYU-Yd-uha" id="s9i-xf-heu"/>
+                <outlet property="whiteBoxView" destination="y2H-Pe-Vwi" id="AUU-WS-1sl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2H-Pe-Vwi">
+                    <rect key="frame" x="63" y="254" width="250" height="160"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spY-zl-uy8" userLabel="CloseButton" customClass="CloseButton" customModule="PoqPlatform" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="6z9-ft-BcL"/>
+                                <constraint firstAttribute="height" constant="44" id="tRA-2I-fWt"/>
+                            </constraints>
+                            <connections>
+                                <action selector="closeButtonClicked:" destination="-1" eventType="touchUpInside" id="s05-wg-Znh"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apply Voucher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-zp-VZ1" userLabel="ApplyVoucher">
+                            <rect key="frame" x="8" y="0.0" width="234" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="QAG-R3-rnF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viC-ek-bN2" userLabel="Ruler">
+                            <rect key="frame" x="0.0" y="43" width="250" height="1"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="kil-54-Oxx"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-pT-zfR" userLabel="Ruler">
+                            <rect key="frame" x="0.0" y="44" width="250" height="1"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="797-0S-ZAq"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Voucher Code" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yYU-Yd-uha" userLabel="VoucherCode" customClass="FloatLabelTextFieldWithState" customModule="PoqPlatform" customModuleProvider="target">
+                            <rect key="frame" x="8" y="53" width="234" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="jVN-Pf-eEm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="c9Z-4T-jxh"/>
+                            </connections>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAr-i8-dsC" userLabel="Ruler">
+                            <rect key="frame" x="0.0" y="101" width="250" height="1"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="O1K-Im-QfP"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFX-QU-L6j">
+                            <rect key="frame" x="8" y="108" width="234" height="44"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="YFX-QU-L6j" secondAttribute="bottom" constant="8" id="299-RA-rJC"/>
+                        <constraint firstItem="spY-zl-uy8" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" id="2lB-Vf-AJR"/>
+                        <constraint firstItem="qAr-i8-dsC" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" id="B0Z-s5-lpt"/>
+                        <constraint firstAttribute="trailing" secondItem="qAr-i8-dsC" secondAttribute="trailing" id="F56-gB-Vht"/>
+                        <constraint firstItem="YFX-QU-L6j" firstAttribute="top" secondItem="qAr-i8-dsC" secondAttribute="bottom" constant="6" id="G7L-p4-3kg"/>
+                        <constraint firstItem="QFy-pT-zfR" firstAttribute="top" secondItem="y2H-Pe-Vwi" secondAttribute="top" constant="44" id="GLU-YA-MqK"/>
+                        <constraint firstAttribute="height" constant="160" id="HoW-KO-1JH"/>
+                        <constraint firstItem="QFy-pT-zfR" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" id="ISR-MA-gvG"/>
+                        <constraint firstItem="spY-zl-uy8" firstAttribute="top" secondItem="y2H-Pe-Vwi" secondAttribute="top" id="KGy-6q-Tj5"/>
+                        <constraint firstAttribute="trailing" secondItem="Waj-zp-VZ1" secondAttribute="trailing" constant="8" id="Mpj-C1-QPY"/>
+                        <constraint firstItem="qAr-i8-dsC" firstAttribute="top" secondItem="yYU-Yd-uha" secondAttribute="bottom" constant="8" id="RGY-eL-Biu"/>
+                        <constraint firstAttribute="trailing" secondItem="YFX-QU-L6j" secondAttribute="trailing" constant="8" id="Twh-YS-2Dt"/>
+                        <constraint firstItem="yYU-Yd-uha" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" constant="8" id="Vqr-yU-kB0"/>
+                        <constraint firstItem="viC-ek-bN2" firstAttribute="top" secondItem="y2H-Pe-Vwi" secondAttribute="top" constant="43" id="Wzn-S0-DzG"/>
+                        <constraint firstAttribute="width" constant="250" id="cXS-11-X1s"/>
+                        <constraint firstAttribute="trailing" secondItem="viC-ek-bN2" secondAttribute="trailing" id="dTB-Jb-ET1"/>
+                        <constraint firstItem="viC-ek-bN2" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" id="eRr-2l-tXs"/>
+                        <constraint firstAttribute="trailing" secondItem="yYU-Yd-uha" secondAttribute="trailing" constant="8" id="gl9-2Q-Xiv"/>
+                        <constraint firstItem="Waj-zp-VZ1" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" constant="8" id="i0G-2O-JK2"/>
+                        <constraint firstItem="yYU-Yd-uha" firstAttribute="top" secondItem="QFy-pT-zfR" secondAttribute="bottom" constant="8" id="oMf-6b-YEo"/>
+                        <constraint firstItem="Waj-zp-VZ1" firstAttribute="top" secondItem="y2H-Pe-Vwi" secondAttribute="top" id="u1F-Qw-ZiP"/>
+                        <constraint firstAttribute="trailing" secondItem="QFy-pT-zfR" secondAttribute="trailing" id="unu-YQ-qtM"/>
+                        <constraint firstItem="YFX-QU-L6j" firstAttribute="leading" secondItem="y2H-Pe-Vwi" secondAttribute="leading" constant="8" id="zhm-Ta-sZv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="y2H-Pe-Vwi" secondAttribute="centerY" id="GrB-iq-GyH"/>
+                <constraint firstAttribute="centerX" secondItem="y2H-Pe-Vwi" secondAttribute="centerX" id="YE5-s2-yyL"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

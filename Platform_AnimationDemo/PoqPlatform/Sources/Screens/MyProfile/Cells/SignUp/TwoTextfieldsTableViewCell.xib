@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TwoTextfieldsTableViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qia-dD-hhh" userLabel="SeparatorsContainer">
+                        <rect key="frame" x="10" y="48.5" width="390" height="1"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5B-nh-KnP" userLabel="Solid Line Separator" customClass="SolidLine" customModule="PoqPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" placeholder="YES" id="SMv-9p-kMz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qa-xw-bOG" userLabel="Horizontal Line Separator" customClass="HorizontalLine" customModule="PoqPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6B5-pw-JU2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U5B-nh-KnP" secondAttribute="trailing" id="GCu-5n-fOD"/>
+                            <constraint firstItem="U5B-nh-KnP" firstAttribute="centerY" secondItem="qia-dD-hhh" secondAttribute="centerY" id="Ite-fr-lc9"/>
+                            <constraint firstItem="U5B-nh-KnP" firstAttribute="leading" secondItem="qia-dD-hhh" secondAttribute="leading" id="LxK-pQ-S8f"/>
+                            <constraint firstItem="9qa-xw-bOG" firstAttribute="trailing" secondItem="U5B-nh-KnP" secondAttribute="trailing" id="QCD-GZ-hyd"/>
+                            <constraint firstAttribute="height" constant="1" id="a2a-nI-pvn"/>
+                            <constraint firstItem="9qa-xw-bOG" firstAttribute="leading" secondItem="U5B-nh-KnP" secondAttribute="leading" id="tU3-bu-dji"/>
+                            <constraint firstItem="9qa-xw-bOG" firstAttribute="centerY" secondItem="qia-dD-hhh" secondAttribute="centerY" id="z2N-vo-MXQ"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FirstName*" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hNW-4N-0qj" customClass="FloatLabelTextFieldWithState" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="15" y="5" width="177" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="jjP-ax-I6t"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIA-Xg-Y2b" customClass="VerticalLine" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="200" y="3" width="1" height="39"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="VYL-uZ-l8c"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LastName*" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zIK-ne-tib" customClass="FloatLabelTextFieldWithState" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="207" y="5" width="178" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="vjx-TU-fXm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="zIK-ne-tib" secondAttribute="bottom" constant="-8.5" id="5y6-58-nsu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hNW-4N-0qj" secondAttribute="bottom" constant="-8.5" id="8Hn-KL-2Zz"/>
+                    <constraint firstItem="qia-dD-hhh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="9k1-mZ-9nr"/>
+                    <constraint firstAttribute="centerY" secondItem="zIK-ne-tib" secondAttribute="centerY" constant="-2.75" id="AjL-JF-C6J"/>
+                    <constraint firstItem="zIK-ne-tib" firstAttribute="leading" secondItem="QIA-Xg-Y2b" secondAttribute="trailing" constant="6" id="C86-nW-uIh"/>
+                    <constraint firstAttribute="trailing" secondItem="qia-dD-hhh" secondAttribute="trailing" id="ERj-9C-OvZ"/>
+                    <constraint firstAttribute="bottom" secondItem="qia-dD-hhh" secondAttribute="bottom" id="ESy-LE-DSp"/>
+                    <constraint firstAttribute="centerY" secondItem="QIA-Xg-Y2b" secondAttribute="centerY" constant="2.25" id="J9u-HV-tgW"/>
+                    <constraint firstItem="hNW-4N-0qj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="JXK-8e-4YZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QIA-Xg-Y2b" secondAttribute="bottom" constant="-0.5" id="OW0-yj-hVU"/>
+                    <constraint firstItem="zIK-ne-tib" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="PmG-fR-DrG"/>
+                    <constraint firstItem="QIA-Xg-Y2b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="TWZ-jC-GVp"/>
+                    <constraint firstItem="hNW-4N-0qj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="m38-rt-yVF"/>
+                    <constraint firstAttribute="centerY" secondItem="hNW-4N-0qj" secondAttribute="centerY" constant="-2.75" id="m4G-Ks-viW"/>
+                    <constraint firstAttribute="centerX" secondItem="QIA-Xg-Y2b" secondAttribute="centerX" constant="-0.5" id="qej-Gm-8Um"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zIK-ne-tib" secondAttribute="trailing" constant="7" id="vOV-hi-yLz"/>
+                    <constraint firstItem="QIA-Xg-Y2b" firstAttribute="leading" secondItem="hNW-4N-0qj" secondAttribute="trailing" constant="8" id="xgB-y3-JDt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstNameTextField" destination="hNW-4N-0qj" id="dww-ie-P5d"/>
+                <outlet property="lastNameTextField" destination="zIK-ne-tib" id="JUo-eD-iKQ"/>
+                <outlet property="solidLineSeparator" destination="U5B-nh-KnP" id="odH-9l-jEZ"/>
+                <outlet property="solidLinesContainer" destination="qia-dD-hhh" id="e6M-uX-rd3"/>
+                <outlet property="underline" destination="9qa-xw-bOG" id="Ia2-qM-j4q"/>
+                <outlet property="verticalLine" destination="QIA-Xg-Y2b" id="mKy-Q3-UVa"/>
+            </connections>
+            <point key="canvasLocation" x="410" y="213"/>
+        </tableViewCell>
+    </objects>
+</document>

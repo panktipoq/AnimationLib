@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OrderConfirmationTitlePriceView" customModule="Albam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbp-NA-vYF" userLabel="Titile Label">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-qm-NCc" userLabel="Price Value Label">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VC4-qm-NCc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WlJ-ja-4b4"/>
+                <constraint firstItem="vbp-NA-vYF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="lJR-4f-ueb"/>
+                <constraint firstAttribute="trailing" secondItem="VC4-qm-NCc" secondAttribute="trailing" constant="15" id="qpI-xQ-2Qp"/>
+                <constraint firstItem="vbp-NA-vYF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xzJ-bD-r2i"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leadindConstraint" destination="lJR-4f-ueb" id="9nK-VW-gw0"/>
+                <outlet property="priceValueLabel" destination="VC4-qm-NCc" id="Dmp-nq-Hic"/>
+                <outlet property="titleLabel" destination="vbp-NA-vYF" id="nvp-KH-3Vc"/>
+                <outlet property="trailingConstraint" destination="qpI-xQ-2Qp" id="QWw-gn-uTu"/>
+            </connections>
+            <point key="canvasLocation" x="-147.5" y="-17.5"/>
+        </view>
+    </objects>
+</document>

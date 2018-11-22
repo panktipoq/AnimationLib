@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="SwitchTableViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQf-e2-hTW">
+                        <rect key="frame" x="321" y="22.5" width="51" height="31"/>
+                        <connections>
+                            <action selector="stateChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="dDr-SV-iip"/>
+                        </connections>
+                    </switch>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVf-4R-SXQ" customClass="SolidLine" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="10" y="74.5" width="420" height="1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="m4k-Ht-Ilp"/>
+                        </constraints>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="I agree to the Terms &amp; Conditions and Privacy Policy" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Al2-KZ-NVV">
+                        <rect key="frame" x="10" y="10" width="301" height="54.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="BOn-LZ-pGC"/>
+                        </connections>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Al2-KZ-NVV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4Ar-rk-pbX"/>
+                    <constraint firstAttribute="trailing" secondItem="dVf-4R-SXQ" secondAttribute="trailing" constant="-30" id="5bP-O6-DOL"/>
+                    <constraint firstItem="qQf-e2-hTW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DKb-tY-NiT"/>
+                    <constraint firstItem="Al2-KZ-NVV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="LzJ-El-L6G"/>
+                    <constraint firstItem="dVf-4R-SXQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="QgZ-Ye-bxR"/>
+                    <constraint firstAttribute="trailing" secondItem="qQf-e2-hTW" secondAttribute="trailing" constant="30" id="bja-Nw-bg8"/>
+                    <constraint firstItem="qQf-e2-hTW" firstAttribute="leading" secondItem="Al2-KZ-NVV" secondAttribute="trailing" constant="10" id="iRl-Gr-gbI"/>
+                    <constraint firstAttribute="bottom" secondItem="dVf-4R-SXQ" secondAttribute="bottom" id="lYT-zK-jhW"/>
+                    <constraint firstItem="dVf-4R-SXQ" firstAttribute="top" secondItem="Al2-KZ-NVV" secondAttribute="bottom" constant="10" id="t55-Tv-HeT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="optionSwitch" destination="qQf-e2-hTW" id="FWl-dw-1L8"/>
+                <outlet property="solidLine" destination="dVf-4R-SXQ" id="uyb-4s-3gM"/>
+                <outlet property="titleTextView" destination="Al2-KZ-NVV" id="HIr-Gu-6Uv"/>
+            </connections>
+            <point key="canvasLocation" x="344" y="230"/>
+        </tableViewCell>
+    </objects>
+</document>

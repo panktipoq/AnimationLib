@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="gUe-dS-bVN" id="jqV-zO-hEJ"/>
+                <outlet property="view" destination="5Cm-te-7fN" id="8Ta-Xh-pJz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5Cm-te-7fN">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-dS-bVN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rLx-Li-zfc"/>
+                        <outlet property="delegate" destination="-1" id="sRg-93-B8q"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gUe-dS-bVN" firstAttribute="top" secondItem="5Cm-te-7fN" secondAttribute="top" id="JJv-u4-4rE"/>
+                <constraint firstItem="gUe-dS-bVN" firstAttribute="leading" secondItem="5Cm-te-7fN" secondAttribute="leading" id="O6o-fa-Rks"/>
+                <constraint firstAttribute="trailing" secondItem="gUe-dS-bVN" secondAttribute="trailing" id="gl8-0k-zAG"/>
+                <constraint firstAttribute="bottom" secondItem="gUe-dS-bVN" secondAttribute="bottom" id="rif-t8-JjI"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="RTE-zh-gqk"/>
+            <point key="canvasLocation" x="288" y="329"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AYy-Vb-LVy" customClass="VouchersCategoryHeaderCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="G81-Pv-Hxn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xSb-ci-TS5">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="yD3-Je-KMv">
+                        <rect key="frame" x="168" y="105" width="39" height="37"/>
+                    </pageControl>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yD3-Je-KMv" firstAttribute="centerX" secondItem="AYy-Vb-LVy" secondAttribute="centerX" id="Acw-pu-aDF"/>
+                <constraint firstAttribute="bottom" secondItem="G81-Pv-Hxn" secondAttribute="bottom" id="AtU-WV-ZZQ"/>
+                <constraint firstAttribute="trailing" secondItem="G81-Pv-Hxn" secondAttribute="trailing" id="FqR-Yh-EZ4"/>
+                <constraint firstItem="G81-Pv-Hxn" firstAttribute="leading" secondItem="AYy-Vb-LVy" secondAttribute="leading" id="Izv-C2-Oal"/>
+                <constraint firstItem="G81-Pv-Hxn" firstAttribute="top" secondItem="AYy-Vb-LVy" secondAttribute="top" id="YJ1-al-6Ha"/>
+                <constraint firstAttribute="bottom" secondItem="yD3-Je-KMv" secondAttribute="bottom" constant="-2" id="rYb-Rf-SRN"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="G81-Pv-Hxn" id="7O5-RX-DwJ"/>
+                <outlet property="pageControl" destination="yD3-Je-KMv" id="9om-ts-0t8"/>
+            </connections>
+            <point key="canvasLocation" x="-361" y="77"/>
+        </collectionViewCell>
+    </objects>
+</document>

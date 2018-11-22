@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="mF1-4t-ums" customClass="BrandedProductListViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="434"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="434"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpY-DU-O03" userLabel="ProductImageContainer">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-ym-ECv" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1JT-ym-ECv" firstAttribute="width" secondItem="gpY-DU-O03" secondAttribute="width" priority="900" id="0GR-oL-xhn"/>
+                            <constraint firstItem="1JT-ym-ECv" firstAttribute="centerX" secondItem="gpY-DU-O03" secondAttribute="centerX" id="9JC-Ff-fZV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1JT-ym-ECv" secondAttribute="trailing" priority="950" id="Gpb-sA-viY"/>
+                            <constraint firstItem="1JT-ym-ECv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gpY-DU-O03" secondAttribute="top" priority="950" id="Wdn-f2-oph"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1JT-ym-ECv" secondAttribute="bottom" priority="950" id="c7l-La-ckQ"/>
+                            <constraint firstItem="1JT-ym-ECv" firstAttribute="centerY" secondItem="gpY-DU-O03" secondAttribute="centerY" id="oc9-eT-1da"/>
+                            <constraint firstItem="1JT-ym-ECv" firstAttribute="height" secondItem="gpY-DU-O03" secondAttribute="height" priority="900" id="zpY-Ef-mUr"/>
+                            <constraint firstItem="1JT-ym-ECv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gpY-DU-O03" secondAttribute="leading" priority="950" id="zyP-CF-5oH"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNH-2M-ZDY" userLabel="Brand Title">
+                        <rect key="frame" x="8" y="310" width="304" height="16"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLR-CY-Bez">
+                        <rect key="frame" x="8" y="327" width="304" height="14"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Product name">
+                                <attributes>
+                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="12" name="ArialMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        </variation>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-ar-JSV" userLabel="ClickArea">
+                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="Iy2-Op-q5M"/>
+                            <constraint firstAttribute="width" constant="10" id="gtN-pM-Rud"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-MY-28F">
+                        <rect key="frame" x="8" y="342" width="304" height="14"/>
+                        <attributedString key="attributedText">
+                            <fragment content="£999.99  long  ">
+                                <attributes>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        </variation>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ia-wg-zIi" customClass="UIButton">
+                        <rect key="frame" x="140" y="364" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="LLE-H2-Qrf"/>
+                            <constraint firstAttribute="height" constant="40" id="fdY-Be-oke"/>
+                        </constraints>
+                        <connections>
+                            <action selector="likeButtonClicked:" destination="mF1-4t-ums" eventType="touchUpInside" id="Vw7-pX-1Cu"/>
+                        </connections>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gpY-DU-O03" secondAttribute="bottom" constant="157" id="3ha-zA-Bjm"/>
+                <constraint firstItem="gpY-DU-O03" firstAttribute="leading" secondItem="mF1-4t-ums" secondAttribute="leading" id="4my-wV-DFc"/>
+                <constraint firstItem="JQg-MY-28F" firstAttribute="leading" secondItem="mF1-4t-ums" secondAttribute="leading" constant="8" id="7uF-bv-mP2"/>
+                <constraint firstItem="rLR-CY-Bez" firstAttribute="top" secondItem="sNH-2M-ZDY" secondAttribute="bottom" constant="1" id="9wv-5r-JpX">
+                    <variation key="heightClass=regular-widthClass=regular" constant="2"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="gpY-DU-O03" secondAttribute="trailing" id="ELc-ur-YKd"/>
+                <constraint firstItem="gpY-DU-O03" firstAttribute="top" secondItem="mF1-4t-ums" secondAttribute="top" id="N9S-Ua-H10"/>
+                <constraint firstItem="sNH-2M-ZDY" firstAttribute="leading" secondItem="mF1-4t-ums" secondAttribute="leading" constant="8" id="a20-zA-9aL"/>
+                <constraint firstItem="1ia-wg-zIi" firstAttribute="centerX" secondItem="mF1-4t-ums" secondAttribute="centerX" id="amo-Mj-DLY"/>
+                <constraint firstItem="1ia-wg-zIi" firstAttribute="top" secondItem="JQg-MY-28F" secondAttribute="bottom" constant="8" id="eFW-US-Ox1">
+                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="rLR-CY-Bez" secondAttribute="trailing" constant="8" id="kDx-xG-4Ii"/>
+                <constraint firstAttribute="trailing" secondItem="sNH-2M-ZDY" secondAttribute="trailing" constant="8" id="kMz-2T-dVY"/>
+                <constraint firstAttribute="trailing" secondItem="JQg-MY-28F" secondAttribute="trailing" constant="8" id="pjh-eL-mXC"/>
+                <constraint firstItem="JQg-MY-28F" firstAttribute="top" secondItem="rLR-CY-Bez" secondAttribute="bottom" constant="1" id="qpC-6w-o3E"/>
+                <constraint firstItem="sNH-2M-ZDY" firstAttribute="top" secondItem="gpY-DU-O03" secondAttribute="bottom" constant="33" id="r5i-Qo-VYZ"/>
+                <constraint firstItem="rLR-CY-Bez" firstAttribute="leading" secondItem="mF1-4t-ums" secondAttribute="leading" constant="8" id="sTE-Gu-JCj"/>
+            </constraints>
+            <size key="customSize" width="482" height="546"/>
+            <connections>
+                <outlet property="bottomSpaceHeightConstraint" destination="3ha-zA-Bjm" id="1xr-OX-z9F"/>
+                <outlet property="brandLabel" destination="sNH-2M-ZDY" id="Onw-oU-SM3"/>
+                <outlet property="likeButton" destination="1ia-wg-zIi" id="gnf-vN-pnP"/>
+                <outlet property="priceLabel" destination="JQg-MY-28F" id="0xi-dl-6Kn"/>
+                <outlet property="productImage" destination="1JT-ym-ECv" id="GEy-cj-kUz"/>
+                <outlet property="titleLabel" destination="rLR-CY-Bez" id="RKV-nQ-iQ1"/>
+            </connections>
+            <point key="canvasLocation" x="297" y="119"/>
+        </collectionViewCell>
+    </objects>
+</document>

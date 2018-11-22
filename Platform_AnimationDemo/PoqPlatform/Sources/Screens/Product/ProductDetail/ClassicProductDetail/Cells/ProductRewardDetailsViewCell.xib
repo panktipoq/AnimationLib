@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="163" id="KGk-i7-Jjw" customClass="ProductRewardDetailsViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="163"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="162"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 rewards for life points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVj-hR-oXH">
+                        <rect key="frame" x="17" y="10" width="354" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="8DS-0v-J3e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£4.89/100 g " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al6-Xl-F1R">
+                        <rect key="frame" x="17" y="30" width="354" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7VM-cD-RKM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="035340" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaR-m9-KwV">
+                        <rect key="frame" x="17" y="50" width="354" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="h9E-zM-lr0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uaR-m9-KwV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="Cdn-hQ-GNX"/>
+                    <constraint firstItem="cVj-hR-oXH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="HFx-nn-SuQ"/>
+                    <constraint firstItem="al6-Xl-F1R" firstAttribute="top" secondItem="cVj-hR-oXH" secondAttribute="bottom" id="Iof-TB-h7g"/>
+                    <constraint firstItem="al6-Xl-F1R" firstAttribute="trailing" secondItem="cVj-hR-oXH" secondAttribute="trailing" id="SNt-wB-nGS"/>
+                    <constraint firstItem="cVj-hR-oXH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="WZv-oC-wqU"/>
+                    <constraint firstItem="cVj-hR-oXH" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-17" id="dcZ-5B-CqN"/>
+                    <constraint firstItem="uaR-m9-KwV" firstAttribute="top" secondItem="al6-Xl-F1R" secondAttribute="bottom" id="hly-ga-fHb"/>
+                    <constraint firstItem="uaR-m9-KwV" firstAttribute="trailing" secondItem="al6-Xl-F1R" secondAttribute="trailing" id="jik-AJ-df0"/>
+                    <constraint firstItem="al6-Xl-F1R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="p1R-K9-Mle"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="codeLabel" destination="uaR-m9-KwV" id="veq-lW-cuL"/>
+                <outlet property="ppuLabel" destination="al6-Xl-F1R" id="qDJ-jF-DSC"/>
+                <outlet property="rewardLabel" destination="cVj-hR-oXH" id="NdH-xh-COU"/>
+            </connections>
+            <point key="canvasLocation" x="-174" y="-62.5"/>
+        </tableViewCell>
+    </objects>
+</document>

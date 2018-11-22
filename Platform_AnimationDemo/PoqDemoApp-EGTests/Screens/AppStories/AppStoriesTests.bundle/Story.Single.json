@@ -1,0 +1,43 @@
+{
+    "stories": [
+        {
+            "identifier": "4b268b62-da05-43ce-8dff-a29c3da9f166",
+            "title": "Accessories",
+            "iconUrl": null,
+            "imageUrl": "http://localhost:50100/app173/11176197-1.png?v=131466069540670000",
+            "from": "2017-08-07T09:17:00",
+            "to": "2017-08-31T12:00:00",
+            "autoplay": false,
+            "cards": [
+                {
+                    "type": "Default",
+                    "identifier": "f222f8fb-5717-4d78-b8e7-818f14449595",
+                    "title": "folding arms",
+                    "imageUrl": "http://localhost:50100/app173/11158308-1.jpg?v=131461356855970000",
+                    "duration": 0.2
+                },
+                {
+                    "type": "Default",
+                    "identifier": "18e9de75-5aee-451d-a073-bb51c228b9f7",
+                    "title": "Oh no, I'm getting wet",
+                    "imageUrl": "http://localhost:50100/app173/11158308-1.jpg?v=131461356855970000",
+                    "duration": 0.2
+                },
+                {
+                    "type": "Default",
+                    "identifier": "db610a92-645e-4482-98f1-c15e77de200e",
+                    "title": "ugyouhg",
+                    "imageUrl": "http://localhost:50100/app173/11158308-1.jpg?v=131461356855970000",
+                    "duration": 0.2
+                },
+                {
+                    "type": "Default",
+                    "identifier": "078fb7c6-3857-4c62-8050-de9bff81f066",
+                    "title": "ardearg",
+                    "imageUrl": "http://localhost:50100/app173/11158308-1.jpg?v=131461356855970000",
+                    "duration": 0.2
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewPeek" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="productImageView" destination="pVP-bC-2gh" id="XZp-2e-Y0f"/>
+                <outlet property="productPriceLabel" destination="o3n-tF-8ZN" id="pXC-KD-dNM"/>
+                <outlet property="productVideoView" destination="XMZ-M5-MSR" id="omv-05-VNn"/>
+                <outlet property="view" destination="0Hg-HC-eWt" id="rW1-QG-QI4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0Hg-HC-eWt">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3n-tF-8ZN" userLabel="productPriceLabel">
+                    <rect key="frame" x="0.0" y="480" width="320" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMZ-M5-MSR" userLabel="productVideoView" customClass="PoqVideoView" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-bC-2gh" userLabel="productImageView" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="o3n-tF-8ZN" secondAttribute="bottom" id="1Mn-HV-w26"/>
+                <constraint firstAttribute="trailing" secondItem="XMZ-M5-MSR" secondAttribute="trailing" id="Dg6-wh-9O1"/>
+                <constraint firstItem="pVP-bC-2gh" firstAttribute="top" secondItem="0Hg-HC-eWt" secondAttribute="top" id="HOk-xG-On4"/>
+                <constraint firstItem="o3n-tF-8ZN" firstAttribute="leading" secondItem="0Hg-HC-eWt" secondAttribute="leading" id="JyC-AJ-MzD"/>
+                <constraint firstAttribute="trailing" secondItem="pVP-bC-2gh" secondAttribute="trailing" id="KUZ-Tj-ZGF"/>
+                <constraint firstItem="pVP-bC-2gh" firstAttribute="leading" secondItem="0Hg-HC-eWt" secondAttribute="leading" id="Ob3-rD-FkF"/>
+                <constraint firstItem="XMZ-M5-MSR" firstAttribute="top" secondItem="0Hg-HC-eWt" secondAttribute="top" id="Ugs-bm-UuC"/>
+                <constraint firstAttribute="trailing" secondItem="o3n-tF-8ZN" secondAttribute="trailing" id="VNr-yK-YkN"/>
+                <constraint firstItem="o3n-tF-8ZN" firstAttribute="top" secondItem="pVP-bC-2gh" secondAttribute="bottom" id="YrP-X8-z2G"/>
+                <constraint firstItem="o3n-tF-8ZN" firstAttribute="top" secondItem="XMZ-M5-MSR" secondAttribute="bottom" id="juU-hG-e0c"/>
+                <constraint firstItem="XMZ-M5-MSR" firstAttribute="leading" secondItem="0Hg-HC-eWt" secondAttribute="leading" id="zCy-kE-bqW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="192.5" y="-81.5"/>
+        </view>
+    </objects>
+</document>

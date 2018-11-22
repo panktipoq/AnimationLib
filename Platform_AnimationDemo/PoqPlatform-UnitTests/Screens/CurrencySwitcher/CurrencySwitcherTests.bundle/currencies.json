@@ -1,0 +1,15 @@
+[
+ {
+ "countryName": "United Kingdom",
+ "countryCode": "GB",
+ "currencyCode": "GBP",
+ "symbol": "£"
+ },
+ {
+ "countryName": "Fake it",
+ "countryCode": "Fake code",
+ "currencyCode": "Fake currency",
+ "symbol": "Fake"
+ }
+ ]
+ 

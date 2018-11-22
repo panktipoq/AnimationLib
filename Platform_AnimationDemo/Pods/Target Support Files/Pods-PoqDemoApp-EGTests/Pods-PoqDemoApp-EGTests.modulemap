@@ -1,0 +1,6 @@
+framework module Pods_PoqDemoApp_EGTests {
+  umbrella header "Pods-PoqDemoApp-EGTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

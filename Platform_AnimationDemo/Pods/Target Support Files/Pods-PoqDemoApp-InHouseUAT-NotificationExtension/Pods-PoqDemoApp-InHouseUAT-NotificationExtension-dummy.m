@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_PoqDemoApp_InHouseUAT_NotificationExtension : NSObject
+@end
+@implementation PodsDummy_Pods_PoqDemoApp_InHouseUAT_NotificationExtension
+@end

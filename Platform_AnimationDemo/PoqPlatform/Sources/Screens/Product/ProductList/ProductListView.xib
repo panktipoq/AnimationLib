@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="KAK-eI-Mar" id="EKn-jI-nhM"/>
+                <outlet property="emptyView" destination="dCF-EY-9qf" id="OpS-oh-dii"/>
+                <outlet property="extensionViewContainer" destination="5tg-al-S6U" id="Xdm-x0-3pZ"/>
+                <outlet property="extensionViewContainerHeight" destination="J8o-5F-2h2" id="dQa-Qb-OBg"/>
+                <outlet property="noItemsLabel" destination="AGk-jg-9lN" id="E3Q-gd-Mq7"/>
+                <outlet property="noSearchResultsView" destination="bdp-5K-ud4" id="3QT-UF-dMU"/>
+                <outlet property="retryButton" destination="Qiu-kb-9W2" id="Nvi-cT-zRs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="okW-gP-4cy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tg-al-S6U">
+                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="J8o-5F-2h2"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-eI-Mar">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uDY-Ma-91s">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="50" height="50"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FVa-0u-cvs"/>
+                        <outlet property="delegate" destination="-1" id="Rs0-ef-vfq"/>
+                    </connections>
+                </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-5K-ud4" userLabel="No Search Results">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCF-EY-9qf">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiu-kb-9W2" userLabel="Retry Button" customClass="RetryButton" customModule="PoqPlatform" customModuleProvider="target">
+                            <rect key="frame" x="134" y="245.5" width="106" height="67"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="67" id="jAe-uw-m7x"/>
+                                <constraint firstAttribute="width" constant="106" id="o4k-Q4-H4R"/>
+                            </constraints>
+                            <connections>
+                                <action selector="retryButtonClicked:" destination="-1" eventType="touchUpInside" id="qjZ-XT-cJ0"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results found........." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AGk-jg-9lN">
+                            <rect key="frame" x="101" y="209.5" width="173" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Qiu-kb-9W2" firstAttribute="centerY" secondItem="dCF-EY-9qf" secondAttribute="centerY" id="FfU-mH-k5i"/>
+                        <constraint firstItem="Qiu-kb-9W2" firstAttribute="top" secondItem="AGk-jg-9lN" secondAttribute="bottom" constant="16" id="VeV-Bg-YT9"/>
+                        <constraint firstAttribute="centerX" secondItem="AGk-jg-9lN" secondAttribute="centerX" id="ZiQ-Fe-G4e"/>
+                        <constraint firstItem="Qiu-kb-9W2" firstAttribute="centerX" secondItem="dCF-EY-9qf" secondAttribute="centerX" id="q8K-rv-XJO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cFn-3l-bt4" firstAttribute="trailing" secondItem="5tg-al-S6U" secondAttribute="trailing" id="17T-Tf-1uZ"/>
+                <constraint firstItem="KAK-eI-Mar" firstAttribute="leading" secondItem="cFn-3l-bt4" secondAttribute="leading" id="1qh-4o-gyB"/>
+                <constraint firstItem="dCF-EY-9qf" firstAttribute="bottom" secondItem="KAK-eI-Mar" secondAttribute="bottom" id="2PZ-b2-ttw"/>
+                <constraint firstItem="dCF-EY-9qf" firstAttribute="top" secondItem="KAK-eI-Mar" secondAttribute="top" id="NqX-u4-ADO"/>
+                <constraint firstItem="KAK-eI-Mar" firstAttribute="trailing" secondItem="bdp-5K-ud4" secondAttribute="trailing" id="SaI-OC-pcV"/>
+                <constraint firstItem="KAK-eI-Mar" firstAttribute="bottom" secondItem="bdp-5K-ud4" secondAttribute="bottom" id="TJf-Zd-2Rj"/>
+                <constraint firstItem="dCF-EY-9qf" firstAttribute="leading" secondItem="KAK-eI-Mar" secondAttribute="leading" id="bMP-G8-y1f"/>
+                <constraint firstItem="5tg-al-S6U" firstAttribute="top" secondItem="cFn-3l-bt4" secondAttribute="top" priority="750" id="dNq-Y3-mbc"/>
+                <constraint firstItem="5tg-al-S6U" firstAttribute="bottom" secondItem="KAK-eI-Mar" secondAttribute="top" id="ehn-Fb-GWr"/>
+                <constraint firstItem="bdp-5K-ud4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="fq1-D7-Idg"/>
+                <constraint firstItem="cFn-3l-bt4" firstAttribute="trailing" secondItem="KAK-eI-Mar" secondAttribute="trailing" id="gWo-XB-Oey"/>
+                <constraint firstItem="cFn-3l-bt4" firstAttribute="bottom" secondItem="KAK-eI-Mar" secondAttribute="bottom" id="hNG-WH-CU9"/>
+                <constraint firstItem="KAK-eI-Mar" firstAttribute="leading" secondItem="bdp-5K-ud4" secondAttribute="leading" id="lEf-26-GRh"/>
+                <constraint firstItem="5tg-al-S6U" firstAttribute="leading" secondItem="cFn-3l-bt4" secondAttribute="leading" id="oT4-CC-uGS"/>
+                <constraint firstItem="dCF-EY-9qf" firstAttribute="trailing" secondItem="KAK-eI-Mar" secondAttribute="trailing" id="tkC-uE-noC"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="cFn-3l-bt4"/>
+            <point key="canvasLocation" x="-41.5" y="25.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppStoryProductListViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="7ld-Ll-4UJ" id="2kn-0c-4NK"/>
+                <outlet property="toolBar" destination="A4g-Uw-jaU" id="0UX-dO-Dbb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="VG0-tV-Pom"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7ld-Ll-4UJ">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FBN-Dh-4Dn">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OGs-9f-akk"/>
+                        <outlet property="delegate" destination="-1" id="RyX-D2-GD7"/>
+                    </connections>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4g-Uw-jaU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="T3t-ik-8fj"/>
+                    </connections>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7ld-Ll-4UJ" secondAttribute="trailing" id="5Oj-Gq-TWP"/>
+                <constraint firstItem="7ld-Ll-4UJ" firstAttribute="top" secondItem="A4g-Uw-jaU" secondAttribute="bottom" id="93h-1J-UZa"/>
+                <constraint firstAttribute="bottom" secondItem="7ld-Ll-4UJ" secondAttribute="bottom" id="Lp7-Ir-rTB"/>
+                <constraint firstItem="A4g-Uw-jaU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YVY-c3-zcB"/>
+                <constraint firstItem="7ld-Ll-4UJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zu1-DV-RQg"/>
+                <constraint firstItem="A4g-Uw-jaU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hGh-hB-TEO"/>
+                <constraint firstAttribute="trailing" secondItem="A4g-Uw-jaU" secondAttribute="trailing" id="xjq-XW-V9f"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-245" y="49"/>
+        </view>
+    </objects>
+</document>

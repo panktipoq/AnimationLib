@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppStoryProductInfoViewController" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="7Kg-Oa-3tj" id="Pdi-WU-pz5"/>
+                <outlet property="closeButton" destination="zy2-WK-DdM" id="gkP-H2-da6"/>
+                <outlet property="collectionView" destination="1Oz-0o-jqa" id="JCu-q3-Jvi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7LI-TP-NFS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Oz-0o-jqa">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hag-CL-Std">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iHg-Ea-dG3"/>
+                        <outlet property="delegate" destination="-1" id="qb4-gS-iB0"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-WK-DdM" userLabel="Close Button">
+                    <rect key="frame" x="318" y="16" width="41" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="1bg-Si-Tdq"/>
+                        <constraint firstAttribute="height" constant="41" id="J6V-C6-b7t"/>
+                    </constraints>
+                    <state key="normal" image="AppStoryProductInfoCloseButton"/>
+                    <connections>
+                        <action selector="closeButtonAction" destination="-1" eventType="touchUpInside" id="7rv-3u-g1t"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kg-Oa-3tj" userLabel="BackButton">
+                    <rect key="frame" x="16" y="16" width="41" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="3EE-xz-GOP"/>
+                        <constraint firstAttribute="height" constant="41" id="hpW-3X-ikz"/>
+                    </constraints>
+                    <state key="normal" image="AppStoryProductInfoBackButton"/>
+                    <connections>
+                        <action selector="backButtonAction" destination="-1" eventType="touchUpInside" id="Qzp-Uc-xrI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7Kg-Oa-3tj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="EOe-P0-WY2"/>
+                <constraint firstAttribute="trailing" secondItem="zy2-WK-DdM" secondAttribute="trailing" constant="16" id="Ksv-X5-0GC"/>
+                <constraint firstItem="1Oz-0o-jqa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MP0-Ek-klT"/>
+                <constraint firstAttribute="bottom" secondItem="1Oz-0o-jqa" secondAttribute="bottom" id="Y6w-YW-au7"/>
+                <constraint firstAttribute="trailing" secondItem="1Oz-0o-jqa" secondAttribute="trailing" id="f6g-w8-Ioi"/>
+                <constraint firstItem="1Oz-0o-jqa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fKC-Xl-zUO"/>
+                <constraint firstItem="7Kg-Oa-3tj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="gd8-uv-ypZ"/>
+                <constraint firstItem="zy2-WK-DdM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="gdu-lg-J4K"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="WLC-l7-Stf"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AppStoryProductInfoBackButton" width="41" height="41"/>
+        <image name="AppStoryProductInfoCloseButton" width="39" height="38"/>
+    </resources>
+</document>

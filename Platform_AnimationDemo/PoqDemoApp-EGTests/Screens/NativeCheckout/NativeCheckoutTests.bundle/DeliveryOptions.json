@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "appID": 0,
+        "deliveryRegionID": 0,
+        "title": "Next Day",
+        "price": 4.5,
+        "freeShippingAbove": null,
+        "eligibleForFreeShippingVouchers": false,
+        "sortIndex": 0,
+        "orderKey": null,
+        "message": null,
+        "statusCode": 200,
+        "poqUserId": "1A8FB0DA-8F48-462B-900C-2F931A3AFF13",
+        "optionCode": "premiumrate_Next_Day"
+    },
+    {
+        "id": 0,
+        "appID": 0,
+        "deliveryRegionID": 0,
+        "title": "Standard",
+        "price": 3.5,
+        "freeShippingAbove": null,
+        "eligibleForFreeShippingVouchers": false,
+        "sortIndex": 0,
+        "orderKey": null,
+        "message": null,
+        "statusCode": 200,
+        "poqUserId": "1A8FB0DA-8F48-462B-900C-2F931A3AFF13",
+        "optionCode": "premiumrate_Standard"
+    },
+    {
+        "id": 0,
+        "appID": 0,
+        "deliveryRegionID": 0,
+        "title": "Saver",
+        "price": 2.5,
+        "freeShippingAbove": null,
+        "eligibleForFreeShippingVouchers": false,
+        "sortIndex": 0,
+        "orderKey": null,
+        "message": null,
+        "statusCode": 200,
+        "poqUserId": "1A8FB0DA-8F48-462B-900C-2F931A3AFF13",
+        "optionCode": "premiumrate_Saver"
+    },
+    {
+        "id": 0,
+        "appID": 0,
+        "deliveryRegionID": 0,
+        "title": "Saturday",
+        "price": 7.5,
+        "freeShippingAbove": null,
+        "eligibleForFreeShippingVouchers": false,
+        "sortIndex": 0,
+        "orderKey": null,
+        "message": null,
+        "statusCode": 200,
+        "poqUserId": "1A8FB0DA-8F48-462B-900C-2F931A3AFF13",
+        "optionCode": "premiumrate_Saturday"
+    }
+]

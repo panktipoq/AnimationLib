@@ -1,0 +1,276 @@
+PODS:
+  - AZDropdownMenu (0.6.1)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts-Swift (1.3.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - Braintree (4.11.0):
+    - Braintree/Card (= 4.11.0)
+    - Braintree/Core (= 4.11.0)
+    - Braintree/PayPal (= 4.11.0)
+    - Braintree/UI (= 4.11.0)
+  - Braintree/Apple-Pay (4.11.0):
+    - Braintree/Core
+  - Braintree/Card (4.11.0):
+    - Braintree/Core
+  - Braintree/Core (4.11.0)
+  - Braintree/PaymentFlow (4.11.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/PayPal (4.11.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.11.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.11.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.11.0)
+  - Braintree/UI (4.11.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Calabash (0.21.5)
+  - Cartography (3.0.1)
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - DACircularProgress (2.3.1)
+  - DBPrivacyHelper (0.7.0)
+  - EarlGrey (1.12.1)
+  - Fabric (1.7.2)
+  - FacebookCore (0.3.1):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.33)
+  - FacebookLogin (0.3.1):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3.1)
+    - FBSDKCoreKit (~> 4.33)
+    - FBSDKLoginKit (~> 4.33)
+  - FBSDKCoreKit (4.36.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.36.0):
+    - FBSDKCoreKit
+  - Firebase/Core (4.10.0):
+    - FirebaseAnalytics (= 4.1.0)
+    - FirebaseCore (= 4.0.16)
+  - Firebase/Performance (4.10.0):
+    - Firebase/Core
+    - FirebasePerformance (= 1.1.2)
+  - FirebaseAnalytics (4.1.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (4.0.16):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseInstanceID (2.0.10):
+    - FirebaseCore (~> 4.0)
+  - FirebasePerformance (1.1.2):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseInstanceID (~> 2.0)
+    - FirebaseSwizzlingUtilities (~> 1.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.5)
+  - FirebaseSwizzlingUtilities (1.0.0)
+  - GoogleAnalytics (3.17.0)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GTMSessionFetcher/Core (1.1.15)
+  - HanekeSwift (0.10.1)
+  - IDMPhotoBrowser (1.7.4):
+    - DACircularProgress
+    - pop
+  - Koloda (4.3.1):
+    - pop (~> 1.0)
+  - Locksmith (4.0.0)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (3.2)
+  - ObjectMapper (3.3.0)
+  - pop (1.0.10)
+  - Protobuf (3.5.0)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
+  - ReSwift (4.0.1)
+  - RSBarcodes_Swift (0.1.9)
+  - Stripe (12.1.1)
+  - SVProgressHUD (2.0.3)
+  - Swifter (1.3.3)
+  - SwiftLint (0.24.0)
+  - UrbanAirship-iOS-AppExtensions (9.1.0)
+  - UrbanAirship-iOS-SDK (9.2.0)
+
+DEPENDENCIES:
+  - AZDropdownMenu (from `https://github.com/poqcommerce/AZDropdownMenu.git`, branch `swift-3.0`)
+  - Bolts-Swift (= 1.3.0)
+  - Braintree (= 4.11.0)
+  - Braintree/Apple-Pay (= 4.11.0)
+  - Braintree/PaymentFlow (= 4.11.0)
+  - Calabash
+  - Cartography (= 3.0.1)
+  - Crashlytics (= 3.9.3)
+  - DBPrivacyHelper (from `https://github.com/poqcommerce/DBPrivacyHelper.git`)
+  - EarlGrey (~> 1.12.0)
+  - Fabric (= 1.7.2)
+  - FacebookCore (= 0.3.1)
+  - FacebookLogin (= 0.3.1)
+  - Firebase/Core (= 4.10.0)
+  - Firebase/Performance (= 4.10.0)
+  - FirebaseSwizzlingUtilities (= 1.0.0)
+  - GoogleAnalytics (= 3.17.0)
+  - HanekeSwift (from `https://github.com/poqcommerce/HanekeSwift.git`, branch `feature/swift-3`)
+  - IDMPhotoBrowser (from `https://github.com/poqcommerce/IDMPhotoBrowser.git`)
+  - Koloda (~> 4.3.1)
+  - Locksmith (= 4.0.0)
+  - NVActivityIndicatorView (= 3.2)
+  - ObjectMapper (= 3.3.0)
+  - RealmSwift (= 2.10.0)
+  - ReSwift (= 4.0.1)
+  - RSBarcodes_Swift (from `https://github.com/poqcommerce/RSBarcodes_Swift.git`, branch `Swift-3.0`)
+  - Stripe (= 12.1.1)
+  - SVProgressHUD (from `https://github.com/poqcommerce/SVProgressHUD.git`)
+  - Swifter (~> 1.3.3)
+  - SwiftLint (= 0.24.0)
+  - UrbanAirship-iOS-AppExtensions
+  - UrbanAirship-iOS-SDK (= 9.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - Bolts-Swift
+    - Braintree
+    - Calabash
+    - Cartography
+    - Crashlytics
+    - DACircularProgress
+    - EarlGrey
+    - Fabric
+    - FacebookCore
+    - FacebookLogin
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebasePerformance
+    - FirebaseSwizzlingUtilities
+    - GoogleAnalytics
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - Koloda
+    - Locksmith
+    - nanopb
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - pop
+    - Protobuf
+    - Realm
+    - RealmSwift
+    - ReSwift
+    - Stripe
+    - Swifter
+    - SwiftLint
+    - UrbanAirship-iOS-AppExtensions
+    - UrbanAirship-iOS-SDK
+
+EXTERNAL SOURCES:
+  AZDropdownMenu:
+    :branch: swift-3.0
+    :git: https://github.com/poqcommerce/AZDropdownMenu.git
+  DBPrivacyHelper:
+    :git: https://github.com/poqcommerce/DBPrivacyHelper.git
+  HanekeSwift:
+    :branch: feature/swift-3
+    :git: https://github.com/poqcommerce/HanekeSwift.git
+  IDMPhotoBrowser:
+    :git: https://github.com/poqcommerce/IDMPhotoBrowser.git
+  RSBarcodes_Swift:
+    :branch: Swift-3.0
+    :git: https://github.com/poqcommerce/RSBarcodes_Swift.git
+  SVProgressHUD:
+    :git: https://github.com/poqcommerce/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  AZDropdownMenu:
+    :commit: 09270d08588a523df0194e66950a3fdbe5f5d5c3
+    :git: https://github.com/poqcommerce/AZDropdownMenu.git
+  DBPrivacyHelper:
+    :commit: df8ac94b36e313b8e0a86d69b65f86c10eeda693
+    :git: https://github.com/poqcommerce/DBPrivacyHelper.git
+  HanekeSwift:
+    :commit: 99e432d371fd1038f923b23271272c8b31601d80
+    :git: https://github.com/poqcommerce/HanekeSwift.git
+  IDMPhotoBrowser:
+    :commit: 646496cfc2784ba818ce4543dc6ea2b2e175f1df
+    :git: https://github.com/poqcommerce/IDMPhotoBrowser.git
+  RSBarcodes_Swift:
+    :commit: aa0be8b53946ba2a1044cd9c5f590f82708e9578
+    :git: https://github.com/poqcommerce/RSBarcodes_Swift.git
+  SVProgressHUD:
+    :commit: daf771d17ac189ac7816bdeff7af2bf624085da2
+    :git: https://github.com/poqcommerce/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  AZDropdownMenu: 2d12e25a50422c30dbe05e8262c059f19e819a80
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Bolts-Swift: fa98d1b59fc1acea9b21a21306dcdca1c85e3737
+  Braintree: f52744f38d1f5f37f8719f7acee4e1d7a3acb758
+  Calabash: c8b2e65359a0d9fabe8278edfdc36bb16896ab88
+  Cartography: f8c899bb0f5cf20758644a8eea59a75e98a03a5d
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DBPrivacyHelper: 3f09fcfe14618a6512bbfc171b36485911233238
+  EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
+  FacebookLogin: 6f15bf4fefd7a8865abbfa8fcd7f3dfd87aa275f
+  FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
+  FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
+  Firebase: c98c8b1fbcbdccd82539a36c2b17a9b1bb0ee798
+  FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
+  FirebaseCore: eb9e1a56733ff1094ecf3e28af9069c344b25239
+  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebasePerformance: 96c831a9eaf8d2ddf8bb37a4a6f6dd1b4bfe929f
+  FirebaseSwizzlingUtilities: f1c49a5a372ac852c853722a5891a0a5e2344a6c
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
+  IDMPhotoBrowser: ceddd4e99b0d920f7ed3a9663234562e90dc9177
+  Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
+  Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 28942c18ced111a6a3ce5e6f5b27d9d40116d639
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  RSBarcodes_Swift: 3c37a05faa0c8742739e1b47eec2f0d3d786330f
+  Stripe: f8e8feff38ba5caf7b2568c64eab96b0440ecb95
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  Swifter: 3fef6ec31449a8e3a29cf8551a9fe23485f15bc0
+  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
+  UrbanAirship-iOS-AppExtensions: cfc54a094db0631f700f79b9a712b27bdfcc8a4b
+  UrbanAirship-iOS-SDK: 5d1c8e8d7817eb5af74de4215b0a7e0b7ba1da46
+
+PODFILE CHECKSUM: 98c9c9212fd5e150dada3fdca7653c55f81e059b
+
+COCOAPODS: 1.5.3

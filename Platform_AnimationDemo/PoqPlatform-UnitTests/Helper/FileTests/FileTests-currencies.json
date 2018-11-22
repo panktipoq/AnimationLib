@@ -1,0 +1,15 @@
+
+[
+    {
+        "countryName": "United States",
+        "countryCode": "US",
+        "currencyCode": "USD",
+        "symbol": "$"
+    },
+    {
+        "countryName": "United Kingdom",
+        "countryCode": "GB",
+        "currencyCode": "GBP",
+        "symbol": "£"
+    }
+]

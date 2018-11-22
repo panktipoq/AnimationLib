@@ -1,0 +1,706 @@
+/*
+ Localizable.strings
+ Poq_App_Base
+ 
+ Created by Jun Seki on 13/07/2014.
+ Copyright (c) 2014 Poq. All rights reserved.
+ */
+
+
+//"KEY" = "CONTENT";
+//MARK: - tabs
+"HOME"="HOME";
+"SHOP"="SHOP";
+"LIKES"="LIKES";
+"WISHLIST"="WISHLIST";
+"STORES"="STORES";
+"SCAN"="SCAN";
+"BAG"="BAG";
+"MORE"="MORE";
+"YOU"="YOU";
+
+"DELIVERY_TYPE" = "delivery";
+"DELIVERY_TYPE" = "delivery";
+"CLICK_AND_COLLECT" = "click & collect";
+"CLICK_AND_COLLECT_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_MESSAGE" = "search for your local collection point...";
+"CLICK_AND_COLLECT_STORE_SELECT" = "Select";
+
+//basics:
+"OK"="OK";
+"YES"="Yes";
+"NO"="No";
+"CANCEL"="Cancel";
+"ERROR"="ERROR";
+"SUCCESSFUL"="Successful!";
+"NEXT"="Next";
+"DONE"="Done";
+"LOADING"="Loading";
+"Loading..."="Loading...";
+"WISH"="WISH";
+"LOVES"="LOVES";
+"SUBMIT"="Submit";
+"LOGOUT"="Logout";
+"REMOVE"="Remove";
+"COLOUR"="Colour";
+
+///MARK: - bag
+"GO_TO_BAG"="Go to your bag";
+"EDIT"="EDIT";
+"REFINE"="REFINE";
+"NUMBER_ITEMS"="%d Items";
+"NUMBER_ITEM"="%d Item";
+"BAG_REMOVE_ITEMS %@"="Are you sure you want to remove %@ from your bag?";
+"BAG_NO_ITEMS"="Your bag is empty";
+"BAG_NO_ITEMS_INSTRUCTIONS"="No products added to your bag Start Shopping Now";
+"ADD_TO_BAG"="ADD TO BAG";
+"ADDED_TO_BAG"="ADDED TO BAG";
+"ERROR_ADDED_TO_BAG"="An error occured while adding to bag";
+"BAG_OUT_OF_STOCK"="Currently out of stock";
+"BAG_ITEM_UNAVAILABLE"="Requested amount is not available";
+"BAG_ITEM_INFO_UNAVAILABLE" = "Product information is not available";
+"DO_NOT_WANT_FREE_GIFT"="Are you sure you don't want a free gift?";
+"FREE_GIFT"="Free Gift";
+"SELECT_GIFT"="Select %@ Free Gift%@";
+"PICK_YOUR_GIFT"="Pick Your Gift";
+"NEXT"="Next";
+"ADD_TO_BAG"="Add to Bag";
+
+"BAG_SWIPE_DELETE_SUCCESS"="Item deleted";
+"BAG_SWIPE_DELETE_FAIL"="Sorry, something went wrong, please try again later";
+"BAG_SWIPE_DELETE_DEFAULT_FAIL"="Sorry, we cannot connect you, please try again later";
+
+//MARK: wishlist
+"WISH_NO_ITEMS"="Your wishlist is empty";
+"WISH_NO_ITEMS_INSTRUCTIONS"="Love a product? Add it to your wishlist by tapping the heart";
+
+//MARK: - store
+"STORE_FINDER"="STORE FINDER";
+"CALL"="Call";
+"GET_NUMBER"="Get number ";
+"DIRECTIONS"="DIRECTIONS";
+"OPENING_HOURS"="Opening Hours:";
+
+"MONDAY"="MONDAY";
+"TUESDAY"="TUESDAY";
+"WEDNESDAY"="WEDNESDAY";
+"THURSDAY"="THURSDAY";
+"FRIDAY"="FRIDAY";
+"SATURDAY"="SATURDAY";
+"SUNDAY"="SUNDAY";
+
+"AVAILABLE_IN_STORE"="Available in store";
+"NOT_AVAILABLE_IN_STORE"="Not Available in store";
+"IN_STORE_AVAILABILITY"="In store";
+"IN_STORE_AVAILABILITY_OFF"="Store information currently unavailable";
+"CHECK_IN_STORE_AVAILABILITY_OFF"="Check store availability";
+"Description"="Description";
+"Delivery"="Delivery";
+"RETURNS"="Returns";
+"SIZE_GUIDE"="Size Guide";
+"LEAVING_THE_APP"="Leaving the app";
+"LEAVING_THE_APP_GETTING_DIRECTIONS"="Getting directions will take you out of the app. Are you sure you want to go?";
+"GET_DIRECTIONS"="Get Directions";
+"NEARBY"="Nearby";
+"NEAR_ME"="NEAR ME";
+"BY_NAME"="BY NAME";
+"MAPS"="MAPS";
+"MAP"="Map";
+"MILES"="Miles";
+"FAVOURITE_STORE"="Favourite Store";
+"CALL_THIS_STORE"="Call this store ";
+"STORE_DIRECTIONS"="Store Directions";
+"OPEN_TODAY"="Open today: ";
+"AVAILABLE_AT_OUR_STORE"="Available at our %@ store";
+"SIZE_AVAILABLE_AT_STORE"="Size %@ is available at our %@ store";
+"UNAVAILABLE_AT_STORE"="Unavailable at our %@ store";
+"SIZE_UNAVAILABLE_STORE_SELECT_STORE"="Size %@ is unavailable at %@ store. Select another store.";
+"SET_FAVOURITE"="Set favourite";
+"SORRY_WE_CANT_FIND_ANY_MATCHING_STORES" = "Sorry we can't find any matching stores";
+"STORE_DETAILS" = "Store Details";
+"FIND_A_STORE" = "Find a Store";
+
+//refresh
+"PULL_TO_REFRESH" = "Pull down to refresh...";
+"RELEASE_TO_REFRESH" = "Release to refresh...";
+
+
+//MARK: PRICE
+"Was"=" Was %@";
+"Now"="Now %@";
+"From"="From %@";
+"%@"="%@";
+
+//MARK: - PLP
+"FEATURED"="FEATURED";
+"NEWEST"="NEWEST";
+"RATING"="RATING";
+"PRICE_DOWN"="PRICE ↓";
+"PRICE_UP"="PRICE ↑";
+"SORT_BY"="Sort by: %@";
+
+
+//MARK: - User login in/registration:
+"REGISTER"="Register";
+"SIGN_UP"="Sign up";
+"SIGN_IN"="Sign in";
+"SIGN_INTO"="Sign in to \n";
+"SIGN_IN_TO"="Sign in to";
+"LOGIN"="Login";
+"LOGGED_OUT"="Logged out";
+"FORGOT_PASSWORD"="Forgot Password";
+"TERMS_CONDITIONS"="Terms & Conditions";
+"LOGIN_REGISTER_TO_LIKE"="Please log in or register to like the product.";
+"LOGIN_REGISTER_TO_CONTINUE"="Please log in or register to continue";
+"LOGGED_OUT_TEXT"="You are now logged out of your account.";
+"LOGIN_ERROR"="The e-mail or password you entered might be incorrect. Please try again ";
+"LOGIN_FAILED"="LOGIN FAILED";
+"BAG_MERGED"="We see you already had items in your basket so we’ve merged these items into your current basket";
+"CUSTOMER_RECOGNITION_NUMBER"="RECOGNITION REWARD ACCOUNT NO.";
+"USER_WELCOME_MESSAGE"="Hey ";
+
+//MARK: - SIGN UP
+"YOUR_ACCOUNT"="Your account";
+"FIRSTNAME"="First Name*";
+"LASTNAME"="Last Name*";
+"EMAIL"="Email*";
+"PASSWORD"="Password*";
+"GENDER"="Gender*";
+"FEMALE"="Female";
+"MALE" ="Male";
+"SHOW"="SHOW";
+"HIDE"="HIDE";
+"SEND_ME_PROMOTIONS"="Send me promotions";
+"DATA_SHARING_OPTION"="Share my data";
+"MASTERCARD_OPTION"="I already have a Recognition MasterCard / Account Card";
+"OPT_OUT_OPTION"="You can opt out of having a Recognition Reward Account at any time, just call Customer Services";
+"PHONE_NUMBER"="PHONE NUMBER";
+
+//MARK: - my profile
+"UNLOCK_FEATURES"="Unlock these features";
+"GO_SHOPPING_NOW"="Start Shopping";
+
+// My profile section titles
+"SHOW_AT_THE_TILL_POINTS" = "SHOW AT THE TILL TO COLLECT RECOGNITION POINTS";
+"MY_FAVOURITE_STORE" = "MY FAVOURITE STORE";
+"SAVED_SIZES" = "SAVED SIZES";
+"HISTORY" = "HISTORY";
+"DISCOVER_MORE_ABOUT_RECOGNITION" = "Discover more about Recognition";
+"IM_NEW" = "I'm new";
+"BACK_TO_TOP" = "Back to top";
+
+// My profile size links
+"MAN" = "Man";
+"WOMAN" = "Woman";
+"KIDS" = "Kids";
+
+// My profile - recently reviewed
+"RECENTLY_VIEWED_ITEMS" = "Recently viewed items";
+"CLEAR_RECENTLY_VIEWED_ITEMS"="Clear Recently Viewed Items";
+"CLEAR_CONFIRMATTION"="Are you sure you want to clear your recently viewed items?";
+"NO_RECENTLY_VIEWED_ITEMS"="No recently viewed items";
+"VIEW_ALL"="View All";
+
+//MARK: - order history
+"NUMBER_ORDER"="%d Order";
+"NUMBER_ORDERS"="%d Orders";
+"YOUR_ORDER_HISTORY" = "Your order history";
+"YOUR_ORDER_SUMMARY"="Your Order Summary";
+"ORDER_NUMBER"="Order Number:";
+"ORDER_DATE"="Order Date";
+"ORDER_TOTAL"="Order Total";
+"PURCHASED"="Purchased";
+"DELIVERY_OPTION"="Delivery Option";
+"PAYMENT_METHOD"="Payment Method";
+"DELIVERED_TO"="Delivered To:";
+"SUB_TOTAL"="Sub Total";
+"POST_PACKAGING"="Post & Packaging";
+"Total"="Total";
+"Total:"="Total:";
+"VAT" = "VAT";
+"ORDER_HISTORY_EMPTY"="Order history empty";
+"PRODUCT_CODE"="Product Code";
+"GIFT_MESSAGE"="Gift Message:";
+"ORDER_STATUS"="Your order is %@";
+"PLACE_ORDER" = "PLACE ORDER";
+"PAY_WITH_CARD" = "PAY WITH CARD";
+"ORDER_HISTORY_TITLE" = "YOUR ORDER WILL SHOW UP HERE LATER";
+
+//MARK: - My profile other text
+"WELCOME"="Welcome";
+"WELCOME_TO_YOUR"="Welcome to your";
+"BIRTHDAY_DOUBLE_POINTS"="Birthday Double Points? Add your date of birth";
+"KEEP_SCROLLING_DOWN"="Keep scrolling down";
+"COLLECT_POINTS"="Collect Points* and enjoy fuss-free checkout";
+"OTHER_GREAT_FEATURES"="You'll also have access to these other great features";
+"ADD_YOUR_FAVOURITE_STORE"="Add your favourite store";
+"VIEW_STOCK_AVAILABILITY_OPENING_TIMES"="View stock availability and opening times";
+"MAKE_MONEY_WHILE_YOU_SHOP"="MAKE MONEY WHILE YOU SHOP";
+"START_COLLECTING_POINTS"="Start collecting points with a House of Fraser Virtual Recognition Card";
+"COLLECT_RECOGNITION_POINTS"="Collect Recognition Points when you sign in or sign up*";
+"DATA_CORRECT_YESTERDAY"="Data correct as of yesterday";
+"REWARD_DUE_TO_EXPIRE_ON"="%@%@ Reward due to expire on %@.\n All data correct as of yesterday";
+"GOT_REWARD_CARD"="Got a plastic Reward Card?";
+"LINK_PLASTIC_REWARD_CARD"="Link your plastic Reward Card to your Recognition Account";
+"BE_YOU_NO_MATTER"="Be you no matter who with House of Fraser";
+"ACCESS_TO_ALL_FEATURES"="You now have access to all the great features below";
+"YOUR_RECOGNITION_DASHBOARD"="YOUR RECOGNITION REWARD ACCOUNT DASHBOARD";
+"EXCLUDES_RECOGNITION_CARD"="This excludes Recognition MasterCard and Account Card";
+"YOU_HAVE"="YOU HAVE";
+"POINTS"="POINTS";
+"YOUR_REWARD"="YOUR REWARD";
+"TO_SPEND"="TO SPEND";
+"OPEN_TIMES"="Opening times";
+"STOCK_AVAILABILITY"="Stock availability";
+"CHANGE_PASSWORD"="Change password";
+"FORGET_PASSWORD"="Forget password";
+//MARK: - Error message:
+"HTTP_ERROR"="Something went wrong there. We're not exactly sure what though. Please try again.";
+"HOME_CONNECTION_ERROR"="Connection error.\nPlease pull down to refresh.";
+"TRY_AGAIN"="Please try again later.";
+"CONNECTION_ERROR"="Connection Error";
+"UNABLE_TO_CONNECT" = "Unable to connect to server, please go back and try again.";
+"SESSION_ERROR"="Session Error";
+"INVALID_SESSION"="Your current session is no longer valid. Please log in again.";
+"SOMETHING_WENT_WRONG"="Something went wrong";
+"FACEBOOK_ERROR"="Failed to share on Facebook";
+"MAIL_SENDING_FAILED"="Mail sending failed.";
+"NO_ACTIVE_EMAIL"="No active e-mail account found on this device.";
+"UNABLE_TO_SYNC_WISH"="Unable to sync wish list. Please try logging in again.";
+"UNABLE_TO_SYNC_BAG"="Unable to sync bag contents. Please try logging in again.";
+"UNABLE_TO_ADD_TO_BAG"="Unable to add to bag. Error communicating with server. Please try again.";
+"NO_NETWORK_CONNECTION"="No Network Connection";
+"NO_NETWORK_CONNECTION_MSG"="Your device does not appear to be connected to the network. Please try again when you have network connection";
+"PRODUCT_NOT_FOUND" = "Product Details are not available at the moment.\nPlease try again later.";
+"WISHLIST_ERROR_TITLE" = "Error Fetching Wishlist Items";
+"ADD_TO_BAG_ERROR_TITLE" = "Could Not Add To Bag";
+"SERVER_ERROR" = "Something went wrong, please try again";
+
+//Cart
+"CART_ERROR_TITLE" = "Error Fetching Cart";
+"ERROR_UPDATING_CART" = "Error Updating Cart";
+"OUT_OF_STOCK_ITEM_IN_CART" = "Please remove out of stock items before proceeding to checkout";
+"OUT_OF_STOCK_ERROR_TITLE" = "Items Out Of Stock";
+"OUT_OF_STOCK_MESSAGE" =  "Currently out of stock";
+"DISMISS" = "Dismiss";
+"RETRY" = "Retry";
+"MOVE_TO_WISHLIST" = "Move To Wishlist";
+
+//MARK: - share options
+"FACEBOOK"="Facebook";
+"TWITTER"="Twitter";
+"PINTEREST"="Pinterest";
+"SAVE_PICTURE"="Save Picture";
+"E-MAIL_FRIEND"="E-mail to a friend";
+"LOOK_WHAT_I_FOUND_ON %@ app! \n%@ "="Look what I just found on the %@ app! \n%@ ";
+
+//MARK: - success message
+"TWITTER_CONFIRMATION"="Thanks for tweeting.";
+"IMAGE_SAVED_TITLE"="Image Saved";
+"IMAGE_SAVED_CONFIRMATION"="Image has been saved onto your device.";
+"SHARING_CONFIRMATION"="Thanks for sharing!";
+"MAIL_SENT_CONFIRMATION"="Mail sent successfully.";
+
+//MARK: - barcode scanner
+"LINK_FOUND"="Link found";
+"OPEN_LINK"="Open link";
+"Continue"="Continue";
+"SCAN_CODE"="SCAN CODE";
+"Enter_code"="Enter code";
+"SCAN_TOP_TEXT"="TO SCAN A CODE, ALIGN IT BETWEEN THE LINES BELOW.";
+"SCAN_BOTTOM_TEXT"="TAP THE SCREEN TO FOCUS";
+"ENTER_CODE_MANUALLY"="Enter code manually";
+"ENTER_THE_CODE_HERE"="Enter the code here";
+"ALIGN_BARCODE"="Align barcode within the arrows";
+"ENSURE_BARCODE"="Ensure barcode is upright and avoid any shadows or glare";
+"QR_Code_Detected"="QR Code detected.";
+
+//MARK: - Products related
+"SHOP_IT"="Shop It";
+"SHARE"="SHARE";
+"LIKE"="LIKE";
+"BUY"="BUY";
+
+"SELECT_SIZE"="Select size:";
+"ONE_SIZE"="One Size";
+"OUT_OF_STOCK"="Out of stock";
+"SOLD_OUT"="Sold Out";
+"SELECT_COLOR"="Select color:";
+"LOW_STOCK"="Low in Stock";
+
+//MARK: Review
+"RATINGS_REVIEWS"="Ratings & Reviews";
+
+//MARK: - search
+"SEARCH_KEYWORD"="Search brand or keyword";
+"SEARCH_ALL_PRODUCTS"="SEARCH ALL PRODUCTS";
+"SEARCH_IN"="SEARCH IN";
+"CLEAR"="Clear";
+"CLEAR_HISTORY"="Clear history";
+"YOUR_SEARCH_HISTORY"="YOUR SEARCH HISTORY";
+"NO_SEARCH_HISTORY"="You have no search history";
+"NO_SEARCH_RESULTS_FOUND"="No search results found";
+"NO_SEARCH_RESULTS_FOUND_FORMAT"="Sorry, we can't find any results for \"%@\"";
+"SEARCH_RESULTS"="Search Results";
+"VISUAL_SEARCH_UNAVAILABLE"="The camera is unavailable";
+"VISUAL_SEARCH_INVALID_IMAGE_SIZE"="The cropped image is too small, please select a bigger area";
+
+
+"NO_RESULTS"="No Results";
+"NO_RESULTS_FOUND"="No results found";
+"PLEASE_TRY_AGAIN"="Please try again";
+"NO_RESULTS_FOUND_FOR \n \"%@\"."="NO RESULTS FOUND FOR \n \"%@\".";
+"NO_RESULTS_FOUND_IN \"%@\"."="NO RESULTS FOUND IN \"%@\". \n\n TAP SEARCH TO VIEW MORE PRODUCTS.";
+"SEARCH_TITLE_FORMAT" = "Search: %@";
+"MORE_COLOURS_TEXT" = "More Colours";
+//checkout
+
+"FIRSTNAME_ADDRESS"="First Name";
+"LASTNAME_ADDRESS"="Last Name";
+"EMAIL_ADDRESS"="Email";
+"PHONE"="Phone";
+"ADDRESS"="Address 1 (Or company name)";
+"CITY"="Town / City";
+"TOWN_CITY"="Town / City";
+"COUNTY"="County";
+"POST_CODE"="Post Code";
+"COUNTRY"="Country";
+"ADDRESS2"="Address Line 2";
+"COMPANY"="Company";
+
+"Phone*"="Phone*";
+"Address*"="Address*";
+"City*"="City*";
+"County*"="County*";
+"PostCode*"="Post Code*";
+"Country*"="Country*";
+
+"CONTACT_DETAILS"="Contact Details";
+"TOTAL_AMOUNT"="Total amount:";
+"SECURE_CHECKOUT"="SECURE CHECKOUT";
+"NEXT_STEP"="NEXT STEP";
+"BILLING_ADDRESS_OREDER_STATUS_TITLE" = "Billing";
+"DELIVERY_ADDRESS_OREDER_STATUS_TITLE" = "Delivery";
+"PRIMARY_BILLING_ADDRESS"="Primary \nBilling Address";
+"PRIMARY_DELIVERY_ADDRESS"="Primary \nDelivery Address";
+"BILLING_ADDRESS"="Billing Address";
+"DELIVERY_ADDRESS"="Delivery Address";
+"OR_STATE_PROVINCE"="or state/province";
+"OR_ZIP_CODE"="or ZIP code";
+"SAME_ADDRESS"="Deliver to the same address";
+"CHECKOUT_SECURELY"="Secure Checkout";
+"SELECT_BILLING_ADDRESS"="select billing address";
+"SELECT_DELIVERY_ADDRESS"="select delivery address";
+"NEW_BILLING_ADDRESS"="new billing address";
+"NEW_DELIVERY_ADDRESS"="new delivery address";
+"PAYMENT_SELECTION_FIRST_TIME_ADD_CARD" = "Pay with card";
+"CHECKOUT_BAG_ITEMS_HEADER_TITLE" = "YOUR ORDER";
+"CHECKOUT_STEPS_HEADER_TITLE" = "CHECKOUT STEPS";
+"CHECKOUT_SELECT_PAYMENT_METHOD" = "Please select payment method";
+"CHECKOUT_SELECT_DELIVERY_ADDRESS" = "Please select delivery address";
+"CHECKOUT_SELECT_DELIVERY_METHOD" = "Please select delivery method";
+
+
+
+// Availability
+"IN_STORE_AVAILABILITY_TITLE"="PLEASE SELECT YOUR SIZE AND YOUR FAVORITE STORE";
+"IN_STORE_AVAILABILITY_DESCRIPTION"="Check the availability of this product in your size and at your desired store";
+"IN_STORE_SIZE"="Size";
+"IN_STORE_STORE"="Store";
+"IN_STORE_SELECT_SIZE"="Select Size";
+"IN_STORE_SELECT_STORE"="Select Store";
+
+"BUY_COLLECT"="Collection";
+"HOME_DELIVERY"="UK & Ireland Delivery";
+"INTERNATIONAL_DELIVERY"="International Delivery";
+
+
+"SIGNUP_FIELD_DOB_PLACEHOLDER"="Date of Birth*";
+"SIGNUP_FIELD_DOB_EDITING"="Date of Birth*";
+"SIGNUP_FIELD_DOB_INVALID"="You need to be over 16 to register";
+
+"PLEASE_CORRECT"="Please Correct:";
+"ENTER_FIRSTNAME"="Please enter first name.";
+"ENTER_LASTNAME"="Please enter last name.";
+"ENTER_TELEPHONE"="Please enter your telephone or mobile number.";
+"ENTER_VALID_EMAIL"="Please enter a valid email address.";
+"ENTER_VALID_DOB"="Enter valid date of birth";
+"ENTER_PASSWORD" ="Please enter a password.";
+"ENTER_VALID_PASSWORD" ="Min 8 characters and 1 number";
+"ENTER_VALID_PHONE"="Please enter a valid phone number.";
+
+"ENTER_BILLING_ADDRESS"="Please enter a billing address.";
+"ENTER_CITY"="Please enter a city for your billing address.";
+"ENTER_COUNTY"="Please enter a county for your billing address.";
+"ENTER_POSTCODE"="Please enter a postcode for your billing address.";
+"ENTER_COUNTRY"="Please pick a country for your billing address.";
+
+"ENTER_DELIVERY_FIRSTNAME"="Please enter your delivery address First Name.";
+"ENTER_DELIVERY_LASTNAME"="Please enter your delivery address Last Name.";
+"ENTER_DELIVERY_TELEPHONE"="Please enter the telephone number for your delivery address.";
+"ENTER_DELIVERY_ADDRESS"="Please enter your delivery address.";
+"ENTER_DELIVERY_CITY"="Please enter your delivery address City.";
+"ENTER_DELIVERY_POSTCODE"="Please enter your delivery address Post Code.";
+"ENTER_DELIVERY_COUNTRY"="Please enter the country for your delivery address.";
+
+"ENTER_VALID_FIRSTNAME"="Please enter first name for %@.";
+"ENTER_VALID_LASTNAME"="Please enter last name for %@.";
+"ENTER_VALID_TELEPHONE"="Please enter a valid number (digits only) for %@.";
+"ENTER_VALID_ADDRESS"="Please enter an address for %@.";
+"ENTER_VALID_CITY"="Please enter city for %@.";
+"ENTER_VALID_POSTCODE"="Please enter a valid post code for %@.";
+"ENTER_VALID_COUNTRY"="Please enter country for %@.";
+
+// PAYMENT METHOD
+"PAYMENT_BILLING" = "PAYMENT & BILLING";
+"SELECT_PAYMENT_METHOD" = "Select Payment Method";
+"SELECT_PAYMENT_METHOD_ERROR" = "Payments temporary unavailable. Please try later";
+
+"ADD_CARD_PAYMENT_METHOD_TITLE" = "Add Card";
+"ADD_PAYMENT_METHOD_SAVE" = "Save";
+"ADD_PAYMENT_METHOD_SECURITY_HINT" = "Your card details are encrypted before transmission to our secure payment service provider, ensuring that all information is kept safe and secure.";
+
+//SCANNER
+"CAMERA"="Camera";
+
+
+// NETWORK TASK
+"NO_RESULTS_FOUND_FOR_YOUR_REQUEST"="No results found for your request";
+
+
+// ALERT
+"CONFIRMATION"="Confirmation";
+"CLEAR_ALL_WISHLIST_ITEMS"="Are you sure you want to clear all the items from your wishlist";
+
+// My Sizes
+"MY_SIZES_MY_MEASUREMENTS"="My sizes";
+"MY_SIZES_HIS_MEASUREMENTS"="His sizes";
+"MY_SIZES_HER_MEASUREMENTS"="Her sizes";
+"MY_SIZES_LITTLE_ONE_MEASUREMENTS"="Little one's sizes";
+"MY_SIZES_MANS_MEASUREMENTS"="Men's sizes";
+"MY_SIZES_WOMAN_MEASUREMENTS"="Women's sizes";
+"MY_SIZES_KIDS_MEASUREMENTS"="Kids' sizes";
+"MY_SIZES_ENTER_IN_YOUR_MEASUREMENTS"="Enter your vital stats";
+"MY_SIZES_TOPS"="Tops";
+"MY_SIZES_BOTTOMS"="Bottoms";
+"MY_SIZES_SHOES"="Shoes";
+"MY_SIZES_BRA"="Bra";
+"MY_SIZES_BRA_BACK"="Back size";
+"MY_SIZES_BRA_CUP"="Cup size";
+"MY_SIZES_NO_SIZE_SELECTED"="No size selected";
+"SIZES" = "SIZES";
+
+// Edit Profile
+"UPDATE_YOUR_DETAILS"="Update Your Details";
+"DOB"="Date of birth";
+"MANAGE_MY_ADDRESS"="Manage addresses";
+"REGISTER_REPLACEMENT_REWARD_CARD"="Register Replacement Reward Card";
+"PLEASE_SELECT_ONE"="Please select one";
+"SUCCESSFULLY_UPDATED"="Successfully updated.";
+"VIEW_MY_PROFILE"="View My Profile";
+"DO_YOU_WANT_TO_LOG_OUT"="Do you want to logout from your account?";
+"ARE_YOU_SURE"="Are you sure ?";
+"MANAGE_YOUR_DETAILS_BIRTHDAY"="Manage your details here - Date of Birth can only be updated once";
+"MANAGE_YOUR_DETAILS"="Manage your details here";
+"EMAIL_IN_USE"="Email address already in use.";
+"PLEASE_SIGN_IN_TO_YOUR_ACCOUNT"="Please sign in to your account";
+"COMPANY_NAME" = "House of Fraser";
+"DAFAULT_DATE_FULL_FORMAT"="0001-01-01T00:00:00";
+"DAFAULT_DATE_YEAR_FORMAT"="1901";
+"DAFAULT_DATE_SHORT_FORMAT"="01/01/1900";
+"USER_BIRTH_YEAR_DAFAULT_DATE_FULL_FORMAT"="01/01/1980";
+
+
+// PRODUCT LIST FILTERS
+"CLEAR_SELECTED_FILTERS"="Clear Selected Filters";
+"CLEAR_CURRENT_VIEW"="Clear Current View";
+"CLEAR_CURRENT_MESSAGE"="Are you sure you want to clear your current selections?";
+"CLEAR_ALL"="Clear All";
+
+//MARK: - FILTERS Options
+"FILTERS" = "FILTERS";
+"FILTER_COLOUR" = "Colour";
+"FILTER_SIZE" = "Size";
+"FILTER_BRAND" = "Brand";
+"FILTER_STYLE" = "Style";
+"FILTER_CATEGORY" = "Category";
+"FILTER_RESULTS" = "Filter Results";
+"FILTER_OPTIONS" = "Filter Options";
+"CLEAR_FILTERS" = "Clear filters";
+"CLEAR_FILTERS_ALERT_TITLE"="Are you sure to clear your filter selections?";
+"CLEAR_ALL_FILTERS" = "CLEAR ALL FILTERS";
+"CLEAR_FILTERS" = "Clear Filters";
+"MOST_RECENT" = "MOST RECENT";
+
+//Order list
+"CLICK_BELOW %@"="Click below to start shopping at %@";
+
+// LOOKBOOK
+"LOOKBOOK_SHOP_BUTTON" = "SHOP THE LOOK";
+"LOOKBOOK_HIDE_BUTTON" = "HIDE";
+
+// Sign up
+"GENDER_REQUIRED" = "Gender is required";
+"USERNAME_ALREADY_USE"="Username is already in use";
+
+// WEBVIEW
+"PLEASE_WAIT" = "Please wait while we process your details";
+"WEBVIEW_LOADING" = "Loading...";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT" = "Are you sure you want to leave the checkout?";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_YES" = "Yes";
+"DO_YOU_WANT_TO_EXIT_CHEKOUT_NO" = "No";
+
+"FAILED_TO_LOGIN" = "Failed to login";
+"UNAUTORIZED_ACCESS" = "Unauthorized Access";
+"WRONG_USERNAME_OR_PASSWORD" = "Wrong Username or password";
+"DISMISS" = "Dismiss";
+"FAILED_TO_SIGN_UP" = "Failed to sign up";
+
+//iRate pop up message
+"iRateMessageTitle" = "Rate %@";
+"iRateAppMessage" = "If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!";
+"iRateGameMessage" = "If you enjoy playing %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!";
+"iRateCancelButton" = "No, Thanks";
+"iRateRateButton" = "Rate It Now";
+"iRateRemindButton" = "Remind Me Later";
+
+
+// Voucher List
+"APPLY_TO_BAG" = "Apply to Bag";
+"USE_IN_STORE" = "Use In-Store";
+"VOUCHER_APPLIED_TO_BAG" = "Voucher applied to your bag";
+"EXPIRING_SOON" = "Expiring Soon";
+"VOUCHER_CODE" = "Voucher Code";
+"SCAN_IN_STORE" = "Scan In-Store";
+"SCAN_THIS_VOUCHER_IN_STORE" = "Scan this voucher In-Store";
+"VOUCHER_APPLIED_TO_BAG" = "Vouhcer applied to your bag";
+"OFFERS_NOT_FOUND" = "Offers not found";
+
+// Apply Voucher
+"APPLY_VOUCHER_TITLE" = "Apply Voucher";
+"APPLY_VOUCHER_TEXTFIELD_PLACEHOLDER" = "Voucher Code and Student Discount";
+"APPLY_VOUCHER_BUTTON_LABEL" = "Apply";
+"REMOVE_VOUCHER_MESSAGE" = "Do you want to remove voucher applied";
+"INVALID_VOUCHER_CODE" = "Invalid Code. Please try again.";
+"VOUCHER_VIEW_TEXT" = "Voucher";
+"STUDENT_DISCOUNT_VIEW_TEXT" = "Student Discount";
+"VOUCHER_CODE_DEFAULT_TEXT" = "Voucher Code";
+"STUDEN_DISCOUNT_DEFAULT_TEXT" = "NUS Student Number";
+
+//Permission
+"FAILED_TO_ACCESS_CONTACT" = "Failed to Access Contacts List";
+
+// Shopify
+"SHOPIFY_US_ONLY_SHIPPING_ADDRESS_TITLE" = "Only US shipping addresses supported";
+"APPLE_PAY_UNAVAILABLE_ERROR" = "Apple Pay temporarily unavailable. Please try again later";
+"CANNOT_USE_APPLE_WHILE_EDIT" = "Finish editing to use Apple Pay";
+"CANNOT_USE_APPLE_UNAVAILABLE_ITEM" = "Can't make order. Bag contains unavailable items";
+"SHOPIFY_US_ONLY_BILLING_ADDRESS_TITLE" = "Only US billing addresses supported";
+
+// MARK: - Checkout Order Summary
+"CHECKOUT_WITH_KLARNA" = "Checkout with Klarna";
+"ORDER_SUMMARY" = "Order Summary";
+"DELIVERY_OPTIONS" = "Delivery Options";
+"SELECT_DELIVERY_OPTIONS" = "Select Delivery Options";
+"DISCOUNT"="Discount";
+"COMPLETE_ALL_REQURED_FIELDS" = "Complete all fields to place order";
+"COMPLETE_PAYMENT_METHOD_NOT_AVAILABLE" = "Payment method not available";
+"CONTINUE_SHOPPING" = "Continue shopping";
+"SWIPE_TO_HYPE_PLACEHOLDER"="Swipe to Hype Feature coming soon.";
+"SELECT_ADDRESS_TYPE" = "Select %@";
+"ADDRESS_TYPE" = "%@ Address";
+"ADDRESS_BOOK" = "address book";
+"DELETE_ADDRESS_MESSAGE" = "Are you sure you want to delete the address?";
+
+"ADDRESS_TYPE_BILLING" = "Billing";
+"ADDRESS_TYPE_DELIVERY" = "Delivery";
+"ADDRESS_TYPE_ADDRESS_BOOK" = "Address Book";
+"ADDRESS_TYPE_NEW_ADDRESS" = "New Address";
+
+"DELETE" = "Delete";
+"SAVE" = "Save";
+
+"VIEW_AMEND_BUTTON" = "View / Amend";
+"SET_PRIMARY_BILLING_ADDRESS" = "Set as primary billing address";
+"SET_PRIMARY_SHIPPING_ADDRESS" = "Set as primary delivery address";
+"SAME_AS_BILLING_ADDRESS" = "Use same as billing address";
+"ORDER_ID"="Order ID: ";
+"YAY"="Yay!";
+"NEW_ADDRESS" = "add new address";
+"CHOOSE_FROM_CONTACTS" = "Choose From Contacts";
+//Order Confirmation
+"ORDER_HARSH_NUMBER" = "Order #%@";
+"CHECKOUT_MANAGEADDRESS_SELECT_ADDRESS" = "SELECT ADDRESS";
+"EDIT_ADDRESS" = "edit address";
+"Free"="Free";
+"MY_ACCOUNT"="my account";
+"ADDRESS_NAME"="Address Name";
+"STATE"="State";
+"ENTER_VALID_ADDRESS_NAME"="Enter valid address name";
+"ENTER_VALID_STATE"="Enter valid state";
+"SELECT_COUNTRY_ALERT"="Please select a country.";
+
+
+"CHECKOUT_ERROR" = "An error occured, please review your payment information and try again later.";
+"Skip" = "Skip";
+"ORDER_CONFIRMATION_ENAIL_FORMAT" = "Order confirmation send to %@";
+
+/// MARK: - Currency Switcher
+"CURRENCY_SWITCHER" = "Country Preference";
+"CURRENCY_SWITCHER_COUNTRIES_SECTION_TITLE" = "Countries";
+"CURRENCY_SWITCHER_SELECTED_COUNTRY_SECTION_TITLE" = "Current Country";
+"CURRENCY_SWITCHER_HEADER_TITLE" = "Your local currency will be applied at checkout";
+
+// MARK: COUNTRY SELECTIONS
+"COUNTRY_SELECTION_TITLE" = "Country Preference";
+"COUNTRY_SELECTION_WARNING_TITLE" = "By changing the country, the product prices could vary and your Shopping Bag will be emptied";
+"COUNTRY_SELECTION_CURRENT_COUNTRY_FORMAT" = "Your current country is %@";
+
+"Size"="Size";
+"size"="size";
+"SIZE"="SIZE";
+
+"TITLE_SIZE_NUMBER"="%@ - Size %@";
+"PDP_Sold_Out" = "Sold Out";
+
+
+"DEFAULT" = "Default";
+"CARE_DETAILS" = "Care Details";
+"I_GOT_THIS" = "ok, I got this";
+
+//MARK: Landing page
+"LANDING_TITLE" = "sign in";
+"LANDING_SIGNIN" = "SIGN IN";
+"LANDING_REGISTER" = "REGISTER";
+
+"TERMS_AND_CONDITION"="Terms & Conditions";
+"TERMS_AND_CONDITION_AGREEMENT"="By Placing an order you agree to our Terms & Conditions";
+"LANDING_TITLE" = "sign in";
+
+"PAYMENT_METHOD_UPDATE_MESSAGE" = "Payment method updated";
+"BILLING_ADDRESS_UPDATE_MESSAGE" = "Billing address updated";
+"SHIPPING_ADDRESS_UPDATE_MESSAGE" = "Shipping address updated";
+"DELIVERY_METHOD_UPDATE_MESSAGE" = "Delivery option updated";
+
+"gPLP_PARENT_PRODUCT_TITLE" = "Select flavour or colour";
+
+// MARK: Recently Viewed Page
+"PLP_REVIEWED_PAGE_NAVIGATION_TITLE" = "Recently viewed products";
+"DO_YOU_WANT_TO_CLEAR_VIEWED_PRODUCT_TITLE" = "Are you sure you want to clear recently viewed products?";
+
+// MARK: - Visual Search
+"VISUAL_SEARCH_RESULTS_NAVIGATION_TITLE" = "Search Results";
+"VISUAL_SEARCH_NO_RESULTS_TEXT" = "Sorry, no matching results. \n Go back to try another pic";
+
+// MARK: Registry
+"REGISTRY_ITEMS_NOT_FOUND" = "Could not fetch registry items";
+
+// MARK: App Stories
+"NEW_APP_STORY" = "new";
+"GO_TO_PRODUCT" = "Go to product";
+
+// MARK: Native Checkout
+"CHECKOUT_PAYMENT_STEP_FIRST_LINE" = "Payment & Billing";
+"CHECKOUT_DELIVERY_STEP_FIRST_LINE" = "Delivery";
+"CHECKOUT_BILLING_STEP_FIRST_LINE" = "Billing address";
+"CHECKOUT_DELIVERY_OPTIONS_STEP_FIRST_LINE" = "Delivery service";

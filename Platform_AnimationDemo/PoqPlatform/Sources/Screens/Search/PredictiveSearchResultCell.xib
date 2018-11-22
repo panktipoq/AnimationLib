@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PredictiveSearchResultCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="457" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="This is a really really retained unsigned long category extension name in completion block men" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5L-Ka-A0a" userLabel="Title label">
+                        <rect key="frame" x="16" y="8" width="441" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="7UR-YU-RjL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-Ee-LyQ" customClass="SolidLine" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="16" y="59" width="441" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" placeholder="YES" id="hEs-BD-U9D"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Q5L-Ka-A0a" secondAttribute="trailing" id="ECI-Nr-4uN"/>
+                <constraint firstItem="Q5L-Ka-A0a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="H4E-Nf-YLd"/>
+                <constraint firstAttribute="trailing" secondItem="xLz-Ee-LyQ" secondAttribute="trailing" id="Sg5-ZT-WDV"/>
+                <constraint firstItem="Q5L-Ka-A0a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="dGg-Lo-Nbl"/>
+                <constraint firstAttribute="bottom" secondItem="Q5L-Ka-A0a" secondAttribute="bottom" constant="8" id="mvZ-zP-2Zh"/>
+                <constraint firstItem="xLz-Ee-LyQ" firstAttribute="leading" secondItem="Q5L-Ka-A0a" secondAttribute="leading" id="shL-iK-AtW"/>
+                <constraint firstAttribute="bottom" secondItem="xLz-Ee-LyQ" secondAttribute="bottom" id="vgR-1r-ksy"/>
+            </constraints>
+            <size key="customSize" width="457" height="60"/>
+            <connections>
+                <outlet property="titleLabel" destination="Q5L-Ka-A0a" id="GIn-5h-OZ8"/>
+            </connections>
+            <point key="canvasLocation" x="-4.5" y="27"/>
+        </collectionViewCell>
+    </objects>
+</document>

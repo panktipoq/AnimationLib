@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1uG-4R-U2P" customClass="ShopViewTableHeaderCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1uG-4R-U2P" id="Xyz-g5-w92">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oxO-Bn-avn" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oxO-Bn-avn" firstAttribute="leading" secondItem="Xyz-g5-w92" secondAttribute="leading" id="6nK-of-tw8"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="oxO-Bn-avn" secondAttribute="bottom" constant="-8" id="KHv-sH-1xb"/>
+                    <constraint firstItem="oxO-Bn-avn" firstAttribute="top" secondItem="Xyz-g5-w92" secondAttribute="topMargin" constant="-8" id="Tfa-Et-G3m"/>
+                    <constraint firstAttribute="bottom" secondItem="oxO-Bn-avn" secondAttribute="bottom" id="U8q-Rf-t82"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="oxO-Bn-avn" secondAttribute="trailing" constant="-8" id="Ucs-jH-VQX"/>
+                    <constraint firstItem="oxO-Bn-avn" firstAttribute="leading" secondItem="Xyz-g5-w92" secondAttribute="leadingMargin" constant="-8" id="Vi5-zs-bDN"/>
+                    <constraint firstItem="oxO-Bn-avn" firstAttribute="top" secondItem="Xyz-g5-w92" secondAttribute="top" id="a4s-qT-GuT"/>
+                    <constraint firstItem="oxO-Bn-avn" firstAttribute="top" secondItem="Xyz-g5-w92" secondAttribute="topMargin" constant="-8" id="ix0-Xn-B2V"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="oxO-Bn-avn" secondAttribute="bottom" constant="-8.5" id="kOb-wm-EzH"/>
+                    <constraint firstAttribute="trailing" secondItem="oxO-Bn-avn" secondAttribute="trailing" id="lDt-rM-ERe"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="oxO-Bn-avn" secondAttribute="trailing" constant="-8" id="qCM-qi-AuI"/>
+                    <constraint firstItem="oxO-Bn-avn" firstAttribute="leading" secondItem="Xyz-g5-w92" secondAttribute="leadingMargin" constant="-8" id="t4Z-E3-UbX"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="KHv-sH-1xb"/>
+                        <exclude reference="Tfa-Et-G3m"/>
+                        <exclude reference="Ucs-jH-VQX"/>
+                        <exclude reference="Vi5-zs-bDN"/>
+                        <exclude reference="ix0-Xn-B2V"/>
+                        <exclude reference="kOb-wm-EzH"/>
+                        <exclude reference="qCM-qi-AuI"/>
+                        <exclude reference="t4Z-E3-UbX"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="customImageView" destination="oxO-Bn-avn" id="vrM-D5-Lqt"/>
+            </connections>
+            <point key="canvasLocation" x="-49" y="-65"/>
+        </tableViewCell>
+    </objects>
+</document>

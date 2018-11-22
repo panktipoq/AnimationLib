@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditMyProfileViewController" customModule="BlueInc" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="hEM-q0-JeU" id="f5X-cz-3ez"/>
+                <outlet property="view" destination="iN0-l3-epB" id="HNr-Ph-nMK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-q0-JeU" userLabel="EditMyProfileTable">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jkh-jw-QZb"/>
+                        <outlet property="delegate" destination="-1" id="N4e-ll-6d8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hEM-q0-JeU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hrv-j6-Scy"/>
+                <constraint firstAttribute="bottom" secondItem="hEM-q0-JeU" secondAttribute="bottom" id="ZaS-5Q-VFP"/>
+                <constraint firstAttribute="trailing" secondItem="hEM-q0-JeU" secondAttribute="trailing" constant="8" id="eit-Gl-F6S"/>
+                <constraint firstItem="hEM-q0-JeU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oYF-QU-fJX"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

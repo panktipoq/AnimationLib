@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppStoryViewController" customModule="PoqModuling">
+            <connections>
+                <outlet property="bottomCTAImageView" destination="CcS-DZ-oPW" id="4YD-bK-c2k"/>
+                <outlet property="bottomCTALabel" destination="Ldt-DJ-Tl8" id="cAL-S1-DpQ"/>
+                <outlet property="bottomGradientView" destination="aUf-8O-5wP" id="Cp4-IL-jkZ"/>
+                <outlet property="bottomOverlayTapRecognizer" destination="UI9-UY-9TV" id="b6t-v0-CnP"/>
+                <outlet property="cardBottomOverlayView" destination="SHd-kW-OOH" id="5BF-pF-FqP"/>
+                <outlet property="cardCounterView" destination="TGA-Sc-hld" id="prS-mv-zVl"/>
+                <outlet property="cardOverlayView" destination="9Yk-NN-vEt" id="nwV-H8-blC"/>
+                <outlet property="closeButton" destination="6eD-GH-aCr" id="GEt-Yx-XPc"/>
+                <outlet property="eventHandlingView" destination="3Om-PO-gz2" id="9pD-a1-JfF"/>
+                <outlet property="gradientView" destination="bbC-pb-OGd" id="VJE-vR-mO4"/>
+                <outlet property="longPressGestureRecognizer" destination="8qW-L5-aps" id="TI4-cp-lvX"/>
+                <outlet property="panGestureRecognizer" destination="wxM-Aq-CpG" id="khz-sm-Ifg"/>
+                <outlet property="storyIconImageView" destination="tD9-CD-l00" id="Pcn-pP-xJH"/>
+                <outlet property="storyTitleLabel" destination="BOH-Xg-WFd" id="UPw-cD-NKK"/>
+                <outlet property="tapGestureRecognizer" destination="3ab-9P-Iij" id="K8X-as-UWR"/>
+                <outlet property="touchGestureRecognizer" destination="bJd-bL-F4f" id="wws-fb-KwS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="G1n-6n-i6C"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbC-pb-OGd" customClass="GradientView" customModule="PoqPlatform" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yk-NN-vEt" userLabel="TopOverlay">
+                    <rect key="frame" x="0.0" y="20" width="375" height="68"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGA-Sc-hld" userLabel="Card Counter View" customClass="AppStoryCardCountOverlayView" customModule="PoqPlatform" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="RBC-zy-MAO"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tD9-CD-l00" userLabel="Story Icon View" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                            <rect key="frame" x="16" y="30" width="75" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="aSM-Ko-sp2"/>
+                                <constraint firstAttribute="width" secondItem="tD9-CD-l00" secondAttribute="height" multiplier="5:2" placeholder="YES" id="ji3-F2-Soe"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOH-Xg-WFd" userLabel="Story title Label">
+                            <rect key="frame" x="99" y="36.5" width="216" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="BOH-Xg-WFd" firstAttribute="centerY" secondItem="tD9-CD-l00" secondAttribute="centerY" id="1PV-Ug-oZI"/>
+                        <constraint firstItem="TGA-Sc-hld" firstAttribute="top" secondItem="9Yk-NN-vEt" secondAttribute="top" id="5ae-Jl-kG4"/>
+                        <constraint firstItem="TGA-Sc-hld" firstAttribute="leading" secondItem="9Yk-NN-vEt" secondAttribute="leading" id="CMB-P2-vgO"/>
+                        <constraint firstItem="tD9-CD-l00" firstAttribute="top" secondItem="TGA-Sc-hld" secondAttribute="bottom" id="PiN-lN-Ohk"/>
+                        <constraint firstItem="BOH-Xg-WFd" firstAttribute="leading" secondItem="tD9-CD-l00" secondAttribute="trailing" constant="8" id="VE5-bc-CuU"/>
+                        <constraint firstAttribute="bottom" secondItem="tD9-CD-l00" secondAttribute="bottom" constant="8" id="cEl-Jl-9ZJ"/>
+                        <constraint firstAttribute="trailing" secondItem="TGA-Sc-hld" secondAttribute="trailing" id="huJ-Va-Sdd"/>
+                        <constraint firstItem="tD9-CD-l00" firstAttribute="leading" secondItem="9Yk-NN-vEt" secondAttribute="leading" constant="16" id="p1d-zM-dz5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Om-PO-gz2" userLabel="Event handling view">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHd-kW-OOH" userLabel="Bottom Overlay">
+                            <rect key="frame" x="0.0" y="547" width="375" height="100"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-8O-5wP" userLabel="GradientView" customClass="GradientView" customModule="PoqPlatform" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A70-jP-Wnb" userLabel="ElementsContainer">
+                                    <rect key="frame" x="148" y="30" width="79" height="40"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppstoryChevron" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-DZ-oPW">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="11"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldt-DJ-Tl8" userLabel="Bottom CTA">
+                                            <rect key="frame" x="0.0" y="19" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="CcS-DZ-oPW" firstAttribute="bottom" secondItem="Ldt-DJ-Tl8" secondAttribute="top" constant="-8" id="8An-zd-R05"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ldt-DJ-Tl8" secondAttribute="trailing" id="Cbg-5q-IfG"/>
+                                        <constraint firstItem="Ldt-DJ-Tl8" firstAttribute="leading" secondItem="A70-jP-Wnb" secondAttribute="leading" id="DNa-G5-oYq"/>
+                                        <constraint firstAttribute="trailing" secondItem="CcS-DZ-oPW" secondAttribute="trailing" id="Xca-of-XVc"/>
+                                        <constraint firstItem="CcS-DZ-oPW" firstAttribute="leading" secondItem="A70-jP-Wnb" secondAttribute="leading" id="YNF-bt-Lji"/>
+                                        <constraint firstItem="CcS-DZ-oPW" firstAttribute="top" secondItem="A70-jP-Wnb" secondAttribute="top" id="e31-j1-ntF"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ldt-DJ-Tl8" secondAttribute="bottom" id="sD6-sE-aQW"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="aUf-8O-5wP" firstAttribute="leading" secondItem="SHd-kW-OOH" secondAttribute="leading" id="6UD-si-hjU"/>
+                                <constraint firstAttribute="trailing" secondItem="aUf-8O-5wP" secondAttribute="trailing" id="8Xh-cY-B3w"/>
+                                <constraint firstItem="A70-jP-Wnb" firstAttribute="centerY" secondItem="SHd-kW-OOH" secondAttribute="centerY" id="M3o-cX-kb3"/>
+                                <constraint firstItem="aUf-8O-5wP" firstAttribute="top" secondItem="SHd-kW-OOH" secondAttribute="top" id="OpV-W2-4np"/>
+                                <constraint firstAttribute="bottom" secondItem="aUf-8O-5wP" secondAttribute="bottom" id="bLN-3g-uoN"/>
+                                <constraint firstItem="A70-jP-Wnb" firstAttribute="centerX" secondItem="SHd-kW-OOH" secondAttribute="centerX" id="kLl-dt-J8w"/>
+                                <constraint firstAttribute="height" constant="100" id="zJO-dZ-Ci4"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="UI9-UY-9TV" appends="YES" id="qg1-NY-L3m"/>
+                            </connections>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eD-GH-aCr" userLabel="Close Button">
+                            <rect key="frame" x="323" y="16" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Pxb-0M-hmK"/>
+                                <constraint firstAttribute="height" constant="44" id="p5J-5o-R9m"/>
+                            </constraints>
+                            <state key="normal" image="AppStoryCloseButton">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="jjS-6g-Qd4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="SHd-kW-OOH" secondAttribute="bottom" id="Qgb-Ul-fdE"/>
+                        <constraint firstItem="SHd-kW-OOH" firstAttribute="leading" secondItem="3Om-PO-gz2" secondAttribute="leading" id="V6c-lY-xrE"/>
+                        <constraint firstAttribute="trailing" secondItem="SHd-kW-OOH" secondAttribute="trailing" id="XS8-Jr-n3G"/>
+                        <constraint firstItem="6eD-GH-aCr" firstAttribute="top" secondItem="3Om-PO-gz2" secondAttribute="top" constant="16" id="jT7-oe-Chu"/>
+                        <constraint firstAttribute="trailing" secondItem="6eD-GH-aCr" secondAttribute="trailing" constant="8" id="sm5-1i-7jS"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="3ab-9P-Iij" appends="YES" id="HmS-te-xEE"/>
+                        <outletCollection property="gestureRecognizers" destination="8qW-L5-aps" appends="YES" id="Ufr-Dy-tRs"/>
+                        <outletCollection property="gestureRecognizers" destination="wxM-Aq-CpG" appends="YES" id="Lu9-F9-V3t"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="3Om-PO-gz2" firstAttribute="top" secondItem="YqJ-qI-e7V" secondAttribute="top" id="0oZ-cC-xeu"/>
+                <constraint firstItem="bbC-pb-OGd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3GZ-U3-h7C"/>
+                <constraint firstItem="9Yk-NN-vEt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5dW-ya-yz0"/>
+                <constraint firstItem="bbC-pb-OGd" firstAttribute="bottom" secondItem="9Yk-NN-vEt" secondAttribute="bottom" id="9ES-hj-yJi"/>
+                <constraint firstItem="bbC-pb-OGd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BHH-ZL-GX4"/>
+                <constraint firstAttribute="trailing" secondItem="3Om-PO-gz2" secondAttribute="trailing" id="Ga5-5a-vxl"/>
+                <constraint firstItem="3Om-PO-gz2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lbe-WY-CB7"/>
+                <constraint firstItem="6eD-GH-aCr" firstAttribute="leading" secondItem="BOH-Xg-WFd" secondAttribute="trailing" constant="8" id="TFa-Ok-9cT"/>
+                <constraint firstAttribute="trailing" secondItem="9Yk-NN-vEt" secondAttribute="trailing" id="Unc-Qb-FWI"/>
+                <constraint firstAttribute="bottom" secondItem="3Om-PO-gz2" secondAttribute="bottom" id="VqI-O8-gvL"/>
+                <constraint firstAttribute="trailing" secondItem="bbC-pb-OGd" secondAttribute="trailing" id="hVm-RV-9Sl"/>
+                <constraint firstItem="9Yk-NN-vEt" firstAttribute="top" secondItem="YqJ-qI-e7V" secondAttribute="top" id="rql-ES-a2b"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="YqJ-qI-e7V"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="bJd-bL-F4f" appends="YES" id="QhS-nF-b4f"/>
+            </connections>
+            <point key="canvasLocation" x="56.5" y="77.5"/>
+        </view>
+        <tapGestureRecognizer id="3ab-9P-Iij">
+            <connections>
+                <action selector="tapActionWithSender:" destination="-1" id="FF3-OD-zcZ"/>
+            </connections>
+        </tapGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="8qW-L5-aps">
+            <connections>
+                <action selector="longPressActionWithSender:" destination="-1" id="gje-fp-tUY"/>
+                <outlet property="delegate" destination="-1" id="24U-Z4-1Ua"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <gestureRecognizer id="bJd-bL-F4f" customClass="TouchGestureRecognizer" customModule="PoqPlatform" customModuleProvider="target">
+            <connections>
+                <action selector="touchRecognizerActionWithSender:" destination="-1" id="e6x-0L-SIK"/>
+                <outlet property="delegate" destination="-1" id="q8O-aL-FDf"/>
+            </connections>
+        </gestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="wxM-Aq-CpG">
+            <connections>
+                <action selector="panGestureActionWithSender:" destination="-1" id="FYF-cW-mWJ"/>
+                <outlet property="delegate" destination="-1" id="Br2-jo-Dpu"/>
+            </connections>
+        </panGestureRecognizer>
+        <tapGestureRecognizer id="UI9-UY-9TV" userLabel="Bottom Overlay Tap Gesture Recognizer">
+            <connections>
+                <action selector="bottomOverlayTapRecognizerActionWithSender:" destination="-1" id="yzE-Va-N33"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="AppStoryCloseButton" width="16" height="17"/>
+        <image name="AppstoryChevron" width="19" height="11"/>
+    </resources>
+</document>

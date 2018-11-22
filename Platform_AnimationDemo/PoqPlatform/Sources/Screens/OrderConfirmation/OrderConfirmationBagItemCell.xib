@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="OrderConfirmationBagItemCell" customModule="Albam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="571" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="571" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q70-Vi-YAK" userLabel="Height Ruler">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="roE-s9-Pfq"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ue9-vX-GJW" customClass="PoqAsyncImageView" customModule="Albam" customModuleProvider="target">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="N3L-yP-u9f"/>
+                            <constraint firstAttribute="width" constant="30" id="ffM-91-fxJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSv-Eq-mY3" userLabel="Item name label">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hos-0Q-eOl" userLabel="Items count label">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8T-pK-Xow" userLabel="Total price label">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="q70-Vi-YAK" secondAttribute="trailing" id="0wl-s7-VSx"/>
+                    <constraint firstAttribute="bottom" secondItem="q70-Vi-YAK" secondAttribute="bottom" id="2tx-GQ-fyg"/>
+                    <constraint firstItem="Ue9-vX-GJW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="5QC-1m-gII"/>
+                    <constraint firstItem="XSv-Eq-mY3" firstAttribute="leading" secondItem="Ue9-vX-GJW" secondAttribute="trailing" constant="8" id="AQr-J9-LTb"/>
+                    <constraint firstItem="hos-0Q-eOl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BGY-gS-EI5"/>
+                    <constraint firstItem="XSv-Eq-mY3" firstAttribute="trailing" secondItem="hos-0Q-eOl" secondAttribute="leading" constant="-8" id="K9H-dw-cT9"/>
+                    <constraint firstItem="r8T-pK-Xow" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lsk-ud-wIb"/>
+                    <constraint firstItem="hos-0Q-eOl" firstAttribute="trailing" secondItem="r8T-pK-Xow" secondAttribute="leading" constant="-8" id="VaS-rn-qnk"/>
+                    <constraint firstItem="q70-Vi-YAK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Viq-Rg-aQB"/>
+                    <constraint firstAttribute="leading" secondItem="q70-Vi-YAK" secondAttribute="leading" id="bO9-If-6HF"/>
+                    <constraint firstItem="XSv-Eq-mY3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fTt-rp-F9r"/>
+                    <constraint firstItem="q70-Vi-YAK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="otM-e5-iOg"/>
+                    <constraint firstItem="Ue9-vX-GJW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qTP-KJ-NzL"/>
+                    <constraint firstAttribute="trailing" secondItem="r8T-pK-Xow" secondAttribute="trailing" constant="15" id="yJW-NL-d9T"/>
+                </constraints>
+                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bagItemCountLabel" destination="hos-0Q-eOl" id="fbr-AO-1Te"/>
+                <outlet property="bagItemImage" destination="Ue9-vX-GJW" id="2Qb-my-dmX"/>
+                <outlet property="bagItemNameLabel" destination="XSv-Eq-mY3" id="tE7-f8-W3e"/>
+                <outlet property="bagItemTotalPice" destination="r8T-pK-Xow" id="zL9-9a-VVy"/>
+            </connections>
+            <point key="canvasLocation" x="159.5" y="54"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="BrandedProductInfoViewCell" rowHeight="593" id="AlY-CU-UWO" customClass="BrandedProductInfoViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="462"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AlY-CU-UWO" id="Hnq-EZ-gcr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="461"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JNs-g0-0eZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="303"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WOI-Oi-84g">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="AlY-CU-UWO" id="VWM-UK-EMf"/>
+                            <outlet property="delegate" destination="AlY-CU-UWO" id="vTV-mB-we5"/>
+                        </connections>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MGx-ch-5N9">
+                        <rect key="frame" x="140" y="266" width="39" height="37"/>
+                        <color key="pageIndicatorTintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </pageControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b8-9o-TUU" userLabel="BrandTitle">
+                        <rect key="frame" x="135" y="351" width="50" height="14"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROUGE COCOC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpQ-hX-TIx" userLabel="Collection name">
+                        <rect key="frame" x="114" y="365" width="93" height="14"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chanel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGb-R8-G6w" userLabel="ProductTitle">
+                        <rect key="frame" x="140" y="379" width="41" height="14"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£39.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upA-xC-2kT" userLabel="Price">
+                        <rect key="frame" x="142" y="393" width="37" height="14"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-Z7-V3y" userLabel="Like Button">
+                        <rect key="frame" x="138" y="407" width="44" height="44"/>
+                        <state key="normal" image="LikeButtonImageDefault"/>
+                        <state key="selected" image="LikeButtonImagePressed"/>
+                        <state key="highlighted" image="LikeButtonImagePressed"/>
+                        <connections>
+                            <action selector="likeButtonClicked:" destination="AlY-CU-UWO" eventType="touchUpInside" id="Onv-BK-pz1"/>
+                        </connections>
+                    </button>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6H-5L-7Bz" userLabel="AddToBag" customClass="AddToBagButton" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="35" y="303" width="250" height="48"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="CWQ-b1-gdJ"/>
+                            <constraint firstAttribute="width" constant="250" id="oMD-ez-pTD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerX" secondItem="MGx-ch-5N9" secondAttribute="centerX" constant="0.5" id="0zq-6F-tDe"/>
+                    <constraint firstItem="s6H-5L-7Bz" firstAttribute="centerX" secondItem="Hnq-EZ-gcr" secondAttribute="centerX" id="5lt-Ui-bZY"/>
+                    <constraint firstItem="CGb-R8-G6w" firstAttribute="centerX" secondItem="Hnq-EZ-gcr" secondAttribute="centerX" id="B7f-Sf-FKa"/>
+                    <constraint firstItem="upA-xC-2kT" firstAttribute="centerX" secondItem="Hnq-EZ-gcr" secondAttribute="centerX" id="Gg2-fI-D9v"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JNs-g0-0eZ" secondAttribute="bottom" priority="750" constant="150" id="N7q-FU-0RD"/>
+                    <constraint firstItem="CGb-R8-G6w" firstAttribute="top" secondItem="dpQ-hX-TIx" secondAttribute="bottom" id="Qd0-gX-oiE"/>
+                    <constraint firstItem="upA-xC-2kT" firstAttribute="top" secondItem="CGb-R8-G6w" secondAttribute="bottom" id="ajH-wJ-UvR"/>
+                    <constraint firstItem="dpQ-hX-TIx" firstAttribute="top" secondItem="3b8-9o-TUU" secondAttribute="bottom" id="aoO-sk-lye"/>
+                    <constraint firstItem="JNs-g0-0eZ" firstAttribute="top" secondItem="Hnq-EZ-gcr" secondAttribute="top" id="dBD-BK-pil"/>
+                    <constraint firstItem="JNs-g0-0eZ" firstAttribute="bottom" secondItem="MGx-ch-5N9" secondAttribute="bottom" id="jcC-Yc-2GP"/>
+                    <constraint firstItem="s6H-5L-7Bz" firstAttribute="bottom" secondItem="3b8-9o-TUU" secondAttribute="top" id="n7u-98-iCO"/>
+                    <constraint firstItem="bdy-Z7-V3y" firstAttribute="centerX" secondItem="Hnq-EZ-gcr" secondAttribute="centerX" id="nyb-oK-sgB"/>
+                    <constraint firstAttribute="trailing" secondItem="JNs-g0-0eZ" secondAttribute="trailing" id="q6s-4I-5nQ"/>
+                    <constraint firstItem="dpQ-hX-TIx" firstAttribute="centerX" secondItem="Hnq-EZ-gcr" secondAttribute="centerX" id="sa4-Dx-p0k"/>
+                    <constraint firstItem="3b8-9o-TUU" firstAttribute="centerX" secondItem="Hnq-EZ-gcr" secondAttribute="centerX" id="slc-4W-ieU"/>
+                    <constraint firstItem="s6H-5L-7Bz" firstAttribute="top" secondItem="JNs-g0-0eZ" secondAttribute="bottom" id="sry-mY-gyP"/>
+                    <constraint firstItem="JNs-g0-0eZ" firstAttribute="leading" secondItem="Hnq-EZ-gcr" secondAttribute="leading" id="wwb-Ns-fq2"/>
+                    <constraint firstItem="bdy-Z7-V3y" firstAttribute="top" secondItem="upA-xC-2kT" secondAttribute="bottom" id="xIx-ff-aEc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addToBagButtonView" destination="s6H-5L-7Bz" id="IW5-zX-la6"/>
+                <outlet property="likeButton" destination="bdy-Z7-V3y" id="ryh-2x-PuG"/>
+                <outlet property="pageControl" destination="MGx-ch-5N9" id="Xsg-1q-lzI"/>
+                <outlet property="priceLabel" destination="upA-xC-2kT" id="4kG-AQ-YQQ"/>
+                <outlet property="swipeView" destination="JNs-g0-0eZ" id="lQW-z1-uoD"/>
+            </connections>
+            <point key="canvasLocation" x="532" y="488"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LikeButtonImageDefault" width="44" height="44"/>
+        <image name="LikeButtonImagePressed" width="44" height="44"/>
+    </resources>
+</document>

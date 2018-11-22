@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-ExtraLight.ttf">
+            <string>SourceSansPro-ExtraLight</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Utn-jS-O1B" customClass="MyProfileRewardCardInfoViewCell" customModule="PoqPlatform" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Mz-sL-CTR" customClass="PoqAsyncImageView" customModule="PoqPlatform" customModuleProvider="target">
+                        <rect key="frame" x="200" y="21" width="100" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="U3q-v2-EUj"/>
+                            <constraint firstAttribute="width" constant="100" id="w90-sk-VGQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sB5-Te-DI2">
+                        <rect key="frame" x="15" y="14" width="173" height="71"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="xX0-0T-bsp"/>
+                        </constraints>
+                        <string key="text">MAKE MONEY
+WHILE YOU SHOP?</string>
+                        <fontDescription key="fontDescription" name="SourceSansPro-ExtraLight" family="Source Sans Pro" pointSize="23"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSU-sv-Q0l">
+                        <rect key="frame" x="15" y="87" width="185" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="eCx-sf-ug9"/>
+                        </constraints>
+                        <string key="text">Start collecting points with a House of Fraser
+Virtual Recognition Card</string>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5Mz-sL-CTR" firstAttribute="leading" secondItem="bSU-sv-Q0l" secondAttribute="trailing" id="1bd-Ou-LAR"/>
+                <constraint firstItem="sB5-Te-DI2" firstAttribute="top" secondItem="Utn-jS-O1B" secondAttribute="top" constant="14" id="BGl-Nk-Vnd"/>
+                <constraint firstItem="5Mz-sL-CTR" firstAttribute="top" secondItem="Utn-jS-O1B" secondAttribute="top" constant="21" id="G4c-Lw-gNk"/>
+                <constraint firstItem="sB5-Te-DI2" firstAttribute="leading" secondItem="Utn-jS-O1B" secondAttribute="leading" constant="15" id="VCG-ue-ffp"/>
+                <constraint firstItem="bSU-sv-Q0l" firstAttribute="leading" secondItem="sB5-Te-DI2" secondAttribute="trailing" constant="-173" id="dtn-qq-K9d"/>
+                <constraint firstItem="bSU-sv-Q0l" firstAttribute="leading" secondItem="Utn-jS-O1B" secondAttribute="leading" constant="15" id="edg-Eq-4Sf"/>
+                <constraint firstAttribute="trailing" secondItem="5Mz-sL-CTR" secondAttribute="trailing" constant="20" id="ng0-0P-umT"/>
+                <constraint firstItem="bSU-sv-Q0l" firstAttribute="top" secondItem="sB5-Te-DI2" secondAttribute="bottom" constant="2" id="wbq-Pg-b7H"/>
+            </constraints>
+            <size key="customSize" width="314" height="319"/>
+            <connections>
+                <outlet property="collectPoints" destination="bSU-sv-Q0l" id="zcA-qP-mfV"/>
+                <outlet property="descriptionLabel" destination="bSU-sv-Q0l" id="spA-1B-fAP"/>
+                <outlet property="image" destination="5Mz-sL-CTR" id="eCW-P9-5TC"/>
+                <outlet property="titleLabel" destination="sB5-Te-DI2" id="mTp-wi-aot"/>
+            </connections>
+            <point key="canvasLocation" x="345" y="346"/>
+        </collectionViewCell>
+    </objects>
+</document>
