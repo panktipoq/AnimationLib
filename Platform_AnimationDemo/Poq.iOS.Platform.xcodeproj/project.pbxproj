@@ -508,6 +508,7 @@
 		62929B9E161B51CB00F82E40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CED7FACEADF18FC0AB6674 /* File.swift */; };
 		62A7F8E4EC643E7C769A4E8F /* StripeCartCreationUIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DB58C7E79454EC99677CEB /* StripeCartCreationUIProvider.swift */; };
 		62D4C50E06E2ACBFE43E1799 /* MySizesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D659EF3E1EA32B279D266 /* MySizesSelectionViewController.swift */; };
+		631BB21421AC65F600BB4366 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631BB21321AC65F500BB4366 /* UIImageViewExtension.swift */; };
 		6349499421A56BDB006A5899 /* TabBarAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6349499221A56A04006A5899 /* TabBarAnimator.swift */; };
 		63C2084EDF87B040984813F2 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645B98CE17FE494C6DD9A60F /* KeyboardHelper.swift */; };
 		63D4C8620AEC321CD1653FE0 /* MyProfileSeperatorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A77EB1AA8A0D1E259B2B6FF /* MyProfileSeperatorViewCell.xib */; };
@@ -1914,6 +1915,7 @@
 		626E343C6DC312047051C3C4 /* WishlistProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistProducts.swift; sourceTree = "<group>"; };
 		62B4BFF5996F2070990209E7 /* Pods_PoqDemoApp_InHouseUAT_NotificationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoqDemoApp_InHouseUAT_NotificationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F7474E5AB8146DC37FDB89 /* ClassicSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassicSearchResultCell.xib; sourceTree = "<group>"; };
+		631BB21321AC65F500BB4366 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		6349499221A56A04006A5899 /* TabBarAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAnimator.swift; sourceTree = "<group>"; };
 		63999407EEC430E8B31A3435 /* FavoriteStoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStoreButton.swift; sourceTree = "<group>"; };
 		63D65BC31ABD5A464286349B /* PoqProductActionContentBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqProductActionContentBlockView.swift; sourceTree = "<group>"; };
@@ -2914,6 +2916,7 @@
 		0325562ADBF0C33F801C22DA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				631BB21321AC65F500BB4366 /* UIImageViewExtension.swift */,
 				8E9D39760E3573B243DE7028 /* BFTaskCompletionSourceExtension.swift */,
 				929AE53C8BAB9F438AFDFA0C /* BoolExtension.swift */,
 				0D6044F4C956706D42FFE4A3 /* CGImageExtension.swift */,
@@ -8582,6 +8585,7 @@
 				96A388AF3ED6B0AFBB63E76E /* CheckoutHelper.swift in Sources */,
 				73A5DCC85FCFDBF40CB64B7B /* AddressHelper.swift in Sources */,
 				73449DB789F25282862F7C5E /* SearchHelper.swift in Sources */,
+				631BB21421AC65F600BB4366 /* UIImageViewExtension.swift in Sources */,
 				19CF376A4FBBC69E964ACBE6 /* ProductSizeHelper.swift in Sources */,
 				63C2084EDF87B040984813F2 /* KeyboardHelper.swift in Sources */,
 				93EE2FBD6FF8065611FBA2D8 /* PreviewModeHelper.swift in Sources */,

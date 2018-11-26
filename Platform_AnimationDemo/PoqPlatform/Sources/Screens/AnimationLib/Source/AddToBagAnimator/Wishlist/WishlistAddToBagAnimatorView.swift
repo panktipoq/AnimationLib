@@ -23,14 +23,16 @@ import UIKit
 
 public struct WishlistAddToBagAnimatorViewSettings {
     
-    
+    public var imageFrame: CGRect
     public var wishlistCellImage: UIImage
     public var wishlistCellFrame: CGRect
     public var endOrigin: CGPoint
     
-    init(wishlistCellImage: UIImage,
-         wishlistCellFrame: CGRect,
-         endOrigin: CGPoint) {
+    init(imageFrame:CGRect,
+        wishlistCellImage: UIImage,
+        wishlistCellFrame: CGRect,
+        endOrigin: CGPoint) {
+        self.imageFrame = imageFrame
         self.wishlistCellFrame = wishlistCellFrame
         self.wishlistCellImage = wishlistCellImage
         self.endOrigin = endOrigin
@@ -69,7 +71,7 @@ class WishlistAddToBagAnimatorView: UIView {
      */
     lazy var productImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode =  .scaleAspectFill
+        imageView.contentMode =  .scaleToFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 1
         return imageView
@@ -171,17 +173,13 @@ extension WishlistAddToBagAnimatorView {
                                from: 1,
                                to: 1.2,
                                duration: 0.3)
-            .addBasicAnimation(keyPath: .boundsSizeWidth,
-                               from: animSettings?.wishlistCellFrame.size.width ?? 0,
-                               to: 120,
-                               duration: 0.3)
-            .addBasicAnimation(keyPath: .boundsSizeHeight,
-                               from: animSettings?.wishlistCellFrame.size.height ?? 0,
-                               to: animSettings?.wishlistCellFrame.size.height ?? 0 - 30,
+            .addBasicAnimation(keyPath: .boundsSize,
+                               from: animSettings?.wishlistCellFrame.size ?? CGSize.zero,
+                               to: animSettings?.imageFrame.size ?? CGSize.zero,
                                duration: 0.3)
             .addBasicAnimation(keyPath: .radius,
                                from:1,
-                               to: 8 ,
+                               to: 10 ,
                                duration: 0.3,
                                delay: 0,
                                timingFunction: .easeInfast)
@@ -194,15 +192,11 @@ extension WishlistAddToBagAnimatorView {
     
     func imageScaleAnimation() -> Self {
         PoqAnimator()
-            .addBasicAnimation(keyPath: .scale,
-                               from: 1,
-                               to: 1.1,
-                               duration: 0.1)
             .addBasicAnimation(keyPath: .position,
                                from: self.productImage.center,
-                               to: CGPoint(x: self.productImage.center.x - 10,
-                                           y: self.productImage.center.y - 5 ),
-                               duration: 0.3)
+                               to: CGPoint(x: self.productImage.center.x - 41.3,
+                                           y: self.productImage.center.y - 25.5 ),
+                               duration: 0.2)
             .startAnimation(for: self.productImage.layer,
                             type: .parallel,
                             isRemovedOnCompletion: false)
@@ -221,7 +215,6 @@ extension WishlistAddToBagAnimatorView {
                             isRemovedOnCompletion: false,
                             completion: completion)
     }
-   
 }
 
 extension WishlistAddToBagAnimatorView {

@@ -669,6 +669,8 @@ open class WishlistViewController: PoqBaseViewController, WishlistCellDelegate, 
         }
     }
     
+    
+    
     /// Syncronizes the bag and checks to see if the user is logged in.
     open func syncBagCheck() {
         
@@ -717,14 +719,15 @@ extension WishlistViewController {
         
         if let tabController = self.tabBarController as? TabBarViewController,
             let tabbarItem = tabController.viewForTabBarItemAtIndex(2) {
-        
             let image = cell.takeScreenshot()
             let endFrame = CGPoint(x: tabbarItem.center.x,
                                    y: tabController.tabBar.center.y)
             
+            let imageFrame = cell.productImage?.contentClippingRect
             let rectOfCell = wishlistTable.rectForRow(at: IndexPath(row: selectedProductIndex, section: 0))
             let rectOfCellInSuperview = wishlistTable.convert(rectOfCell, to: wishlistTable.superview)
-            let settings = WishlistAddToBagAnimatorViewSettings(wishlistCellImage: image,
+            let settings = WishlistAddToBagAnimatorViewSettings(imageFrame: imageFrame ?? CGRect.zero,
+                                                                wishlistCellImage: image,
                                                                 wishlistCellFrame: rectOfCellInSuperview,
                                                                 endOrigin:endFrame)
             weak var weakself = self
