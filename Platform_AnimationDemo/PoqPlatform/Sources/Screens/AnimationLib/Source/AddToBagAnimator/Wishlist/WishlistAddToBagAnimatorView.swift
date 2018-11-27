@@ -193,8 +193,8 @@ extension WishlistAddToBagAnimatorView {
     func imageScaleAnimation() -> Self {
         PoqAnimator()
             .addBasicAnimation(keyPath: .position,
-                               from: self.productImage.frame.origin,
-                               to: CGPoint(x: ((animSettings?.imageFrame.width ?? 0)/2 - 7) ,
+                               from: self.productImage.center,
+                               to: CGPoint(x:(self.productImage.center.x - (animSettings?.imageFrame.width ?? 0)/2 + 7) ,
                                            y: self.productImage.center.y - 25.5 ),
                                duration: 0.2)
             .startAnimation(for: self.productImage.layer,
