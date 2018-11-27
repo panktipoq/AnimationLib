@@ -170,11 +170,15 @@ extension PDPAddToBagAnimatorView {
             .addBasicAnimation(keyPath: .positionY,
                                from:backgroundView.center.y,
                                to: self.center.y-52,
-                               duration: 0.35)
+                               duration: 0.35,
+                               delay: 0,
+                               timingFunction: .easeInfast)
             .addBasicAnimation(keyPath: .scale,
                                from:1,
                                to: 0.5 ,
-                               duration: 0.35)
+                               duration: 0.35,
+                               delay: 0,
+                               timingFunction: .easeInfast)
             .startAnimation(for: backgroundView.layer,
                             type: .parallel,
                             isRemovedOnCompletion: false)
@@ -185,7 +189,9 @@ extension PDPAddToBagAnimatorView {
             .addBasicAnimation(keyPath: .opacity,
                                from:0,
                                to: 0.24,
-                               duration: 0.35)
+                               duration: 0.35,
+                               delay: 0,
+                               timingFunction: .easeInfast)
             .startAnimation(for: self.overlayLayer,
                             type: .parallel,
                             isRemovedOnCompletion: false)

@@ -278,6 +278,14 @@ open class PoqProductInfoContentBlockView: FullWidthAutoresizedCollectionCell, U
     @IBAction func addToBagButtonDidTap(_ sender: AnyObject) {
         
         Log.verbose("Add to Bag Button Tap")
+        
+        if let collectionView = imagesCollectionView,
+            let cell = self.collectionView(collectionView, cellForItemAt: IndexPath(row: imagesPageControl?.currentPage ?? 0, section: 0)) as? PoqProductImageView,
+            let image = cell.imageView?.image{
+            self.presenter?.animationParams = AddToBagAnimationParams(productImage: image,
+                                                                      productImageFrame: cell.frame)
+            
+        }
         presenter?.addToBagDidTap()
     }
     
@@ -313,11 +321,8 @@ open class PoqProductInfoContentBlockView: FullWidthAutoresizedCollectionCell, U
             return cell
         }
 
-        cell.imageView?.fetchImage(from: pictureURL, shouldDisplaySkeleton: false, placeholder: nil, format: nil, isAnimated: true, showLoading: true, completion: { (image) in
-            if let imageView = cell.imageView, let image = image {
-                self.presenter?.animationParams = AddToBagAnimationParams(productImage: image, productImageFrame: imageView.frame)
-            }
-        })
+        
+        cell.imageView?.fetchImage(from: pictureURL)
         cell.imageView?.contentMode = imageViewContentMode
         cell.isAccessibilityElement = true
         cell.accessibilityIdentifier = AccessibilityLabels.pdpImage

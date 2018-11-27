@@ -166,7 +166,12 @@ open class ModularProductDetailViewController: PoqBaseViewController, PoqProduct
             
         case PoqNetworkTaskType.postBag:
             if let params = animationParams {
-                startAddToBagAnimation(using: params)
+                
+                weak var weakSelf = self
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    weakSelf?.startAddToBagAnimation(using: params)
+                }
+                
             } else {
                 BagHelper.incrementBagBy(1)
                 BagHelper.completedAddToBag()
@@ -178,12 +183,12 @@ open class ModularProductDetailViewController: PoqBaseViewController, PoqProduct
         }
     }
     
-    public func startAddToBagAnimation(using param: AddToBagAnimationParams) {
+    open func startAddToBagAnimation(using param: AddToBagAnimationParams) {
         // Test Code
         if let tabController = self.tabBarController as? TabBarViewController,
             let tabbarItem = tabController.viewForTabBarItemAtIndex(2) {
-            let startFrame = CGRect(x: param.productImageFrame.origin.x,
-                                    y: param.productImageFrame.origin.y - (self.collectionView?.contentOffset.y ?? 0),
+            let startFrame = CGRect(x: 0,
+                                    y:  -(self.collectionView?.contentOffset.y ?? 0),
                                     width: param.productImageFrame.size.width,
                                     height: param.productImageFrame.size.height)
             
