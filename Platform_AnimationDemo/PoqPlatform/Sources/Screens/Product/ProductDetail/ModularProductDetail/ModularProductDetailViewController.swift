@@ -197,7 +197,7 @@ open class ModularProductDetailViewController: PoqBaseViewController, PoqProduct
             let settings = PDPAddToBagAnimatorViewSettings(productImage: param.productImage,
                                                            startFrame: startFrame,
                                                            endOrigin: endFrame)
-            ProductDetailAnimator.startAddToBagAnimation(with: settings) {
+            CAAnimation.startAddToBagAnimation(with: settings) {
                 BagHelper.incrementBagBy(1)
                 BagHelper.completedAddToBag()
             }

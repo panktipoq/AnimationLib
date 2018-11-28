@@ -733,7 +733,7 @@ extension WishlistViewController {
                                                                 wishlistCellFrame: rectOfCellInSuperview,
                                                                 endOrigin:endFrame)
             weak var weakself = self
-            WishlistAnimator.startAddToBagAnimation(with: settings) {
+            CAAnimation.startAddToBagAnimation(with: settings) {
                 weakself?.syncBagCheck()
             }
         }

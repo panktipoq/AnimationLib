@@ -23,6 +23,33 @@ import QuartzCore
  */
 extension CAAnimation {
     
+    
+    static func startAddToBagAnimation(with settings: PDPAddToBagAnimatorViewSettings,
+                                       completion:@escaping AnimClosure) {
+        
+        let addToBagAnimatorView = PDPAddToBagAnimatorView(frame: UIScreen.main.bounds)
+        guard  let window = UIApplication.shared.keyWindow else {
+            fatalError("window not found")
+        }
+        window.addSubview(addToBagAnimatorView)
+        addToBagAnimatorView.startAnimation(with: settings,
+                                            completion: completion)
+        
+    }
+    
+    static func startAddToBagAnimation(with settings: WishlistAddToBagAnimatorViewSettings,
+                                       completion:@escaping AnimClosure) {
+        
+        let addToBagAnimatorView = WishlistAddToBagAnimatorView(frame: UIScreen.main.bounds)
+        guard  let window = UIApplication.shared.keyWindow else {
+            fatalError("window not found")
+        }
+        window.addSubview(addToBagAnimatorView)
+        addToBagAnimatorView.startAnimation(with: settings,
+                                            completion: completion)
+        
+    }
+    
     func configure(delay: Double, duration: Double, timingfunction: TimingFunction, isRemovedOnCompletion: Bool = false) {
         self.beginTime = delay
         self.duration = duration

@@ -706,7 +706,6 @@
 		8A3E15522224D2BC7072C3D7 /* ViewAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93723776FAECBBFD4A18750B /* ViewAnimationHelper.swift */; };
 		8A5D83CA5355ABCEB7221D36 /* PoqSizeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8F85B59D5CD775B1F8CF1 /* PoqSizeAttribute.swift */; };
 		8A65452E8B1FD9186318632C /* CartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28776023B23A758A3D8FC98 /* CartType.swift */; };
-		8A7794B13765F5EFB07C9A99 /* WishlistAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D6881E9D2219D516EFF6ED /* WishlistAnimator.swift */; };
 		8A8927E0F44DD02B20DB8FDE /* ReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31991AD95531C00F66BEB05 /* ReviewsViewController.xib */; };
 		8AAB0D7D85FF71CE293966D8 /* CartDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66D0651B30D3570B50F477F /* CartDomainModel.swift */; };
 		8AAB2CF96326056FF30D6105 /* PoqProductsCarouselCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E81C15E586231305C2EF4B /* PoqProductsCarouselCategoryCell.swift */; };
@@ -896,7 +895,6 @@
 		B06366ED90000A37E2068944 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139FDB07179F7741FB4EBD2 /* Circle.swift */; };
 		B0702AB0A7BF8D1182657623 /* BagHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0F090BC5934A8C4B69706F /* BagHelperTests.swift */; };
 		B0999045F7B039737BBEBB47 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B508F7D25E6BC13BA14AEFA /* CartItem.swift */; };
-		B0D46B1CAE4C6901DE8683A5 /* ProductDetailAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CAF718863A84C4D2C9CF61 /* ProductDetailAnimator.swift */; };
 		B15BE744509541738929B73A /* VisualSearchOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BBE76ECBF9D876882A2BF6 /* VisualSearchOverlayView.xib */; };
 		B1B38EF7B859A33ED9AF3D9A /* UIWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C68C566C09EE6371833B98 /* UIWebViewExtension.swift */; };
 		B1B92179617FCDB8DB235343 /* PoqNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C22E646A8B2FEB6458F341EB /* PoqNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2453,7 +2451,6 @@
 		D0753A0860FC09789F4BE61B /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		D0A58A710E69E765BEB8E645 /* PoqCheckoutTrackableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqCheckoutTrackableTests.swift; sourceTree = "<group>"; };
 		D0B8C69A072AE860C6E5FFAE /* Pods-PoqModuling-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoqModuling-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PoqModuling-UnitTests/Pods-PoqModuling-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D0D6881E9D2219D516EFF6ED /* WishlistAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistAnimator.swift; sourceTree = "<group>"; };
 		D21821AD05EAD26EDCF6C6FE /* PoqProductShareContentBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqProductShareContentBlockView.swift; sourceTree = "<group>"; };
 		D228F87F12A59B9BBA420529 /* CurrencySwitcherHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySwitcherHeaderView.swift; sourceTree = "<group>"; };
 		D22B82917EF9D3BB612C3456 /* OrderDetailBasicViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailBasicViewCell.xib; sourceTree = "<group>"; };
@@ -2487,7 +2484,6 @@
 		D910835F745A58EF374061F6 /* PoqWebBagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqWebBagItem.swift; sourceTree = "<group>"; };
 		D96E4AB86F9235B794A0C20D /* CheckoutAddressCountrySelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutAddressCountrySelectionCell.xib; sourceTree = "<group>"; };
 		D99C0B7A67304326EE151CC7 /* VouchersCategoryHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VouchersCategoryHeaderCell.xib; sourceTree = "<group>"; };
-		D9CAF718863A84C4D2C9CF61 /* ProductDetailAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAnimator.swift; sourceTree = "<group>"; };
 		D9F7397A33A47544A77CD617 /* MyProfileAddressBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileAddressBookViewController.swift; sourceTree = "<group>"; };
 		DA0905748ACE2CA0E018EC7B /* ProductListViewPeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewPeek.swift; sourceTree = "<group>"; };
 		DA3F50AE2B4B133328DF6E9B /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
@@ -4465,7 +4461,6 @@
 			isa = PBXGroup;
 			children = (
 				02BEA846CE53567FD8BF3175 /* WishlistAddToBagAnimatorView.swift */,
-				D0D6881E9D2219D516EFF6ED /* WishlistAnimator.swift */,
 			);
 			path = Wishlist;
 			sourceTree = "<group>";
@@ -5796,7 +5791,6 @@
 			isa = PBXGroup;
 			children = (
 				4E5DEA9BA623C3E6499EEB1A /* PDPAddToBagAnimatorView.swift */,
-				D9CAF718863A84C4D2C9CF61 /* ProductDetailAnimator.swift */,
 			);
 			path = PDP;
 			sourceTree = "<group>";
@@ -8206,9 +8200,7 @@
 				F3FF177D54692BD4A9423DA9 /* PoqAnimator.swift in Sources */,
 				5F8B1B52C3412DDB1264C831 /* AnimationKeyPaths.swift in Sources */,
 				87D66517A9F160CBF9DA48FD /* TimingFunction.swift in Sources */,
-				B0D46B1CAE4C6901DE8683A5 /* ProductDetailAnimator.swift in Sources */,
 				DF1D11FC604ED7AB58136749 /* PDPAddToBagAnimatorView.swift in Sources */,
-				8A7794B13765F5EFB07C9A99 /* WishlistAnimator.swift in Sources */,
 				645DF747309F2D8685B6B3CA /* WishlistAddToBagAnimatorView.swift in Sources */,
 				91F1B4624C61668AAC274DD4 /* WebWrapperViewConroller.swift in Sources */,
 				096D36B569767AC276865D48 /* StoreDistanceFormatter.swift in Sources */,
