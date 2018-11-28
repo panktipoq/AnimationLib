@@ -126,12 +126,12 @@ class WishlistAddToBagAnimatorView: UIView {
         //View, image Tranform and scale animations
         weakself?.scaleAnimation {
             //View, image fall and scale animations
-//            weakself?.transformAnimation(completion: {
-//                //badge view, tabbar view scale animations
-//                weakself?.tabViewAnimation(completion: {
-//                    weakself?.perform(#selector(weakself?.dismissView), with: nil, afterDelay: 0.1)
-//                })
-//            })
+            weakself?.transformAnimation(completion: {
+                //badge view, tabbar view scale animations
+                weakself?.tabViewAnimation(completion: {
+                    weakself?.perform(#selector(weakself?.dismissView), with: nil, afterDelay: 0.1)
+                })
+            })
         }
     }
     
@@ -194,8 +194,8 @@ extension WishlistAddToBagAnimatorView {
         PoqAnimator()
             .addBasicAnimation(keyPath: .position,
                                from: self.productImage.center,
-                               to: CGPoint(x:(self.productImage.center.x - (animSettings?.imageFrame.width ?? 0)/2 + 7) ,
-                                           y: self.productImage.center.y - 25.5 ),
+                               to: CGPoint(x:(self.productImage.center.x - (animSettings?.imageFrame.origin.x ?? 0)) ,
+                                           y: self.productImage.center.y - (animSettings?.imageFrame.origin.y ?? 0) ),
                                duration: 0.2)
             .startAnimation(for: self.productImage.layer,
                             type: .parallel,

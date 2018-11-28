@@ -6512,6 +6512,7 @@
 					};
 					3F38D7052179D0D5F1D66274 = {
 						DevelopmentTeam = DK34MVSU63;
+						ProvisioningStyle = Automatic;
 					};
 					4C1019B5436C222EBA5DC8D3 = {
 						DevelopmentTeam = DK34MVSU63;
@@ -9831,8 +9832,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "PoqDemoApp-AppIcon";
 				CODE_SIGN_ENTITLEMENTS = ./PoqDemoApp/SupportFiles/PoqDemoApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				DEVELOPMENT_TEAM = DK34MVSU63;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FABRIC_API_KEY = 8cea57cad8f39f3960f3eb8efd9468cb9a808dfe;
@@ -9848,7 +9850,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poq.poqdemoapp;
 				PRODUCT_NAME = PoqDemoApp;
-				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.poq.poqdemoapp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -10313,8 +10315,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "PoqDemoApp-AppIcon";
 				CODE_SIGN_ENTITLEMENTS = ./PoqDemoApp/SupportFiles/PoqDemoApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				DEVELOPMENT_TEAM = DK34MVSU63;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FABRIC_API_KEY = 8cea57cad8f39f3960f3eb8efd9468cb9a808dfe;
@@ -10333,7 +10336,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poq.poqdemoapp;
 				PRODUCT_NAME = PoqDemoApp;
-				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.poq.poqdemoapp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -10560,8 +10563,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "PoqDemoApp-AppIcon";
 				CODE_SIGN_ENTITLEMENTS = ./PoqDemoApp/SupportFiles/PoqDemoApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				DEVELOPMENT_TEAM = DK34MVSU63;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FABRIC_API_KEY = 8cea57cad8f39f3960f3eb8efd9468cb9a808dfe;
@@ -10577,7 +10581,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poq.poqdemoapp;
 				PRODUCT_NAME = PoqDemoApp;
-				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.poq.poqdemoapp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;

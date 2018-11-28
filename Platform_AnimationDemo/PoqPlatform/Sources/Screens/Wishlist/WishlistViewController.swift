@@ -723,10 +723,12 @@ extension WishlistViewController {
             let endFrame = CGPoint(x: tabbarItem.center.x,
                                    y: tabController.tabBar.center.y)
             
-            let imageFrame = cell.productImage?.contentClippingRect
+            let imageFrame = CGRect(origin: CGPoint(x: (cell.productImage?.contentClippingRect.origin.x ?? 0) + cell.productImage.frame.origin.x,
+                                                    y: (cell.productImage?.contentClippingRect.origin.y ?? 0) + cell.productImage.frame.origin.y),
+                                    size: cell.productImage?.contentClippingRect.size ?? CGSize.zero)
             let rectOfCell = wishlistTable.rectForRow(at: IndexPath(row: selectedProductIndex, section: 0))
             let rectOfCellInSuperview = wishlistTable.convert(rectOfCell, to: wishlistTable.superview)
-            let settings = WishlistAddToBagAnimatorViewSettings(imageFrame: imageFrame ?? CGRect.zero,
+            let settings = WishlistAddToBagAnimatorViewSettings(imageFrame: imageFrame,
                                                                 wishlistCellImage: image,
                                                                 wishlistCellFrame: rectOfCellInSuperview,
                                                                 endOrigin:endFrame)
