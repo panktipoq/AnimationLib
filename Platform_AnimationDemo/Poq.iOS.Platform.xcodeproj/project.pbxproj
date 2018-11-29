@@ -510,6 +510,7 @@
 		62D4C50E06E2ACBFE43E1799 /* MySizesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D659EF3E1EA32B279D266 /* MySizesSelectionViewController.swift */; };
 		631BB21421AC65F600BB4366 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631BB21321AC65F500BB4366 /* UIImageViewExtension.swift */; };
 		6349499421A56BDB006A5899 /* TabBarAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6349499221A56A04006A5899 /* TabBarAnimator.swift */; };
+		6380708F21B0125400016995 /* PoqAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6380708D21B0026600016995 /* PoqAnimator.swift */; };
 		63C2084EDF87B040984813F2 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645B98CE17FE494C6DD9A60F /* KeyboardHelper.swift */; };
 		63D4C8620AEC321CD1653FE0 /* MyProfileSeperatorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A77EB1AA8A0D1E259B2B6FF /* MyProfileSeperatorViewCell.xib */; };
 		63EA032B16630827696901B6 /* FullWidthAutoresizedCellFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986FEBCFC8EB20E432B75B7 /* FullWidthAutoresizedCellFlowLayout.swift */; };
@@ -1220,7 +1221,7 @@
 		F308F96CCC1B9DB2BC5AA2C4 /* OnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351A1796E38FE97602ACB76B /* OnboardingView.xib */; };
 		F37C455774B935B878995E8F /* PoqProductColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87304D4C871811B824BFC771 /* PoqProductColor.swift */; };
 		F3D57ACF39660C9FF882BCE6 /* WishlistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452D5141773EDF044DA0D808 /* WishlistView.xib */; };
-		F3FF177D54692BD4A9423DA9 /* PoqAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E593EE9E7A89CC418B94534 /* PoqAnimator.swift */; };
+		F3FF177D54692BD4A9423DA9 /* PoqAnimator_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E593EE9E7A89CC418B94534 /* PoqAnimator_old.swift */; };
 		F411B1BF5E0DC40B422186FC /* MyProfileTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644BE5500DE4270F51738766 /* MyProfileTitleViewCell.swift */; };
 		F425C9BD563CB34FD68F5DC7 /* RecentlyViewedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858E53DA42762E274FAE483 /* RecentlyViewedProduct.swift */; };
 		F4394F159B572686D4637E9B /* PoqStripeZipCodeBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D04E5E0EBAF66F2B71BF9 /* PoqStripeZipCodeBody.swift */; };
@@ -1623,7 +1624,7 @@
 		2D809455E924F97382F53B3F /* WebviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewTableViewCell.swift; sourceTree = "<group>"; };
 		2D8D900B558B637D3A7E7211 /* CheckoutOrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutOrderSummaryViewController.swift; sourceTree = "<group>"; };
 		2D931C193588E5275F942088 /* PoqUserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqUserNotificationCenter.swift; sourceTree = "<group>"; };
-		2E593EE9E7A89CC418B94534 /* PoqAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqAnimator.swift; sourceTree = "<group>"; };
+		2E593EE9E7A89CC418B94534 /* PoqAnimator_old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqAnimator_old.swift; sourceTree = "<group>"; };
 		2E7DF9FBA84E3D9D194BC870 /* Pods-PoqCart.calabash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoqCart.calabash.xcconfig"; path = "Pods/Target Support Files/Pods-PoqCart/Pods-PoqCart.calabash.xcconfig"; sourceTree = "<group>"; };
 		2EABC43529F1148F71AFA170 /* PoqPointsRewardSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqPointsRewardSummary.swift; sourceTree = "<group>"; };
 		2EE95ED8EF5F2A8D3130BA7B /* OrderListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListViewController.xib; sourceTree = "<group>"; };
@@ -1915,6 +1916,7 @@
 		62F7474E5AB8146DC37FDB89 /* ClassicSearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassicSearchResultCell.xib; sourceTree = "<group>"; };
 		631BB21321AC65F500BB4366 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		6349499221A56A04006A5899 /* TabBarAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAnimator.swift; sourceTree = "<group>"; };
+		6380708D21B0026600016995 /* PoqAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqAnimator.swift; sourceTree = "<group>"; };
 		63999407EEC430E8B31A3435 /* FavoriteStoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStoreButton.swift; sourceTree = "<group>"; };
 		63D65BC31ABD5A464286349B /* PoqProductActionContentBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoqProductActionContentBlockView.swift; sourceTree = "<group>"; };
 		640DCB06364C115959020EB4 /* BagUnitTests.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = BagUnitTests.bundle; sourceTree = "<group>"; };
@@ -5575,8 +5577,9 @@
 				40B70860E22E81C85A4887A4 /* AnimationKeyPaths.swift */,
 				97201D9FC11BDCF3621D707D /* CAAnimationExtension.swift */,
 				9A383CE7ADE0405E37C264B6 /* FillMode.swift */,
-				2E593EE9E7A89CC418B94534 /* PoqAnimator.swift */,
+				2E593EE9E7A89CC418B94534 /* PoqAnimator_old.swift */,
 				B09EB6223A0A24A303CB3FC5 /* TimingFunction.swift */,
+				6380708D21B0026600016995 /* PoqAnimator.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -6506,7 +6509,7 @@
 					};
 					3F38D7052179D0D5F1D66274 = {
 						DevelopmentTeam = DK34MVSU63;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					4C1019B5436C222EBA5DC8D3 = {
 						DevelopmentTeam = DK34MVSU63;
@@ -8197,7 +8200,7 @@
 				48563C80997D22B071B620DD /* ShopViewController.swift in Sources */,
 				C3A4F7D4AF156E608F0F3854 /* CAAnimationExtension.swift in Sources */,
 				A645749E061F9DD3ACC3452B /* FillMode.swift in Sources */,
-				F3FF177D54692BD4A9423DA9 /* PoqAnimator.swift in Sources */,
+				F3FF177D54692BD4A9423DA9 /* PoqAnimator_old.swift in Sources */,
 				5F8B1B52C3412DDB1264C831 /* AnimationKeyPaths.swift in Sources */,
 				87D66517A9F160CBF9DA48FD /* TimingFunction.swift in Sources */,
 				DF1D11FC604ED7AB58136749 /* PDPAddToBagAnimatorView.swift in Sources */,
@@ -8492,6 +8495,7 @@
 				A8AD2CD6B5EEDF014AA9CCA5 /* Logo.swift in Sources */,
 				24CECF55223C07465285A3FD /* CAPSPageMenu.swift in Sources */,
 				C5CD1004C91BF17E72F8B86F /* ImportButton.swift in Sources */,
+				6380708F21B0125400016995 /* PoqAnimator.swift in Sources */,
 				ECED3151637B1DF4A17927C8 /* AddToBagButton.swift in Sources */,
 				2566EB2197E7F43218B5B252 /* DirectionButton.swift in Sources */,
 				2C70B3939E6BE48B03E3D05C /* PlusButton.swift in Sources */,
@@ -9824,9 +9828,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "PoqDemoApp-AppIcon";
 				CODE_SIGN_ENTITLEMENTS = ./PoqDemoApp/SupportFiles/PoqDemoApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DK34MVSU63;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FABRIC_API_KEY = 8cea57cad8f39f3960f3eb8efd9468cb9a808dfe;
@@ -9842,7 +9846,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poq.poqdemoapp;
 				PRODUCT_NAME = PoqDemoApp;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.poq.poqdemoapp";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -10307,9 +10311,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "PoqDemoApp-AppIcon";
 				CODE_SIGN_ENTITLEMENTS = ./PoqDemoApp/SupportFiles/PoqDemoApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DK34MVSU63;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FABRIC_API_KEY = 8cea57cad8f39f3960f3eb8efd9468cb9a808dfe;
@@ -10328,7 +10332,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poq.poqdemoapp;
 				PRODUCT_NAME = PoqDemoApp;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.poq.poqdemoapp";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -10555,9 +10559,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "PoqDemoApp-AppIcon";
 				CODE_SIGN_ENTITLEMENTS = ./PoqDemoApp/SupportFiles/PoqDemoApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DK34MVSU63;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				FABRIC_API_KEY = 8cea57cad8f39f3960f3eb8efd9468cb9a808dfe;
@@ -10573,7 +10577,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.poq.poqdemoapp;
 				PRODUCT_NAME = PoqDemoApp;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match InHouse com.poq.poqdemoapp";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
