@@ -21,10 +21,10 @@ struct AnimConfig{
     var timingFunction   : TimingFunction
     
     init(keyPath        :AnimatorKeyPath,
-         fromValue      :Any?,
-         toValue        :Any?,
-         keyFrameValues :[Any]?,
-         keyTimes       :[NSNumber]?,
+         fromValue      :Any? = nil,
+         toValue        :Any? = nil,
+         keyFrameValues :[Any]? = nil,
+         keyTimes       :[NSNumber]? = nil,
          duration       :TimeInterval,
          delay          : Double = 0,
          timingFunction :TimingFunction = .default) {
@@ -62,28 +62,28 @@ enum AnimConfigType{
     var configurtion:AnimConfig?{
         switch self {
         case .OverlayStartOpacity:
-            return AnimConfig(keyPath: .opacity, fromValue: 0, toValue: 0.3, keyFrameValues: nil, keyTimes: nil, duration: 0.4, delay :0, timingFunction : .easeInfast)
+            return AnimConfig(keyPath: .opacity, fromValue: 0, toValue: 0.3, duration: 0.4, delay :0, timingFunction : .easeInfast)
         case .OverlayEndOpacity:
-            return AnimConfig(keyPath: .opacity, fromValue: 0.3, toValue: 0, keyFrameValues: nil, keyTimes: nil, duration: 0.4, delay :0, timingFunction : .easeOut)
+            return AnimConfig(keyPath: .opacity, fromValue: 0.3, toValue: 0, duration: 0.4, delay :0, timingFunction : .easeOut)
         case .TabItemSpring:
-            return AnimConfig(keyPath: .scale, fromValue: nil, toValue: nil, keyFrameValues: [1, 1.2, 0.9, 1], keyTimes: nil, duration: 0.3)
+            return AnimConfig(keyPath: .scale, keyFrameValues: [1, 1.2, 0.9, 1], duration: 0.3)
         case .TabItemCountScale:
-            return AnimConfig(keyPath: .scale, fromValue: 0, toValue: 1, keyFrameValues: nil, keyTimes: nil, duration: 0.5, delay :0, timingFunction : .easeInSlow)
+            return AnimConfig(keyPath: .scale, fromValue: 0, toValue: 1, duration: 0.5, delay :0, timingFunction : .easeInSlow)
         // PDP
         case .PDPStartScale:
-            return AnimConfig(keyPath: .scale, fromValue: 1, toValue: 0.4, keyFrameValues: nil, keyTimes: nil, duration: 0.3, delay :0, timingFunction : .easeInfast)
+            return AnimConfig(keyPath: .scale, fromValue: 1, toValue: 0.4, duration: 0.3, delay :0, timingFunction : .easeInfast)
         case .PDPEndScale:
-            return AnimConfig(keyPath: .scale, fromValue: 0.4, toValue: 0, keyFrameValues: nil, keyTimes: nil, duration: 0.35)
+            return AnimConfig(keyPath: .scale, fromValue: 0.4, toValue: 0, duration: 0.35)
         case .PDPImageRadius:
-            return AnimConfig(keyPath: .radius, fromValue: 1, toValue: 15, keyFrameValues: nil, keyTimes: nil, duration: 0.3, delay :0, timingFunction : .easeInfast)
+            return AnimConfig(keyPath: .radius, fromValue: 1, toValue: 15, duration: 0.3, delay :0, timingFunction : .easeInfast)
             
         // Wishlist
         case .WishlistCellStartScale:
-            return AnimConfig(keyPath: .scale, fromValue: 1, toValue: 1.2, keyFrameValues: nil, keyTimes: nil, duration: 0.3)
+            return AnimConfig(keyPath: .scale, fromValue: 1, toValue: 1.2, duration: 0.3)
         case .WishlistCellEndScale:
-            return AnimConfig(keyPath: .scale, fromValue: 0.5, toValue: 0, keyFrameValues: nil, keyTimes: nil, duration: 0.35)
+            return AnimConfig(keyPath: .scale, fromValue: 0.5, toValue: 0, duration: 0.35)
         case .WishlistCellRadius:
-            return AnimConfig(keyPath: .radius, fromValue: 1, toValue: 10, keyFrameValues: nil, keyTimes: nil, duration: 0.3, delay :0, timingFunction : .easeInfast)
+            return AnimConfig(keyPath: .radius, fromValue: 1, toValue: 10, duration: 0.3, delay :0, timingFunction : .easeInfast)
         case .custom(_): return nil
         }
     }
