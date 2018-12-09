@@ -17,37 +17,12 @@ open class TabBarAnimator {
             let badgeView = bagBadgeView(at: tabIndex) else {
                 fatalError("bag tab item not found")
         }
-        
-        PoqAnimator()
-            .addKeyFrameAnimation(keyPath: .scale,
-                                  values: [1, 1.2, 0.9, 1],
-                                  keyTimes: [],
-                                  duration: 0.3)
-            .startAnimation(for: bagTabbarItemView.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
-        if !isFirstBagItem(at: tabIndex) {
-            PoqAnimator()
-                .addKeyFrameAnimation(keyPath: .scale,
-                                      values: [1, 1.2, 0.9, 1],
-                                      keyTimes: [],
-                                      duration: 0.2)
-                .startAnimation(for: badgeView.layer,
-                                type: .parallel,
-                                isRemovedOnCompletion: false,
-                                completion: completion)
-        } else {
-            PoqAnimator()
-                .addBasicAnimation(keyPath: .scale,
-                                   from: 0,
-                                   to: 1 ,
-                                   duration: 0.5,
-                                   delay: 0,
-                                   timingFunction: .easeInSlow)
-                .startAnimation(for: badgeView.layer,
-                                type: .parallel,
-                                isRemovedOnCompletion: false,
-                                completion: completion)
+        bagTabbarItemView.layer.runAnimation(CAAnimation.TabItemSpringAnimation())
+        if !isBadgeCountEmpty(for: tabIndex) {
+            badgeView.layer.runAnimation(CAAnimation.TabItemSpringAnimation(),completion: completion)
+        }
+        else{
+            badgeView.layer.runAnimation(CAAnimation.BadgeCountScaleAnimation(),completion: completion)
         }
     }
 }
@@ -55,9 +30,9 @@ open class TabBarAnimator {
 extension TabBarAnimator {
 
     // MARK: - Helpers
-    func isFirstBagItem(at index: Int) -> Bool {
+    func isBadgeCountEmpty(for tabIndex: Int) -> Bool {
         
-        if let badgeView = bagBadgeView(at: index) {
+        if let badgeView = bagBadgeView(at: tabIndex) {
             return Int(badgeView.badgeText) ?? 0 == 0
         }
         return false

@@ -50,11 +50,116 @@ extension CAAnimation {
         
     }
     
+}
+extension CAAnimation{
     func configure(delay: Double, duration: Double, timingfunction: TimingFunction, isRemovedOnCompletion: Bool = false) {
         self.beginTime = delay
         self.duration = duration
         self.timingFunction = timingfunction.rawValue
         self.fillMode = FillMode.forwards.rawValue
         self.isRemovedOnCompletion = isRemovedOnCompletion
-  }
+    }
+    
+    static func basicAnimation(for config: AnimConfig) -> CABasicAnimation{
+        
+        let basicAnimation = CABasicAnimation(keyPath: config.keyPath.rawValue)
+        basicAnimation.fromValue = config.fromValue
+        basicAnimation.toValue = config.toValue
+        basicAnimation.configure(delay: config.delay,
+                                 duration: config.duration,
+                                 timingfunction: config.timingFunction)
+        return basicAnimation
+    }
+    
+    static func keyFrameAnimation(for config: AnimConfig) -> CAKeyframeAnimation{
+        
+        let keyFrameAnimation = CAKeyframeAnimation(keyPath: config.keyPath.rawValue)
+        keyFrameAnimation.values = config.keyFrameValues
+        keyFrameAnimation.keyTimes = config.keyTimes
+        keyFrameAnimation.configure(delay: config.delay,
+                                    duration: config.duration,
+                                    timingfunction: config.timingFunction)
+        return keyFrameAnimation
+    }
+    
+    static func PDPStartScaleAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .scale,
+                                                        fromValue: 1,
+                                                        toValue: 0.4,
+                                                        duration: 0.3,
+                                                        delay :0,
+                                                        timingFunction : .easeInfast))
+    }
+    
+    static func PDPEndScaleAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .scale,
+                                                        fromValue: 0.4,
+                                                        toValue: 0,
+                                                        duration: 0.35))
+    }
+    
+    static func PDPImageRadiusAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .radius,
+                                                        fromValue: 1,
+                                                        toValue: 15,
+                                                        duration: 0.3,
+                                                        delay :0,
+                                                        timingFunction : .easeInfast))
+    }
+    
+    static func OverlayStartOpacityAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .opacity,
+                                                        fromValue: 0,
+                                                        toValue: 0.3,
+                                                        duration: 0.4,
+                                                        delay :0,
+                                                        timingFunction : .easeInfast))
+    }
+    
+    static func OverlayEndOpacityAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .opacity,
+                                                        fromValue: 0.3,
+                                                        toValue: 0,
+                                                        duration: 0.4,
+                                                        delay :0,
+                                                        timingFunction : .easeOut))
+    }
+    
+    static func TabItemSpringAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .scale,
+                                                        keyFrameValues: [1, 1.2, 0.9, 1],
+                                                        duration: 0.3))
+    }
+    
+    static func BadgeCountScaleAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .scale,
+                                                        fromValue: 0,
+                                                        toValue: 1,
+                                                        duration: 0.5,
+                                                        delay :0,
+                                                        timingFunction : .easeInSlow))
+    }
+    
+    static func WishlistCellStartScaleAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .scale,
+                                                        fromValue: 1,
+                                                        toValue: 1.2,
+                                                        duration: 0.3))
+    }
+    
+    static func WishlistCellEndScaleAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .scale,
+                                                        fromValue: 0.5,
+                                                        toValue: 0,
+                                                        duration: 0.35))
+    }
+    
+    static func WishlistCellRadiusAnimation() -> CAAnimation{
+        return basicAnimation(for: AnimConfig(keyPath: .radius,
+                                                        fromValue: 1,
+                                                        toValue: 10,
+                                                        duration: 0.3,
+                                                        delay :0,
+                                                        timingFunction : .easeInfast))
+    }
 }

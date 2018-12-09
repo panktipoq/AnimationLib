@@ -101,7 +101,6 @@ class WishlistAddToBagAnimatorView: UIView {
     }
     deinit {
         UIApplication.shared.endIgnoringInteractionEvents()
-        PoqAnimator().stopAnimation()
     }
     
     
@@ -137,7 +136,6 @@ class WishlistAddToBagAnimatorView: UIView {
     
     @objc func dismissView() {
         
-        PDPAddToBagAnimatorView.stopAnimation()
         if let completion = self.completion {
             completion()
         }
@@ -149,7 +147,6 @@ class WishlistAddToBagAnimatorView: UIView {
         if UIApplication.shared.isIgnoringInteractionEvents {
             UIApplication.shared.endIgnoringInteractionEvents()
         }
-        PoqAnimator().stopAnimation()
     }
 }
 
@@ -164,56 +161,41 @@ extension WishlistAddToBagAnimatorView {
     }
     
     func viewScaleAnimation() -> Self {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .position,
-                               from: self.backgroundView.center,
-                               to: CGPoint(x: self.center.x, y: self.backgroundView.center.y),
-                               duration: 0.3)
-            .addBasicAnimation(keyPath: .scale,
-                               from: 1,
-                               to: 1.2,
-                               duration: 0.3)
-            .addBasicAnimation(keyPath: .boundsSize,
-                               from: animSettings?.wishlistCellFrame.size ?? CGSize.zero,
-                               to: animSettings?.imageFrame.size ?? CGSize.zero,
-                               duration: 0.3)
-            .addBasicAnimation(keyPath: .radius,
-                               from:1,
-                               to: 10 ,
-                               duration: 0.3,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .startAnimation(for: self.backgroundView.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
+        
+        let positionAnimation = CAAnimation.basicAnimation(for: AnimConfig(keyPath: .position,
+                                                                           fromValue:self.backgroundView.center,
+                                                                           toValue: CGPoint(x: self.center.x, y: self.backgroundView.center.y),
+                                                                           duration: 0.3))
+
+        let bounceAnimation = CAAnimation.basicAnimation(for: AnimConfig(keyPath: .boundsSize,
+                                                                           fromValue: animSettings?.wishlistCellFrame.size ?? CGSize.zero,
+                                                                           toValue: animSettings?.imageFrame.size ?? CGSize.zero,
+                                                                           duration: 0.3))
+        self.backgroundView.layer.runAnimations(for: .parallel,
+                                                animations: [positionAnimation,
+                                                             CAAnimation.WishlistCellStartScaleAnimation(),
+                                                             bounceAnimation,
+                                                             CAAnimation.WishlistCellRadiusAnimation()],
+                                                completion: nil)
+        
         return self
         
     }
     
     func imageScaleAnimation() -> Self {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .position,
-                               from: self.productImage.center,
-                               to: CGPoint(x:(self.productImage.center.x - (animSettings?.imageFrame.origin.x ?? 0)) ,
-                                           y: self.productImage.center.y - (animSettings?.imageFrame.origin.y ?? 0) ),
-                               duration: 0.2)
-            .startAnimation(for: self.productImage.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
+
+        let positionAnimation = CAAnimation.basicAnimation(for: AnimConfig(keyPath: .position,
+                                                                           fromValue:self.productImage.center,
+                                                                           toValue: CGPoint(x:(self.productImage.center.x - (animSettings?.imageFrame.origin.x ?? 0)),y: self.productImage.center.y - (animSettings?.imageFrame.origin.y ?? 0) ),
+                                                                           duration: 0.2))
+        self.productImage.layer.runAnimation(positionAnimation, completion: nil)
         return self
         
     }
     
     func overlayScaleAnimation(completion: AnimClosure?){
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .opacity,
-                               from:0,
-                               to: 0.3,
-                               duration: 0.4)
-            .startAnimation(for: self.overlayLayer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false,
-                            completion: completion)
+        overlayLayer.runAnimation(CAAnimation.OverlayStartOpacityAnimation(),
+                                  completion: nil)
     }
 }
 
@@ -228,37 +210,22 @@ extension WishlistAddToBagAnimatorView {
     
     
     func viewTransformAnimation() -> Self {
+
+        let positionAnimation = CAAnimation.basicAnimation(for: AnimConfig(keyPath: .position,
+                                                                           fromValue:backgroundView.center,
+                                                                           toValue: CGPoint(x: animSettings?.endOrigin.x ?? 0,y: animSettings?.endOrigin.y ?? 0 ),
+                                                                           duration: 0.35,
+                                                                           delay: 0,
+                                                                           timingFunction: .easeInfast))
         
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .position,
-                               from:backgroundView.center,
-                               to: CGPoint(x: animSettings?.endOrigin.x ?? 0,
-                                           y: animSettings?.endOrigin.y ?? 0 ),
-                               duration: 0.35,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .addBasicAnimation(keyPath: .scale,
-                               from:0.5,
-                               to: 0 ,
-                               duration: 0.35)
-            .startAnimation(for: backgroundView.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
+        backgroundView.layer.runAnimations(for: .parallel,
+                                           animations: [positionAnimation, CAAnimation.WishlistCellEndScaleAnimation()],
+                                           completion: nil)
         return self
     }
     func overlayTransformAnimation(completion: AnimClosure?) {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .opacity,
-                               from:0.24,
-                               to: 0 ,
-                               duration: 0.35,
-                               delay: 0,
-                               timingFunction: .easeOut)
-            .startAnimation(for: self.overlayLayer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false,
-                            completion: completion)
-        
+        overlayLayer.runAnimation(CAAnimation.OverlayEndOpacityAnimation(),
+                                  completion: nil)
     }
 }
 

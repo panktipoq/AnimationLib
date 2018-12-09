@@ -17,6 +17,8 @@ import UIKit
     ValueType : This is the type of the animation values, it can be used to restrict specific value type for keypath.
                 for e.g When backgroundColor keyPath is used, the from and to animation values has to be CGColor type only
  */
+
+
 public struct AnimatorKeyPath {
     let rawValue: String
     init(keyPath: String) {

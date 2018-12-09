@@ -105,7 +105,6 @@ class PDPAddToBagAnimatorView: UIView {
     
     deinit {
         UIApplication.shared.endIgnoringInteractionEvents()
-        PoqAnimator().stopAnimation()
     }
     
     
@@ -119,7 +118,7 @@ class PDPAddToBagAnimatorView: UIView {
     
     //MARK: - Animation Actions
     func startAnimation(with settings: PDPAddToBagAnimatorViewSettings,
-                        completion:@escaping AnimClosure) {
+                        completion:@escaping (AnimClosure)) {
         
         UIApplication.shared.beginIgnoringInteractionEvents()
         self.animSettings = settings
@@ -128,37 +127,24 @@ class PDPAddToBagAnimatorView: UIView {
         weak var weakself = self
         
         //View, image Tranform and scale animations
-        weakself?.viewScaleAnimation()
-            .overlayScaleAnimation()
-            .imageScaleAnimation {
-                
-                //View, image fall and scale animations
-                weakself?.viewTransformAnimation()
-                    .overlayTransformAnimation(completion: {
-                        
-                        //badge view, tabbar view scale animations
-                        weakself?.tabViewAnimation(completion: {
-                            weakself?.perform(#selector(weakself?.dismissView), with: nil, afterDelay: 0.1)
-                        })
-                    })
-        }
+        weakself?.scaleAnimation(completion:{
+            //View, image fall and scale animations
+            weakself?.transformAnimation(completion: {
+                //badge view, tabbar view scale animations
+                weakself?.tabViewAnimation(completion: {
+                    weakself?.perform(#selector(weakself?.dismissView), with: nil, afterDelay: 0.1)
+                })
+            })
+        })
     }
     
     @objc func dismissView() {
         
-        PDPAddToBagAnimatorView.stopAnimation()
         if let completion = self.completion {
             completion()
         }
         self.removeFromSuperview()
         
-    }
-    
-    static func stopAnimation() {
-        if UIApplication.shared.isIgnoringInteractionEvents {
-            UIApplication.shared.endIgnoringInteractionEvents()
-        }
-        PoqAnimator().stopAnimation()
     }
 }
 
@@ -166,52 +152,35 @@ extension PDPAddToBagAnimatorView {
     
     // MARK: - Start Scale Animations
     
+    func scaleAnimation(completion: AnimClosure?){
+        self.viewScaleAnimation()
+            .overlayScaleAnimation()
+           .imageScaleAnimation(completion: completion)
+    }
+    
     func viewScaleAnimation() -> Self {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .positionY,
-                               from:backgroundView.center.y,
-                               to: self.center.y-52,
-                               duration: 0.3,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .addBasicAnimation(keyPath: .scale,
-                               from:1,
-                               to: 0.4,
-                               duration: 0.3,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .startAnimation(for: backgroundView.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
+        let positionAnimation = CAAnimation.basicAnimation(for: AnimConfig(keyPath: .positionY,
+                                                                         fromValue: backgroundView.center.y,
+                                                                         toValue: self.center.y-52,
+                                                                         duration: 0.3,
+                                                                         delay:0,
+                                                                         timingFunction: .easeInfast))
+        
+        backgroundView.layer.runAnimations(for: .parallel,
+                                           animations: [positionAnimation, CAAnimation.PDPStartScaleAnimation()],
+                                           completion: nil)
         return self
     }
     func overlayScaleAnimation() -> Self {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .opacity,
-                               from:0,
-                               to: 0.24,
-                               duration: 0.3,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .startAnimation(for: self.overlayLayer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
+        overlayLayer.runAnimation(CAAnimation.OverlayStartOpacityAnimation(),
+                                  completion: nil)
+
         return self
         
     }
     func imageScaleAnimation(completion: AnimClosure?) {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .radius,
-                               from:1,
-                               to: 15 ,
-                               duration: 0.3,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .startAnimation(for: self.productImage.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false,
-                            completion: completion)
-        
+        self.productImage.layer.runAnimation(CAAnimation.PDPImageRadiusAnimation(),
+                                             completion: completion)
     }
     
 }
@@ -219,38 +188,27 @@ extension PDPAddToBagAnimatorView {
 extension PDPAddToBagAnimatorView {
     
     // MARK: - Start transform Animations
-    
+    func transformAnimation(completion: AnimClosure?){
+        self.viewTransformAnimation()
+            .overlayTransformAnimation(completion:completion)
+    }
     func viewTransformAnimation() -> Self {
-        
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .position,
-                               from:CGPoint(x: self.center.x, y: self.center.y-52),
-                               to: CGPoint(x: animSettings?.endOrigin.x ?? 0, y: animSettings?.endOrigin.y ?? 0 ) ,
-                               duration: 0.35,
-                               delay: 0,
-                               timingFunction: .easeInfast)
-            .addBasicAnimation(keyPath: .scale,
-                               from:0.4,
-                               to: 0 ,
-                               duration: 0.35)
-            .startAnimation(for: backgroundView.layer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false)
+
+        let positionAnimation = CAAnimation.basicAnimation(for: AnimConfig(keyPath: .position,
+                                                                           fromValue: CGPoint(x: self.center.x, y: self.center.y-52),
+                                                                           toValue: CGPoint(x: animSettings?.endOrigin.x ?? 0, y: animSettings?.endOrigin.y ?? 0 ),
+                                                                           duration: 0.35,
+                                                                           delay:0,
+                                                                           timingFunction: .easeInfast))
+
+        backgroundView.layer.runAnimations(for: .parallel,
+                                           animations: [positionAnimation, CAAnimation.PDPEndScaleAnimation()],
+                                           completion: nil)
         return self
     }
     func overlayTransformAnimation(completion: AnimClosure?) {
-        PoqAnimator()
-            .addBasicAnimation(keyPath: .opacity,
-                               from:0.24,
-                               to: 0 ,
-                               duration: 0.35,
-                               delay: 0,
-                               timingFunction: .easeOut)
-            .startAnimation(for: self.overlayLayer,
-                            type: .parallel,
-                            isRemovedOnCompletion: false,
-                            completion: completion)
-        
+        overlayLayer.runAnimation(CAAnimation.OverlayEndOpacityAnimation(),
+                                  completion: nil)
     }
 }
 
